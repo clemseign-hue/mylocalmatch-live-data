@@ -23,7 +23,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
+const DATA_DIR = __dirname;
 const COMMUNES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'communes-laura.json'), 'utf-8'));
 
 // Compétitions suivies. Ajoutez-en en copiant le format d'URL trouvé sur
