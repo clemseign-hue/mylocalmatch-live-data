@@ -19,12 +19,11 @@ jobs:
           node-version: '20'
 
       - name: Installer les dépendances
-        run: npm install playwright@^1.48.0
-
-      - name: Installer le navigateur headless
-        run: npx playwright install --with-deps chromium
+        run: npm install cheerio
 
       - name: Lancer le robot d'extraction
+        env:
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: node scrape-laura.js
 
       - name: Publier les données mises à jour
