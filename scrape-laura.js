@@ -3,32 +3,23 @@
 // Récupère les calendriers de matchs amateurs de la Ligue Auvergne-Rhône-Alpes
 // de Football (LAuRAFoot) et les transforme en JSON exploitable par l'application.
 //
-// POURQUOI UN NAVIGATEUR HEADLESS (Playwright) ET PAS UN SIMPLE FETCH :
-// Les pages laurafoot.fff.fr chargent la liste des matchs en JavaScript après
-// le premier affichage — un simple téléchargement de page ne les voit pas.
-// Playwright ouvre un vrai navigateur (sans interface) qui exécute ce JavaScript,
-// exactement comme le ferait Safari.
+// v2 — passe par ScraperAPI (scraperapi.com) au lieu d'un navigateur headless
+// classique : le site LAuRAFoot bloque les adresses réseau des serveurs GitHub
+// Actions (constaté en v1), quel que soit le déguisement du navigateur.
+// ScraperAPI fait transiter la requête par d'autres adresses et rend le
+// JavaScript côté serveur, on récupère directement le HTML final.
 //
-// IMPORTANT — À LIRE : je n'ai pas pu observer le HTML final réellement généré par
-// ces pages (mes outils ne peuvent pas exécuter de JavaScript). Les sélecteurs
-// ci-dessous sont donc une première version, écrite à partir de la structure
-// habituelle de ce type de site (tableaux de résultats). Il est probable qu'un
-// premier lancement révèle un ajustement à faire (nom de classe CSS différent,
-// etc.). Le script est conçu pour être diagnostiqué facilement : en cas d'échec
-// d'extraction sur une compétition, il enregistre le texte brut de la page dans
-// data/debug-<competition>.txt pour qu'on puisse l'inspecter et corriger le
-// sélecteur ensemble.
+// Nécessite la variable d'environnement SCRAPER_API_KEY (voir README —
+// stockée comme "secret" GitHub, jamais en clair dans ce fichier).
 
-const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const cheerio = require('cheerio');
 
-const DATA_DIR = __dirname; // fichiers à plat à la racine du dépôt (voir note structure)
+const DATA_DIR = __dirname;
 const COMMUNES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'communes-laura.json'), 'utf-8'));
+const API_KEY = process.env.SCRAPER_API_KEY;
 
-// Compétitions suivies. Ajoutez-en en copiant le format d'URL trouvé sur
-// https://laurafoot.fff.fr/competitions/ (sélectionnez un championnat + une poule,
-// copiez l'URL affichée dans la barre d'adresse).
 const COMPETITIONS = [
   { name: 'Régional 1 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch' },
   { name: 'Régional 2 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch' },
@@ -36,12 +27,11 @@ const COMPETITIONS = [
   { name: 'Coupe de France - LAURA', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?id=449168&poule=13&phase=1&type=cp&tab=resultat' },
 ];
 
+const MONTHS = { JANVIER:1, 'FÉVRIER':2, MARS:3, AVRIL:4, MAI:5, JUIN:6, JUILLET:7, 'AOÛT':8, SEPTEMBRE:9, OCTOBRE:10, NOVEMBRE:11, 'DÉCEMBRE':12 };
+const DAY_HEADER = /^(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+(\d{1,2})\s+([A-ZÀ-Ü]+)\s+(\d{4})(?:\s*-\s*(\d{1,2})H(\d{2}))?/i;
+
 function slugify(str) {
-  return (str || '')
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+  return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function geocode(cityName) {
@@ -50,149 +40,116 @@ function geocode(cityName) {
   return null;
 }
 
-// Essaie plusieurs sélecteurs candidats pour trouver les lignes de match.
-// Retourne le texte de chaque ligne trouvée.
-async function extractRows(page) {
-  const candidates = [
-    'table tr',
-    '[class*="match"]',
-    '[class*="calendrier"] li',
-    '[class*="result"] li',
-  ];
-  for (const selector of candidates) {
-    const rows = await page.$$eval(selector, els =>
-      els.map(el => el.innerText.trim()).filter(t => t.length > 5)
-    ).catch(() => []);
-    if (rows.length > 3) return { selector, rows };
-  }
-  return { selector: null, rows: [] };
+async function fetchRendered(url) {
+  if (!API_KEY) throw new Error('SCRAPER_API_KEY manquant (secret GitHub non configuré ?)');
+  const endpoint = `http://api.scraperapi.com/?api_key=${API_KEY}&url=${encodeURIComponent(url)}&render=true`;
+  const res = await fetch(endpoint, { signal: AbortSignal.timeout(60000) });
+  if (!res.ok) throw new Error(`ScraperAPI HTTP ${res.status}`);
+  return await res.text();
 }
 
-// Tente de reconnaître "Équipe A - Équipe B", une date (JJ/MM) et une heure (HH:MM)
-// dans une ligne de texte brute. Renvoie null si le format n'est pas reconnu —
-// dans ce cas la ligne brute est conservée pour vérification manuelle.
-function parseRow(raw) {
-  const dateMatch = raw.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?/);
-  const timeMatch = raw.match(/(\d{1,2})[h:](\d{2})/);
-  const teamsMatch = raw.match(/([A-ZÉÈÀÇ][A-Za-zÉÈÀÇéèêàçôî'. -]{2,40})\s*[-–]\s*([A-ZÉÈÀÇ][A-Za-zÉÈÀÇéèêàçôî'. -]{2,40})/);
-  if (!dateMatch || !teamsMatch) return null;
-
-  const year = dateMatch[3] || (new Date().getMonth() >= 6 ? new Date().getFullYear() : new Date().getFullYear() - 1);
-  const date = `${year}-${String(dateMatch[2]).padStart(2, '0')}-${String(dateMatch[1]).padStart(2, '0')}`;
-  const time = timeMatch ? `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}` : null;
-
-  return {
-    home: teamsMatch[1].trim(),
-    away: teamsMatch[2].trim(),
-    date,
-    time,
-  };
+function bodyText(html) {
+  const $ = cheerio.load(html);
+  $('script, style, noscript').remove();
+  return $('body').text();
 }
 
-async function scrapeCompetition(page, comp) {
-  await page.goto(comp.url, { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {});
-  await page.waitForTimeout(3000);
-
-  // Certains sites de ce type n'affichent le calendrier qu'après avoir cliqué sur un
-  // bouton de validation des filtres, même si l'URL contient déjà les paramètres.
-  // On tente de cliquer un bouton probable, sans échouer si aucun n'existe.
-  const buttonTexts = ['Valider', 'Rechercher', 'Afficher', 'OK'];
-  for (const label of buttonTexts) {
-    const btn = await page.$(`button:has-text("${label}"), input[value="${label}"]`).catch(() => null);
-    if (btn) {
-      await btn.click().catch(() => {});
-      await page.waitForTimeout(2000);
-      break;
-    }
-  }
-
-  const { selector, rows } = await extractRows(page);
+// Reconnaît les lignes de date ("DIMANCHE 30 AOÛT 2026 - 15H00") et associe les
+// deux lignes d'équipes qui suivent (avec ou sans tiret explicite entre elles),
+// selon la forme que prend réellement le texte une fois extrait de la page.
+function parseSchedule(text) {
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
   const events = [];
-  const unparsed = [];
+  let currentDate = null, currentTime = null, pendingHome = null;
 
-  // Rien trouvé du tout : on garde une trace complète (texte + capture d'écran) pour
-  // pouvoir ajuster le script d'extraction sans deviner à l'aveugle.
-  if (rows.length === 0) {
-    const bodyText = await page.evaluate(() => document.body.innerText).catch(() => '(impossible de lire le texte de la page)');
-    fs.writeFileSync(path.join(DATA_DIR, `debug-${slugify(comp.name)}.txt`), bodyText);
-    await page.screenshot({ path: path.join(DATA_DIR, `debug-${slugify(comp.name)}.png`), fullPage: true }).catch(() => {});
-  }
+  const looksLikeTeam = (l) => l.length >= 2 && l.length <= 45 && !DAY_HEADER.test(l) && !/^JOURNÉE/i.test(l) && !/^\d+$/.test(l) && !/^(RÉSULTATS|AGENDA|CLASSEMENT|CALENDRIER)$/i.test(l);
 
-  for (const raw of rows) {
-    const parsed = parseRow(raw);
-    if (parsed) {
-      const geo = geocode(parsed.home) || geocode(comp.name);
-      events.push({
-        sport: comp.sport,
-        competition: comp.name,
-        home: parsed.home,
-        away: parsed.away,
-        date: parsed.date,
-        time: parsed.time,
-        lat: geo ? geo.lat : null,
-        lng: geo ? geo.lng : null,
-        geocoded: !!geo,
-        real: true,
-        source: 'LAuRAFoot — ' + comp.name,
-      });
-    } else {
-      unparsed.push(raw);
+  for (const line of lines) {
+    const dm = line.match(DAY_HEADER);
+    if (dm) {
+      const month = MONTHS[dm[3].toUpperCase()];
+      if (month) {
+        currentDate = `${dm[4]}-${String(month).padStart(2, '0')}-${String(dm[2]).padStart(2, '0')}`;
+        currentTime = dm[5] ? `${dm[5].padStart(2, '0')}:${dm[6]}` : null;
+      }
+      pendingHome = null;
+      continue;
+    }
+    if (!currentDate) continue;
+
+    const dashMatch = line.match(/^(.{2,40}?)\s*[-–—]\s*(.{2,40})$/);
+    if (dashMatch) {
+      events.push({ home: dashMatch[1].trim(), away: dashMatch[2].trim(), date: currentDate, time: currentTime });
+      currentDate = null;
+      continue;
+    }
+    if (looksLikeTeam(line)) {
+      if (pendingHome === null) {
+        pendingHome = line;
+      } else {
+        events.push({ home: pendingHome, away: line, date: currentDate, time: currentTime });
+        pendingHome = null;
+        currentDate = null;
+      }
     }
   }
+  return events;
+}
 
-  if (unparsed.length > 0) {
-    fs.writeFileSync(
-      path.join(DATA_DIR, `debug-${slugify(comp.name)}.txt`),
-      `Sélecteur utilisé: ${selector}\n\nLignes non reconnues (${unparsed.length}):\n\n` + unparsed.join('\n---\n')
-    );
-  }
+async function scrapeCompetition(comp) {
+  const html = await fetchRendered(comp.url);
+  const text = bodyText(html);
 
-  return { events, totalRows: rows.length, parsedCount: events.length, selector };
+  fs.writeFileSync(path.join(DATA_DIR, `debug-${slugify(comp.name)}.txt`), text);
+
+  const parsed = parseSchedule(text);
+  const events = parsed.map(p => {
+    const geo = geocode(p.home) || geocode(comp.name);
+    return {
+      sport: comp.sport,
+      competition: comp.name,
+      home: p.home,
+      away: p.away,
+      date: p.date,
+      time: p.time,
+      lat: geo ? geo.lat : null,
+      lng: geo ? geo.lng : null,
+      geocoded: !!geo,
+      real: true,
+      source: 'LAuRAFoot — ' + comp.name,
+    };
+  });
+
+  return { events, parsedCount: events.length, textLength: text.length };
 }
 
 async function main() {
-  const browser = await chromium.launch({
-    args: ['--disable-blink-features=AutomationControlled'],
-  });
-  const page = await browser.newPage({
-    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-    viewport: { width: 1280, height: 900 },
-    locale: 'fr-FR',
-    timezoneId: 'Europe/Paris',
-    extraHTTPHeaders: { 'Accept-Language': 'fr-FR,fr;q=0.9' },
-  });
-  await page.addInitScript(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-  });
-
   const allEvents = [];
   const report = [];
 
   for (const comp of COMPETITIONS) {
     console.log(`Extraction : ${comp.name}...`);
     try {
-      const result = await scrapeCompetition(page, comp);
+      const result = await scrapeCompetition(comp);
       allEvents.push(...result.events);
-      report.push({ competition: comp.name, ...result, events: undefined });
-      console.log(`  → ${result.parsedCount}/${result.totalRows} lignes reconnues (sélecteur: ${result.selector})`);
+      report.push({ competition: comp.name, parsedCount: result.parsedCount, textLength: result.textLength });
+      console.log(`  → ${result.parsedCount} match(s) reconnu(s) (${result.textLength} caractères lus)`);
     } catch (err) {
       report.push({ competition: comp.name, error: err.message });
       console.log(`  → échec : ${err.message}`);
     }
   }
 
-  await browser.close();
-
   const output = {
     generatedAt: new Date().toISOString(),
-    sourceNote: "Extrait automatiquement depuis laurafoot.fff.fr. Coordonnées approximatives quand la ville n'a pas pu être identifiée.",
+    sourceNote: "Extrait automatiquement depuis laurafoot.fff.fr via ScraperAPI. Coordonnées approximatives quand la ville n'a pas pu être identifiée.",
     events: allEvents,
     report,
   };
 
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
   console.log(`\nTerminé : ${allEvents.length} match(s) extrait(s) au total.`);
-  console.log('Voir debug-*.txt et debug-*.png pour comprendre pourquoi, si le nombre extrait semble bas.');
+  console.log('Voir debug-*.txt pour vérifier/ajuster la reconnaissance si le nombre semble bas.');
 }
 
 main().catch(err => {
