@@ -151,8 +151,19 @@ async function scrapeCompetition(page, comp) {
 }
 
 async function main() {
-  const browser = await chromium.launch();
-  const page = await browser.newPage({ userAgent: 'Mozilla/5.0 (compatible; MyLocalMatchBot/1.0)' });
+  const browser = await chromium.launch({
+    args: ['--disable-blink-features=AutomationControlled'],
+  });
+  const page = await browser.newPage({
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    viewport: { width: 1280, height: 900 },
+    locale: 'fr-FR',
+    timezoneId: 'Europe/Paris',
+    extraHTTPHeaders: { 'Accept-Language': 'fr-FR,fr;q=0.9' },
+  });
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+  });
 
   const allEvents = [];
   const report = [];
