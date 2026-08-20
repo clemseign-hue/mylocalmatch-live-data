@@ -23,7 +23,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = __dirname;
+const DATA_DIR = __dirname; // fichiers à plat à la racine du dépôt (voir note structure)
 const COMMUNES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'communes-laura.json'), 'utf-8'));
 
 // Compétitions suivies. Ajoutez-en en copiant le format d'URL trouvé sur
@@ -91,17 +91,36 @@ function parseRow(raw) {
 
 async function scrapeCompetition(page, comp) {
   await page.goto(comp.url, { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {});
-  await page.waitForTimeout(2500); // laisse le temps au JS de peupler le tableau
+  await page.waitForTimeout(3000);
+
+  // Certains sites de ce type n'affichent le calendrier qu'après avoir cliqué sur un
+  // bouton de validation des filtres, même si l'URL contient déjà les paramètres.
+  // On tente de cliquer un bouton probable, sans échouer si aucun n'existe.
+  const buttonTexts = ['Valider', 'Rechercher', 'Afficher', 'OK'];
+  for (const label of buttonTexts) {
+    const btn = await page.$(`button:has-text("${label}"), input[value="${label}"]`).catch(() => null);
+    if (btn) {
+      await btn.click().catch(() => {});
+      await page.waitForTimeout(2000);
+      break;
+    }
+  }
 
   const { selector, rows } = await extractRows(page);
   const events = [];
   const unparsed = [];
 
+  // Rien trouvé du tout : on garde une trace complète (texte + capture d'écran) pour
+  // pouvoir ajuster le script d'extraction sans deviner à l'aveugle.
+  if (rows.length === 0) {
+    const bodyText = await page.evaluate(() => document.body.innerText).catch(() => '(impossible de lire le texte de la page)');
+    fs.writeFileSync(path.join(DATA_DIR, `debug-${slugify(comp.name)}.txt`), bodyText);
+    await page.screenshot({ path: path.join(DATA_DIR, `debug-${slugify(comp.name)}.png`), fullPage: true }).catch(() => {});
+  }
+
   for (const raw of rows) {
     const parsed = parseRow(raw);
     if (parsed) {
-      // Le nom de ville n'est pas toujours présent dans la ligne de calendrier ;
-      // à défaut, on géocode sur le nom de l'équipe à domicile (heuristique).
       const geo = geocode(parsed.home) || geocode(comp.name);
       events.push({
         sport: comp.sport,
@@ -162,7 +181,7 @@ async function main() {
 
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
   console.log(`\nTerminé : ${allEvents.length} match(s) extrait(s) au total.`);
-  console.log('Voir data/debug-*.txt pour les lignes non reconnues, si le nombre extrait semble bas.');
+  console.log('Voir debug-*.txt et debug-*.png pour comprendre pourquoi, si le nombre extrait semble bas.');
 }
 
 main().catch(err => {
