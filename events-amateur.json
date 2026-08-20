@@ -1,6 +1,31 @@
 {
-  "generatedAt": null,
-  "sourceNote": "Pas encore généré — ce fichier sera remplacé automatiquement après le premier passage du robot (voir README).",
+  "generatedAt": "2026-08-20T10:19:26.121Z",
+  "sourceNote": "Extrait automatiquement depuis laurafoot.fff.fr. Coordonnées approximatives quand la ville n'a pas pu être identifiée.",
   "events": [],
-  "report": []
+  "report": [
+    {
+      "competition": "Régional 1 - Poule A",
+      "totalRows": 0,
+      "parsedCount": 0,
+      "selector": null
+    },
+    {
+      "competition": "Régional 2 - Poule A",
+      "totalRows": 0,
+      "parsedCount": 0,
+      "selector": null
+    },
+    {
+      "competition": "Régional 3 - Poule A",
+      "totalRows": 0,
+      "parsedCount": 0,
+      "selector": null
+    },
+    {
+      "competition": "Coupe de France - LAURA",
+      "totalRows": 0,
+      "parsedCount": 0,
+      "selector": null
+    }
+  ]
 }
