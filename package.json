@@ -1,0 +1,11 @@
+{
+  "name": "mylocalmatch-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "scrape": "node scrape-laura.js"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
