@@ -27,8 +27,9 @@ const COMPETITIONS = [
   { name: 'Coupe de France - LAURA', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?id=449168&poule=13&phase=1&type=cp&tab=resultat' },
 ];
 
-const MONTHS = { JANVIER:1, 'FÉVRIER':2, MARS:3, AVRIL:4, MAI:5, JUIN:6, JUILLET:7, 'AOÛT':8, SEPTEMBRE:9, OCTOBRE:10, NOVEMBRE:11, 'DÉCEMBRE':12 };
-const DAY_HEADER = /^(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+(\d{1,2})\s+([A-ZÀ-Ü]+)\s+(\d{4})(?:\s*-\s*(\d{1,2})H(\d{2}))?/i;
+const MONTHS = { janvier:1, février:2, mars:3, avril:4, mai:5, juin:6, juillet:7, août:8, septembre:9, octobre:10, novembre:11, décembre:12 };
+const DATE_RE = /(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s+(\d{1,2})\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\s*-\s*(\d{1,2})H(\d{2})/gi;
+const SEP_RE = /\s-\s/; // sépare équipe domicile / équipe extérieur, quel que soit le nombre d'espaces autour
 
 function slugify(str) {
   return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -54,44 +55,36 @@ function bodyText(html) {
   return $('body').text();
 }
 
-// Reconnaît les lignes de date ("DIMANCHE 30 AOÛT 2026 - 15H00") et associe les
-// deux lignes d'équipes qui suivent (avec ou sans tiret explicite entre elles),
-// selon la forme que prend réellement le texte une fois extrait de la page.
+// La page ne contient AUCUN saut de ligne entre les éléments (confirmé sur un
+// vrai extrait de laurafoot.fff.fr) : tout le calendrier d'une poule est un seul
+// bloc de texte continu, ex. "...samedi 05 septembre 2026 - 17H00U.S. BRIOUDE
+// - ESP CEYRAT  samedi 05 septembre 2026 - 18H00...". On repère donc chaque
+// date/heure dans le texte entier, puis on découpe le texte qui suit (jusqu'à
+// la date suivante) pour en extraire domicile/extérieur.
 function parseSchedule(text) {
-  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+  const matches = [...text.matchAll(DATE_RE)];
   const events = [];
-  let currentDate = null, currentTime = null, pendingHome = null;
 
-  const looksLikeTeam = (l) => l.length >= 2 && l.length <= 45 && !DAY_HEADER.test(l) && !/^JOURNÉE/i.test(l) && !/^\d+$/.test(l) && !/^(RÉSULTATS|AGENDA|CLASSEMENT|CALENDRIER)$/i.test(l);
+  for (let i = 0; i < matches.length; i++) {
+    const m = matches[i];
+    const start = m.index + m[0].length;
+    const end = i + 1 < matches.length ? matches[i + 1].index : text.length;
+    let chunk = text.slice(start, end).split(/Journée\s*\d+/i)[0];
 
-  for (const line of lines) {
-    const dm = line.match(DAY_HEADER);
-    if (dm) {
-      const month = MONTHS[dm[3].toUpperCase()];
-      if (month) {
-        currentDate = `${dm[4]}-${String(month).padStart(2, '0')}-${String(dm[2]).padStart(2, '0')}`;
-        currentTime = dm[5] ? `${dm[5].padStart(2, '0')}:${dm[6]}` : null;
-      }
-      pendingHome = null;
-      continue;
-    }
-    if (!currentDate) continue;
+    const sep = chunk.search(SEP_RE);
+    if (sep === -1) continue;
+    const sepMatch = chunk.slice(sep).match(SEP_RE);
+    const home = chunk.slice(0, sep + 1).trim();
+    const away = chunk.slice(sep + sepMatch[0].length).trim();
+    if (!home || !away) continue;
 
-    const dashMatch = line.match(/^(.{2,40}?)\s*[-–—]\s*(.{2,40})$/);
-    if (dashMatch) {
-      events.push({ home: dashMatch[1].trim(), away: dashMatch[2].trim(), date: currentDate, time: currentTime });
-      currentDate = null;
-      continue;
-    }
-    if (looksLikeTeam(line)) {
-      if (pendingHome === null) {
-        pendingHome = line;
-      } else {
-        events.push({ home: pendingHome, away: line, date: currentDate, time: currentTime });
-        pendingHome = null;
-        currentDate = null;
-      }
-    }
+    const month = MONTHS[m[3].toLowerCase()];
+    if (!month) continue;
+    events.push({
+      home, away,
+      date: `${m[4]}-${String(month).padStart(2, '0')}-${String(m[2]).padStart(2, '0')}`,
+      time: `${m[5].padStart(2, '0')}:${m[6]}`,
+    });
   }
   return events;
 }
