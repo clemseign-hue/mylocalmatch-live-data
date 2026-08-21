@@ -29,15 +29,26 @@ const COMPETITIONS = [
 
 const MONTHS = { janvier:1, février:2, mars:3, avril:4, mai:5, juin:6, juillet:7, août:8, septembre:9, octobre:10, novembre:11, décembre:12 };
 const DATE_RE = /(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s+(\d{1,2})\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\s*-\s*(\d{1,2})H(\d{2})/gi;
-const SEP_RE = /\s-\s/; // sépare équipe domicile / équipe extérieur, quel que soit le nombre d'espaces autour
+const SEP_RE = /\s-\s/;
 
 function slugify(str) {
   return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
+const CLUB_PREFIXES = /^(U\.?S\.?|A\.?S\.?|F\.?C\.?|E\.?S\.?|S\.?C\.?|R\.?C\.?|S\.?P\.?|A\.?S\.?C\.?|A\.?M\.?S?\.?|C\.?S\.?|J\.?S\.?|A\.?C\.?|U\.?O\.?|ENT\.?|ENTENTE)\s+/i;
+
 function geocode(cityName) {
-  const key = slugify(cityName);
-  if (COMMUNES[key]) return { ...COMMUNES[key], approx: false };
+  if (!cityName) return null;
+  const candidates = [cityName];
+  const stripped = cityName.replace(/\s+\d+\s*$/, '').trim();
+  candidates.push(stripped);
+  candidates.push(stripped.replace(CLUB_PREFIXES, ''));
+  stripped.split(/[\s.]+/).filter(w => w.length >= 4).forEach(w => candidates.push(w));
+
+  for (const c of candidates) {
+    const key = slugify(c);
+    if (COMMUNES[key]) return { ...COMMUNES[key], approx: false };
+  }
   return null;
 }
 
@@ -55,12 +66,6 @@ function bodyText(html) {
   return $('body').text();
 }
 
-// La page ne contient AUCUN saut de ligne entre les éléments (confirmé sur un
-// vrai extrait de laurafoot.fff.fr) : tout le calendrier d'une poule est un seul
-// bloc de texte continu, ex. "...samedi 05 septembre 2026 - 17H00U.S. BRIOUDE
-// - ESP CEYRAT  samedi 05 septembre 2026 - 18H00...". On repère donc chaque
-// date/heure dans le texte entier, puis on découpe le texte qui suit (jusqu'à
-// la date suivante) pour en extraire domicile/extérieur.
 function parseSchedule(text) {
   const matches = [...text.matchAll(DATE_RE)];
   const events = [];
@@ -69,7 +74,9 @@ function parseSchedule(text) {
     const m = matches[i];
     const start = m.index + m[0].length;
     const end = i + 1 < matches.length ? matches[i + 1].index : text.length;
-    let chunk = text.slice(start, end).split(/Journée\s*\d+/i)[0];
+    let chunk = text.slice(start, end).split(/Journée\s*\d+|Sidebar|Recherche avancée/i)[0];
+    const nlIdx = chunk.indexOf('\n');
+    if (nlIdx !== -1) chunk = chunk.slice(0, nlIdx);
 
     const sep = chunk.search(SEP_RE);
     if (sep === -1) continue;
