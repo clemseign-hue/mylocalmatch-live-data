@@ -22,8 +22,22 @@ const API_KEY = process.env.SCRAPER_API_KEY;
 
 const COMPETITIONS = [
   { name: 'Régional 1 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch' },
+  { name: 'Régional 1 - Poule B', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch' },
   { name: 'Régional 2 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch' },
+  { name: 'Régional 2 - Poule B', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch' },
+  { name: 'Régional 2 - Poule C', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch' },
+  { name: 'Régional 2 - Poule D', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch' },
+  { name: 'Régional 2 - Poule E', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=5&type=ch' },
   { name: 'Régional 3 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch' },
+  { name: 'Régional 3 - Poule B', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=2&type=ch' },
+  { name: 'Régional 3 - Poule C', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch' },
+  { name: 'Régional 3 - Poule D', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch' },
+  { name: 'Régional 3 - Poule E', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch' },
+  { name: 'Régional 3 - Poule F', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch' },
+  { name: 'Régional 3 - Poule G', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch' },
+  { name: 'Régional 3 - Poule H', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch' },
+  { name: 'Régional 3 - Poule I', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch' },
+  { name: 'Régional 3 - Poule J', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch' },
   { name: 'Coupe de France - LAURA', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?id=449168&poule=13&phase=1&type=cp&tab=resultat' },
 ];
 
