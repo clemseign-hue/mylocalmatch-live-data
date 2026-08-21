@@ -157,7 +157,7 @@ LinkedIn
 		
 
 SENIORS REGIONAL 2Phase UNIQUE Poule POULE A  POULE B  POULE C  POULE D  POULE E RésultatsAgendaClassementCalendrierRésultatsAgendaClassementCalendrierJournée 1samedi 05 septembre 2026 - 17H00FC LA TOUR ST CLAIR   - ECHIROLLES FC  samedi 05 septembre 2026 - 19H00ES TARENTAISE   - SUD LYONNAIS F. 2013  dimanche 06 septembre 2026 - 15H00MENIVAL F.C.   - THONON EVIAN GG FC  2 dimanche 06 septembre 2026 - 15H00CLUSES F.C.   - AIX FC  dimanche 06 septembre 2026 - 15H00ST-PRIEST  2 - SEYSSINS FC  dimanche 06 septembre 2026 - 15H00F.C. VAULX EN VELIN   - ANNECY LE VIEUX U.S.  Journée 2samedi 19 septembre 2026 - 18H00ECHIROLLES FC   - F.C. VAULX EN VELIN  samedi 19 septembre 2026 - 18H00AIX FC   - MENIVAL F.C.  samedi 19 septembre 2026 - 19H00SEYSSINS FC   - FC LA TOUR ST CLAIR  dimanche 20 septembre 2026 - 15H00ANNECY LE VIEUX U.S.   - SUD LYONNAIS F. 2013  dimanche 20 septembre 2026 - 15H00THONON EVIAN GG FC  2 - ST-PRIEST  2 dimanche 20 septembre 2026 - 15H00CLUSES F.C.   - ES TARENTAISE  Journée 3samedi 03 octobre 2026 - 19H00SUD LYONNAIS F. 2013   - ECHIROLLES FC  samedi 03 octobre 2026 - 19H00ES TARENTAISE   - ANNECY LE VIEUX U.S.  dimanche 04 octobre 2026 - 15H00MENIVAL F.C.   - CLUSES F.C.  dimanche 04 octobre 2026 - 15H00F.C. VAULX EN VELIN   - SEYSSINS FC  dimanche 04 octobre 2026 - 15H00FC LA TOUR ST CLAIR   - THONON EVIAN GG FC  2 dimanche 04 octobre 2026 - 15H00ST-PRIEST  2 - AIX FC  Journée 4samedi 17 octobre 2026 - 18H00ECHIROLLES FC   - ANNECY LE VIEUX U.S.  samedi 17 octobre 2026 - 18H00AIX FC   - FC LA TOUR ST CLAIR  samedi 17 octobre 2026 - 19H00SEYSSINS FC   - SUD LYONNAIS F. 2013  dimanche 18 octobre 2026 - 15H00THONON EVIAN GG FC  2 - F.C. VAULX EN VELIN  dimanche 18 octobre 2026 - 15H00MENIVAL F.C.   - ES TARENTAISE  dimanche 18 octobre 2026 - 15H00CLUSES F.C.   - ST-PRIEST  2 Journée 5samedi 24 octobre 2026 - 19H00ES TARENTAISE   - ECHIROLLES FC  samedi 24 octobre 2026 - 19H00SUD LYONNAIS F. 2013   - THONON EVIAN GG FC  2 dimanche 25 octobre 2026 - 15H00ST-PRIEST  2 - MENIVAL F.C.  dimanche 25 octobre 2026 - 15H00ANNECY LE VIEUX U.S.   - SEYSSINS FC  dimanche 25 octobre 2026 - 15H00FC LA TOUR ST CLAIR   - CLUSES F.C.  dimanche 25 octobre 2026 - 15H00F.C. VAULX EN VELIN   - AIX FC   Sidebar
-SidebarSidebarfffNos partenairesPrevious
+SidebarfffNos partenairesPrevious
             
 
             
@@ -248,7 +248,7 @@ SidebarSidebarfffNos partenairesPrevious
 
 
     
-	
+	Sidebar
 
 		        
             Compétitions
