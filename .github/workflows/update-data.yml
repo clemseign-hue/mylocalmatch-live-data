@@ -1,8 +1,8 @@
-name: Mise à jour quotidienne des données MyLocalMatch
+name: Mise à jour des données MyLocalMatch
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * 1'
   workflow_dispatch: {}
 
 permissions:
