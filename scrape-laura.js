@@ -66,11 +66,19 @@ function geocode(cityName) {
   return null;
 }
 
-async function fetchRendered(url) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchRendered(url, attempt = 1) {
   if (!API_KEY) throw new Error('SCRAPER_API_KEY manquant (secret GitHub non configuré ?)');
   const endpoint = `http://api.scraperapi.com/?api_key=${API_KEY}&url=${encodeURIComponent(url)}&render=true`;
   const res = await fetch(endpoint, { signal: AbortSignal.timeout(60000) });
-  if (!res.ok) throw new Error(`ScraperAPI HTTP ${res.status}`);
+  if (!res.ok) {
+    if (res.status >= 500 && attempt < 3) {
+      await sleep(3000 * attempt);
+      return fetchRendered(url, attempt + 1);
+    }
+    throw new Error(`ScraperAPI HTTP ${res.status} (après ${attempt} tentative${attempt > 1 ? 's' : ''})`);
+  }
   return await res.text();
 }
 
