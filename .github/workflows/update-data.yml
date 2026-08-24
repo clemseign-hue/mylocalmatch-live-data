@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "MyLocalMatch Bot"
           git config user.email "actions@github.com"
-          git add events-amateur.json
+          git add events-amateur.json communes-laura.json
           git add debug-*.txt debug-*.png 2>/dev/null || true
           git diff --quiet --cached || git commit -m "Mise à jour automatique des données ($(date -u +%Y-%m-%d))"
           git push
