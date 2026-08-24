@@ -1,55 +1,679 @@
 {
   "_comment": "Coordonnées réelles (centre-ville approximatif) des communes de la région Auvergne-Rhône-Alpes les plus courantes en football amateur. Liste enrichie à partir des vraies compétitions suivies (Régional 1/3, Coupe de France LAURA). Toujours incomplète — les clubs non reconnus n'apparaissent simplement pas sur la carte, sans casser le reste.",
-  "lyon": { "lat": 45.7640, "lng": 4.8357 },
-  "villeurbanne": { "lat": 45.7667, "lng": 4.8794 },
-  "venissieux": { "lat": 45.6975, "lng": 4.8862 },
-  "bron": { "lat": 45.7386, "lng": 4.9147 },
-  "oullins": { "lat": 45.7186, "lng": 4.8060 },
-  "ecully": { "lat": 45.7736, "lng": 4.7736 },
-  "meyzieu": { "lat": 45.7736, "lng": 5.0056 },
-  "caluire-et-cuire": { "lat": 45.7947, "lng": 4.8467 },
-  "decines-charpieu": { "lat": 45.7654, "lng": 4.9822 },
-  "villefranche-sur-saone": { "lat": 45.9886, "lng": 4.7167 },
-  "grenoble": { "lat": 45.1885, "lng": 5.7245 },
-  "saint-etienne": { "lat": 45.4397, "lng": 4.3872 },
-  "annecy": { "lat": 45.8992, "lng": 6.1294 },
-  "valence": { "lat": 44.9334, "lng": 4.8924 },
-  "chambery": { "lat": 45.5646, "lng": 5.9178 },
-  "clermont-ferrand": { "lat": 45.7772, "lng": 3.0870 },
-  "bourgoin-jallieu": { "lat": 45.5836, "lng": 5.2730 },
-  "vienne": { "lat": 45.5253, "lng": 4.8747 },
-  "roanne": { "lat": 46.0367, "lng": 4.0708 },
-  "aix-les-bains": { "lat": 45.6886, "lng": 5.9153 },
-  "montelimar": { "lat": 44.5581, "lng": 4.7502 },
-  "firminy": { "lat": 45.3958, "lng": 4.2939 },
-  "saint-priest": { "lat": 45.6975, "lng": 4.9414 },
-  "rillieux-la-pape": { "lat": 45.8175, "lng": 4.8981 },
-  "pusignan": { "lat": 45.7500, "lng": 5.0500 },
-  "vichy": { "lat": 46.1247, "lng": 3.4267 },
-  "puy": { "lat": 45.0433, "lng": 3.8850 },
-  "montlucon": { "lat": 46.3400, "lng": 2.6039 },
-  "moulins": { "lat": 46.5658, "lng": 3.3350 },
-  "thiers": { "lat": 45.8531, "lng": 3.5464 },
-  "aurillac": { "lat": 44.9289, "lng": 2.4433 },
-  "chamalieres": { "lat": 45.7728, "lng": 3.0678 },
-  "cournon": { "lat": 45.7503, "lng": 3.1897 },
-  "issoire": { "lat": 45.5461, "lng": 3.2494 },
-  "brioude": { "lat": 45.2947, "lng": 3.3856 },
-  "ambert": { "lat": 45.5486, "lng": 3.7414 },
-  "riom": { "lat": 45.8933, "lng": 3.1136 },
-  "monistrol": { "lat": 45.2947, "lng": 4.1747 },
-  "vaulx": { "lat": 45.7775, "lng": 4.9106 },
-  "sallanches": { "lat": 45.9433, "lng": 6.6317 },
-  "cranves-sales": { "lat": 46.1461, "lng": 6.2364 },
-  "vinay": { "lat": 45.2072, "lng": 5.3958 },
-  "cognin": { "lat": 45.5567, "lng": 5.8853 },
-  "orcet": { "lat": 45.6828, "lng": 3.1614 },
-  "ydes": { "lat": 45.3486, "lng": 2.4325 },
-  "romagnat": { "lat": 45.7328, "lng": 3.1069 },
-  "orcines": { "lat": 45.7911, "lng": 3.0136 },
-  "veigy": { "lat": 46.2833, "lng": 6.2667 },
-  "royat": { "lat": 45.7639, "lng": 3.0508 },
-  "cebazat": { "lat": 45.8244, "lng": 3.1250 },
-  "gennetines": { "lat": 46.5308, "lng": 3.4453 },
-  "souvigny": { "lat": 46.5386, "lng": 3.1958 }
+  "lyon": {
+    "lat": 45.764,
+    "lng": 4.8357
+  },
+  "villeurbanne": {
+    "lat": 45.7667,
+    "lng": 4.8794
+  },
+  "venissieux": {
+    "lat": 45.6975,
+    "lng": 4.8862
+  },
+  "bron": {
+    "lat": 45.7386,
+    "lng": 4.9147
+  },
+  "oullins": {
+    "lat": 45.7186,
+    "lng": 4.806
+  },
+  "ecully": {
+    "lat": 45.7736,
+    "lng": 4.7736
+  },
+  "meyzieu": {
+    "lat": 45.7736,
+    "lng": 5.0056
+  },
+  "caluire-et-cuire": {
+    "lat": 45.7947,
+    "lng": 4.8467
+  },
+  "decines-charpieu": {
+    "lat": 45.7654,
+    "lng": 4.9822
+  },
+  "villefranche-sur-saone": {
+    "lat": 45.9886,
+    "lng": 4.7167
+  },
+  "grenoble": {
+    "lat": 45.1885,
+    "lng": 5.7245
+  },
+  "saint-etienne": {
+    "lat": 45.4397,
+    "lng": 4.3872
+  },
+  "annecy": {
+    "lat": 45.8992,
+    "lng": 6.1294
+  },
+  "valence": {
+    "lat": 44.9334,
+    "lng": 4.8924
+  },
+  "chambery": {
+    "lat": 45.5646,
+    "lng": 5.9178
+  },
+  "clermont-ferrand": {
+    "lat": 45.7772,
+    "lng": 3.087
+  },
+  "bourgoin-jallieu": {
+    "lat": 45.5836,
+    "lng": 5.273
+  },
+  "vienne": {
+    "lat": 45.5253,
+    "lng": 4.8747
+  },
+  "roanne": {
+    "lat": 46.0367,
+    "lng": 4.0708
+  },
+  "aix-les-bains": {
+    "lat": 45.6886,
+    "lng": 5.9153
+  },
+  "montelimar": {
+    "lat": 44.5581,
+    "lng": 4.7502
+  },
+  "firminy": {
+    "lat": 45.3958,
+    "lng": 4.2939
+  },
+  "saint-priest": {
+    "lat": 45.6975,
+    "lng": 4.9414
+  },
+  "rillieux-la-pape": {
+    "lat": 45.8175,
+    "lng": 4.8981
+  },
+  "pusignan": {
+    "lat": 45.75,
+    "lng": 5.05
+  },
+  "vichy": {
+    "lat": 46.1247,
+    "lng": 3.4267
+  },
+  "puy": {
+    "lat": 45.0433,
+    "lng": 3.885
+  },
+  "montlucon": {
+    "lat": 46.34,
+    "lng": 2.6039
+  },
+  "moulins": {
+    "lat": 46.5658,
+    "lng": 3.335
+  },
+  "thiers": {
+    "lat": 45.8531,
+    "lng": 3.5464
+  },
+  "aurillac": {
+    "lat": 44.9289,
+    "lng": 2.4433
+  },
+  "chamalieres": {
+    "lat": 45.7728,
+    "lng": 3.0678
+  },
+  "cournon": {
+    "lat": 45.7503,
+    "lng": 3.1897
+  },
+  "issoire": {
+    "lat": 45.5461,
+    "lng": 3.2494
+  },
+  "brioude": {
+    "lat": 45.2947,
+    "lng": 3.3856
+  },
+  "ambert": {
+    "lat": 45.5486,
+    "lng": 3.7414
+  },
+  "riom": {
+    "lat": 45.8933,
+    "lng": 3.1136
+  },
+  "monistrol": {
+    "lat": 45.2947,
+    "lng": 4.1747
+  },
+  "vaulx": {
+    "lat": 45.7775,
+    "lng": 4.9106
+  },
+  "sallanches": {
+    "lat": 45.9433,
+    "lng": 6.6317
+  },
+  "cranves-sales": {
+    "lat": 46.1461,
+    "lng": 6.2364
+  },
+  "vinay": {
+    "lat": 45.2072,
+    "lng": 5.3958
+  },
+  "cognin": {
+    "lat": 45.5567,
+    "lng": 5.8853
+  },
+  "orcet": {
+    "lat": 45.6828,
+    "lng": 3.1614
+  },
+  "ydes": {
+    "lat": 45.3486,
+    "lng": 2.4325
+  },
+  "romagnat": {
+    "lat": 45.7328,
+    "lng": 3.1069
+  },
+  "orcines": {
+    "lat": 45.7911,
+    "lng": 3.0136
+  },
+  "veigy": {
+    "lat": 46.2833,
+    "lng": 6.2667
+  },
+  "royat": {
+    "lat": 45.7639,
+    "lng": 3.0508
+  },
+  "cebazat": {
+    "lat": 45.8244,
+    "lng": 3.125
+  },
+  "gennetines": {
+    "lat": 46.5308,
+    "lng": 3.4453
+  },
+  "souvigny": {
+    "lat": 46.5386,
+    "lng": 3.1958
+  },
+  "blavozy": {
+    "lat": 45.061179,
+    "lng": 3.971127
+  },
+  "villars": {
+    "lat": 45.465949,
+    "lng": 4.356583
+  },
+  "chavanay": {
+    "lat": 45.418811,
+    "lng": 4.724838
+  },
+  "saint-maurice-de-lignon": {
+    "lat": 45.226443,
+    "lng": 4.131893
+  },
+  "le-puy-en-velay": {
+    "lat": 45.031845,
+    "lng": 3.899669
+  },
+  "chassieu": {
+    "lat": 45.73584,
+    "lng": 4.958712
+  },
+  "crest": {
+    "lat": 44.730674,
+    "lng": 5.020155
+  },
+  "vallieres": {
+    "lat": 47.995643,
+    "lng": 4.058006
+  },
+  "gleize": {
+    "lat": 45.992645,
+    "lng": 4.685147
+  },
+  "bellignat": {
+    "lat": 46.243566,
+    "lng": 5.632359
+  },
+  "la-roche-sur-foron": {
+    "lat": 46.053131,
+    "lng": 6.296247
+  },
+  "craponne": {
+    "lat": 45.745346,
+    "lng": 4.730163
+  },
+  "trevoux": {
+    "lat": 45.942379,
+    "lng": 4.774112
+  },
+  "le-pouzin": {
+    "lat": 44.746835,
+    "lng": 4.751769
+  },
+  "seyssinet-pariset": {
+    "lat": 45.174023,
+    "lng": 5.679611
+  },
+  "jussac": {
+    "lat": 44.996574,
+    "lng": 2.424822
+  },
+  "ceyrat": {
+    "lat": 45.743989,
+    "lng": 3.063463
+  },
+  "beaumont": {
+    "lat": 45.751398,
+    "lng": 3.08607
+  },
+  "neuville-sur-saone": {
+    "lat": 45.878728,
+    "lng": 4.842213
+  },
+  "feurs": {
+    "lat": 45.737125,
+    "lng": 4.220145
+  },
+  "andrezieux-boutheon": {
+    "lat": 45.532152,
+    "lng": 4.28067
+  },
+  "saint-prix": {
+    "lat": 49.008493,
+    "lng": 2.266921
+  },
+  "chatel-guyon": {
+    "lat": 45.921997,
+    "lng": 3.060949
+  },
+  "lempdes": {
+    "lat": 45.771877,
+    "lng": 3.193029
+  },
+  "saint-peray": {
+    "lat": 44.937982,
+    "lng": 4.829871
+  },
+  "ucel": {
+    "lat": 44.6416,
+    "lng": 4.386687
+  },
+  "limonest": {
+    "lat": 45.825721,
+    "lng": 4.777125
+  },
+  "saint-symphorien-sur-coise": {
+    "lat": 45.634387,
+    "lng": 4.449903
+  },
+  "saint-just-saint-rambert": {
+    "lat": 45.494348,
+    "lng": 4.251132
+  },
+  "l-etrat": {
+    "lat": 45.495626,
+    "lng": 4.369721
+  },
+  "villefontaine": {
+    "lat": 45.610369,
+    "lng": 5.160021
+  },
+  "dommartin": {
+    "lat": 45.836748,
+    "lng": 4.71452
+  },
+  "annonay": {
+    "lat": 45.244927,
+    "lng": 4.651645
+  },
+  "mours-saint-eusebe": {
+    "lat": 45.069999,
+    "lng": 5.057139
+  },
+  "roussillon": {
+    "lat": 45.38015,
+    "lng": 4.817038
+  },
+  "saint-maurice-de-beynosaint": {
+    "lat": 45.830607,
+    "lng": 4.980507
+  },
+  "saint-martin-du-mont": {
+    "lat": 46.103199,
+    "lng": 5.323943
+  },
+  "saint-ismier": {
+    "lat": 45.249413,
+    "lng": 5.834546
+  },
+  "pont-de-cheruy": {
+    "lat": 45.751836,
+    "lng": 5.172676
+  },
+  "peronnas": {
+    "lat": 46.17596,
+    "lng": 5.207269
+  },
+  "septeme": {
+    "lat": 45.552535,
+    "lng": 4.986833
+  },
+  "cluses": {
+    "lat": 46.064209,
+    "lng": 6.575877
+  },
+  "saint-jean-de-soudain": {
+    "lat": 45.581835,
+    "lng": 5.435615
+  },
+  "moutiers-tarentaise": {
+    "lat": 45.370986,
+    "lng": 4.488311
+  },
+  "echirolles": {
+    "lat": 45.146125,
+    "lng": 5.715042
+  },
+  "seyssins": {
+    "lat": 45.15924,
+    "lng": 5.681955
+  },
+  "thonon-les-bains": {
+    "lat": 46.3759,
+    "lng": 6.478152
+  },
+  "communay": {
+    "lat": 45.597428,
+    "lng": 4.837694
+  },
+  "pont-du-chateau": {
+    "lat": 45.797567,
+    "lng": 3.24335
+  },
+  "varennes-sur-allier": {
+    "lat": 46.319418,
+    "lng": 3.40578
+  },
+  "saint-genes-champanelle": {
+    "lat": 45.720307,
+    "lng": 3.005606
+  },
+  "ytrac": {
+    "lat": 44.911261,
+    "lng": 2.362896
+  },
+  "volvic": {
+    "lat": 45.863245,
+    "lng": 3.023059
+  },
+  "saint-germain-des-fosses": {
+    "lat": 46.197819,
+    "lng": 3.433222
+  },
+  "quinssaines": {
+    "lat": 46.325271,
+    "lng": 2.505256
+  },
+  "domerat": {
+    "lat": 46.370151,
+    "lng": 2.549263
+  },
+  "vertaizon": {
+    "lat": 45.776746,
+    "lng": 3.290774
+  },
+  "vorey": {
+    "lat": 45.193122,
+    "lng": 3.91346
+  },
+  "vic-le-comte": {
+    "lat": 45.649784,
+    "lng": 3.239002
+  },
+  "commentry": {
+    "lat": 46.274736,
+    "lng": 2.749455
+  },
+  "charbonnieres-les-varennes": {
+    "lat": 45.896099,
+    "lng": 2.987368
+  },
+  "bourbon-l-archambault": {
+    "lat": 46.580561,
+    "lng": 3.059294
+  },
+  "montbrison": {
+    "lat": 45.604225,
+    "lng": 4.069547
+  },
+  "veauche": {
+    "lat": 45.561486,
+    "lng": 4.290024
+  },
+  "la-seauve-sur-semene": {
+    "lat": 45.300318,
+    "lng": 4.246514
+  },
+  "haute-rivoire": {
+    "lat": 45.714708,
+    "lng": 4.405338
+  },
+  "langogne": {
+    "lat": 44.722205,
+    "lng": 3.836524
+  },
+  "grammond": {
+    "lat": 45.57328,
+    "lng": 4.443326
+  },
+  "l-arbresle": {
+    "lat": 45.834532,
+    "lng": 4.610769
+  },
+  "le-chambon-feugerolles": {
+    "lat": 45.389791,
+    "lng": 4.331899
+  },
+  "le-chambon-sur-lignon": {
+    "lat": 45.054499,
+    "lng": 4.329501
+  },
+  "sainte-sigolene": {
+    "lat": 45.24894,
+    "lng": 4.230086
+  },
+  "amplepuis": {
+    "lat": 45.964365,
+    "lng": 4.325054
+  },
+  "malafretaz": {
+    "lat": 46.324302,
+    "lng": 5.146197
+  },
+  "colombier-saugnieu": {
+    "lat": 45.721639,
+    "lng": 5.103058
+  },
+  "vourles": {
+    "lat": 45.66035,
+    "lng": 4.770125
+  },
+  "pontcharra-sur-turdine": {
+    "lat": 45.419286,
+    "lng": 6.016275
+  },
+  "saint-donat-sur-l-herbasse": {
+    "lat": 45.129256,
+    "lng": 4.985693
+  },
+  "saint-paul-en-jarez": {
+    "lat": 45.475457,
+    "lng": 4.579302
+  },
+  "saint-christo-en-jarez": {
+    "lat": 45.534249,
+    "lng": 4.471178
+  },
+  "hostun": {
+    "lat": 45.038014,
+    "lng": 5.194369
+  },
+  "feillens": {
+    "lat": 46.333617,
+    "lng": 4.894277
+  },
+  "davezieux": {
+    "lat": 45.254704,
+    "lng": 4.697818
+  },
+  "saint-andre-d-huiriat": {
+    "lat": 46.220736,
+    "lng": 4.917441
+  },
+  "boen": {
+    "lat": 45.748065,
+    "lng": 4.004425
+  },
+  "la-talaudiere": {
+    "lat": 45.477646,
+    "lng": 4.429392
+  },
+  "guereins": {
+    "lat": 46.103469,
+    "lng": 4.776736
+  },
+  "saint-just-d-ardeche": {
+    "lat": 44.296538,
+    "lng": 4.610618
+  },
+  "givors": {
+    "lat": 45.582983,
+    "lng": 4.756279
+  },
+  "marcy-l-etoile": {
+    "lat": 45.783483,
+    "lng": 4.712176
+  },
+  "gieres": {
+    "lat": 45.184369,
+    "lng": 5.790485
+  },
+  "marboz": {
+    "lat": 46.342594,
+    "lng": 5.24763
+  },
+  "chaponnay": {
+    "lat": 45.62714,
+    "lng": 4.956839
+  },
+  "eybens": {
+    "lat": 45.153612,
+    "lng": 5.749583
+  },
+  "viriat": {
+    "lat": 46.248528,
+    "lng": 5.227107
+  },
+  "villargondran": {
+    "lat": 45.258784,
+    "lng": 6.380735
+  },
+  "meylan": {
+    "lat": 45.215013,
+    "lng": 5.780514
+  },
+  "pringy": {
+    "lat": 48.523396,
+    "lng": 2.556399
+  },
+  "chatillon-sur-chalaronne": {
+    "lat": 46.128374,
+    "lng": 4.95847
+  },
+  "douvaine": {
+    "lat": 46.308639,
+    "lng": 6.29984
+  },
+  "saint-martin-en-haut": {
+    "lat": 45.650211,
+    "lng": 4.55455
+  },
+  "lagnieu": {
+    "lat": 45.891231,
+    "lng": 5.334017
+  },
+  "drumettaz-clarafond": {
+    "lat": 45.660293,
+    "lng": 5.925472
+  },
+  "vetraz-monthoux": {
+    "lat": 46.179679,
+    "lng": 6.259177
+  },
+  "chilly": {
+    "lat": 45.988866,
+    "lng": 5.954891
+  },
+  "genas": {
+    "lat": 45.729595,
+    "lng": 5.001369
+  },
+  "charvieu-chavagneux": {
+    "lat": 45.741246,
+    "lng": 5.152273
+  },
+  "la-boisse": {
+    "lat": 45.842973,
+    "lng": 5.039535
+  },
+  "montagnole": {
+    "lat": 45.531802,
+    "lng": 5.912479
+  },
+  "marignier": {
+    "lat": 46.097489,
+    "lng": 6.495849
+  },
+  "poisy": {
+    "lat": 45.920735,
+    "lng": 6.066135
+  },
+  "valserhone": {
+    "lat": 46.127964,
+    "lng": 5.803809
+  },
+  "mercury": {
+    "lat": 45.679218,
+    "lng": 6.342905
+  },
+  "saint-pierre-de-belleville": {
+    "lat": 45.46888,
+    "lng": 6.281232
+  },
+  "domarin": {
+    "lat": 45.58646,
+    "lng": 5.250965
+  },
+  "entrelacs": {
+    "lat": 45.778542,
+    "lng": 5.924669
+  },
+  "divonne-les-bains": {
+    "lat": 46.362372,
+    "lng": 6.13642
+  }
 }

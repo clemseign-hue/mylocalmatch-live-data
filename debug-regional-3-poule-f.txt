@@ -157,7 +157,7 @@ LinkedIn
 		
 
 SENIORS REGIONAL 3Phase UNIQUE Poule POULE A  POULE B  POULE C  POULE D  POULE E  POULE F  POULE G  POULE H  POULE I  POULE J RésultatsAgendaClassementCalendrierRésultatsAgendaClassementCalendrierJournée 1samedi 05 septembre 2026 - 19H00ST E.COTE CHAUDE   - GUEREINS  dimanche 06 septembre 2026 - 12H15GRAND OUEST LYON  3 - MISERIEUX TREVOUX  2 dimanche 06 septembre 2026 - 15H00LYON LA DUCHERE  2 - U.S. ST JUST ST MARC  dimanche 06 septembre 2026 - 15H00DAVEZIEUX VIDALON   - FC LYON FOOTBALL  dimanche 06 septembre 2026 - 15H00FC VEYLE SAONE   - SO. LA TALAUDIERE F.  dimanche 06 septembre 2026 - 15H00LIGNON FC   - J.ST.O. GIVORS  Journée 2dimanche 20 septembre 2026 - 15H00FC LYON FOOTBALL   - MISERIEUX TREVOUX  2 dimanche 20 septembre 2026 - 15H00SO. LA TALAUDIERE F.   - DAVEZIEUX VIDALON  dimanche 20 septembre 2026 - 15H00GUEREINS   - FC VEYLE SAONE  dimanche 20 septembre 2026 - 15H00U.S. ST JUST ST MARC   - ST E.COTE CHAUDE  dimanche 20 septembre 2026 - 15H00J.ST.O. GIVORS   - LYON LA DUCHERE  2 dimanche 20 septembre 2026 - 15H00LIGNON FC   - GRAND OUEST LYON  3 Journée 3samedi 03 octobre 2026 - 19H00ST E.COTE CHAUDE   - J.ST.O. GIVORS  dimanche 04 octobre 2026 - 12H15GRAND OUEST LYON  3 - FC LYON FOOTBALL  dimanche 04 octobre 2026 - 15H00MISERIEUX TREVOUX  2 - SO. LA TALAUDIERE F.  dimanche 04 octobre 2026 - 15H00DAVEZIEUX VIDALON   - GUEREINS  dimanche 04 octobre 2026 - 15H00FC VEYLE SAONE   - U.S. ST JUST ST MARC  dimanche 04 octobre 2026 - 15H00LYON LA DUCHERE  2 - LIGNON FC  Journée 4dimanche 18 octobre 2026 - 15H00GUEREINS   - MISERIEUX TREVOUX  2 dimanche 18 octobre 2026 - 15H00SO. LA TALAUDIERE F.   - FC LYON FOOTBALL  dimanche 18 octobre 2026 - 15H00U.S. ST JUST ST MARC   - DAVEZIEUX VIDALON  dimanche 18 octobre 2026 - 15H00J.ST.O. GIVORS   - FC VEYLE SAONE  dimanche 18 octobre 2026 - 15H00LIGNON FC   - ST E.COTE CHAUDE  dimanche 18 octobre 2026 - 15H00LYON LA DUCHERE  2 - GRAND OUEST LYON  3 Journée 5samedi 24 octobre 2026 - 19H00ST E.COTE CHAUDE   - LYON LA DUCHERE  2 dimanche 25 octobre 2026 - 12H15GRAND OUEST LYON  3 - SO. LA TALAUDIERE F.  dimanche 25 octobre 2026 - 15H00FC VEYLE SAONE   - LIGNON FC  dimanche 25 octobre 2026 - 15H00FC LYON FOOTBALL   - GUEREINS  dimanche 25 octobre 2026 - 15H00MISERIEUX TREVOUX  2 - U.S. ST JUST ST MARC  dimanche 25 octobre 2026 - 15H00DAVEZIEUX VIDALON   - J.ST.O. GIVORS   Sidebar
-SidebarSidebarfffNos partenairesPrevious
+SidebarfffNos partenairesPrevious
             
 
             
@@ -248,7 +248,7 @@ SidebarSidebarfffNos partenairesPrevious
 
 
     
-	
+	Sidebar
 
 		        
             Compétitions

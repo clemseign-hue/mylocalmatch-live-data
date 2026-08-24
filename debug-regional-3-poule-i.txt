@@ -157,7 +157,7 @@ LinkedIn
 		
 
 SENIORS REGIONAL 3Phase UNIQUE Poule POULE A  POULE B  POULE C  POULE D  POULE E  POULE F  POULE G  POULE H  POULE I  POULE J RésultatsAgendaClassementCalendrierRésultatsAgendaClassementCalendrierJournée 1samedi 05 septembre 2026 - 19H00ECHIROLLES FC  2 - F.C. COTIERE LUENAZ  samedi 05 septembre 2026 - 19H00C.S. LAGNIEU   - ENT. VAL D HYERES  samedi 05 septembre 2026 - 19H30O. VILLEFONTAINE  2 - CHARVIEU CHAV. FC  samedi 05 septembre 2026 - 19H30E.S. DRUMETTAZ MOUXY   - O. DE BELLEROCHE  samedi 05 septembre 2026 - 20H00ANNEMASSE AMB. GAIL.   - MARIGNIER SP.  dimanche 06 septembre 2026 - 15H00CHILLY E.S.   - EV.S. GENAS AZIEU  Journée 2samedi 19 septembre 2026 - 18H00EV.S. GENAS AZIEU   - O. VILLEFONTAINE  2 samedi 19 septembre 2026 - 19H00O. DE BELLEROCHE   - MARIGNIER SP.  dimanche 20 septembre 2026 - 15H00CHILLY E.S.   - ANNEMASSE AMB. GAIL.  dimanche 20 septembre 2026 - 15H00CHARVIEU CHAV. FC   - ECHIROLLES FC  2 dimanche 20 septembre 2026 - 15H00F.C. COTIERE LUENAZ   - C.S. LAGNIEU  dimanche 20 septembre 2026 - 15H00ENT. VAL D HYERES   - E.S. DRUMETTAZ MOUXY  Journée 3samedi 03 octobre 2026 - 19H00ECHIROLLES FC  2 - EV.S. GENAS AZIEU  samedi 03 octobre 2026 - 19H00C.S. LAGNIEU   - CHARVIEU CHAV. FC  samedi 03 octobre 2026 - 19H30E.S. DRUMETTAZ MOUXY   - F.C. COTIERE LUENAZ  samedi 03 octobre 2026 - 19H30O. VILLEFONTAINE  2 - CHILLY E.S.  samedi 03 octobre 2026 - 20H00ANNEMASSE AMB. GAIL.   - O. DE BELLEROCHE  dimanche 04 octobre 2026 - 15H00MARIGNIER SP.   - ENT. VAL D HYERES  Journée 4samedi 17 octobre 2026 - 18H00EV.S. GENAS AZIEU   - C.S. LAGNIEU  samedi 17 octobre 2026 - 19H30O. VILLEFONTAINE  2 - ANNEMASSE AMB. GAIL.  dimanche 18 octobre 2026 - 15H00CHARVIEU CHAV. FC   - E.S. DRUMETTAZ MOUXY  dimanche 18 octobre 2026 - 15H00ENT. VAL D HYERES   - O. DE BELLEROCHE  dimanche 18 octobre 2026 - 15H00F.C. COTIERE LUENAZ   - MARIGNIER SP.  dimanche 18 octobre 2026 - 15H00CHILLY E.S.   - ECHIROLLES FC  2 Journée 5samedi 24 octobre 2026 - 19H00ECHIROLLES FC  2 - O. VILLEFONTAINE  2 samedi 24 octobre 2026 - 19H00C.S. LAGNIEU   - CHILLY E.S.  samedi 24 octobre 2026 - 19H00O. DE BELLEROCHE   - F.C. COTIERE LUENAZ  samedi 24 octobre 2026 - 19H30E.S. DRUMETTAZ MOUXY   - EV.S. GENAS AZIEU  samedi 24 octobre 2026 - 20H00ANNEMASSE AMB. GAIL.   - ENT. VAL D HYERES  dimanche 25 octobre 2026 - 15H00MARIGNIER SP.   - CHARVIEU CHAV. FC   Sidebar
-SidebarfffNos partenairesPrevious
+SidebarSidebarfffNos partenairesPrevious
             
 
             
@@ -248,7 +248,7 @@ SidebarfffNos partenairesPrevious
 
 
     
-	Sidebar
+	
 
 		        
             Compétitions
