@@ -18,7 +18,9 @@ const cheerio = require('cheerio');
 
 const DATA_DIR = __dirname;
 const COMMUNES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'communes-laura.json'), 'utf-8'));
+const CLUBS_VILLES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'clubs-villes.json'), 'utf-8'));
 const API_KEY = process.env.SCRAPER_API_KEY;
+let communesDirty = false; // true si de nouvelles coordonnées ont été résolues durant ce passage
 
 const COMPETITIONS = [
   { name: 'Régional 1 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch' },
@@ -51,7 +53,22 @@ function slugify(str) {
 
 const CLUB_PREFIXES = /^(U\.?S\.?|A\.?S\.?|F\.?C\.?|E\.?S\.?|S\.?C\.?|R\.?C\.?|S\.?P\.?|A\.?S\.?C\.?|A\.?M\.?S?\.?|C\.?S\.?|J\.?S\.?|A\.?C\.?|U\.?O\.?|ENT\.?|ENTENTE)\s+/i;
 
-function geocode(cityName) {
+async function geocodeViaBAN(cityName) {
+  try {
+    const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(cityName)}&type=municipality&limit=1`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const feature = json.features && json.features[0];
+    if (!feature) return null;
+    const [lng, lat] = feature.geometry.coordinates;
+    return { lat, lng };
+  } catch {
+    return null;
+  }
+}
+
+async function geocode(cityName) {
   if (!cityName) return null;
   const candidates = [cityName];
   const stripped = cityName.replace(/\s+\d+\s*$/, '').trim();
@@ -62,6 +79,19 @@ function geocode(cityName) {
   for (const c of candidates) {
     const key = slugify(c);
     if (COMMUNES[key]) return { ...COMMUNES[key], approx: false };
+  }
+
+  const clubKey = slugify(stripped);
+  const villeManuelle = CLUBS_VILLES[clubKey];
+  if (villeManuelle) {
+    const villeKey = slugify(villeManuelle);
+    if (COMMUNES[villeKey]) return { ...COMMUNES[villeKey], approx: false };
+    const resolved = await geocodeViaBAN(villeManuelle);
+    if (resolved) {
+      COMMUNES[villeKey] = resolved;
+      communesDirty = true;
+      return { ...resolved, approx: false };
+    }
   }
   return null;
 }
@@ -125,9 +155,10 @@ async function scrapeCompetition(comp) {
   fs.writeFileSync(path.join(DATA_DIR, `debug-${slugify(comp.name)}.txt`), text);
 
   const parsed = parseSchedule(text);
-  const events = parsed.map(p => {
-    const geo = geocode(p.home) || geocode(comp.name);
-    return {
+  const events = [];
+  for (const p of parsed) {
+    const geo = (await geocode(p.home)) || (await geocode(comp.name));
+    events.push({
       sport: comp.sport,
       competition: comp.name,
       home: p.home,
@@ -139,8 +170,8 @@ async function scrapeCompetition(comp) {
       geocoded: !!geo,
       real: true,
       source: 'LAuRAFoot — ' + comp.name,
-    };
-  });
+    });
+  }
 
   return { events, parsedCount: events.length, textLength: text.length };
 }
@@ -170,6 +201,12 @@ async function main() {
   };
 
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
+
+  if (communesDirty) {
+    fs.writeFileSync(path.join(DATA_DIR, 'communes-laura.json'), JSON.stringify(COMMUNES, null, 2));
+    console.log('communes-laura.json mis à jour avec les nouvelles villes résolues.');
+  }
+
   console.log(`\nTerminé : ${allEvents.length} match(s) extrait(s) au total.`);
   console.log('Voir debug-*.txt pour vérifier/ajuster la reconnaissance si le nombre semble bas.');
 }
