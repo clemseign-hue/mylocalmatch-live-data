@@ -118,6 +118,13 @@ function bodyText(html) {
   return $('body').text();
 }
 
+// Nettoie un nom d'équipe des scories du site : un score de tirs au but
+// ("TAB 5 - 4") se glisse parfois juste avant le nom de l'équipe visiteuse
+// sur les matchs de coupe qui sont allés aux tirs au but.
+function cleanTeamName(name) {
+  return name.replace(/^TAB\s*\d+\s*-\s*\d+\s*/i, '').trim();
+}
+
 function parseSchedule(text) {
   const matches = [...text.matchAll(DATE_RE)];
   const events = [];
@@ -133,8 +140,8 @@ function parseSchedule(text) {
     const sep = chunk.search(SEP_RE);
     if (sep === -1) continue;
     const sepMatch = chunk.slice(sep).match(SEP_RE);
-    const home = chunk.slice(0, sep + 1).trim();
-    const away = chunk.slice(sep + sepMatch[0].length).trim();
+    const home = cleanTeamName(chunk.slice(0, sep + 1).trim());
+    const away = cleanTeamName(chunk.slice(sep + sepMatch[0].length).trim());
     if (!home || !away) continue;
 
     const month = MONTHS[m[3].toLowerCase()];
