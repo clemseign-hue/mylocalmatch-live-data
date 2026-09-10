@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T11:19:41.565Z",
+  "generatedAt": "2026-09-10T08:19:29.850Z",
   "sourceNote": "Extrait automatiquement depuis laurafoot.fff.fr via ScraperAPI. Coordonnées approximatives quand la ville n'a pas pu être identifiée.",
   "events": [],
   "report": [
@@ -73,7 +73,7 @@
     },
     {
       "competition": "Coupe de France - LAURA",
-      "error": "ScraperAPI HTTP 403 (après 1 tentative)"
+      "error": "ScraperAPI HTTP 429 (après 1 tentative)"
     }
   ]
 }
