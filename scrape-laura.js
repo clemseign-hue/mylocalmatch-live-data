@@ -5,12 +5,10 @@
 //
 // v2 — passe par ScraperAPI (scraperapi.com) au lieu d'un navigateur headless
 // classique : le site LAuRAFoot bloque les adresses réseau des serveurs GitHub
-// Actions (constaté en v1), quel que soit le déguisement du navigateur.
-// ScraperAPI fait transiter la requête par d'autres adresses et rend le
-// JavaScript côté serveur, on récupère directement le HTML final.
+// Actions, quel que soit le déguisement du navigateur. ScraperAPI fait transiter
+// la requête par d'autres adresses et rend le JavaScript côté serveur.
 //
-// Nécessite la variable d'environnement SCRAPER_API_KEY (voir README —
-// stockée comme "secret" GitHub, jamais en clair dans ce fichier).
+// Nécessite la variable d'environnement SCRAPER_API_KEY (secret GitHub).
 
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +18,7 @@ const DATA_DIR = __dirname;
 const COMMUNES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'communes-laura.json'), 'utf-8'));
 const CLUBS_VILLES = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'clubs-villes.json'), 'utf-8'));
 const API_KEY = process.env.SCRAPER_API_KEY;
-let communesDirty = false; // true si de nouvelles coordonnées ont été résolues durant ce passage
+let communesDirty = false;
 
 const COMPETITIONS = [
   { name: 'Régional 1 - Poule A', sport: 'football', url: 'https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch' },
@@ -118,9 +116,6 @@ function bodyText(html) {
   return $('body').text();
 }
 
-// Nettoie un nom d'équipe des scories du site : un score de tirs au but
-// ("TAB 5 - 4") se glisse parfois juste avant le nom de l'équipe visiteuse
-// sur les matchs de coupe qui sont allés aux tirs au but.
 function cleanTeamName(name) {
   return name.replace(/^TAB\s*\d+\s*-\s*\d+\s*/i, '').trim();
 }
@@ -177,6 +172,7 @@ async function scrapeCompetition(comp) {
       geocoded: !!geo,
       real: true,
       source: 'LAuRAFoot — ' + comp.name,
+      detailsUrl: comp.url,
     });
   }
 
