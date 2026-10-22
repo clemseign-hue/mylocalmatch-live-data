@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T11:47:22.456Z",
+  "generatedAt": "2026-10-22T13:25:52.145Z",
   "sourceNote": "Extrait automatiquement depuis laurafoot.fff.fr via ScraperAPI. Coordonnées approximatives quand la ville n'a pas pu être identifiée.",
   "events": [
     {
@@ -13,7 +13,8 @@
       "lng": 3.4267,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -26,7 +27,8 @@
       "lng": 3.971127,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -39,7 +41,8 @@
       "lng": 4.356583,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -52,7 +55,8 @@
       "lng": 4.724838,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -65,7 +69,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -78,7 +83,8 @@
       "lng": 4.131893,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -91,7 +97,8 @@
       "lng": 4.0708,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -104,7 +111,8 @@
       "lng": 3.899669,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -117,7 +125,8 @@
       "lng": 2.6039,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -130,7 +139,8 @@
       "lng": 2.4433,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -143,7 +153,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -156,7 +167,8 @@
       "lng": 3.5464,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -169,7 +181,8 @@
       "lng": 4.2939,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -182,7 +195,8 @@
       "lng": 3.971127,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -195,7 +209,8 @@
       "lng": 4.724838,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -208,7 +223,8 @@
       "lng": 4.1747,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -221,7 +237,8 @@
       "lng": 4.0708,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -234,7 +251,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -247,7 +265,8 @@
       "lng": 4.131893,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -260,7 +279,8 @@
       "lng": 4.356583,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -273,7 +293,8 @@
       "lng": 3.4267,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -286,7 +307,8 @@
       "lng": 3.5464,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -299,7 +321,8 @@
       "lng": 2.6039,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -312,7 +335,8 @@
       "lng": 4.0708,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -325,7 +349,8 @@
       "lng": 2.4433,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -338,7 +363,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -351,7 +377,8 @@
       "lng": 4.2939,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -364,7 +391,8 @@
       "lng": 3.971127,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -377,7 +405,8 @@
       "lng": 4.724838,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -390,7 +419,428 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 1 - Poule A"
+      "source": "LAuRAFoot — Régional 1 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=1&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CHASSIEU DECINES FC",
+      "away": "GRAND OUEST LYON  2",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 45.73584,
+      "lng": 4.958712,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "ENT. CREST AOUSTE",
+      "away": "MISERIEUX TREVOUX",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 44.730674,
+      "lng": 5.020155,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "RUMILLY VALLIERES  2",
+      "away": "CHAMBERY SAVOIE FOOT",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 47.995643,
+      "lng": 4.058006,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC VILLEFRANCHE B.  2",
+      "away": "SEYSSINET AC",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 45.992645,
+      "lng": 4.685147,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "OYONNAX PVFC",
+      "away": "O. VALENCE",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 46.243566,
+      "lng": 5.632359,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC DU FORON",
+      "away": "GRENOBLE FOOT 38  2",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 46.053131,
+      "lng": 6.296247,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CRAPONNE AS",
+      "away": "FC RHONE VALLEES",
+      "date": "2026-08-30",
+      "time": "15:00",
+      "lat": 45.745346,
+      "lng": 4.730163,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "MISERIEUX TREVOUX",
+      "away": "SEYSSINET AC",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 45.942379,
+      "lng": 4.774112,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "O. VALENCE",
+      "away": "FC DU FORON",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 44.9334,
+      "lng": 4.8924,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC RHONE VALLEES",
+      "away": "CHASSIEU DECINES FC",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 44.746835,
+      "lng": 4.751769,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CHAMBERY SAVOIE FOOT",
+      "away": "ENT. CREST AOUSTE",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 45.5646,
+      "lng": 5.9178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "GRENOBLE FOOT 38  2",
+      "away": "RUMILLY VALLIERES  2",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 45.1885,
+      "lng": 5.7245,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CRAPONNE AS",
+      "away": "FC VILLEFRANCHE B.  2",
+      "date": "2026-09-05",
+      "time": "20:00",
+      "lat": 45.745346,
+      "lng": 4.730163,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "GRAND OUEST LYON  2",
+      "away": "OYONNAX PVFC",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "ENT. CREST AOUSTE",
+      "away": "GRENOBLE FOOT 38  2",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 44.730674,
+      "lng": 5.020155,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC DU FORON",
+      "away": "GRAND OUEST LYON  2",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 46.053131,
+      "lng": 6.296247,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "OYONNAX PVFC",
+      "away": "FC RHONE VALLEES",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 46.243566,
+      "lng": 5.632359,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC VILLEFRANCHE B.  2",
+      "away": "MISERIEUX TREVOUX",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 45.992645,
+      "lng": 4.685147,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "SEYSSINET AC",
+      "away": "CHAMBERY SAVOIE FOOT",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 45.174023,
+      "lng": 5.679611,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CHASSIEU DECINES FC",
+      "away": "CRAPONNE AS",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 45.73584,
+      "lng": 4.958712,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "RUMILLY VALLIERES  2",
+      "away": "O. VALENCE",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 47.995643,
+      "lng": 4.058006,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC RHONE VALLEES",
+      "away": "FC DU FORON",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 44.746835,
+      "lng": 4.751769,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CRAPONNE AS",
+      "away": "OYONNAX PVFC",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 45.745346,
+      "lng": 4.730163,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "GRENOBLE FOOT 38  2",
+      "away": "SEYSSINET AC",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 45.1885,
+      "lng": 5.7245,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CHAMBERY SAVOIE FOOT",
+      "away": "MISERIEUX TREVOUX",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 45.5646,
+      "lng": 5.9178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "CHASSIEU DECINES FC",
+      "away": "FC VILLEFRANCHE B.  2",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 45.73584,
+      "lng": 4.958712,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "O. VALENCE",
+      "away": "ENT. CREST AOUSTE",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 44.9334,
+      "lng": 4.8924,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "GRAND OUEST LYON  2",
+      "away": "RUMILLY VALLIERES  2",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "ENT. CREST AOUSTE",
+      "away": "GRAND OUEST LYON  2",
+      "date": "2026-10-17",
+      "time": "18:00",
+      "lat": 44.730674,
+      "lng": 5.020155,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 1 - Poule B",
+      "home": "FC VILLEFRANCHE B.  2",
+      "away": "CHAMBERY SAVOIE FOOT",
+      "date": "2026-10-17",
+      "time": "19:00",
+      "lat": 45.992645,
+      "lng": 4.685147,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 1 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457860&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -403,7 +853,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -416,7 +867,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -429,7 +881,8 @@
       "lng": 3.3856,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -442,7 +895,8 @@
       "lng": 3.2494,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -455,7 +909,8 @@
       "lng": 3.7414,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -468,7 +923,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -481,7 +937,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -494,7 +951,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -507,7 +965,8 @@
       "lng": 3.971127,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -520,7 +979,8 @@
       "lng": 2.424822,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -533,7 +993,8 @@
       "lng": 3.063463,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -546,7 +1007,8 @@
       "lng": 3.7414,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -559,7 +1021,8 @@
       "lng": 3.2494,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -572,7 +1035,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -585,7 +1049,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -598,7 +1063,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -611,7 +1077,8 @@
       "lng": 3.3856,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -624,7 +1091,8 @@
       "lng": 3.0678,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -637,7 +1105,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -650,7 +1119,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -663,7 +1133,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -676,7 +1147,8 @@
       "lng": 3.063463,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -689,7 +1161,8 @@
       "lng": 3.7414,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -702,7 +1175,8 @@
       "lng": 3.971127,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -715,7 +1189,8 @@
       "lng": 2.424822,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -728,7 +1203,8 @@
       "lng": 3.0678,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -741,7 +1217,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -754,7 +1231,22 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 2 - Poule A",
+      "home": "ISSOIRE US",
+      "away": "AMBERT LIVRADOIS SUD",
+      "date": "2026-10-30",
+      "time": "20:30",
+      "lat": 45.5461,
+      "lng": 3.2494,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -767,20 +1259,8 @@
       "lng": 3.3856,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 2 - Poule A",
-      "home": "ISSOIRE US",
-      "away": "AMBERT LIVRADOIS SUD",
-      "date": "2026-10-31",
-      "time": "18:00",
-      "lat": 45.5461,
-      "lng": 3.2494,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule A"
+      "source": "LAuRAFoot — Régional 2 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -793,7 +1273,8 @@
       "lng": 3.1136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -806,7 +1287,8 @@
       "lng": 3.08607,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -819,7 +1301,8 @@
       "lng": 4.842213,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -832,7 +1315,8 @@
       "lng": 4.28067,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -845,7 +1329,8 @@
       "lng": 4.220145,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -858,7 +1343,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -871,7 +1357,8 @@
       "lng": 3.193029,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -884,7 +1371,8 @@
       "lng": 3.060949,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -897,7 +1385,8 @@
       "lng": 3.08607,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -910,7 +1399,8 @@
       "lng": 3.1897,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -923,7 +1413,8 @@
       "lng": 4.28067,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -936,7 +1427,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -949,7 +1441,8 @@
       "lng": 4.842213,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -962,7 +1455,8 @@
       "lng": 3.1136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -975,7 +1469,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -988,7 +1483,8 @@
       "lng": 4.28067,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1001,7 +1497,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1014,7 +1511,8 @@
       "lng": 4.220145,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1027,7 +1525,8 @@
       "lng": 3.1897,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1040,7 +1539,8 @@
       "lng": 3.060949,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1053,7 +1553,8 @@
       "lng": 3.08607,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1066,7 +1567,8 @@
       "lng": 2.266921,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1079,7 +1581,8 @@
       "lng": 4.28067,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1092,7 +1595,8 @@
       "lng": 3.193029,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1105,7 +1609,8 @@
       "lng": 4.842213,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1118,7 +1623,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1131,7 +1637,8 @@
       "lng": 4.220145,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1144,20 +1651,22 @@
       "lng": 3.1136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 2 - Poule B",
       "home": "MONTFERRAND A.S.",
       "away": "LEMPDES SP.",
-      "date": "2026-11-01",
-      "time": "15:00",
+      "date": "2026-10-31",
+      "time": "18:30",
       "lat": 45.7772,
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1170,7 +1679,8 @@
       "lng": 3.335,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule B"
+      "source": "LAuRAFoot — Régional 2 - Poule B",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=2&type=ch"
     },
     {
       "sport": "football",
@@ -1183,7 +1693,8 @@
       "lng": 4.8862,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1196,7 +1707,8 @@
       "lng": 4.829871,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1209,7 +1721,8 @@
       "lng": 4.386687,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1222,7 +1735,8 @@
       "lng": 4.251132,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1235,7 +1749,8 @@
       "lng": 4.777125,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1248,7 +1763,8 @@
       "lng": 4.449903,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1261,7 +1777,8 @@
       "lng": 4.829871,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1274,7 +1791,8 @@
       "lng": 5.7245,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1287,7 +1805,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1300,7 +1819,8 @@
       "lng": 4.369721,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1313,7 +1833,8 @@
       "lng": 4.71452,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1326,7 +1847,8 @@
       "lng": 5.273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1339,7 +1861,8 @@
       "lng": 4.651645,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1352,7 +1875,8 @@
       "lng": 4.8862,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1365,7 +1889,8 @@
       "lng": 4.386687,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1378,7 +1903,8 @@
       "lng": 4.777125,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1391,7 +1917,8 @@
       "lng": 4.251132,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1404,7 +1931,8 @@
       "lng": 4.449903,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1417,7 +1945,8 @@
       "lng": 4.386687,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1430,7 +1959,8 @@
       "lng": 4.829871,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1443,7 +1973,8 @@
       "lng": 4.369721,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1456,7 +1987,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1469,7 +2001,8 @@
       "lng": 4.71452,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1482,7 +2015,8 @@
       "lng": 5.7245,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1495,7 +2029,8 @@
       "lng": 4.8862,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1508,7 +2043,8 @@
       "lng": 4.651645,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1521,7 +2057,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1534,7 +2071,8 @@
       "lng": 4.251132,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1547,7 +2085,8 @@
       "lng": 4.449903,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1560,7 +2099,8 @@
       "lng": 4.777125,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule C"
+      "source": "LAuRAFoot — Régional 2 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -1573,7 +2113,8 @@
       "lng": 5.057139,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1586,7 +2127,8 @@
       "lng": 4.817038,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1599,7 +2141,8 @@
       "lng": 4.980507,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1612,7 +2155,8 @@
       "lng": 5.323943,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1625,7 +2169,8 @@
       "lng": 5.834546,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1638,7 +2183,8 @@
       "lng": 4.8924,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1651,7 +2197,8 @@
       "lng": 5.207269,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1664,7 +2211,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1677,7 +2225,8 @@
       "lng": 4.8357,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1690,7 +2239,8 @@
       "lng": 5.172676,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1703,7 +2253,8 @@
       "lng": 4.8924,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1716,7 +2267,8 @@
       "lng": 4.986833,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1729,7 +2281,8 @@
       "lng": 6.575877,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1742,7 +2295,8 @@
       "lng": 4.817038,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1755,7 +2309,8 @@
       "lng": 5.323943,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1768,7 +2323,8 @@
       "lng": 4.980507,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1781,7 +2337,8 @@
       "lng": 5.834546,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1794,7 +2351,8 @@
       "lng": 5.057139,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1807,7 +2365,8 @@
       "lng": 4.8924,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1820,7 +2379,8 @@
       "lng": 5.172676,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1833,7 +2393,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1846,7 +2407,8 @@
       "lng": 4.8357,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1859,7 +2421,8 @@
       "lng": 4.986833,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1872,7 +2435,8 @@
       "lng": 5.057139,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1885,7 +2449,8 @@
       "lng": 6.575877,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1898,7 +2463,8 @@
       "lng": 4.817038,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1911,7 +2477,8 @@
       "lng": 5.207269,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1924,20 +2491,8 @@
       "lng": 4.980507,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 2 - Poule D",
-      "home": "ENT. S. REVERMONT",
-      "away": "PONT DE CHERUY CHAV.",
-      "date": "2026-10-31",
-      "time": "18:00",
-      "lat": 46.103199,
-      "lng": 5.323943,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1950,7 +2505,22 @@
       "lng": 5.834546,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 2 - Poule D"
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 2 - Poule D",
+      "home": "ENT. S. REVERMONT",
+      "away": "PONT DE CHERUY CHAV.",
+      "date": "2026-11-01",
+      "time": "15:00",
+      "lat": 46.103199,
+      "lng": 5.323943,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 2 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457861&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -1963,7 +2533,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -1976,7 +2547,8 @@
       "lng": 3.1069,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -1989,7 +2561,8 @@
       "lng": 3.1897,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2002,7 +2575,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2015,7 +2589,8 @@
       "lng": 3.0678,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2028,7 +2603,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2041,7 +2617,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2054,7 +2631,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2067,7 +2645,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2080,7 +2659,8 @@
       "lng": 3.0136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2093,7 +2673,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2106,7 +2687,8 @@
       "lng": 3.0678,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2119,7 +2701,8 @@
       "lng": 3.1897,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2132,7 +2715,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2145,7 +2729,8 @@
       "lng": 3.1069,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2158,7 +2743,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2171,7 +2757,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2184,7 +2771,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2197,7 +2785,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2210,7 +2799,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2223,7 +2813,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2236,7 +2827,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2249,7 +2841,8 @@
       "lng": 3.0678,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2262,7 +2855,8 @@
       "lng": 3.0136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2275,7 +2869,8 @@
       "lng": 3.1897,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2288,7 +2883,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2301,7 +2897,8 @@
       "lng": 3.1069,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2314,7 +2911,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2327,7 +2925,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2340,397 +2939,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule A"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "C.S. PONT DU CHATEAU",
-      "away": "AS CLERMONT ST JACQU",
-      "date": "2026-09-05",
-      "time": "18:00",
-      "lat": 45.797567,
-      "lng": 3.24335,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ESP CEYRAT  2",
-      "away": "AM.S. BELBEXOISE",
-      "date": "2026-09-05",
-      "time": "18:00",
-      "lat": 45.743989,
-      "lng": 3.063463,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VALLEE DE L'AUTHRE  2",
-      "away": "ST GERMAIN FOSSES",
-      "date": "2026-09-05",
-      "time": "19:00",
-      "lat": 44.996574,
-      "lng": 2.424822,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VARENNES A.S.",
-      "away": "AM LAIQ QUINSSAINES",
-      "date": "2026-09-05",
-      "time": "19:00",
-      "lat": 46.319418,
-      "lng": 3.40578,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ST GENES CHAMPANELLE",
-      "away": "AURILLAC FC  2",
-      "date": "2026-09-06",
-      "time": "15:00",
-      "lat": 45.720307,
-      "lng": 3.005606,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "A.S. ESPINAT F.",
-      "away": "VOLVIC CS",
-      "date": "2026-09-06",
-      "time": "15:00",
-      "lat": 44.911261,
-      "lng": 2.362896,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "C.S. PONT DU CHATEAU",
-      "away": "ST GENES CHAMPANELLE",
-      "date": "2026-09-19",
-      "time": "18:00",
-      "lat": 45.797567,
-      "lng": 3.24335,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AM LAIQ QUINSSAINES",
-      "away": "AURILLAC FC  2",
-      "date": "2026-09-19",
-      "time": "19:00",
-      "lat": 46.325271,
-      "lng": 2.505256,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ST GERMAIN FOSSES",
-      "away": "A.S. ESPINAT F.",
-      "date": "2026-09-19",
-      "time": "19:00",
-      "lat": 46.197819,
-      "lng": 3.433222,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AS CLERMONT ST JACQU",
-      "away": "VALLEE DE L'AUTHRE  2",
-      "date": "2026-09-19",
-      "time": "19:00",
-      "lat": 45.7772,
-      "lng": 3.087,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AM.S. BELBEXOISE",
-      "away": "VARENNES A.S.",
-      "date": "2026-09-20",
-      "time": "15:00",
-      "lat": 44.9289,
-      "lng": 2.4433,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ESP CEYRAT  2",
-      "away": "VOLVIC CS",
-      "date": "2026-09-20",
-      "time": "15:00",
-      "lat": 45.743989,
-      "lng": 3.063463,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "A.S. ESPINAT F.",
-      "away": "AS CLERMONT ST JACQU",
-      "date": "2026-10-03",
-      "time": "17:00",
-      "lat": 44.911261,
-      "lng": 2.362896,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ESP CEYRAT  2",
-      "away": "ST GERMAIN FOSSES",
-      "date": "2026-10-03",
-      "time": "18:00",
-      "lat": 45.743989,
-      "lng": 3.063463,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VALLEE DE L'AUTHRE  2",
-      "away": "C.S. PONT DU CHATEAU",
-      "date": "2026-10-03",
-      "time": "18:00",
-      "lat": 44.996574,
-      "lng": 2.424822,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ST GENES CHAMPANELLE",
-      "away": "AM LAIQ QUINSSAINES",
-      "date": "2026-10-03",
-      "time": "19:00",
-      "lat": 45.720307,
-      "lng": 3.005606,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VARENNES A.S.",
-      "away": "VOLVIC CS",
-      "date": "2026-10-03",
-      "time": "19:00",
-      "lat": 46.319418,
-      "lng": 3.40578,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AURILLAC FC  2",
-      "away": "AM.S. BELBEXOISE",
-      "date": "2026-10-03",
-      "time": "20:00",
-      "lat": 44.9289,
-      "lng": 2.4433,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VOLVIC CS",
-      "away": "AURILLAC FC  2",
-      "date": "2026-10-17",
-      "time": "18:00",
-      "lat": 45.863245,
-      "lng": 3.023059,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AS CLERMONT ST JACQU",
-      "away": "ESP CEYRAT  2",
-      "date": "2026-10-17",
-      "time": "18:00",
-      "lat": 45.7772,
-      "lng": 3.087,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "C.S. PONT DU CHATEAU",
-      "away": "A.S. ESPINAT F.",
-      "date": "2026-10-17",
-      "time": "18:00",
-      "lat": 45.797567,
-      "lng": 3.24335,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ST GERMAIN FOSSES",
-      "away": "VARENNES A.S.",
-      "date": "2026-10-17",
-      "time": "19:00",
-      "lat": 46.197819,
-      "lng": 3.433222,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AM.S. BELBEXOISE",
-      "away": "AM LAIQ QUINSSAINES",
-      "date": "2026-10-18",
-      "time": "15:00",
-      "lat": 44.9289,
-      "lng": 2.4433,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VALLEE DE L'AUTHRE  2",
-      "away": "ST GENES CHAMPANELLE",
-      "date": "2026-10-18",
-      "time": "15:00",
-      "lat": 44.996574,
-      "lng": 2.424822,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ESP CEYRAT  2",
-      "away": "C.S. PONT DU CHATEAU",
-      "date": "2026-10-24",
-      "time": "18:00",
-      "lat": 45.743989,
-      "lng": 3.063463,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AURILLAC FC  2",
-      "away": "ST GERMAIN FOSSES",
-      "date": "2026-10-24",
-      "time": "18:00",
-      "lat": 44.9289,
-      "lng": 2.4433,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "A.S. ESPINAT F.",
-      "away": "VALLEE DE L'AUTHRE  2",
-      "date": "2026-10-24",
-      "time": "19:00",
-      "lat": 44.911261,
-      "lng": 2.362896,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "VARENNES A.S.",
-      "away": "AS CLERMONT ST JACQU",
-      "date": "2026-10-24",
-      "time": "19:00",
-      "lat": 46.319418,
-      "lng": 3.40578,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "ST GENES CHAMPANELLE",
-      "away": "AM.S. BELBEXOISE",
-      "date": "2026-10-24",
-      "time": "19:00",
-      "lat": 45.720307,
-      "lng": 3.005606,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
-    },
-    {
-      "sport": "football",
-      "competition": "Régional 3 - Poule B",
-      "home": "AM LAIQ QUINSSAINES",
-      "away": "VOLVIC CS",
-      "date": "2026-10-25",
-      "time": "15:00",
-      "lat": 46.325271,
-      "lng": 2.505256,
-      "geocoded": true,
-      "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule B"
+      "source": "LAuRAFoot — Régional 3 - Poule A",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=1&type=ch"
     },
     {
       "sport": "football",
@@ -2743,7 +2953,8 @@
       "lng": 2.549263,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2756,7 +2967,8 @@
       "lng": 3.290774,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2769,20 +2981,22 @@
       "lng": 2.6039,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 3 - Poule C",
-      "home": "EMBLAVEZ VOREY",
+      "home": "GÉNÉRATION EMBLAVEZ",
       "away": "BOURBON SP.",
       "date": "2026-09-06",
       "time": "15:00",
-      "lat": 45.193122,
-      "lng": 3.91346,
-      "geocoded": true,
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2795,7 +3009,8 @@
       "lng": 3.239002,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2808,7 +3023,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2821,7 +3037,8 @@
       "lng": 3.1136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2834,20 +3051,22 @@
       "lng": 2.749455,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 3 - Poule C",
       "home": "R.C. CHARBONNIERES L",
-      "away": "EMBLAVEZ VOREY",
+      "away": "GÉNÉRATION EMBLAVEZ",
       "date": "2026-09-19",
       "time": "19:00",
       "lat": 45.896099,
       "lng": 2.987368,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2860,7 +3079,8 @@
       "lng": 3.290774,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2873,7 +3093,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2886,7 +3107,8 @@
       "lng": 3.059294,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2899,7 +3121,8 @@
       "lng": 2.549263,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2912,7 +3135,8 @@
       "lng": 3.5464,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2925,7 +3149,8 @@
       "lng": 2.6039,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2938,20 +3163,22 @@
       "lng": 3.239002,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 3 - Poule C",
-      "home": "EMBLAVEZ VOREY",
+      "home": "GÉNÉRATION EMBLAVEZ",
       "away": "FC PUY DE MUR",
       "date": "2026-10-04",
       "time": "15:00",
-      "lat": 45.193122,
-      "lng": 3.91346,
-      "geocoded": true,
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2964,7 +3191,8 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2977,7 +3205,8 @@
       "lng": 3.1136,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -2990,7 +3219,8 @@
       "lng": 2.749455,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3003,7 +3233,8 @@
       "lng": 2.987368,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3016,7 +3247,8 @@
       "lng": 3.290774,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3029,20 +3261,22 @@
       "lng": 3.059294,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 3 - Poule C",
-      "home": "EMBLAVEZ VOREY",
+      "home": "GÉNÉRATION EMBLAVEZ",
       "away": "OUVOIMOJA CLERMONT",
       "date": "2026-10-18",
       "time": "15:00",
-      "lat": 45.193122,
-      "lng": 3.91346,
-      "geocoded": true,
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3055,7 +3289,8 @@
       "lng": 2.6039,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3068,7 +3303,8 @@
       "lng": 2.549263,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3081,7 +3317,8 @@
       "lng": 3.5464,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3094,7 +3331,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3107,20 +3345,22 @@
       "lng": 3.087,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
       "competition": "Régional 3 - Poule C",
       "home": "VIC LE COMTE U.S.",
-      "away": "EMBLAVEZ VOREY",
+      "away": "GÉNÉRATION EMBLAVEZ",
       "date": "2026-11-01",
       "time": "15:00",
       "lat": 45.649784,
       "lng": 3.239002,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule C"
+      "source": "LAuRAFoot — Régional 3 - Poule C",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=3&type=ch"
     },
     {
       "sport": "football",
@@ -3133,7 +3373,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3146,7 +3387,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3159,7 +3401,8 @@
       "lng": 4.290024,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3172,7 +3415,8 @@
       "lng": 4.246514,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3185,7 +3429,8 @@
       "lng": 4.405338,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3198,7 +3443,8 @@
       "lng": 3.836524,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3211,7 +3457,8 @@
       "lng": 4.443326,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3224,7 +3471,8 @@
       "lng": 4.610769,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3237,7 +3485,8 @@
       "lng": 3.836524,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3250,7 +3499,8 @@
       "lng": 4.331899,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3263,7 +3513,8 @@
       "lng": 4.329501,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3276,7 +3527,8 @@
       "lng": 4.230086,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3289,7 +3541,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3302,7 +3555,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3315,7 +3569,8 @@
       "lng": 4.290024,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3328,7 +3583,8 @@
       "lng": 4.246514,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3341,7 +3597,8 @@
       "lng": 4.405338,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3354,7 +3611,8 @@
       "lng": 4.325054,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3367,7 +3625,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3380,7 +3639,8 @@
       "lng": 4.331899,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3393,7 +3653,8 @@
       "lng": 3.836524,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3406,7 +3667,8 @@
       "lng": 4.610769,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3419,7 +3681,8 @@
       "lng": 4.329501,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3432,7 +3695,8 @@
       "lng": 4.230086,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3445,7 +3709,8 @@
       "lng": 4.069547,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3458,7 +3723,8 @@
       "lng": 4.443326,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3471,7 +3737,8 @@
       "lng": 4.246514,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3484,7 +3751,8 @@
       "lng": 4.325054,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3497,7 +3765,8 @@
       "lng": 4.405338,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
     },
     {
       "sport": "football",
@@ -3510,7 +3779,1674 @@
       "lng": 4.290024,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule D"
+      "source": "LAuRAFoot — Régional 3 - Poule D",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=4&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PLAINE TONIQUE",
+      "away": "ENT.S. ST CHRISTO MA",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 46.324302,
+      "lng": 5.146197,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "FC COLOMBIER-SATOLAS",
+      "away": "ROANNAIS FOOT 42  2",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 45.721639,
+      "lng": 5.103058,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PONTCHARRA ST L",
+      "away": "AIN SUD  2",
+      "date": "2026-09-05",
+      "time": "19:30",
+      "lat": 45.419286,
+      "lng": 6.016275,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "U.S. MILLERY VOURLES",
+      "away": "ESP. HOSTUN",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.66035,
+      "lng": 4.770125,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "AM.S. DONATIENNE",
+      "away": "US ECOTAY MOINGT",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.129256,
+      "lng": 4.985693,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. ST PAUL EN JARE",
+      "away": "U.S. FEILLENS",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.475457,
+      "lng": 4.579302,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PLAINE TONIQUE",
+      "away": "F.C. ST PAUL EN JARE",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 46.324302,
+      "lng": 5.146197,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ROANNAIS FOOT 42  2",
+      "away": "F.C. PONTCHARRA ST L",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 46.0367,
+      "lng": 4.0708,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "US ECOTAY MOINGT",
+      "away": "U.S. FEILLENS",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.604225,
+      "lng": 4.069547,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "AIN SUD  2",
+      "away": "U.S. MILLERY VOURLES",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.830607,
+      "lng": 4.980507,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ENT.S. ST CHRISTO MA",
+      "away": "FC COLOMBIER-SATOLAS",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.534249,
+      "lng": 4.471178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ESP. HOSTUN",
+      "away": "AM.S. DONATIENNE",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.038014,
+      "lng": 5.194369,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "FC COLOMBIER-SATOLAS",
+      "away": "F.C. PLAINE TONIQUE",
+      "date": "2026-10-03",
+      "time": "19:00",
+      "lat": 45.721639,
+      "lng": 5.103058,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "U.S. MILLERY VOURLES",
+      "away": "ROANNAIS FOOT 42  2",
+      "date": "2026-10-03",
+      "time": "19:30",
+      "lat": 45.66035,
+      "lng": 4.770125,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "AM.S. DONATIENNE",
+      "away": "AIN SUD  2",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.129256,
+      "lng": 4.985693,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "U.S. FEILLENS",
+      "away": "ESP. HOSTUN",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 46.333617,
+      "lng": 4.894277,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. ST PAUL EN JARE",
+      "away": "US ECOTAY MOINGT",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.475457,
+      "lng": 4.579302,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PONTCHARRA ST L",
+      "away": "ENT.S. ST CHRISTO MA",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.419286,
+      "lng": 6.016275,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PLAINE TONIQUE",
+      "away": "F.C. PONTCHARRA ST L",
+      "date": "2026-10-17",
+      "time": "18:00",
+      "lat": 46.324302,
+      "lng": 5.146197,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ROANNAIS FOOT 42  2",
+      "away": "AM.S. DONATIENNE",
+      "date": "2026-10-17",
+      "time": "19:00",
+      "lat": 46.0367,
+      "lng": 4.0708,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "FC COLOMBIER-SATOLAS",
+      "away": "F.C. ST PAUL EN JARE",
+      "date": "2026-10-17",
+      "time": "20:00",
+      "lat": 45.721639,
+      "lng": 5.103058,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ESP. HOSTUN",
+      "away": "US ECOTAY MOINGT",
+      "date": "2026-10-18",
+      "time": "14:30",
+      "lat": 45.038014,
+      "lng": 5.194369,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "ENT.S. ST CHRISTO MA",
+      "away": "U.S. MILLERY VOURLES",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.534249,
+      "lng": 4.471178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "AIN SUD  2",
+      "away": "U.S. FEILLENS",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.830607,
+      "lng": 4.980507,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "U.S. MILLERY VOURLES",
+      "away": "F.C. PLAINE TONIQUE",
+      "date": "2026-10-24",
+      "time": "19:30",
+      "lat": 45.66035,
+      "lng": 4.770125,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "US ECOTAY MOINGT",
+      "away": "AIN SUD  2",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.604225,
+      "lng": 4.069547,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "AM.S. DONATIENNE",
+      "away": "ENT.S. ST CHRISTO MA",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.129256,
+      "lng": 4.985693,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "U.S. FEILLENS",
+      "away": "ROANNAIS FOOT 42  2",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 46.333617,
+      "lng": 4.894277,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. PONTCHARRA ST L",
+      "away": "FC COLOMBIER-SATOLAS",
+      "date": "2026-11-01",
+      "time": "15:00",
+      "lat": 45.419286,
+      "lng": 6.016275,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule E",
+      "home": "F.C. ST PAUL EN JARE",
+      "away": "ESP. HOSTUN",
+      "date": "2026-11-01",
+      "time": "15:00",
+      "lat": 45.475457,
+      "lng": 4.579302,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule E",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=5&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "ST E.COTE CHAUDE",
+      "away": "GUEREINS",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 45.4397,
+      "lng": 4.3872,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "GRAND OUEST LYON  3",
+      "away": "MISERIEUX TREVOUX  2",
+      "date": "2026-09-06",
+      "time": "12:15",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "DAVEZIEUX VIDALON",
+      "away": "FC LYON FOOTBALL",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.254704,
+      "lng": 4.697818,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "FC VEYLE SAONE",
+      "away": "SO. LA TALAUDIERE F.",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 46.220736,
+      "lng": 4.917441,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "LIGNON FC",
+      "away": "J.ST.O. GIVORS",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.748065,
+      "lng": 4.004425,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "LYON LA DUCHERE  2",
+      "away": "U.S. ST JUST ST MARC",
+      "date": "2026-09-06",
+      "time": "15:30",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "FC LYON FOOTBALL",
+      "away": "MISERIEUX TREVOUX  2",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "SO. LA TALAUDIERE F.",
+      "away": "DAVEZIEUX VIDALON",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.477646,
+      "lng": 4.429392,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "GUEREINS",
+      "away": "FC VEYLE SAONE",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 46.103469,
+      "lng": 4.776736,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "U.S. ST JUST ST MARC",
+      "away": "ST E.COTE CHAUDE",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 44.296538,
+      "lng": 4.610618,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "J.ST.O. GIVORS",
+      "away": "LYON LA DUCHERE  2",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.582983,
+      "lng": 4.756279,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "LIGNON FC",
+      "away": "GRAND OUEST LYON  3",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.748065,
+      "lng": 4.004425,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "ST E.COTE CHAUDE",
+      "away": "J.ST.O. GIVORS",
+      "date": "2026-10-03",
+      "time": "19:00",
+      "lat": 45.4397,
+      "lng": 4.3872,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "GRAND OUEST LYON  3",
+      "away": "FC LYON FOOTBALL",
+      "date": "2026-10-04",
+      "time": "12:15",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "FC VEYLE SAONE",
+      "away": "U.S. ST JUST ST MARC",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 46.220736,
+      "lng": 4.917441,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "DAVEZIEUX VIDALON",
+      "away": "GUEREINS",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.254704,
+      "lng": 4.697818,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "LYON LA DUCHERE  2",
+      "away": "LIGNON FC",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "J.ST.O. GIVORS",
+      "away": "FC VEYLE SAONE",
+      "date": "2026-10-17",
+      "time": "20:00",
+      "lat": 45.582983,
+      "lng": 4.756279,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "SO. LA TALAUDIERE F.",
+      "away": "FC LYON FOOTBALL",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.477646,
+      "lng": 4.429392,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "U.S. ST JUST ST MARC",
+      "away": "DAVEZIEUX VIDALON",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 44.296538,
+      "lng": 4.610618,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "GUEREINS",
+      "away": "MISERIEUX TREVOUX  2",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 46.103469,
+      "lng": 4.776736,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "ST E.COTE CHAUDE",
+      "away": "LIGNON FC",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.4397,
+      "lng": 4.3872,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "LYON LA DUCHERE  2",
+      "away": "GRAND OUEST LYON  3",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "FC LYON FOOTBALL",
+      "away": "GUEREINS",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "MISERIEUX TREVOUX  2",
+      "away": "U.S. ST JUST ST MARC",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "lat": 45.942379,
+      "lng": 4.774112,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "ST E.COTE CHAUDE",
+      "away": "LYON LA DUCHERE  2",
+      "date": "2026-10-24",
+      "time": "19:00",
+      "lat": 45.4397,
+      "lng": 4.3872,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "FC VEYLE SAONE",
+      "away": "LIGNON FC",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 46.220736,
+      "lng": 4.917441,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "DAVEZIEUX VIDALON",
+      "away": "J.ST.O. GIVORS",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.254704,
+      "lng": 4.697818,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule F",
+      "home": "GRAND OUEST LYON  3",
+      "away": "SO. LA TALAUDIERE F.",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule F",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=6&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "FC MONTELIMAR",
+      "away": "ENT. CREST AOUSTE  2",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "lat": 44.5581,
+      "lng": 4.7502,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "OL. DE RILLIEUX",
+      "away": "CHAPONNAY MARENNES",
+      "date": "2026-09-05",
+      "time": "18:30",
+      "lat": 45.8175,
+      "lng": 4.8981,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "F.C. GERLAND LYON",
+      "away": "VAREZE FC",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "ESB FOOT MARBOZ",
+      "away": "GIERES US",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 46.342594,
+      "lng": 5.24763,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "USVO GRENOBLE",
+      "away": "BOURG SUD",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.1885,
+      "lng": 5.7245,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "EYBENS OC",
+      "away": "CS MEGINAND",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.153612,
+      "lng": 5.749583,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "ESB FOOT MARBOZ",
+      "away": "CS MEGINAND",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 46.342594,
+      "lng": 5.24763,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "EYBENS OC",
+      "away": "FC MONTELIMAR",
+      "date": "2026-09-19",
+      "time": "19:00",
+      "lat": 45.153612,
+      "lng": 5.749583,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "CHAPONNAY MARENNES",
+      "away": "BOURG SUD",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.62714,
+      "lng": 4.956839,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "VAREZE FC",
+      "away": "GIERES US",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "ENT. CREST AOUSTE  2",
+      "away": "OL. DE RILLIEUX",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 44.730674,
+      "lng": 5.020155,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "F.C. GERLAND LYON",
+      "away": "USVO GRENOBLE",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "FC MONTELIMAR",
+      "away": "ESB FOOT MARBOZ",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 44.5581,
+      "lng": 4.7502,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "CS MEGINAND",
+      "away": "VAREZE FC",
+      "date": "2026-10-03",
+      "time": "18:00",
+      "lat": 45.783483,
+      "lng": 4.712176,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "OL. DE RILLIEUX",
+      "away": "EYBENS OC",
+      "date": "2026-10-03",
+      "time": "18:30",
+      "lat": 45.8175,
+      "lng": 4.8981,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "USVO GRENOBLE",
+      "away": "CHAPONNAY MARENNES",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.1885,
+      "lng": 5.7245,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "GIERES US",
+      "away": "F.C. GERLAND LYON",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.184369,
+      "lng": 5.790485,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "BOURG SUD",
+      "away": "ENT. CREST AOUSTE  2",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "ESB FOOT MARBOZ",
+      "away": "OL. DE RILLIEUX",
+      "date": "2026-10-17",
+      "time": "18:00",
+      "lat": 46.342594,
+      "lng": 5.24763,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "EYBENS OC",
+      "away": "BOURG SUD",
+      "date": "2026-10-17",
+      "time": "19:00",
+      "lat": 45.153612,
+      "lng": 5.749583,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "F.C. GERLAND LYON",
+      "away": "CS MEGINAND",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "GIERES US",
+      "away": "USVO GRENOBLE",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 45.184369,
+      "lng": 5.790485,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "VAREZE FC",
+      "away": "FC MONTELIMAR",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "ENT. CREST AOUSTE  2",
+      "away": "CHAPONNAY MARENNES",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 44.730674,
+      "lng": 5.020155,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "CS MEGINAND",
+      "away": "GIERES US",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "lat": 45.783483,
+      "lng": 4.712176,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "FC MONTELIMAR",
+      "away": "F.C. GERLAND LYON",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "lat": 44.5581,
+      "lng": 4.7502,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "OL. DE RILLIEUX",
+      "away": "VAREZE FC",
+      "date": "2026-10-24",
+      "time": "18:30",
+      "lat": 45.8175,
+      "lng": 4.8981,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "CHAPONNAY MARENNES",
+      "away": "EYBENS OC",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.62714,
+      "lng": 4.956839,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "BOURG SUD",
+      "away": "ESB FOOT MARBOZ",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule G",
+      "home": "USVO GRENOBLE",
+      "away": "ENT. CREST AOUSTE  2",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.1885,
+      "lng": 5.7245,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule G",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=7&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "C.S. VIRIAT",
+      "away": "ET.S DOUVAINE-LOISIN",
+      "date": "2026-09-05",
+      "time": "18:30",
+      "lat": 46.248528,
+      "lng": 5.227107,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "FC DU FORON  2",
+      "away": "CRAPONNE AS  2",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 46.053131,
+      "lng": 6.296247,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "VILLARGONDRAN",
+      "away": "AS ST MARTIN EN HAUT",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 45.258784,
+      "lng": 6.380735,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "RACHAIS E.S.",
+      "away": "SEYSSINET AC  2",
+      "date": "2026-09-05",
+      "time": "19:00",
+      "lat": 45.215013,
+      "lng": 5.780514,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "PRINGY U.S.",
+      "away": "DOMBES BRESSE FC",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 48.523396,
+      "lng": 2.556399,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "CHAMBERY SAVOIE FOOT  2",
+      "away": "VILLENEUVE AJA",
+      "date": "2026-09-06",
+      "time": "15:00",
+      "lat": 45.5646,
+      "lng": 5.9178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "CRAPONNE AS  2",
+      "away": "CHAMBERY SAVOIE FOOT  2",
+      "date": "2026-09-19",
+      "time": "18:00",
+      "lat": 45.745346,
+      "lng": 4.730163,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "DOMBES BRESSE FC",
+      "away": "RACHAIS E.S.",
+      "date": "2026-09-19",
+      "time": "20:00",
+      "lat": 46.128374,
+      "lng": 4.95847,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "VILLENEUVE AJA",
+      "away": "C.S. VIRIAT",
+      "date": "2026-09-19",
+      "time": "20:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "FC DU FORON  2",
+      "away": "VILLARGONDRAN",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 46.053131,
+      "lng": 6.296247,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "ET.S DOUVAINE-LOISIN",
+      "away": "PRINGY U.S.",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 46.308639,
+      "lng": 6.29984,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "SEYSSINET AC  2",
+      "away": "AS ST MARTIN EN HAUT",
+      "date": "2026-09-20",
+      "time": "15:00",
+      "lat": 45.174023,
+      "lng": 5.679611,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "C.S. VIRIAT",
+      "away": "CRAPONNE AS  2",
+      "date": "2026-10-03",
+      "time": "18:30",
+      "lat": 46.248528,
+      "lng": 5.227107,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "RACHAIS E.S.",
+      "away": "ET.S DOUVAINE-LOISIN",
+      "date": "2026-10-03",
+      "time": "19:00",
+      "lat": 45.215013,
+      "lng": 5.780514,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "VILLARGONDRAN",
+      "away": "SEYSSINET AC  2",
+      "date": "2026-10-03",
+      "time": "19:00",
+      "lat": 45.258784,
+      "lng": 6.380735,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "AS ST MARTIN EN HAUT",
+      "away": "DOMBES BRESSE FC",
+      "date": "2026-10-03",
+      "time": "20:00",
+      "lat": 45.650211,
+      "lng": 4.55455,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "CHAMBERY SAVOIE FOOT  2",
+      "away": "FC DU FORON  2",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 45.5646,
+      "lng": 5.9178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "PRINGY U.S.",
+      "away": "VILLENEUVE AJA",
+      "date": "2026-10-04",
+      "time": "15:00",
+      "lat": 48.523396,
+      "lng": 2.556399,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "CRAPONNE AS  2",
+      "away": "PRINGY U.S.",
+      "date": "2026-10-17",
+      "time": "18:00",
+      "lat": 45.745346,
+      "lng": 4.730163,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "CHAMBERY SAVOIE FOOT  2",
+      "away": "VILLARGONDRAN",
+      "date": "2026-10-17",
+      "time": "18:00",
+      "lat": 45.5646,
+      "lng": 5.9178,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "VILLENEUVE AJA",
+      "away": "RACHAIS E.S.",
+      "date": "2026-10-17",
+      "time": "19:00",
+      "lat": null,
+      "lng": null,
+      "geocoded": false,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "DOMBES BRESSE FC",
+      "away": "SEYSSINET AC  2",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 46.128374,
+      "lng": 4.95847,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "FC DU FORON  2",
+      "away": "C.S. VIRIAT",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 46.053131,
+      "lng": 6.296247,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "ET.S DOUVAINE-LOISIN",
+      "away": "AS ST MARTIN EN HAUT",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "lat": 46.308639,
+      "lng": 6.29984,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "PRINGY U.S.",
+      "away": "FC DU FORON  2",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "lat": 48.523396,
+      "lng": 2.556399,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "C.S. VIRIAT",
+      "away": "CHAMBERY SAVOIE FOOT  2",
+      "date": "2026-10-24",
+      "time": "18:30",
+      "lat": 46.248528,
+      "lng": 5.227107,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "AS ST MARTIN EN HAUT",
+      "away": "VILLENEUVE AJA",
+      "date": "2026-10-24",
+      "time": "19:00",
+      "lat": 45.650211,
+      "lng": 4.55455,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "RACHAIS E.S.",
+      "away": "CRAPONNE AS  2",
+      "date": "2026-10-24",
+      "time": "19:00",
+      "lat": 45.215013,
+      "lng": 5.780514,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "VILLARGONDRAN",
+      "away": "DOMBES BRESSE FC",
+      "date": "2026-10-24",
+      "time": "19:00",
+      "lat": 45.258784,
+      "lng": 6.380735,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
+    },
+    {
+      "sport": "football",
+      "competition": "Régional 3 - Poule H",
+      "home": "SEYSSINET AC  2",
+      "away": "ET.S DOUVAINE-LOISIN",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "lat": 45.174023,
+      "lng": 5.679611,
+      "geocoded": true,
+      "real": true,
+      "source": "LAuRAFoot — Régional 3 - Poule H",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=8&type=ch"
     },
     {
       "sport": "football",
@@ -3523,7 +5459,8 @@
       "lng": 5.715042,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3536,7 +5473,8 @@
       "lng": 5.334017,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3549,7 +5487,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3562,7 +5501,8 @@
       "lng": 5.925472,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3575,7 +5515,8 @@
       "lng": 6.259177,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3588,7 +5529,8 @@
       "lng": 5.954891,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3601,7 +5543,8 @@
       "lng": 5.152273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3614,7 +5557,8 @@
       "lng": 5.001369,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3627,7 +5571,8 @@
       "lng": 4.685147,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3640,7 +5585,8 @@
       "lng": 5.954891,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3653,7 +5599,8 @@
       "lng": 5.039535,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3666,7 +5613,8 @@
       "lng": 5.912479,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3679,7 +5627,8 @@
       "lng": 5.715042,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3692,7 +5641,8 @@
       "lng": 5.334017,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3705,7 +5655,8 @@
       "lng": 5.925472,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3718,7 +5669,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3731,7 +5683,8 @@
       "lng": 6.495849,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3744,7 +5697,8 @@
       "lng": 6.259177,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3757,7 +5711,8 @@
       "lng": 5.001369,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3770,7 +5725,8 @@
       "lng": 5.160021,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3783,7 +5739,8 @@
       "lng": 5.152273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3796,7 +5753,8 @@
       "lng": 5.912479,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3809,7 +5767,8 @@
       "lng": 5.039535,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3822,7 +5781,8 @@
       "lng": 5.954891,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3835,7 +5795,8 @@
       "lng": 5.715042,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3848,7 +5809,8 @@
       "lng": 5.334017,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3861,7 +5823,8 @@
       "lng": 4.685147,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3874,7 +5837,8 @@
       "lng": 5.925472,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3887,7 +5851,8 @@
       "lng": 6.259177,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3900,7 +5865,8 @@
       "lng": 6.495849,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule I"
+      "source": "LAuRAFoot — Régional 3 - Poule I",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=9&type=ch"
     },
     {
       "sport": "football",
@@ -3913,7 +5879,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3926,7 +5893,8 @@
       "lng": 5.05,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3939,7 +5907,8 @@
       "lng": 6.066135,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3952,7 +5921,8 @@
       "lng": 5.803809,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3965,7 +5935,8 @@
       "lng": 6.342905,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3978,7 +5949,8 @@
       "lng": 5.273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -3991,7 +5963,8 @@
       "lng": 5.250965,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4004,7 +5977,8 @@
       "lng": 5.273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4017,7 +5991,8 @@
       "lng": 6.281232,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4030,7 +6005,8 @@
       "lng": 5.924669,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4043,7 +6019,8 @@
       "lng": 6.13642,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4056,7 +6033,8 @@
       "lng": 4.958712,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4069,7 +6047,8 @@
       "lng": 5.05,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4082,7 +6061,8 @@
       "lng": 5.803809,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4095,7 +6075,8 @@
       "lng": 6.066135,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4108,7 +6089,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4121,7 +6103,8 @@
       "lng": 6.342905,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4134,7 +6117,8 @@
       "lng": 4.058006,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4147,7 +6131,8 @@
       "lng": 5.250965,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4160,7 +6145,8 @@
       "lng": 6.281232,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4173,7 +6159,8 @@
       "lng": 6.13642,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4186,7 +6173,8 @@
       "lng": 4.958712,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4199,7 +6187,8 @@
       "lng": 5.273,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4212,7 +6201,8 @@
       "lng": 6.342905,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4225,7 +6215,8 @@
       "lng": 6.066135,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4238,7 +6229,8 @@
       "lng": 5.05,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4251,7 +6243,8 @@
       "lng": null,
       "geocoded": false,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4264,7 +6257,8 @@
       "lng": 5.803809,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4277,7 +6271,8 @@
       "lng": 4.058006,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     },
     {
       "sport": "football",
@@ -4290,97 +6285,100 @@
       "lng": 5.924669,
       "geocoded": true,
       "real": true,
-      "source": "LAuRAFoot — Régional 3 - Poule J"
+      "source": "LAuRAFoot — Régional 3 - Poule J",
+      "detailsUrl": "https://laurafoot.fff.fr/competitions?tab=calendar&id=457862&phase=1&poule=10&type=ch"
     }
   ],
   "report": [
     {
       "competition": "Régional 1 - Poule A",
       "parsedCount": 30,
-      "textLength": 31034
+      "textLength": 31130
     },
     {
       "competition": "Régional 1 - Poule B",
-      "parsedCount": 0,
-      "textLength": 27917
+      "parsedCount": 30,
+      "textLength": 31205
     },
     {
       "competition": "Régional 2 - Poule A",
       "parsedCount": 30,
-      "textLength": 30975
+      "textLength": 31073
     },
     {
       "competition": "Régional 2 - Poule B",
       "parsedCount": 30,
-      "textLength": 30966
+      "textLength": 31059
     },
     {
       "competition": "Régional 2 - Poule C",
       "parsedCount": 30,
-      "textLength": 31107
+      "textLength": 31203
     },
     {
       "competition": "Régional 2 - Poule D",
       "parsedCount": 30,
-      "textLength": 31032
+      "textLength": 31131
     },
     {
       "competition": "Régional 2 - Poule E",
       "parsedCount": 0,
-      "textLength": 27917
+      "textLength": 122
     },
     {
       "competition": "Régional 3 - Poule A",
       "parsedCount": 30,
-      "textLength": 31040
+      "textLength": 31136
     },
     {
       "competition": "Régional 3 - Poule B",
-      "parsedCount": 30,
-      "textLength": 31165
+      "parsedCount": 0,
+      "textLength": 28013
     },
     {
       "competition": "Régional 3 - Poule C",
       "parsedCount": 30,
-      "textLength": 31090
+      "textLength": 31216
     },
     {
       "competition": "Régional 3 - Poule D",
       "parsedCount": 30,
-      "textLength": 31107
+      "textLength": 31203
     },
     {
       "competition": "Régional 3 - Poule E",
-      "parsedCount": 0,
-      "textLength": 27917
+      "parsedCount": 30,
+      "textLength": 30925
     },
     {
       "competition": "Régional 3 - Poule F",
-      "parsedCount": 0,
-      "textLength": 27917
+      "parsedCount": 29,
+      "textLength": 31261
     },
     {
       "competition": "Régional 3 - Poule G",
-      "error": "ScraperAPI HTTP 500 (après 3 tentatives)"
+      "parsedCount": 30,
+      "textLength": 31072
     },
     {
       "competition": "Régional 3 - Poule H",
-      "parsedCount": 0,
-      "textLength": 27917
+      "parsedCount": 30,
+      "textLength": 31176
     },
     {
       "competition": "Régional 3 - Poule I",
       "parsedCount": 30,
-      "textLength": 31178
+      "textLength": 31274
     },
     {
       "competition": "Régional 3 - Poule J",
       "parsedCount": 30,
-      "textLength": 31104
+      "textLength": 31200
     },
     {
       "competition": "Coupe de France - LAURA",
-      "error": "ScraperAPI HTTP 500 (après 3 tentatives)"
+      "parsedCount": 0,
+      "textLength": 122
     }
   ]
 }
