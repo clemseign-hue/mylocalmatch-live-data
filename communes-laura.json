@@ -675,5 +675,193 @@
   "st-maurice-de-lignon": {
     "lat": 45.226443,
     "lng": 4.131893
+  },
+  "yzeure": {
+    "lat": 46.566478,
+    "lng": 3.360672
+  },
+  "monistrol-sur-loire": {
+    "lat": 45.292442,
+    "lng": 4.184792
+  },
+  "st-cyr-au-mont-d-or": {
+    "lat": 45.818702,
+    "lng": 4.821927
+  },
+  "st-flour": {
+    "lat": 45.02387,
+    "lng": 3.07272
+  },
+  "st-saturnin": {
+    "lat": 45.663267,
+    "lng": 3.089311
+  },
+  "brives-charensac": {
+    "lat": 45.044703,
+    "lng": 3.922298
+  },
+  "le-cendre": {
+    "lat": 45.720546,
+    "lng": 3.188048
+  },
+  "cournon-d-auvergne": {
+    "lat": 45.739285,
+    "lng": 3.18543
+  },
+  "st-prix": {
+    "lat": 46.230662,
+    "lng": 3.65235
+  },
+  "st-just-st-rambert": {
+    "lat": 45.494348,
+    "lng": 4.251132
+  },
+  "st-symphorien-sur-coise": {
+    "lat": 45.634387,
+    "lng": 4.449903
+  },
+  "st-peray": {
+    "lat": 44.937982,
+    "lng": 4.829871
+  },
+  "st-maurice-de-beynost": {
+    "lat": 45.830607,
+    "lng": 4.980507
+  },
+  "st-ismier": {
+    "lat": 45.249413,
+    "lng": 5.834546
+  },
+  "st-martin-du-mont": {
+    "lat": 46.103199,
+    "lng": 5.323943
+  },
+  "st-genis-laval": {
+    "lat": 45.695316,
+    "lng": 4.794065
+  },
+  "mours-st-eusebe": {
+    "lat": 45.069999,
+    "lng": 5.057139
+  },
+  "st-priest": {
+    "lat": 45.701894,
+    "lng": 4.94422
+  },
+  "annecy-le-vieux": {
+    "lat": 45.901584,
+    "lng": 6.125296
+  },
+  "vaulx-en-velin": {
+    "lat": 45.770799,
+    "lng": 4.923175
+  },
+  "st-clair-de-la-tour": {
+    "lat": 45.570754,
+    "lng": 5.486363
+  },
+  "st-jean-de-soudain": {
+    "lat": 45.581835,
+    "lng": 5.435615
+  },
+  "bezenet": {
+    "lat": 46.329371,
+    "lng": 2.846158
+  },
+  "sansac-de-marmiesse": {
+    "lat": 44.892746,
+    "lng": 2.347775
+  },
+  "mozac": {
+    "lat": 45.890609,
+    "lng": 3.085755
+  },
+  "billy": {
+    "lat": 46.227882,
+    "lng": 3.435948
+  },
+  "murat": {
+    "lat": 45.123661,
+    "lng": 2.857375
+  },
+  "lacapelle-del-fraisse": {
+    "lat": 44.770406,
+    "lng": 2.431078
+  },
+  "bellerive-sur-allier": {
+    "lat": 46.119968,
+    "lng": 3.405526
+  },
+  "le-rouget-pers": {
+    "lat": 44.882907,
+    "lng": 2.233149
+  },
+  "parlan": {
+    "lat": 44.822013,
+    "lng": 2.172065
+  },
+  "premilhat": {
+    "lat": 46.306924,
+    "lng": 2.551941
+  },
+  "st-genes-champanelle": {
+    "lat": 45.720307,
+    "lng": 3.005606
+  },
+  "st-germain-des-fosses": {
+    "lat": 46.197819,
+    "lng": 3.433222
+  },
+  "st-julien-chapteuil": {
+    "lat": 45.027726,
+    "lng": 4.078218
+  },
+  "chamboeuf": {
+    "lat": 45.576959,
+    "lng": 4.316931
+  },
+  "ste-sigolene": {
+    "lat": 45.24894,
+    "lng": 4.230086
+  },
+  "st-donat-sur-l-herbasse": {
+    "lat": 45.12842,
+    "lng": 4.982421
+  },
+  "st-christo-en-jarez": {
+    "lat": 45.534249,
+    "lng": 4.471178
+  },
+  "st-etienne": {
+    "lat": 45.430195,
+    "lng": 4.370045
+  },
+  "st-andre-d-huiriat": {
+    "lat": 46.220736,
+    "lng": 4.917441
+  },
+  "trelins": {
+    "lat": 45.726122,
+    "lng": 4.00767
+  },
+  "st-just-d-ardeche": {
+    "lat": 44.296538,
+    "lng": 4.610618
+  },
+  "bourg-en-bresse": {
+    "lat": 46.204893,
+    "lng": 5.241148
+  },
+  "cour-et-buis": {
+    "lat": 45.440861,
+    "lng": 5.007984
+  },
+  "st-martin-en-haut": {
+    "lat": 45.650211,
+    "lng": 4.55455
+  },
+  "st-pierre-de-belleville": {
+    "lat": 45.46888,
+    "lng": 6.281232
   }
 }
