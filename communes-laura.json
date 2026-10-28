@@ -671,5 +671,9 @@
   "st-paul-en-jarez": {
     "lat": 45.475457,
     "lng": 4.579302
+  },
+  "st-maurice-de-lignon": {
+    "lat": 45.226443,
+    "lng": 4.131893
   }
 }
