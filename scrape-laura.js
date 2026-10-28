@@ -210,7 +210,11 @@ const NOMINATIM = 'https://nominatim.openstreetmap.org/search';
 const SPORT_PLACE = /^(pitch|stadium|sports_centre|recreation_ground|track|sports_hall)$/;
 const RETRY_AFTER_DAYS = 30;
 const LOOKUP_VERSION = 2; // augmenter pour relancer la recherche des stades non trouvés
-const OVERPASS = 'https://overpass-api.de/api/interpreter';
+// Plusieurs serveurs Overpass : on passe au suivant si l'un est lent ou saturé.
+const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.private.coffee/api/interpreter', 'https://maps.mail.ru/osm/tools/overpass/api/interpreter'];
+const OVERPASS_BUDGET_MS = 12 * 60 * 1000; // au-delà, on garde la meilleure position déjà connue
+let startedAt = null; // démarre à la première recherche Overpass
+let overpassDown = 0;
 const GENERIC_WORDS = new Set(['stade', 'stades', 'complexe', 'sportif', 'sportive', 'sports', 'sport', 'municipal', 'municipale', 'terrain', 'terrains', 'parc', 'plaine', 'espace', 'synthetique', 'honneur', 'annexe', 'football', 'foot', 'des', 'du', 'de', 'la', 'le', 'les']);
 const nameTokens = n => slug(n).split('-').filter(w => w.length >= 4 && !GENERIC_WORDS.has(w) && !/^\d+$/.test(w));
 let lastNominatim = 0;
@@ -239,16 +243,18 @@ const distKm = (a, b) => {
 // Terrains de foot / stades recensés dans OpenStreetMap autour d'un point (API Overpass).
 async function pitchesAround(pos, radius) {
   const q = `[out:json][timeout:25];(nwr["leisure"~"^(pitch|stadium)$"]["sport"~"soccer|football|multi"](around:${radius},${pos.lat},${pos.lng});nwr["leisure"="stadium"](around:${radius},${pos.lat},${pos.lng}););out center tags 40;`;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  startedAt = startedAt || Date.now();
+  if (Date.now() - startedAt > OVERPASS_BUDGET_MS || overpassDown >= 8) return [];
+  for (const server of OVERPASS) {
     try {
-      await sleep(1000);
-      const r = await fetch(OVERPASS, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(40000) });
-      if (r.status === 429 || r.status >= 500) { await sleep(5000 * attempt); continue; }
-      if (!r.ok) return [];
+      const r = await fetch(server, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(15000) });
+      if (!r.ok) continue;
       const j = await r.json();
+      overpassDown = 0;
       return (j.elements || []).map(el => ({ lat: el.lat ?? el.center?.lat, lng: el.lon ?? el.center?.lon, name: (el.tags && el.tags.name) || '' })).filter(p => p.lat != null);
-    } catch { await sleep(3000); }
+    } catch { /* serveur suivant */ }
   }
+  overpassDown++; // après 8 échecs complets d'affilée, on n'insiste plus pour ce passage
   return [];
 }
 
@@ -303,7 +309,8 @@ async function locateVenue(v) {
     const near = await stadiumNear(v, result, result.precision);
     if (near) result = { lat: near.lat, lng: near.lng, precision: 'stade' };
   }
-  STADES[key] = { name: v.name, address: v.address, zip: v.zip, city: v.city, lat: result ? result.lat : null, lng: result ? result.lng : null, precision: result ? result.precision : null, v: LOOKUP_VERSION, checkedAt: new Date().toISOString() };
+  const complete = (!startedAt || Date.now() - startedAt <= OVERPASS_BUDGET_MS) && overpassDown < 8;
+  STADES[key] = { name: v.name, address: v.address, zip: v.zip, city: v.city, lat: result ? result.lat : null, lng: result ? result.lng : null, precision: result ? result.precision : null, v: complete ? LOOKUP_VERSION : 1, checkedAt: new Date().toISOString() };
   stadesDirty = true;
   return result;
 }
@@ -334,7 +341,11 @@ async function relocateOnly() {
     venues.set(id, { id, name: st.name, city: st.city, address: st.address ?? (m && m[1]) ?? '', zip: st.zip ?? (m && m[2]) ?? '' });
     e.stadeId = id;
   }
-  for (const v of venues.values()) await locateVenue(v);
+  let n = 0;
+  for (const v of venues.values()) {
+    await locateVenue(v);
+    if (++n % 20 === 0) console.log(`  … ${n}/${venues.size} stades`);
+  }
   let moved = 0;
   for (const e of data.events) {
     const st = e.stadeId && STADES[e.stadeId];
