@@ -37,10 +37,21 @@ const clean = s => (s || '').replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
 const pad = n => String(n).padStart(2, '0');
 
 // ---------- Source 1 : API FFF ----------
+// L'API FFF bloque aussi les serveurs GitHub : en cas de refus, on passe par ScraperAPI
+// sans rendu JavaScript (≈1 crédit par requête au lieu de ≈10).
+let dofaViaProxy = false;
 async function fetchJson(url) {
-  const res = await fetch(url, { headers: { Accept: 'application/json', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(20000) });
-  if (!res.ok) throw new Error(`API FFF HTTP ${res.status}`);
-  return res.json();
+  if (!dofaViaProxy) {
+    const res = await fetch(url, { headers: { Accept: 'application/json', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(20000) });
+    if (res.ok) return res.json();
+    if (!API_KEY || ![401, 403, 429].includes(res.status)) throw new Error(`API FFF HTTP ${res.status}`);
+    dofaViaProxy = true;
+  }
+  const api = `http://api.scraperapi.com/?api_key=${API_KEY}&url=${encodeURIComponent(url)}&keep_headers=true`;
+  const res = await fetch(api, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(60000) });
+  if (!res.ok) throw new Error(`API FFF via ScraperAPI HTTP ${res.status}`);
+  const text = await res.text();
+  try { return JSON.parse(text); } catch { throw new Error(`API FFF via ScraperAPI : réponse non JSON (${text.slice(0, 80)})`); }
 }
 
 const teamName = t => {
