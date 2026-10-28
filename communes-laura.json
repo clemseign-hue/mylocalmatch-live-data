@@ -588,10 +588,6 @@
     "lat": 45.215013,
     "lng": 5.780514
   },
-  "pringy": {
-    "lat": 48.523396,
-    "lng": 2.556399
-  },
   "chatillon-sur-chalaronne": {
     "lat": 46.128374,
     "lng": 4.95847
@@ -667,13 +663,5 @@
   "divonne-les-bains": {
     "lat": 46.362372,
     "lng": 6.13642
-  },
-  "vallieres": {
-    "lat": 47.995643,
-    "lng": 4.058006
-  },
-  "saint-prix": {
-    "lat": 49.008493,
-    "lng": 2.266921
   }
 }

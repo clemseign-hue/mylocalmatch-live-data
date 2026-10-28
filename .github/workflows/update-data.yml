@@ -1,36 +1,27 @@
 name: Mise à jour des données MyLocalMatch
-
 on:
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '0 6 * * 1'   # lundi, pour économiser les crédits ScraperAPI
   workflow_dispatch: {}
-
 permissions:
   contents: write
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Installer les dépendances
-        run: npm install cheerio
-
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: '22' }
+      - run: npm install --no-save cheerio
       - name: Lancer le robot d'extraction
         env:
           SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: node scrape-laura.js
-
       - name: Publier les données mises à jour
         run: |
           git config user.name "MyLocalMatch Bot"
           git config user.email "actions@github.com"
           git add events-amateur.json communes-laura.json
-          git add debug-*.txt debug-*.png 2>/dev/null || true
+          for f in debug-*.txt debug-*.json last-run-report.json; do [ -e "$f" ] && git add "$f"; done; true
           git diff --quiet --cached || git commit -m "Mise à jour automatique des données ($(date -u +%Y-%m-%d))"
           git push
