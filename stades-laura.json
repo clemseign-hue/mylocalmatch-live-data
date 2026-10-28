@@ -1,67 +1,91 @@
 {
   "10310101": {
     "name": "Complexe Sportif Gerard Goujon 1",
+    "address": "27 ROUTE D'IZERNORE",
+    "zip": "01100",
     "city": "BELLIGNAT",
     "lat": 46.240427,
     "lng": 5.621509,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:16.271Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:54:13.707Z"
   },
   "10490101": {
     "name": "STADE LES GRAVELLES 1",
+    "address": "264 route des Gravelles",
+    "zip": "01120",
     "city": "LA BOISSE",
     "lat": 45.841482,
     "lng": 5.044662,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:53.956Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:11.052Z"
   },
   "10530301": {
     "name": "STADE FLECHON",
+    "address": "836-1034 CHEMIN DE LA CHAGNE",
+    "zip": "01000",
     "city": "BOURG EN BRESSE",
     "lat": 46.20582,
     "lng": 5.269956,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:17.415Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:34.628Z"
   },
   "10910101": {
     "name": "COMPLEXE SPORTIF ÉTOURNELLES 1",
+    "address": "ROUTE DES ETOURNELLES",
+    "zip": "01200",
     "city": "VALSERHONE",
     "lat": 46.128171,
     "lng": 5.803078,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:20.096Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:57.438Z"
   },
   "10930201": {
     "name": "STADE DE L'EUROPE",
+    "address": "412 AVENUE FRANCOIS MITTERRAND",
+    "zip": "01400",
     "city": "CHATILLON SUR CHALARONNE",
     "lat": 46.127825,
     "lng": 4.959428,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:21.486Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:22.100Z"
   },
   "11430101": {
     "name": "COMPLEXE SPORTIF N°1",
+    "address": "TERRAIN HONNEUR 380 AVENUE DU CRET D'EAU",
+    "zip": "01220",
     "city": "DIVONNE LES BAINS",
     "lat": 46.344862,
     "lng": 6.14577,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:35.769Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:28.500Z"
   },
   "11590101": {
     "name": "COMPLEXE SPORTIF DES DÎMES 1",
+    "address": "575 ROUTE DES DIMES",
+    "zip": "01570",
     "city": "FEILLENS",
     "lat": 46.33367,
     "lng": 4.880896,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:40.478Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:27.577Z"
   },
   "11830101": {
     "name": "STADE MUNICIPAL",
+    "address": "STADE PAUL MELINON 275 RUE DU CENTRE",
+    "zip": "01090",
     "city": "GUEREINS",
     "lat": 46.105581,
     "lng": 4.7793,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:50.458Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:02.656Z"
   },
   "12020101": {
     "name": "STADE HONNEUR",
@@ -73,11 +97,14 @@
   },
   "12290101": {
     "name": "STADE DU MOULIN NEUF 1",
+    "address": "ROUTE D'ETREZ",
+    "zip": "01340",
     "city": "MALAFRETAZ",
     "lat": 46.336297,
     "lng": 5.143201,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:48.915Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:45.283Z"
   },
   "12320101": {
     "name": "STADE FERNAND PIGUET 1",
@@ -97,67 +124,91 @@
   },
   "13340101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "434 ROUTE DU VILLAGE",
+    "zip": "01290",
     "city": "ST ANDRE D'HUIRIAT",
     "lat": 46.216895,
     "lng": 4.913319,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:29.507Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:30.875Z"
   },
   "13740101": {
     "name": "STADE GASTON GAILLARD 1",
+    "address": "LE FARGET",
+    "zip": "01160",
     "city": "ST MARTIN DU MONT",
     "lat": 46.099684,
     "lng": 5.316598,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:19.397Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:08.950Z"
   },
   "13760101": {
     "name": "STADE DU FORUM DES SPORTS 1",
+    "address": "CHEMIN DES BATTERSES",
+    "zip": "01700",
     "city": "ST MAURICE DE BEYNOST",
     "lat": 45.830332,
     "lng": 4.987217,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:11.762Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:54.002Z"
   },
   "14270101": {
     "name": "COMPLEXE SPORTIF DE FÉTAN 1",
+    "address": "ALLEE DES FILIERISTES",
+    "zip": "01600",
     "city": "TREVOUX",
     "lat": 45.945726,
     "lng": 4.752827,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:38.795Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:57:11.784Z"
   },
   "14510101": {
     "name": "STADE PIERRE BRICHON",
+    "address": "CHEMIN DES RIPPES CHILLEYS",
+    "zip": "01440",
     "city": "VIRIAT",
     "lat": 46.2481,
     "lng": 5.201376,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:58.995Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:35.199Z"
   },
   "30230102": {
     "name": "STADE BOUCLE DES ISLES 2",
+    "address": "RUE EUGENIE DESGOUTTES",
+    "zip": "03700",
     "city": "BELLERIVE SUR ALLIER",
     "lat": 46.115215,
     "lng": 3.421977,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:50.470Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:05.542Z"
   },
   "30270101": {
     "name": "STADE GEORGES BIDEAU",
+    "address": "RUE SAINT CHARLES",
+    "zip": "03170",
     "city": "BEZENET",
     "lat": 46.32415,
     "lng": 2.849338,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:28.268Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:40.020Z"
   },
   "30290101": {
     "name": "STADE PAULETTE ET ANDRE LETE",
+    "address": "ROUTE DE MARCENAT LES FOURS",
+    "zip": "03260",
     "city": "BILLY",
     "lat": 46.235499,
     "lng": 3.426888,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:44.987Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:07.171Z"
   },
   "30360101": {
     "name": "STADE JEAN BIGNON",
@@ -169,19 +220,25 @@
   },
   "30820201": {
     "name": "STADE LUCIEN VINCENT",
+    "address": "TERRAIN HONNEUR BOULEVARD GENERAL DE GAULLE",
+    "zip": "03600",
     "city": "COMMENTRY",
     "lat": 46.291259,
     "lng": 2.733789,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:09.432Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:07.593Z"
   },
   "31010101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "TERRAIN HONNEUR RUE DU STADE",
+    "zip": "03410",
     "city": "DOMERAT",
     "lat": 46.358552,
     "lng": 2.538762,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:00.991Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:55:51.552Z"
   },
   "31380101": {
     "name": "Stade Abel Chervier",
@@ -217,19 +274,25 @@
   },
   "32110102": {
     "name": "STADE COMMUNAUTAIRE",
+    "address": "ROUTE DU STADE",
+    "zip": "03410",
     "city": "PREMILHAT",
     "lat": 46.312051,
     "lng": 2.537182,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:27.559Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:55:19.011Z"
   },
   "32120101": {
     "name": "STADE MUNICIPAL LES JUSTICES",
+    "address": "LES JUSTICES 2 RUE DU STADE",
+    "zip": "03380",
     "city": "QUINSSAINES",
     "lat": 46.328559,
     "lng": 2.503776,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:04:01.465Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:52.636Z"
   },
   "32360101": {
     "name": "STADE DES ÎLES 1",
@@ -265,11 +328,14 @@
   },
   "70100101": {
     "name": "STADE ALAIN DUPUY",
+    "address": "parc de deomas RUE EMILE BOUSCHON",
+    "zip": "07100",
     "city": "ANNONAY",
     "lat": 45.25184,
     "lng": 4.672946,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:28.475Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:55:00.778Z"
   },
   "70780102": {
     "name": "STADE DE JOSSOLS 2",
@@ -289,19 +355,25 @@
   },
   "72590101": {
     "name": "STADE MUNICIPAL",
+    "address": "CHEMIN MELINAS",
+    "zip": "07700",
     "city": "ST JUST D ARDECHE",
     "lat": 44.297617,
     "lng": 4.625815,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:43.423Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:55.061Z"
   },
   "72810101": {
     "name": "STADE DE LA PLAINE 1",
+    "address": "RUE PIERRE DE COUBERTIN",
+    "zip": "07130",
     "city": "ST PERAY",
     "lat": 44.947607,
     "lng": 4.852673,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:43.834Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:28.462Z"
   },
   "73250101": {
     "name": "STADE GEORGES MARQUAND N°1",
@@ -329,11 +401,14 @@
   },
   "150140301": {
     "name": "STADE PIERRE TIBLE",
+    "address": "ROUTE DU COLLET",
+    "zip": "15000",
     "city": "AURILLAC",
     "lat": 44.910719,
     "lng": 2.419366,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:58.700Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:34.874Z"
   },
   "150830101": {
     "name": "Stade Eugène Bessou 1",
@@ -345,11 +420,14 @@
   },
   "150870101": {
     "name": "STADE MUNICIPAL",
+    "address": "LE BOURG",
+    "zip": "15120",
     "city": "LACAPELLE DEL FRAISSE",
     "lat": 44.753298,
     "lng": 2.45197,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:48.358Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:03.669Z"
   },
   "151380101": {
     "name": "STADE JEAN JAMBON",
@@ -361,11 +439,14 @@
   },
   "151470101": {
     "name": "STADE MUNICIPAL",
+    "address": "LE BOURG",
+    "zip": "15290",
     "city": "PARLAN",
     "lat": 44.830029,
     "lng": 2.17204,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:01.537Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:54.647Z"
   },
   "151870101": {
     "name": "STADE RENÉ JARLIER",
@@ -377,51 +458,69 @@
   },
   "152210101": {
     "name": "STADE MUNICIPAL",
+    "address": "28 RUE DU STADE",
+    "zip": "15130",
     "city": "SANSAC DE MARMIESSE",
     "lat": 44.886575,
     "lng": 2.344732,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:41.007Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:04.394Z"
   },
   "152670101": {
     "name": "STADE ROLAND CORNET",
+    "address": "RUE DES OLYMPIADES LE BEX",
+    "zip": "15130",
     "city": "YTRAC",
     "lat": 44.884445,
     "lng": 2.395125,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:17.896Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:42.052Z"
   },
   "152670301": {
     "name": "STADE DU SIVADOU",
+    "address": "ESPINAT",
+    "zip": "15130",
     "city": "YTRAC",
     "lat": 44.935918,
     "lng": 2.378612,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:55.969Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:41.443Z"
   },
   "152680101": {
     "name": "STADE DE LA BESSADE",
+    "address": "RUE DES ECOLES",
+    "zip": "15290",
     "city": "LE ROUGET PERS",
     "lat": 44.852042,
     "lng": 2.231444,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:54.750Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:19.533Z"
   },
   "261080101": {
     "name": "STADE JOHAN HAMEL",
+    "address": "TERRAIN ANNEXE FOOT 2 CHEMIN DES PLANTAS QUARTIER SOUBEYRAN",
+    "zip": "26400",
     "city": "CREST",
     "lat": 44.721573,
     "lng": 5.029564,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:41.058Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:39.255Z"
   },
   "261490101": {
     "name": "STADE GEORGES LAPASSAT",
+    "address": "CHEMIN DES CITES",
+    "zip": "26730",
     "city": "HOSTUN",
     "lat": 45.037517,
     "lng": 5.19589,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:59.336Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:26.122Z"
   },
   "261980301": {
     "name": "STADE BAGATELLE",
@@ -433,19 +532,25 @@
   },
   "262180101": {
     "name": "STADE HERVÉ POTIGNAT 1",
+    "address": "LES GUILHOTS",
+    "zip": "26540",
     "city": "MOURS ST EUSEBE",
     "lat": 45.068089,
     "lng": 5.052383,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:25.286Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:30.175Z"
   },
   "263010101": {
     "name": "STADE RAYMOND GAYET 1",
+    "address": "route de st bardoux 1 PONT MORLIER EST",
+    "zip": "26260",
     "city": "ST DONAT SUR L HERBASSE",
     "lat": 45.113986,
     "lng": 4.985113,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:37.589Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:25.393Z"
   },
   "263620101": {
     "name": "STADE GEORGES POMPIDOU N° 1",
@@ -497,19 +602,25 @@
   },
   "381340102": {
     "name": "Stade Municipal 1",
+    "address": "ROUTE DE LA COTE ST ANDRE",
+    "zip": "38122",
     "city": "COUR ET BUIS",
     "lat": 45.430907,
     "lng": 5.065705,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:27.287Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:04.687Z"
   },
   "381490101": {
     "name": "STADE MUNICIPAL",
+    "address": "AVENUE DES NOYERS",
+    "zip": "38300",
     "city": "DOMARIN",
     "lat": 45.588037,
     "lng": 5.242442,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:25.552Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:47.424Z"
   },
   "381510101": {
     "name": "STADE EUGÈNE THÉNARD",
@@ -537,27 +648,36 @@
   },
   "381790101": {
     "name": "PARC DES SPORTS PAUL BOURGEAT 1",
+    "address": "accès rue des Glairons 1 RUE DES SPORTS",
+    "zip": "38610",
     "city": "GIERES",
     "lat": 45.187006,
     "lng": 5.786914,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:29.348Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:06.500Z"
   },
   "381850501": {
     "name": "STADE DU VERCORS 1",
+    "address": "20 CHEMIN DE LA POTERNE",
+    "zip": "38000",
     "city": "GRENOBLE",
     "lat": 45.173049,
     "lng": 5.747815,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:18.479Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:49.269Z"
   },
   "381850701": {
     "name": "STADE PORTE DE VILLENEUVE",
+    "address": "68 AVENUE LA BRUYERE",
+    "zip": "38000",
     "city": "GRENOBLE",
     "lat": 45.184486,
     "lng": 5.705667,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:14.255Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:15.040Z"
   },
   "381850901": {
     "name": "STADE PIERRE DE COUBERTIN",
@@ -577,11 +697,14 @@
   },
   "383160101": {
     "name": "COMPLEXE SPORTIF GRAMMONT 1",
+    "address": "TERRAIN EDOUARD GRAMMONT 16, RUE DU 8 MAI 1945",
+    "zip": "38230",
     "city": "PONT DE CHERUY",
     "lat": 45.748826,
     "lng": 5.171104,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:32.118Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:47.977Z"
   },
   "383440101": {
     "name": "STADE DE LA TERRE ROUGE 1",
@@ -601,43 +724,58 @@
   },
   "383970101": {
     "name": "STADE FRANÇOIS RÉGIS BÉRIOT 1",
+    "address": "314 ROUTE DU RIVET",
+    "zip": "38330",
     "city": "ST ISMIER",
     "lat": 45.242817,
     "lng": 5.828386,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:13.371Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:59.893Z"
   },
   "384010101": {
     "name": "STADE GÉRIFONDIÈRE N°1",
+    "address": "RUE DE LA BOURBRE",
+    "zip": "38110",
     "city": "ST JEAN DE SOUDAIN",
     "lat": 45.565554,
     "lng": 5.430717,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:03.547Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:32.689Z"
   },
   "384800101": {
     "name": "STADE JEAN LUC BONNARDEL",
+    "address": "TERRAIN HONNEUR ROUTE DE LA PIVOLEE",
+    "zip": "38780",
     "city": "SEPTEME",
     "lat": 45.560017,
     "lng": 5.000871,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:30.654Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:32.347Z"
   },
   "384850101": {
     "name": "STADE JOSEPH GUETAT 1",
+    "address": "AVENUE PIERRE DE COUBERTIN",
+    "zip": "38170",
     "city": "SEYSSINET PARISET",
     "lat": 45.169223,
     "lng": 5.68851,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:31.911Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:31.579Z"
   },
   "384850102": {
     "name": "STADE JOSEPH GUETAT 2",
+    "address": "TERRAIN ANNEXE 2 AVENUE PIERRE DE COUBERTIN",
+    "zip": "38170",
     "city": "SEYSSINET PARISET",
     "lat": 45.169339,
     "lng": 5.688824,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:01.630Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:36.965Z"
   },
   "384860101": {
     "name": "STADE JEAN BEAUVALLET 1",
@@ -657,11 +795,14 @@
   },
   "420050102": {
     "name": "COMPLEXE SPORTIF GOUYONNIÈRE 2",
+    "address": "ENVOL STADIUM RUE DORINE BOURNETON",
+    "zip": "42160",
     "city": "ANDREZIEUX BOUTHEON",
     "lat": 45.524061,
     "lng": 4.297768,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:58.937Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:58.282Z"
   },
   "420430101": {
     "name": "STADE DE CHAMPVERT",
@@ -673,27 +814,36 @@
   },
   "420440101": {
     "name": "Stade François MondoN",
+    "address": "CHEMIN DU BOIS CARBOZ",
+    "zip": "42500",
     "city": "LE CHAMBON FEUGEROLLES",
     "lat": 45.385967,
     "lng": 4.30457,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:07.444Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:36.771Z"
   },
   "420560101": {
     "name": "STADE RAPHAËL GARDE 1",
+    "address": "23 AVENUE DU RHONE",
+    "zip": "42410",
     "city": "CHAVANAY",
     "lat": 45.413374,
     "lng": 4.737474,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:35.102Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:22.345Z"
   },
   "420920101": {
     "name": "COMPLEXE SPORTIF DES OLLIÈRES 1",
+    "address": "RUE DE VERDUN",
+    "zip": "42580",
     "city": "L ETRAT",
     "lat": 45.483851,
     "lng": 4.36148,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:39.048Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:25.343Z"
   },
   "420940104": {
     "name": "STADE MAURICE ROUSSON 4",
@@ -713,19 +863,25 @@
   },
   "420950401": {
     "name": "STADE DE FIRMAMENT",
+    "address": "2 RUE DORIAN",
+    "zip": "42700",
     "city": "FIRMINY",
     "lat": 45.390265,
     "lng": 4.280341,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:42.923Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:46.023Z"
   },
   "421020101": {
     "name": "STADE MUNICIPAL",
+    "address": "LE FLANCHARD",
+    "zip": "42140",
     "city": "GRAMMOND",
     "lat": 45.57095,
     "lng": 4.438376,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:47.125Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:33.626Z"
   },
   "421470101": {
     "name": "STADE LA MADELEINE 1",
@@ -745,27 +901,36 @@
   },
   "421870101": {
     "name": "STADE HENRY MALLEVAL HONNEUR",
+    "address": "TERRAIN HONNEUR 51 RUE GENERAL GIRAUD",
+    "zip": "42300",
     "city": "ROANNE",
     "lat": 46.033021,
     "lng": 4.05747,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:26.110Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:45.949Z"
   },
   "421870103": {
     "name": "Stade Henry Malleval 3",
+    "address": "TERRAIN ANNEXE 2 51 RUE GENERAL GIRAUD",
+    "zip": "42300",
     "city": "ROANNE",
     "lat": 46.033021,
     "lng": 4.05747,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:46.352Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:09.902Z"
   },
   "422080101": {
     "name": "STADE DE LA CÔTE 1",
+    "address": "5 RUE DU STADE",
+    "zip": "42320",
     "city": "ST CHRISTO EN JAREZ",
     "lat": 45.542659,
     "lng": 4.488495,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:57.529Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:53.216Z"
   },
   "422180501": {
     "name": "STADE AUGUSTE DURY 1",
@@ -777,11 +942,14 @@
   },
   "422710101": {
     "name": "STADE DES FRARIES 1",
+    "address": "BOULEVARD NOEL LANDY",
+    "zip": "42740",
     "city": "ST PAUL EN JAREZ",
     "lat": 45.487647,
     "lng": 4.568196,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:44.165Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:13.174Z"
   },
   "422790201": {
     "name": "COMPLEXE SPORTIF DES UNCHATS 1",
@@ -801,11 +969,14 @@
   },
   "423130101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "LE MORTIER",
+    "zip": "42130",
     "city": "TRELINS",
     "lat": 45.731034,
     "lng": 4.015363,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:41.555Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:18.163Z"
   },
   "423230101": {
     "name": "STADE IRÉNÉE LAURENT 1",
@@ -817,35 +988,47 @@
   },
   "423300201": {
     "name": "STADE ROGER VILLENEUVE",
+    "address": "TERRAIN LOUIS BERNICHON RUE DE L HOTEL DE VILLE",
+    "zip": "42390",
     "city": "VILLARS",
     "lat": 45.467287,
     "lng": 4.353284,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:24.077Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:58.161Z"
   },
   "430320101": {
     "name": "STADE DE PANASSAC 1",
+    "address": "ROUTE DE ST GERMAIN",
+    "zip": "43700",
     "city": "BLAVOZY",
     "lat": 45.050448,
     "lng": 3.982052,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:28.212Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:02.433Z"
   },
   "430400101": {
     "name": "STADE DU DOCTEUR JALENQUES",
+    "address": "12 AVENUE DE LAMOTHE",
+    "zip": "43100",
     "city": "BRIOUDE",
     "lat": 45.296699,
     "lng": 3.392323,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:22.975Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:44.354Z"
   },
   "430410101": {
     "name": "STADE LOUIS EXBRAYAT 1",
+    "address": "136 AVENUE DES SPORTS",
+    "zip": "43700",
     "city": "BRIVES CHARENSAC",
     "lat": 45.04453,
     "lng": 3.932641,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:25.072Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:51.535Z"
   },
   "430510101": {
     "name": "STADE DU LIGNON",
@@ -857,27 +1040,36 @@
   },
   "431370101": {
     "name": "STADE DU MONTEIL 1",
+    "address": "1 RUE HENRI POURRAT",
+    "zip": "43120",
     "city": "MONISTROL SUR LOIRE",
     "lat": 45.291455,
     "lng": 4.161855,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:39.783Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:24.668Z"
   },
   "431570301": {
     "name": "STADE FÉLIX MALBO GUITARD",
+    "address": "AVENUE JEAN MOULIN",
+    "zip": "43000",
     "city": "LE PUY EN VELAY",
     "lat": 45.042655,
     "lng": 3.90604,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:37.540Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:49.760Z"
   },
   "432000101": {
     "name": "STADE DU PONT DE LA ROCHE 1",
+    "address": "PONT LA ROCHE",
+    "zip": "43260",
     "city": "ST JULIEN CHAPTEUIL",
     "lat": 45.040754,
     "lng": 4.06104,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:04.056Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:13.833Z"
   },
   "432110101": {
     "name": "STADE MARCEL OUILLON",
@@ -889,19 +1081,25 @@
   },
   "432240101": {
     "name": "COMPLEXE SPORTIF ANTOINE RABERIN",
+    "address": "TERRAIN HONNEUR AVENUE DU STADE",
+    "zip": "43600",
     "city": "STE SIGOLENE",
     "lat": 45.23909,
     "lng": 4.233699,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:05.593Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:51.150Z"
   },
   "432360101": {
     "name": "STADE MUNICIPAL",
+    "address": "AVENUE JEAN BONNEVIALLE",
+    "zip": "43140",
     "city": "LA SEAUVE SUR SEMENE",
     "lat": 45.299458,
     "lng": 4.258402,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:51.215Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:18.798Z"
   },
   "432670101": {
     "name": "STADE AUGUSTE BONNEFOUX",
@@ -913,43 +1111,58 @@
   },
   "480800101": {
     "name": "STADE DES CHOISINETS",
+    "address": "9-11 RUE DU 11 NOVEMBRE 1918",
+    "zip": "48300",
     "city": "LANGOGNE",
     "lat": 44.722205,
     "lng": 3.836524,
     "precision": "ville",
-    "checkedAt": "2026-10-28T18:06:03.088Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:47.814Z"
   },
   "481320101": {
     "name": "STADE DE LA BAÏSSE 1",
+    "address": "route de st chely d' apcher",
+    "zip": "48120",
     "city": "ST ALBAN SUR LIMAGNOLE",
     "lat": null,
     "lng": null,
     "precision": null,
-    "checkedAt": "2026-10-28T17:58:32.291Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:34.379Z"
   },
   "630030101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "88 AV DU DOCTEUR EUGENE CHASSAING",
+    "zip": "63600",
     "city": "AMBERT",
-    "lat": 45.538512,
-    "lng": 3.748384,
-    "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:30.482Z"
+    "lat": 45.5486,
+    "lng": 3.7414,
+    "precision": "ville",
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:56.553Z"
   },
   "630320101": {
     "name": "COMPLEXE SPORTIF DE L' ARTIÈRE",
+    "address": "AVENUE DU STADE",
+    "zip": "63110",
     "city": "BEAUMONT",
     "lat": 45.746766,
     "lng": 3.077259,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:01.549Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:36.290Z"
   },
   "630690101": {
     "name": "STADE JEAN JAURÈS 1",
+    "address": "AVENUE DE L'AUZON",
+    "zip": "63670",
     "city": "LE CENDRE",
     "lat": 45.717504,
     "lng": 3.184705,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:35.633Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:17.719Z"
   },
   "630700101": {
     "name": "STADE OLIVIER VERNADAL",
@@ -969,11 +1182,14 @@
   },
   "630920102": {
     "name": "PARC DES SPORTS DE LASCHAMP 2",
+    "address": "RUE DU STADE Paugnat",
+    "zip": "63410",
     "city": "CHARBONNIERES LES VARENNES",
     "lat": 45.884239,
     "lng": 2.985943,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:15.480Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:43.474Z"
   },
   "631030101": {
     "name": "STADE DE LA VOUÉE 1",
@@ -993,27 +1209,36 @@
   },
   "631130301": {
     "name": "COMPLEXE SPORTIF GRAVANCHES N°1",
+    "address": "RUE DU PRECOMTAL",
+    "zip": "63000",
     "city": "CLERMONT FERRAND",
     "lat": 45.780304,
     "lng": 3.088701,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:09.396Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:50.502Z"
   },
   "631130701": {
     "name": "STADE DE TRÉMONTEIX",
+    "address": "3 RUE JEAN MONNET ZAC DE TREMONTEIX",
+    "zip": "63000",
     "city": "CLERMONT FERRAND",
     "lat": 45.793983,
     "lng": 3.071459,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:05.736Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:15.578Z"
   },
   "631131001": {
     "name": "STADE DE L' ESPÉRANCE ST JACQUES",
+    "address": "AVENUE LEON BLUM",
+    "zip": "63000",
     "city": "CLERMONT FERRAND",
     "lat": 45.765463,
     "lng": 3.097312,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:35.316Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:38.786Z"
   },
   "631240101": {
     "name": "STADE JOSEPH ET MICHEL GARDET 1",
@@ -1025,19 +1250,25 @@
   },
   "631780301": {
     "name": "Complexe Sportif Lavedrine Stade Honneur",
+    "address": "RUE JEAN MONET",
+    "zip": "63500",
     "city": "ISSOIRE",
     "lat": 45.550726,
     "lng": 3.270285,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:20.869Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:41.602Z"
   },
   "631930201": {
     "name": "STADE JEAN-FRANÇOIS PHILIPONEAU",
+    "address": "RUE DU STADE",
+    "zip": "63370",
     "city": "LEMPDES",
     "lat": 45.781209,
     "lng": 3.192856,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:05.538Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:30.169Z"
   },
   "632450101": {
     "name": "COMPLEXE SPORTIF EDMOND VACANT",
@@ -1049,11 +1280,14 @@
   },
   "632630101": {
     "name": "STADE MUNICIPAL",
+    "address": "ROUTE DE LIMOGES",
+    "zip": "63870",
     "city": "ORCINES",
     "lat": 45.787817,
     "lng": 3.011134,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:52.852Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:39.057Z"
   },
   "632840101": {
     "name": "STADE LÉON BAGET",
@@ -1065,59 +1299,80 @@
   },
   "633000203": {
     "name": "PARC DES SPORTS DU CEREY 3",
+    "address": "AVENUE DE L'EUROPE",
+    "zip": "63200",
     "city": "RIOM",
     "lat": 45.902811,
     "lng": 3.107923,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:57.478Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:04.570Z"
   },
   "633070102": {
     "name": "STADE MICHEL BRUN 2",
+    "address": "Avenue des Pérouses",
+    "zip": "63540",
     "city": "ROMAGNAT",
     "lat": 45.736135,
     "lng": 3.105165,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:34.421Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:51.026Z"
   },
   "633450101": {
     "name": "STADE MUNICIPAL",
+    "address": "LE BOURG",
+    "zip": "63122",
     "city": "ST GENES CHAMPANELLE",
     "lat": 45.719835,
     "lng": 3.019627,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:33.147Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:44.403Z"
   },
   "633960101": {
     "name": "STADE LOUIS JOUHET",
+    "address": "TERRAIN HONNEUR ALLEE DES MARRONNIERS",
+    "zip": "63450",
     "city": "ST SATURNIN",
     "lat": 45.663864,
     "lng": 3.098787,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:58:18.663Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:59.649Z"
   },
   "634300101": {
     "name": "PARC DES SPORTS ANTONIN CHASTEL 1",
+    "address": "TERRAIN A 115, AVENUE LEO LAGRANGE",
+    "zip": "63300",
     "city": "THIERS",
     "lat": 45.845655,
     "lng": 3.521379,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:56:32.242Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:19.491Z"
   },
   "634300102": {
     "name": "PARC DES SPORTS ANTONIN CHASTEL 2",
+    "address": "TERRAIN B 115 AVENUE LEO LAGRANGE",
+    "zip": "63300",
     "city": "THIERS",
     "lat": 45.845655,
     "lng": 3.521379,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:04:30.370Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:53.132Z"
   },
   "634530101": {
     "name": "STADE MUNICIPAL",
+    "address": "AVENUE DES ACACIAS",
+    "zip": "63910",
     "city": "VERTAIZON",
     "lat": 45.771266,
     "lng": 3.292696,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:22.279Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:45.879Z"
   },
   "634570101": {
     "name": "STADE ANDRÉ BOSTE 1",
@@ -1129,27 +1384,36 @@
   },
   "634700101": {
     "name": "STADE MICHEL CHAMPLEBOUX 1",
+    "address": "1 RUE DU STADE",
+    "zip": "63530",
     "city": "VOLVIC",
     "lat": 45.872608,
     "lng": 3.043441,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:03:47.913Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:40.755Z"
   },
   "690060101": {
     "name": "PARC DES SPORTS HENRI MALATRAY",
+    "address": "CHEMIN DE BAGATELLE",
+    "zip": "69550",
     "city": "AMPLEPUIS",
     "lat": 45.962033,
     "lng": 4.332687,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:53.271Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:20.635Z"
   },
   "690100101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "201 ROUTE DE PARIS",
+    "zip": "69210",
     "city": "L ARBRESLE",
     "lat": 45.838091,
     "lng": 4.609955,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:58.413Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:43.049Z"
   },
   "690690101": {
     "name": "STADE CHARLES TRÉVOUX",
@@ -1161,43 +1425,58 @@
   },
   "690760101": {
     "name": "STADE DOMAINE DU MALIGNY",
+    "address": "CHEMIN DU JOINET",
+    "zip": "69380",
     "city": "DOMMARTIN",
     "lat": 45.829516,
     "lng": 4.717807,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:37.166Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:23.371Z"
   },
   "690910103": {
     "name": "STADE TONY GARCIA 3",
+    "address": "RUE AUGUSTE DELAUNE",
+    "zip": "69700",
     "city": "GIVORS",
     "lat": 45.597892,
     "lng": 4.772748,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:45.858Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:57.619Z"
   },
   "690920101": {
     "name": "STADE PIERRE MONTMARTIN",
+    "address": "RUE PIERRE MONTMARTIN",
+    "zip": "69400",
     "city": "GLEIZE",
     "lat": 46.001881,
     "lng": 4.716971,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:34.298Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:48.255Z"
   },
   "690990101": {
     "name": "STADE DU NOYER",
+    "address": "RUE DES AMOUREUX",
+    "zip": "69610",
     "city": "HAUTE RIVOIRE",
     "lat": 45.713326,
     "lng": 4.397525,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:05:55.152Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:23.569Z"
   },
   "691160102": {
     "name": "PARC DES SPORTS COURTOIS FILLOT 2",
+    "address": "TERRAIN ANNEXE 53 ROUTE DE ST DIDIER",
+    "zip": "69760",
     "city": "LIMONEST",
     "lat": 45.832121,
     "lng": 4.776485,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:59:33.835Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:06.753Z"
   },
   "691270101": {
     "name": "STADE DOCTEURS MÉRIEUX",
@@ -1217,11 +1496,14 @@
   },
   "691570101": {
     "name": "COMPLEXE SPORTIF ROGER MARDUEL",
+    "address": "CHEMIN DU STADE LE MOULIN",
+    "zip": "69490",
     "city": "PONTCHARRA SUR TURDINE",
     "lat": 45.419286,
     "lng": 6.016275,
     "precision": "ville",
-    "checkedAt": "2026-10-28T18:06:42.294Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:11.395Z"
   },
   "691910101": {
     "name": "STADE DES COMBES",
@@ -1233,19 +1515,25 @@
   },
   "692040102": {
     "name": "STADE CLOS DE BEAUREGARD 2",
+    "address": "179 AVENUE DE GADAGNE",
+    "zip": "69230",
     "city": "ST GENIS LAVAL",
     "lat": 45.688331,
     "lng": 4.786013,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:00:23.329Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:01.462Z"
   },
   "692270101": {
     "name": "STADE MUNICIPAL",
+    "address": "AVENUE DES HAUTS DU LYONNAIS",
+    "zip": "69850",
     "city": "ST MARTIN EN HAUT",
     "lat": 45.657892,
     "lng": 4.557868,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:55.312Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:46.522Z"
   },
   "692380101": {
     "name": "STADE THOMAS GRANJON",
@@ -1281,35 +1569,47 @@
   },
   "692700101": {
     "name": "COMPLEXE SPORTIF GIL LA FORÊT",
+    "address": "RUE DU STADE",
+    "zip": "69970",
     "city": "CHAPONNAY",
     "lat": 45.638309,
     "lng": 4.932695,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:15.686Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:32.888Z"
   },
   "692710101": {
     "name": "STADE ROMAIN TISSERAND 1",
+    "address": "17 CHEMIN DU TREVES",
+    "zip": "69680",
     "city": "CHASSIEU",
     "lat": 45.733193,
     "lng": 4.974264,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:23.190Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:50.807Z"
   },
   "692710102": {
     "name": "STADE ROMAIN TISSERAND 2",
+    "address": "TERRAIN ANNEXE S 17 CHEMIN DU TREVE",
+    "zip": "69680",
     "city": "CHASSIEU",
     "lat": 45.733193,
     "lng": 4.974264,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:31.978Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:12.735Z"
   },
   "692720102": {
     "name": "STADE DE LA PLAINE 2",
+    "address": "5000 ROUTE DE MARENNES",
+    "zip": "69360",
     "city": "COMMUNAY",
-    "lat": 45.605093,
-    "lng": 4.840491,
-    "precision": "adresse",
-    "checkedAt": "2026-10-28T18:01:16.225Z"
+    "lat": 45.6326203,
+    "lng": 4.8692653,
+    "precision": "stade",
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:37.451Z"
   },
   "692770101": {
     "name": "STADE EDMOND POUZET 1",
@@ -1345,11 +1645,14 @@
   },
   "692990101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "2 ROUTE DU STADE MONTERRAT",
+    "zip": "69124",
     "city": "COLOMBIER SAUGNIEU",
     "lat": 45.715612,
     "lng": 5.110165,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:06:50.938Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:12.612Z"
   },
   "693830101": {
     "name": "STADE MARC VIVIEN FOÉ 1",
@@ -1377,19 +1680,25 @@
   },
   "693880301": {
     "name": "STADE GEORGES VUILLERMET",
+    "address": "TERRAIN RUGBY / FOOT 196 AVENUE PAUL SANTY",
+    "zip": "69008",
     "city": "LYON",
     "lat": 45.72455,
     "lng": 4.882515,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:27.133Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:56:24.622Z"
   },
   "693892001": {
     "name": "STADE DE LA SAUVEGARDE",
+    "address": "490 AV. BEN GOURION LA DUCHERE",
+    "zip": "69009",
     "city": "LYON",
     "lat": 45.78903,
     "lng": 4.788689,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:07:47.976Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:59.751Z"
   },
   "730080101": {
     "name": "STADE JACQUES FORESTIER 1",
@@ -1401,19 +1710,25 @@
   },
   "730100101": {
     "name": "Stade Philippe Basso 1",
+    "address": "435 ROUTE D ORLY ALBENS",
+    "zip": "73410",
     "city": "ENTRELACS",
     "lat": 45.779446,
     "lng": 5.949366,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:23.918Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:15.670Z"
   },
   "730650201": {
     "name": "PLAINE DE JEUX MAGER 1",
+    "address": "ROUTE DE LA LABIAZ",
+    "zip": "73000",
     "city": "CHAMBERY",
     "lat": 45.575413,
     "lng": 5.888936,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:27.556Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:27.329Z"
   },
   "731030102": {
     "name": "STADE DES FINS 2",
@@ -1425,35 +1740,47 @@
   },
   "731540101": {
     "name": "STADE DE LA GRILLETTE",
+    "address": "130 CHEMIN DU STADE",
+    "zip": "73200",
     "city": "MERCURY",
     "lat": 45.688471,
     "lng": 6.355789,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:30.262Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:16.937Z"
   },
   "731600101": {
     "name": "STADE MUNICIPAL",
+    "address": "LE CHEF LIEU",
+    "zip": "73000",
     "city": "MONTAGNOLE",
     "lat": 45.540741,
     "lng": 5.909399,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:58.092Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:43.999Z"
   },
   "731810101": {
     "name": "STADE JOSEPH BARDASSIER 1",
+    "address": "AVENUE DES THERMES VERS LA SCIE",
+    "zip": "73600",
     "city": "MOUTIERS TARENTAISE",
     "lat": 45.370986,
     "lng": 4.488311,
     "precision": "ville",
-    "checkedAt": "2026-10-28T18:01:48.222Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:56.099Z"
   },
   "732730101": {
     "name": "Stade Roger MailleT",
+    "address": "Rue du stade",
+    "zip": "73220",
     "city": "ST PIERRE DE BELLEVILLE",
     "lat": 45.473198,
     "lng": 6.279578,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:28.076Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:19.296Z"
   },
   "733200101": {
     "name": "STADE LA MISTROLETTE",
@@ -1473,27 +1800,36 @@
   },
   "740110101": {
     "name": "COMPLEXE SPORTIF D' ALBIGNY 1",
+    "address": "6 RUE DU PRE VERNET",
+    "zip": "74940",
     "city": "ANNECY LE VIEUX",
     "lat": 45.90744,
     "lng": 6.155808,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:02:01.025Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:23.443Z"
   },
   "740110102": {
     "name": "COMPLEXE SPORTIF D' ALBIGNY 2",
+    "address": "TERRAIN ANNEXE 6 RUE DU PRE VERNET",
+    "zip": "74940",
     "city": "ANNECY LE VIEUX",
     "lat": 45.90744,
     "lng": 6.155808,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:01:33.814Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:01.565Z"
   },
   "740750101": {
     "name": "STADE MUNICIPAL 1",
+    "address": "1939 ROUTE DU STADE LES TREGES",
+    "zip": "74270",
     "city": "CHILLY",
     "lat": 45.989361,
     "lng": 5.954311,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:55.645Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:21.003Z"
   },
   "740810101": {
     "name": "STADE INTERCOMMUNAL 1",
@@ -1505,83 +1841,113 @@
   },
   "740810301": {
     "name": "PARC DES SPORTS DES ESSERTS 1",
+    "address": "37 RUE DU MARCELLY",
+    "zip": "74300",
     "city": "CLUSES",
     "lat": 46.074482,
     "lng": 6.55981,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:01:56.838Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:36.919Z"
   },
   "740930101": {
     "name": "STADE DES GRÈVES 1",
+    "address": "12 CHEMIN DES GREVES",
+    "zip": "74960",
     "city": "CRAN GEVRIER",
     "lat": 45.910075,
     "lng": 6.103458,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:08:50.004Z"
+    "v": 2,
+    "checkedAt": "2026-10-28T18:57:58.833Z"
   },
   "741050101": {
     "name": "STADE JULIEN GAUDIN N° 1",
+    "address": "2TER AVENUE DU STADE",
+    "zip": "74140",
     "city": "DOUVAINE",
     "lat": 46.303347,
     "lng": 6.30358,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:16.389Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:08.598Z"
   },
   "741640101": {
     "name": "STADE DU BOIS DU PONT 1",
+    "address": "262 AVENUE DU STADE",
+    "zip": "74970",
     "city": "MARIGNIER",
     "lat": 46.087846,
     "lng": 6.502637,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:02.654Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:57.518Z"
   },
   "741640201": {
     "name": "STADE ARTHUR HAILLANT",
+    "address": "COMPLEXE DES PRÉS PARIS 295 AVENUE DE L INDUSTRIE LE PRET DU CRET",
+    "zip": "74970",
     "city": "MARIGNIER",
     "lat": 46.079197,
     "lng": 6.507816,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:47.879Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:55.123Z"
   },
   "742130101": {
     "name": "STADE ABBE CHARLES PONCET 1",
+    "address": "TERRAIN HONNEUR ROUTE DE MACULLY",
+    "zip": "74330",
     "city": "POISY",
     "lat": 45.928708,
     "lng": 6.062584,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:10:18.234Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:58:31.213Z"
   },
   "742170102": {
     "name": "STADE DU PLATEAU 2",
+    "address": "TERRAIN ANNEXE 557 ROUTE DU PLATEAU",
+    "zip": "74370",
     "city": "PRINGY",
     "lat": 45.942869,
     "lng": 6.117586,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:09:24.276Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:02:41.997Z"
   },
   "742240101": {
     "name": "STADE JEAN MOENNE",
+    "address": "RUE DES MARMOTAINES",
+    "zip": "74800",
     "city": "LA ROCHE SUR FORON",
     "lat": 46.070022,
     "lng": 6.316501,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:29.709Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:00:29.724Z"
   },
   "742810201": {
     "name": "STADE ST DISDILLE 3",
+    "address": "SAINT DISDILLE",
+    "zip": "74200",
     "city": "THONON LES BAINS",
     "lat": 46.3896,
     "lng": 6.503689,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T18:01:54.635Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T19:01:34.372Z"
   },
   "742890101": {
     "name": "STADE DES MARAIS 1",
+    "address": "ROUTE DE GENEVE",
+    "zip": "74150",
     "city": "VALLIERES",
     "lat": 45.898729,
     "lng": 5.934839,
     "precision": "adresse",
-    "checkedAt": "2026-10-28T17:57:36.864Z"
+    "v": 1,
+    "checkedAt": "2026-10-28T18:59:39.234Z"
   },
   "742980101": {
     "name": "STADE HENRI JEANTET 1",
