@@ -2,7 +2,12 @@ name: Mise à jour des données MyLocalMatch
 on:
   schedule:
     - cron: '0 6 * * 1'   # lundi, pour économiser les crédits ScraperAPI
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      stades_seulement:
+        description: "Relocaliser seulement les stades (sans interroger la FFF, aucun crédit ScraperAPI)"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -16,7 +21,7 @@ jobs:
       - name: Lancer le robot d'extraction
         env:
           SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
-        run: node scrape-laura.js
+        run: node scrape-laura.js ${{ inputs.stades_seulement && '--stades' || '' }}
       - name: Publier les données mises à jour
         run: |
           git config user.name "MyLocalMatch Bot"

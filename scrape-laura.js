@@ -209,6 +209,10 @@ async function geocodeClub(clubName) {
 const NOMINATIM = 'https://nominatim.openstreetmap.org/search';
 const SPORT_PLACE = /^(pitch|stadium|sports_centre|recreation_ground|track|sports_hall)$/;
 const RETRY_AFTER_DAYS = 30;
+const LOOKUP_VERSION = 2; // augmenter pour relancer la recherche des stades non trouvés
+const OVERPASS = 'https://overpass-api.de/api/interpreter';
+const GENERIC_WORDS = new Set(['stade', 'stades', 'complexe', 'sportif', 'sportive', 'sports', 'sport', 'municipal', 'municipale', 'terrain', 'terrains', 'parc', 'plaine', 'espace', 'synthetique', 'honneur', 'annexe', 'football', 'foot', 'des', 'du', 'de', 'la', 'le', 'les']);
+const nameTokens = n => slug(n).split('-').filter(w => w.length >= 4 && !GENERIC_WORDS.has(w) && !/^\d+$/.test(w));
 let lastNominatim = 0;
 
 // « PARC DES SPORTS PIERRE COULON 01 » → « PARC DES SPORTS PIERRE COULON »
@@ -232,6 +236,37 @@ const distKm = (a, b) => {
   return 12742 * Math.asin(Math.sqrt(x));
 };
 
+// Terrains de foot / stades recensés dans OpenStreetMap autour d'un point (API Overpass).
+async function pitchesAround(pos, radius) {
+  const q = `[out:json][timeout:25];(nwr["leisure"~"^(pitch|stadium)$"]["sport"~"soccer|football|multi"](around:${radius},${pos.lat},${pos.lng});nwr["leisure"="stadium"](around:${radius},${pos.lat},${pos.lng}););out center tags 40;`;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      await sleep(1000);
+      const r = await fetch(OVERPASS, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(40000) });
+      if (r.status === 429 || r.status >= 500) { await sleep(5000 * attempt); continue; }
+      if (!r.ok) return [];
+      const j = await r.json();
+      return (j.elements || []).map(el => ({ lat: el.lat ?? el.center?.lat, lng: el.lon ?? el.center?.lon, name: (el.tags && el.tags.name) || '' })).filter(p => p.lat != null);
+    } catch { await sleep(3000); }
+  }
+  return [];
+}
+
+// Choisit le terrain : celui dont le nom correspond, sinon le plus proche de l'adresse,
+// sinon (ville seule) uniquement s'il n'y a qu'un seul site de foot dans la commune.
+async function stadiumNear(v, anchor, anchorKind) {
+  const pitches = await pitchesAround(anchor, anchorKind === 'adresse' ? 1200 : 3000);
+  if (!pitches.length) return null;
+  const tokens = nameTokens(stadiumName(v.name));
+  const named = pitches.filter(p => tokens.length && nameTokens(p.name).some(t => tokens.includes(t)));
+  const byDist = list => list.map(p => ({ ...p, d: distKm(p, anchor) })).sort((a, b) => a.d - b.d);
+  if (named.length) return byDist(named)[0];
+  const sorted = byDist(pitches);
+  if (anchorKind === 'adresse' && sorted[0].d <= 0.7) return sorted[0];
+  if (anchorKind === 'ville' && sorted.every(p => distKm(p, sorted[0]) <= 0.6)) return sorted[0];
+  return null;
+}
+
 async function findStadium(v, cityPos) {
   const name = stadiumName(v.name);
   const queries = [`${name}, ${v.city}`, `${name}, ${v.zip}`];
@@ -251,7 +286,7 @@ async function findStadium(v, cityPos) {
 async function locateVenue(v) {
   const key = String(v.id || slug(`${v.name} ${v.zip} ${v.city}`));
   const cached = STADES[key];
-  if (cached && (cached.precision === 'stade' || Date.now() - Date.parse(cached.checkedAt) < RETRY_AFTER_DAYS * 864e5)) {
+  if (cached && (cached.precision === 'stade' || ((cached.v || 1) >= LOOKUP_VERSION && Date.now() - Date.parse(cached.checkedAt) < RETRY_AFTER_DAYS * 864e5))) {
     return cached.lat != null ? cached : null;
   }
   const cityPos = v.city ? await geocodeCity(v.city) : null;
@@ -263,7 +298,12 @@ async function locateVenue(v) {
     if (g && (!cityPos || distKm(g, cityPos) < 10)) result = { ...g, precision: 'adresse' };
   }
   if (!result && cityPos) result = { ...cityPos, precision: 'ville' };
-  STADES[key] = { name: v.name, city: v.city, lat: result ? result.lat : null, lng: result ? result.lng : null, precision: result ? result.precision : null, checkedAt: new Date().toISOString() };
+  // Pas trouvé par le nom : on cherche les terrains de foot autour de l'adresse (ou de la commune).
+  if (result && result.precision !== 'stade') {
+    const near = await stadiumNear(v, result, result.precision);
+    if (near) result = { lat: near.lat, lng: near.lng, precision: 'stade' };
+  }
+  STADES[key] = { name: v.name, address: v.address, zip: v.zip, city: v.city, lat: result ? result.lat : null, lng: result ? result.lng : null, precision: result ? result.precision : null, v: LOOKUP_VERSION, checkedAt: new Date().toISOString() };
   stadesDirty = true;
   return result;
 }
@@ -278,8 +318,38 @@ async function locate(e) {
   return c ? { ...c, precision: 'ville' } : null;
 }
 
+// ---------- Relocalisation seule : node scrape-laura.js --stades ----------
+// Recalcule la position des stades des matchs déjà récupérés, sans interroger la FFF.
+async function relocateOnly() {
+  const file = path.join(DATA_DIR, 'events-amateur.json');
+  const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  const byName = new Map(Object.entries(STADES).map(([id, s]) => [slug(`${s.name} ${s.city}`), id]));
+  const venues = new Map();
+  for (const e of data.events) {
+    if (!e.venue) continue;
+    const id = e.stadeId || byName.get(slug(e.venue.replace(/,\s*/, ' ')));
+    const st = id && STADES[id];
+    if (!st) continue;
+    const m = (e.address || '').match(/^(?:(.*),\s*)?(\d{5})\s+(.+)$/);
+    venues.set(id, { id, name: st.name, city: st.city, address: st.address ?? (m && m[1]) ?? '', zip: st.zip ?? (m && m[2]) ?? '' });
+    e.stadeId = id;
+  }
+  for (const v of venues.values()) await locateVenue(v);
+  let moved = 0;
+  for (const e of data.events) {
+    const st = e.stadeId && STADES[e.stadeId];
+    if (!st || st.lat == null) continue;
+    if (st.lat !== e.lat || st.lng !== e.lng || st.precision !== e.precision) moved++;
+    Object.assign(e, { lat: st.lat, lng: st.lng, geocoded: true, precision: st.precision });
+  }
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
+  const counts = Object.values(STADES).reduce((c, s) => (c[s.precision] = (c[s.precision] || 0) + 1, c), {});
+  console.log(`${venues.size} stades traités, ${moved} matchs repositionnés, précision des stades :`, counts);
+}
+
 // ---------- Programme principal ----------
-(async () => {
+if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
   const events = []; const report = []; const unlocated = new Set();
   for (const comp of COMPETITIONS) {
     let parsed = null, source = null, errors = [];
@@ -297,6 +367,7 @@ async function locate(e) {
       events.push({
         sport: 'football', competition: comp.name, ...rest,
         venue: venue && venue.name ? [venue.name, venue.city].filter(Boolean).join(', ') : null,
+        stadeId: venue && venue.id ? String(venue.id) : null,
         address: venue ? [venue.address, [venue.zip, venue.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') || null : null,
         lat: pos ? pos.lat : null, lng: pos ? pos.lng : null, geocoded: !!pos, precision: pos ? pos.precision : null,
         real: true, source: `LAuRAFoot — ${comp.name}`, detailsUrl: comp.url,
