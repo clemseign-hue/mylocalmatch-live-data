@@ -663,5 +663,9 @@
   "divonne-les-bains": {
     "lat": 46.362372,
     "lng": 6.13642
+  },
+  "vallieres": {
+    "lat": 45.908093,
+    "lng": 5.933841
   }
 }
