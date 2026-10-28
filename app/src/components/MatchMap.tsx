@@ -71,8 +71,16 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
     if (style.kind === 'raster') {
       setBase(L.tileLayer(url, { attribution: style.attribution, maxZoom: 19, subdomains: 'abc' }));
     } else {
-      Promise.all([import('@maplibre/maplibre-gl-leaflet'), import('maplibre-gl/dist/maplibre-gl.css')])
-        .then(([plugin]) => setBase(plugin.maplibreGL({ style: url })))
+      // Le « worker » de MapLibre (fichier qui prépare les tuiles) doit être livré à part et déclaré,
+      // sinon la carte n'affiche que sa couleur de fond.
+      Promise.all([
+        import('maplibre-gl'), import('maplibre-gl/dist/maplibre-gl-worker.mjs?url'),
+        import('@maplibre/maplibre-gl-leaflet'), import('maplibre-gl/dist/maplibre-gl.css'),
+      ])
+        .then(([maplibre, worker, plugin]) => {
+          maplibre.setWorkerUrl(worker.default);
+          setBase(plugin.maplibreGL({ style: url }));
+        })
         .catch(() => setBase(L.tileLayer(mapStyleById('classique').light, { attribution: style.attribution, maxZoom: 19 })));
     }
     return () => { cancelled = true; };
