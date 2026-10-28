@@ -215,6 +215,8 @@ const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.p
 const OVERPASS_BUDGET_MS = 12 * 60 * 1000; // au-delà, on garde la meilleure position déjà connue
 let startedAt = null; // démarre à la première recherche Overpass
 let overpassDown = 0;
+const overpassLog = [];
+const logOverpass = msg => { if (overpassLog.length < 30) overpassLog.push(`${new Date().toISOString()} ${msg}`); };
 const GENERIC_WORDS = new Set(['stade', 'stades', 'complexe', 'sportif', 'sportive', 'sports', 'sport', 'municipal', 'municipale', 'terrain', 'terrains', 'parc', 'plaine', 'espace', 'synthetique', 'honneur', 'annexe', 'football', 'foot', 'des', 'du', 'de', 'la', 'le', 'les']);
 const nameTokens = n => slug(n).split('-').filter(w => w.length >= 4 && !GENERIC_WORDS.has(w) && !/^\d+$/.test(w));
 let lastNominatim = 0;
@@ -248,11 +250,12 @@ async function pitchesAround(pos, radius) {
   for (const server of OVERPASS) {
     try {
       const r = await fetch(server, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyLocalMatch/1.0' }, signal: AbortSignal.timeout(15000) });
-      if (!r.ok) continue;
+      if (!r.ok) { logOverpass(`${server} HTTP ${r.status} ${(await r.text()).slice(0, 200).replace(/\s+/g, ' ')}`); continue; }
       const j = await r.json();
       overpassDown = 0;
+      logOverpass(`${server} OK ${(j.elements || []).length} éléments`);
       return (j.elements || []).map(el => ({ lat: el.lat ?? el.center?.lat, lng: el.lon ?? el.center?.lon, name: (el.tags && el.tags.name) || '' })).filter(p => p.lat != null);
-    } catch { /* serveur suivant */ }
+    } catch (err) { logOverpass(`${server} ${err.name}: ${err.message}`); /* serveur suivant */ }
   }
   overpassDown++; // après 8 échecs complets d'affilée, on n'insiste plus pour ce passage
   return [];
@@ -354,6 +357,7 @@ async function relocateOnly() {
     Object.assign(e, { lat: st.lat, lng: st.lng, geocoded: true, precision: st.precision });
   }
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  fs.writeFileSync(path.join(DATA_DIR, 'debug-overpass.txt'), overpassLog.join('\n'));
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   const counts = Object.values(STADES).reduce((c, s) => (c[s.precision] = (c[s.precision] || 0) + 1, c), {});
   console.log(`${venues.size} stades traités, ${moved} matchs repositionnés, précision des stades :`, counts);
