@@ -1,14 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster';
 import type { MatchEvent, Place } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
-
-// Fond de carte OpenStreetMap (gratuit, sans clé) ; en mode sombre il est assombri par un filtre CSS.
-const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
-const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+import { MAP_STYLES, mapStyleById } from '../mapStyles';
 
 const pinIcon = (e: MatchEvent, selected: boolean) => L.divIcon({
   className: '',
@@ -31,13 +28,18 @@ interface Props {
   selectedId: string | null;
   onSelect: (id: string) => void;
   fitKey?: string | null; // quand il change, la carte se cadre sur tous les matchs affichés
+  styleId: string;
+  onStyleChange: (id: string) => void;
   height?: number;
 }
 
-export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey, height = 340 }: Props) {
+export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey, styleId, onStyleChange, height = 340 }: Props) {
   const elRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
-  const tilesRef = useRef<L.TileLayer | null>(null);
+  const baseRef = useRef<L.Layer | null>(null);
+  const [showStyles, setShowStyles] = useState(false);
+  const style = mapStyleById(styleId);
+  const filtered = dark && !!style.darkFilter;
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
   const meRef = useRef<L.Marker | null>(null);
   const markersRef = useRef(new Map<string, { marker: L.Marker; event: MatchEvent }>());
@@ -56,12 +58,25 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Fond de carte
+  // Fond de carte (le moteur vectoriel n'est chargé que si un style vectoriel est choisi)
   useEffect(() => {
-    tilesRef.current = L.tileLayer(TILES, { attribution: ATTRIBUTION, maxZoom: 19 }).addTo(mapRef.current!);
-    tilesRef.current.bringToBack();
-    return () => { tilesRef.current?.remove(); };
-  }, []);
+    const map = mapRef.current!;
+    let cancelled = false;
+    const url = dark ? style.dark : style.light;
+    const setBase = (layer: L.Layer) => {
+      if (cancelled) return;
+      baseRef.current?.remove();
+      baseRef.current = layer.addTo(map);
+    };
+    if (style.kind === 'raster') {
+      setBase(L.tileLayer(url, { attribution: style.attribution, maxZoom: 19, subdomains: 'abc' }));
+    } else {
+      Promise.all([import('@maplibre/maplibre-gl-leaflet'), import('maplibre-gl/dist/maplibre-gl.css')])
+        .then(([plugin]) => setBase(plugin.maplibreGL({ style: url })))
+        .catch(() => setBase(L.tileLayer(mapStyleById('classique').light, { attribution: style.attribution, maxZoom: 19 })));
+    }
+    return () => { cancelled = true; };
+  }, [style, dark]);
 
   // Marqueurs des matchs
   useEffect(() => {
@@ -112,10 +127,24 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
   const btn = 'flex h-9 w-9 items-center justify-center rounded-lg border shadow-sm';
   const btnStyle = { background: t.sheet, borderColor: t.chipBorder, color: t.text };
   return (
-    <div className={`relative w-full overflow-hidden rounded-xl border${dark ? ' mlm-dark-map' : ''}`} style={{ height, borderColor: t.border,
+    <div className={`relative w-full overflow-hidden rounded-xl border${filtered ? ' mlm-dark-map' : ''}`} style={{ height, borderColor: t.border,
       ['--map-bg' as string]: t.inputBg, ['--pin-border' as string]: t.sheet, ['--pin-selected' as string]: t.text,
       ['--cluster-bg' as string]: t.flare, ['--cluster-text' as string]: '#FFFFFF', ['--cluster-ring' as string]: t.flare + '55' }}>
       <div ref={elRef} className="absolute inset-0" />
+      <div className="absolute right-3 top-3 z-[510] flex flex-col items-end gap-1.5">
+        <button onClick={() => setShowStyles(v => !v)} className={btn} style={btnStyle} aria-label="Style de carte"><Icon name="layers" /></button>
+        {showStyles && (
+          <div className="overflow-hidden rounded-lg border shadow-md" style={{ background: t.sheet, borderColor: t.chipBorder }}>
+            {MAP_STYLES.map(s => (
+              <button key={s.id} onClick={() => { onStyleChange(s.id); setShowStyles(false); }}
+                className="flex w-full items-center justify-between gap-3 px-3 py-2 text-left text-xs font-semibold"
+                style={{ color: s.id === style.id ? t.flare : t.text }}>
+                {s.label} {s.id === style.id && <Icon name="check" size={12} />}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
       <div className="absolute bottom-6 right-3 z-[500] flex flex-col gap-1.5">
         <button onClick={() => zoom(1)} className={btn} style={btnStyle} aria-label="Zoomer"><Icon name="plus" /></button>
         <button onClick={() => zoom(-1)} className={btn} style={btnStyle} aria-label="Dézoomer"><Icon name="minus" /></button>

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Club, MatchEvent, Place } from './types';
 import { DATE_FILTERS, LEVELS, SPORTS, THEMES } from './theme';
+import { DEFAULT_MAP_STYLE } from './mapStyles';
 import { REFRESH_INTERVAL_MS, addDaysISO, fetchEvents, haversineKm, isWeekendDate, loadPref, savePref, todayISO } from './data';
 import { Icon } from './components/Icon';
 import { MatchMap } from './components/MatchMap';
@@ -27,7 +28,7 @@ function useSystemDark() {
 export default function App() {
   const [sport, setSport] = useState('tous');
   const [level, setLevel] = useState('tous');
-  const [date, setDate] = useState('tous');
+  const [date, setDate] = useState('weekend'); // à l'ouverture : les matchs de ce week-end
   const [selected, setSelected] = useState<string | null>(null);
   const [place, setPlace] = useState<Place>(() => loadPref('place', DEFAULT_PLACE));
   const [locating, setLocating] = useState(false);
@@ -35,6 +36,7 @@ export default function App() {
   const [showLocation, setShowLocation] = useState(false);
   const [club, setClub] = useState<string | null>(() => loadPref('club', null));
   const [showClubs, setShowClubs] = useState(false);
+  const [mapStyle, setMapStyle] = useState<string>(() => loadPref('mapStyle', DEFAULT_MAP_STYLE));
   const [ticketEvent, setTicketEvent] = useState<MatchEvent | null>(null);
   const [manualMode, setManualMode] = useState<'dark' | 'light' | null>(() => loadPref('theme', null));
   const [events, setEvents] = useState<MatchEvent[]>([]);
@@ -206,7 +208,8 @@ export default function App() {
       </header>
 
       <section className="px-4 pb-2 pt-4">
-        <MatchMap t={t} dark={isDark} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club} />
+        <MatchMap t={t} dark={isDark} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club}
+          styleId={mapStyle} onStyleChange={id => { setMapStyle(id); savePref('mapStyle', id); }} />
         <p className="mt-3 text-center text-[11px]" style={{ color: t.textMute }}>
           {count} match{count > 1 ? 's' : ''} à venir{club ? ` pour ${club}` : ''} · touche un point pour voir le match
         </p>
