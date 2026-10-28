@@ -88,17 +88,21 @@ function dofaVenue(m) {
 }
 
 async function fetchViaDofa(comp) {
-  const members = [];
-  for (let page = 1; page <= 20; page++) {
+  // On ne se fie pas au lien « page suivante » (parfois absent) : on avance tant que des matchs arrivent.
+  const members = []; const seen = new Set(); const pages = [];
+  for (let page = 1; page <= 10; page++) {
     const url = `${DOFA}/compets/${comp.id}/phases/${comp.phase}/poules/${comp.poule}/matchs?page=${page}`;
-    const json = await fetchJson(url);
+    let json;
+    try { json = await fetchJson(url); } catch (err) { if (page === 1) throw err; pages.push(`p${page}: ${err.message}`); break; }
     if (page === 1) fs.writeFileSync(path.join(DATA_DIR, `debug-dofa-${slug(comp.name)}.json`), JSON.stringify(json, null, 2).slice(0, 20000));
     const list = Array.isArray(json) ? json : (json['hydra:member'] || json.member || json.items || []);
-    members.push(...list);
-    const next = json['hydra:view'] && json['hydra:view']['hydra:next'];
-    if (!list.length || !next) break;
+    const fresh = list.filter(m => { const k = m.ma_no || JSON.stringify([m.date, m.home, m.away]); if (seen.has(k)) return false; seen.add(k); return true; });
+    pages.push(`p${page}: ${list.length}`);
+    members.push(...fresh);
+    if (!fresh.length || json['hydra:totalItems'] && members.length >= json['hydra:totalItems']) break;
     await sleep(300);
   }
+  comp.pages = pages.join(', ');
   const events = [];
   for (const m of members) {
     const dt = dofaDateTime(m);
@@ -235,7 +239,7 @@ async function locate(e) {
       });
       kept++;
     }
-    report.push({ competition: comp.name, source, parsedCount: parsed.length, keptCount: kept, warnings: errors.length ? errors : undefined });
+    report.push({ competition: comp.name, source, pages: comp.pages, parsedCount: parsed.length, keptCount: kept, warnings: errors.length ? errors : undefined });
   }
   events.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
   const output = { generatedAt: new Date().toISOString(), sourceNote: "Extrait automatiquement des calendriers LAuRAFoot / FFF. Coordonnées du stade quand elles sont connues, sinon de la ville du club.", events, report, unlocatedClubs: [...unlocated].sort() };
