@@ -22,7 +22,6 @@ const clusterIcon = (cluster: L.MarkerCluster) => {
 
 interface Props {
   t: Theme;
-  dark: boolean;
   events: MatchEvent[];
   center: Place;
   selectedId: string | null;
@@ -33,13 +32,12 @@ interface Props {
   height?: number;
 }
 
-export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey, styleId, onStyleChange, height = 340 }: Props) {
+export function MatchMap({ t, events, center, selectedId, onSelect, fitKey, styleId, onStyleChange, height = 340 }: Props) {
   const elRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const baseRef = useRef<L.Layer | null>(null);
   const [showStyles, setShowStyles] = useState(false);
   const style = mapStyleById(styleId);
-  const filtered = dark && !!style.darkFilter;
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
   const meRef = useRef<L.Marker | null>(null);
   const markersRef = useRef(new Map<string, { marker: L.Marker; event: MatchEvent }>());
@@ -62,7 +60,7 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
   useEffect(() => {
     const map = mapRef.current!;
     let cancelled = false;
-    const url = dark ? style.dark : style.light;
+    const url = style.url;
     const setBase = (layer: L.Layer) => {
       if (cancelled) return;
       baseRef.current?.remove();
@@ -81,10 +79,10 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
           maplibre.setWorkerUrl(worker.default);
           setBase(plugin.maplibreGL({ style: url }));
         })
-        .catch(() => setBase(L.tileLayer(mapStyleById('classique').light, { attribution: style.attribution, maxZoom: 19 })));
+        .catch(() => setBase(L.tileLayer(mapStyleById('classique').url, { attribution: style.attribution, maxZoom: 19 })));
     }
     return () => { cancelled = true; };
-  }, [style, dark]);
+  }, [style]);
 
   // Marqueurs des matchs
   useEffect(() => {
@@ -135,7 +133,7 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey
   const btn = 'flex h-9 w-9 items-center justify-center rounded-lg border shadow-sm';
   const btnStyle = { background: t.sheet, borderColor: t.chipBorder, color: t.text };
   return (
-    <div className={`relative w-full overflow-hidden rounded-xl border${filtered ? ' mlm-dark-map' : ''}`} style={{ height, borderColor: t.border,
+    <div className="relative w-full overflow-hidden rounded-xl border" style={{ height, borderColor: t.border,
       ['--map-bg' as string]: t.inputBg, ['--pin-border' as string]: t.sheet, ['--pin-selected' as string]: t.text,
       ['--cluster-bg' as string]: t.flare, ['--cluster-text' as string]: '#FFFFFF', ['--cluster-ring' as string]: t.flare + '55' }}>
       <div ref={elRef} className="absolute inset-0" />

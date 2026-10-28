@@ -208,7 +208,7 @@ export default function App() {
       </header>
 
       <section className="px-4 pb-2 pt-4">
-        <MatchMap t={t} dark={isDark} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club}
+        <MatchMap t={t} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club}
           styleId={mapStyle} onStyleChange={id => { setMapStyle(id); savePref('mapStyle', id); }} />
         <p className="mt-3 text-center text-[11px]" style={{ color: t.textMute }}>
           {count} match{count > 1 ? 's' : ''} à venir{club ? ` pour ${club}` : ''} · touche un point pour voir le match

@@ -1,17 +1,17 @@
 export const THEMES = {
-  dark: { bg: '#0E1712', card: '#16281C', border: '#26382C', text: '#EDE8DC', textSoft: '#8FA394', textMute: '#4E6455', chipBorder: '#3A5240', chipActiveBg: '#EDE8DC', chipActiveText: '#0E1712', flare: '#FF5A36', gold: '#F4B740', dashed: '#3A5240', overlay: 'rgba(6,10,7,0.72)', sheet: '#16281C', inputBg: '#1B2E20' },
-  light: { bg: '#F6F4EE', card: '#FFFFFF', border: '#E4DFD1', text: '#1A281C', textSoft: '#5B6B5C', textMute: '#9AA394', chipBorder: '#DAD4C4', chipActiveBg: '#1A281C', chipActiveText: '#F6F4EE', flare: '#D9481F', gold: '#B4790F', dashed: '#DAD4C4', overlay: 'rgba(30,30,20,0.45)', sheet: '#FFFFFF', inputBg: '#F0EDE2' },
+  dark: { bg: '#111113', card: '#1C1C1E', border: '#2C2C2E', text: '#F2F2F7', textSoft: '#AEAEB2', textMute: '#6E6E73', chipBorder: '#3A3A3C', chipActiveBg: '#F2F2F7', chipActiveText: '#111113', flare: '#FF5A36', gold: '#F4B740', dashed: '#3A3A3C', overlay: 'rgba(0,0,0,0.6)', sheet: '#1C1C1E', inputBg: '#2C2C2E' },
+  light: { bg: '#F5F5F7', card: '#FFFFFF', border: '#E5E5EA', text: '#1C1C1E', textSoft: '#636366', textMute: '#8E8E93', chipBorder: '#D1D1D6', chipActiveBg: '#1C1C1E', chipActiveText: '#F5F5F7', flare: '#D9481F', gold: '#B4790F', dashed: '#D1D1D6', overlay: 'rgba(0,0,0,0.4)', sheet: '#FFFFFF', inputBg: '#EDEDF0' },
 };
 export type Theme = typeof THEMES.dark;
 
 export const SPORTS = [
   { id: 'tous', label: 'Tous' },
-  { id: 'football', label: 'Football', color: '#3FA34D' },
+  { id: 'football', label: 'Football', color: '#F4B740' },
   { id: 'rugby', label: 'Rugby', color: '#C97B2E' },
   { id: 'handball', label: 'Handball', color: '#3A7CA5' },
-  { id: 'basket', label: 'Basket', color: '#E0A93A' },
+  { id: 'basket', label: 'Basket', color: '#A78BFA' },
 ];
-export const sportColor = (s: string) => SPORTS.find(x => x.id === s)?.color || '#EDE8DC';
+export const sportColor = (s: string) => SPORTS.find(x => x.id === s)?.color || '#F2F2F7';
 export const sportInitial = (s: string) => ({ football: 'F', rugby: 'R', handball: 'H', basket: 'B' } as Record<string, string>)[s] || '?';
 export const PRICING: Record<string, number[]> = { football: [8, 5, 3], rugby: [15, 10, 6], handball: [6, 4, 2], basket: [12, 8, 5] };
 

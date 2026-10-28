@@ -15,7 +15,7 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
       <div className="flex">
         <div className="flex w-16 shrink-0 flex-col items-center justify-center gap-1 border-r border-dashed"
           style={{ background: sportColor(e.sport) + '1A', borderColor: t.dashed }}>
-          <span className="font-display flex h-9 w-9 items-center justify-center rounded-full text-sm" style={{ background: sportColor(e.sport), color: '#0E1712' }}>
+          <span className="font-display flex h-9 w-9 items-center justify-center rounded-full text-sm" style={{ background: sportColor(e.sport), color: '#111113' }}>
             {sportInitial(e.sport)}
           </span>
           <span className="text-[9px] font-semibold" style={{ color: t.textSoft }}>{e.distanceKm} km</span>
