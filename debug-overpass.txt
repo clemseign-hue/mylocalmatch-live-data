@@ -1,0 +1,24 @@
+2026-10-28T19:03:59.943Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:04:14.944Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:04:16.283Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:04:19.119Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:04:34.120Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:04:35.114Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:04:37.554Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:04:52.555Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:05:07.556Z https://maps.mail.ru/osm/tools/overpass/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:05:10.245Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:05:25.245Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:05:26.417Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:05:29.347Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:05:44.348Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:05:45.345Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:05:48.282Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:06:03.283Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:06:04.288Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:06:21.677Z https://overpass-api.de/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:06:36.678Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:06:37.499Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
+2026-10-28T19:06:39.820Z https://overpass-api.de/api/interpreter HTTP 502 # 502 Gateway Timeout This Overpass API server is currently at capacity. All query workers are busy and the request queue is full. ## What to do Retry your request using exponential backoff: wait a
+2026-10-28T19:06:54.821Z https://overpass.private.coffee/api/interpreter TimeoutError: The operation was aborted due to timeout
+2026-10-28T19:06:55.825Z https://maps.mail.ru/osm/tools/overpass/api/interpreter HTTP 504 <html> <head><title>504 Gateway Time-out</title></head> <body> <center><h1>504 Gateway Time-out</h1></center> <hr><center>nginx</center> </body> </html> 
