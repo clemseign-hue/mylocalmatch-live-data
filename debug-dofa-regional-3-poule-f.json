@@ -1,0 +1,636 @@
+{
+  "@context": "/api/contexts/MatchEntity",
+  "@id": "/api/match_entities",
+  "@type": "hydra:Collection",
+  "hydra:member": [
+    {
+      "ma_no": 56114548,
+      "competition": {
+        "cp_no": 457862,
+        "season": 2026,
+        "type": "CH",
+        "name": "SENIORS REGIONAL 3",
+        "level": "L",
+        "cdg": {
+          "cg_no": 122,
+          "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+          "external_updated_at": "2026-10-28T08:34:08+00:00"
+        },
+        "external_updated_at": "2026-09-17T16:19:38+00:00"
+      },
+      "phase": {
+        "number": 1,
+        "type": "CH",
+        "name": "UNIQUE",
+        "external_updated_at": "2026-08-26T14:31:32+00:00"
+      },
+      "poule": {
+        "stage_number": 6,
+        "name": "POULE F",
+        "external_updated_at": "2026-09-05T21:21:56+00:00",
+        "poule_unique": false,
+        "at_least_one_match_resultat": true
+      },
+      "poule_journee": {
+        "number": 1,
+        "external_updated_at": "2026-09-08T21:48:09+00:00",
+        "name": "1"
+      },
+      "home": {
+        "club": {
+          "cl_no": 514,
+          "external_updated_at": "2026-10-13T11:23:33+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC500430.jpg"
+        },
+        "category_code": "SEM",
+        "number": 1,
+        "code": 1,
+        "short_name": "ST E.COTE CHAUDE",
+        "short_name_ligue": "ST E.COTE CHAUDE",
+        "short_name_federation": "ST E.COTE CHAUDE",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 449168,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+              "level": "F",
+              "cdg": {
+                "cg_no": 0,
+                "name": "FEDERATION FRANCAISE DE FOOTBALL",
+                "external_updated_at": "2026-10-27T19:10:19+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:04:45+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 450019,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE LA LOIRE SÉNIORS",
+              "level": "D",
+              "cdg": {
+                "cg_no": 126,
+                "name": "DISTRICT DE LA LOIRE",
+                "external_updated_at": "2026-10-26T15:11:09+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:26:49+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-10-22T14:55:44+00:00"
+            }
+          }
+        ],
+        "external_updated_at": "2026-08-27T14:19:48+00:00",
+        "category_label": "Senior Libre",
+        "category_gender": "M"
+      },
+      "away": {
+        "club": {
+          "cl_no": 15517,
+          "external_updated_at": "2026-09-21T14:08:01+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC533355.jpg"
+        },
+        "category_code": "SEM",
+        "number": 1,
+        "code": 1,
+        "short_name": "GUEREINS",
+        "short_name_ligue": "GUEREINS",
+        "short_name_federation": "GUEREINS",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 449168,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+              "level": "F",
+              "cdg": {
+                "cg_no": 0,
+                "name": "FEDERATION FRANCAISE DE FOOTBALL",
+                "external_updated_at": "2026-10-27T19:10:19+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:04:45+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-10-22T14:55:44+00:00"
+            }
+          }
+        ],
+        "external_updated_at": "2026-08-27T14:26:32+00:00",
+        "category_label": "Senior Libre",
+        "category_gender": "M"
+      },
+      "terrain": {
+        "te_no": 422180501,
+        "name": "STADE AUGUSTE DURY 1",
+        "zip_code": "42000",
+        "city": "ST ETIENNE",
+        "libelle_surface": "Pelouse Naturelle",
+        "external_updated_at": "2026-06-06T08:43:07+00:00",
+        "address": "14 RUE MARGUERITE GONON"
+      },
+      "season": 2026,
+      "status": "A",
+      "ma_ar": "A",
+      "ma_inver": "N",
+      "ma_arret": "N",
+      "is_overtime": "N",
+      "date": "2026-09-05T00:00:00+00:00",
+      "time": "19H00",
+      "initial_date": null,
+      "cr_eq_naff": null,
+      "home_resu": "NU",
+      "cr_nb_but": 2,
+      "home_score": 2,
+      "home_but_contre": 2,
+      "home_nb_point": null,
+      "home_nb_tir_but": null,
+      "home_nb_point_pena": 0,
+      "home_is_forfeit": "N",
+      "cv_eq_naff": null,
+      "away_resu": "NU",
+      "away_nb_but": 2,
+      "away_score": 2,
+      "away_but_contre": 2,
+      "away_nb_point": null,
+      "away_nb_tir_but": null,
+      "away_nb_point_pena": 0,
+      "away_is_forfeit": "N",
+      "seems_postponed": "",
+      "match_membres": [
+        {
+          "mm_no": 160317761,
+          "po_cod": "AC",
+          "prenom": "SIMON",
+          "nom": "BROSSARD",
+          "label_position": "Arbitre centre",
+          "position_ordre": 1,
+          "external_updated_at": "2026-09-03T17:19:26+00:00"
+        },
+        {
+          "mm_no": 161435833,
+          "po_cod": "A1",
+          "prenom": "NATHAN",
+          "nom": "DESTABLE",
+          "label_position": "Arbitre assistant 1",
+          "position_ordre": 2,
+          "external_updated_at": "2026-09-03T17:19:26+00:00"
+        },
+        {
+          "mm_no": 161435834,
+          "po_cod": "A2",
+          "prenom": "CLEMENT",
+          "nom": "CHARREYRON",
+          "label_position": "Arbitre assistant 2",
+          "position_ordre": 3,
+          "external_updated_at": "2026-09-03T17:19:26+00:00"
+        }
+      ],
+      "match_feuille": "/api/match_feuilles/26137288",
+      "external_updated_at": "2026-09-05T21:21:56+00:00",
+      "status_label": "/"
+    },
+    {
+      "ma_no": 56114546,
+      "competition": {
+        "cp_no": 457862,
+        "season": 2026,
+        "type": "CH",
+        "name": "SENIORS REGIONAL 3",
+        "level": "L",
+        "cdg": {
+          "cg_no": 122,
+          "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+          "external_updated_at": "2026-10-28T08:34:08+00:00"
+        },
+        "external_updated_at": "2026-09-17T16:19:38+00:00"
+      },
+      "phase": {
+        "number": 1,
+        "type": "CH",
+        "name": "UNIQUE",
+        "external_updated_at": "2026-08-26T14:31:32+00:00"
+      },
+      "poule": {
+        "stage_number": 6,
+        "name": "POULE F",
+        "external_updated_at": "2026-09-05T21:21:56+00:00",
+        "poule_unique": false,
+        "at_least_one_match_resultat": true
+      },
+      "poule_journee": {
+        "number": 1,
+        "external_updated_at": "2026-09-08T21:48:09+00:00",
+        "name": "1"
+      },
+      "home": {
+        "club": {
+          "cl_no": 6704,
+          "external_updated_at": "2026-09-08T11:54:18+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC520066.jpg"
+        },
+        "category_code": "SEM",
+        "number": 4,
+        "code": 2,
+        "short_name": "LYON LA DUCHERE",
+        "short_name_ligue": "LYON LA DUCHERE",
+        "short_name_federation": "LYON LA DUCHERE",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 453692,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE LYON DU RHONE SENIORS",
+              "level": "D",
+              "cdg": {
+                "cg_no": 127,
+                "name": "DISTRICT DE LYON ET DU RHONE",
+                "external_updated_at": "2026-10-27T22:52:04+00:00"
+              },
+              "external_updated_at": "2026-08-26T14:20:29+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-10-22T14:55:44+00:00"
+            }
+          }
+        ],
+        "external_updated_at": "2026-08-27T14:23:55+00:00",
+        "category_label": "Senior Libre",
+        "category_gender": "M"
+      },
+      "away": {
+        "club": {
+          "cl_no": 23514,
+          "external_updated_at": "2026-10-14T12:35:22+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC545636.jpg"
+        },
+        "category_code": "SEM",
+        "number": 1,
+        "code": 1,
+        "short_name": "U.S. ST JUST ST MARC",
+        "short_name_ligue": "U.S. ST JUST ST MARC",
+        "short_name_federation": "U.S. ST JUST ST MARC",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 449168,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+              "level": "F",
+              "cdg": {
+                "cg_no": 0,
+                "name": "FEDERATION FRANCAISE DE FOOTBALL",
+                "external_updated_at": "2026-10-27T19:10:19+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:04:45+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-10-22T14:55:44+00:00"
+            }
+          }
+        ],
+        "external_updated_at": "2026-08-27T14:32:00+00:00",
+        "category_label": "Senior Libre",
+        "category_gender": "M"
+      },
+      "terrain": {
+        "te_no": 693892001,
+        "name": "STADE DE LA SAUVEGARDE",
+        "zip_code": "69009",
+        "city": "LYON",
+        "libelle_surface": "Synthétique",
+        "external_updated_at": "2026-06-07T08:43:46+00:00",
+        "address": "490 AV. BEN GOURION LA DUCHERE"
+      },
+      "season": 2026,
+      "status": "A",
+      "ma_ar": "A",
+      "ma_inver": "N",
+      "ma_arret": "N",
+      "is_overtime": "N",
+      "date": "2026-09-06T00:00:00+00:00",
+      "time": "15H30",
+      "initial_date": null,
+      "cr_eq_naff": null,
+      "home_resu": "PE",
+      "cr_nb_but": 0,
+      "home_score": 0,
+      "home_but_contre": 5,
+      "home_nb_point": null,
+      "home_nb_tir_but": null,
+      "home_nb_point_pena": 0,
+      "home_is_forfeit": "N",
+      "cv_eq_naff": null,
+      "away_resu": "GA",
+      "away_nb_but": 5,
+      "away_score": 5,
+      "away_but_contre": 0,
+      "away_nb_point": null,
+      "away_nb_tir_but": null,
+      "away_nb_point_pena": 0,
+      "away_is_forfeit": "N",
+      "seems_postponed": "",
+      "match_membres": [
+        {
+          "mm_no": 160317700,
+          "po_cod": "AC",
+          "prenom": "ROMAIN",
+          "nom": "JARJAVAL",
+          "label_position": "Arbitre centre",
+          "position_ordre": 1,
+          "external_updated_at": "2026-08-26T15:08:19+00:00"
+        },
+        {
+          "mm_no": 160501572,
+          "po_cod": "A1",
+          "prenom": "KAMAL",
+          "nom": "KHODJA",
+          "label_position": "Arbitre assistant 1",
+          "position_ordre": 2,
+          "external_updated_at": "2026-08-26T15:08:19+00:00"
+        },
+        {
+          "mm_no": 160501573,
+          "po_cod": "A2",
+          "prenom": "SABRY",
+          "nom": "BENBELAID",
+          "label_position": "Arbitre assistant 2",
+          "position_ordre": 3,
+          "external_updated_at": "2026-08-26T15:08:19+00:00"
+        }
+      ],
+      "match_feuille": "/api/match_feuilles/26137245",
+      "external_updated_at": "2026-09-08T21:48:00+00:00",
+      "status_label": "/"
+    },
+    {
+      "ma_no": 56114550,
+      "competition": {
+        "cp_no": 457862,
+        "season": 2026,
+        "type": "CH",
+        "name": "SENIORS REGIONAL 3",
+        "level": "L",
+        "cdg": {
+          "cg_no": 122,
+          "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+          "external_updated_at": "2026-10-28T08:34:08+00:00"
+        },
+        "external_updated_at": "2026-09-17T16:19:38+00:00"
+      },
+      "phase": {
+        "number": 1,
+        "type": "CH",
+        "name": "UNIQUE",
+        "external_updated_at": "2026-08-26T14:31:32+00:00"
+      },
+      "poule": {
+        "stage_number": 6,
+        "name": "POULE F",
+        "external_updated_at": "2026-09-05T21:21:56+00:00",
+        "poule_unique": false,
+        "at_least_one_match_resultat": true
+      },
+      "poule_journee": {
+        "number": 1,
+        "external_updated_at": "2026-09-08T21:48:09+00:00",
+        "name": "1"
+      },
+      "home": {
+        "club": {
+          "cl_no": 3405,
+          "external_updated_at": "2026-10-05T10:08:06+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC509197.jpg"
+        },
+        "category_code": "SEM",
+        "number": 1,
+        "code": 1,
+        "short_name": "DAVEZIEUX VIDALON",
+        "short_name_ligue": "DAVEZIEUX VIDALON",
+        "short_name_federation": "U.S. DAVEZIEUX VIDAL",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 449168,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+              "level": "F",
+              "cdg": {
+                "cg_no": 0,
+                "name": "FEDERATION FRANCAISE DE FOOTBALL",
+                "external_updated_at": "2026-10-27T19:10:19+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:04:45+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-10-22T14:55:44+00:00"
+            }
+          }
+        ],
+        "external_updated_at": "2026-08-27T14:22:07+00:00",
+        "category_label": "Senior Libre",
+        "category_gender": "M"
+      },
+      "away": {
+        "club": {
+          "cl_no": 2602,
+          "external_updated_at": "2026-09-07T11:50:57+00:00",
+          "logo": "https://cdn-transverse.azureedge.net/phlogos/BC505605.jpg"
+        },
+        "category_code": "SEM",
+        "number": 1,
+        "code": 1,
+        "short_name": "FC LYON FOOTBALL",
+        "short_name_ligue": "FC LYON FOOTBALL",
+        "short_name_federation": "FC LYON FOOTBALL",
+        "type": "C",
+        "engagements": [
+          {
+            "competition": {
+              "cp_no": 449168,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+              "level": "F",
+              "cdg": {
+                "cg_no": 0,
+                "name": "FEDERATION FRANCAISE DE FOOTBALL",
+                "external_updated_at": "2026-10-27T19:10:19+00:00"
+              },
+              "external_updated_at": "2026-10-08T15:04:45+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 457862,
+              "season": 2026,
+              "type": "CH",
+              "name": "SENIORS REGIONAL 3",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "external_updated_at": "2026-09-17T16:19:38+00:00"
+            }
+          },
+          {
+            "competition": {
+              "cp_no": 459242,
+              "season": 2026,
+              "type": "CP",
+              "name": "COUPE LAURAFOOT",
+              "level": "L",
+              "cdg": {
+                "cg_no": 122,
+                "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+                "external_updated_at": "2026-10-28T08:34:08+00:00"
+              },
+              "extern

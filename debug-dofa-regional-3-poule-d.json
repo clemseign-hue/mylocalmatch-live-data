@@ -1,0 +1,681 @@
+[
+  {
+    "ma_no": 56147249,
+    "competition": {
+      "cp_no": 457862,
+      "season": 2026,
+      "type": "CH",
+      "name": "SENIORS REGIONAL 3",
+      "level": "L",
+      "cdg": {
+        "cg_no": 122,
+        "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+        "external_updated_at": "2026-10-28T08:34:08+00:00"
+      },
+      "external_updated_at": "2026-09-17T16:19:38+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "UNIQUE",
+      "external_updated_at": "2026-08-26T14:31:32+00:00"
+    },
+    "poule": {
+      "stage_number": 4,
+      "name": "POULE D",
+      "external_updated_at": "2026-09-05T20:19:15+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:22:47+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 154141,
+        "external_updated_at": "2026-08-24T14:52:10+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC552955.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "AS SAVIGNEUX MONTB",
+      "short_name_ligue": "AS SAVIGNEUX MONTB",
+      "short_name_federation": "A.S.S.M",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 457862,
+            "season": 2026,
+            "type": "CH",
+            "name": "SENIORS REGIONAL 3",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-09-17T16:19:38+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 450019,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE LA LOIRE SÉNIORS",
+            "level": "D",
+            "cdg": {
+              "cg_no": 126,
+              "name": "DISTRICT DE LA LOIRE",
+              "external_updated_at": "2026-10-26T15:11:09+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:26:49+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 459242,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE LAURAFOOT",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-10-22T14:55:44+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:00+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 200740,
+        "external_updated_at": "2026-09-30T08:44:56+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC561131.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "HAUT LIGNON FOOT",
+      "short_name_ligue": "HAUT LIGNON FOOT",
+      "short_name_federation": "HAUT LIGNON FOOT",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 457862,
+            "season": 2026,
+            "type": "CH",
+            "name": "SENIORS REGIONAL 3",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-09-17T16:19:38+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 451628,
+            "season": 2026,
+            "type": "CP",
+            "name": "Coupe Haute Loire Seniors",
+            "level": "D",
+            "cdg": {
+              "cg_no": 20,
+              "name": "DISTRICT HAUTE LOIRE",
+              "external_updated_at": "2026-08-12T09:01:01+00:00"
+            },
+            "external_updated_at": "2026-10-23T21:05:35+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 459242,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE LAURAFOOT",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-10-22T14:55:44+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:50+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 421470101,
+      "name": "STADE LA MADELEINE 1",
+      "zip_code": "42600",
+      "city": "MONTBRISON",
+      "libelle_surface": "Synthétique",
+      "external_updated_at": "2026-09-25T14:29:20+00:00",
+      "address": "2 RUE DU STADE"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-05T00:00:00+00:00",
+    "time": "20H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 160317755,
+        "po_cod": "AC",
+        "prenom": "DAVID",
+        "nom": "PAVAN",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-31T12:44:19+00:00"
+      },
+      {
+        "mm_no": 161240550,
+        "po_cod": "A1",
+        "prenom": "MAROUANE",
+        "nom": "KBIBOU",
+        "label_position": "Arbitre assistant 1",
+        "position_ordre": 2,
+        "external_updated_at": "2026-08-31T12:44:19+00:00"
+      },
+      {
+        "mm_no": 161270140,
+        "po_cod": "A2",
+        "prenom": "MARION",
+        "nom": "PICARD",
+        "label_position": "Arbitre assistant 2",
+        "position_ordre": 3,
+        "external_updated_at": "2026-08-31T12:44:19+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26137282",
+    "external_updated_at": "2026-09-06T10:36:29+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56147253,
+    "competition": {
+      "cp_no": 457862,
+      "season": 2026,
+      "type": "CH",
+      "name": "SENIORS REGIONAL 3",
+      "level": "L",
+      "cdg": {
+        "cg_no": 122,
+        "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+        "external_updated_at": "2026-10-28T08:34:08+00:00"
+      },
+      "external_updated_at": "2026-09-17T16:19:38+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "UNIQUE",
+      "external_updated_at": "2026-08-26T14:31:32+00:00"
+    },
+    "poule": {
+      "stage_number": 4,
+      "name": "POULE D",
+      "external_updated_at": "2026-09-05T20:19:15+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:22:47+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 173078,
+        "external_updated_at": "2026-09-04T11:09:26+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC563840.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "ST GALMIER CHAMBOEUF",
+      "short_name_ligue": "ST GALMIER CHAMBOEUF",
+      "short_name_federation": "USGC",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 457862,
+            "season": 2026,
+            "type": "CH",
+            "name": "SENIORS REGIONAL 3",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-09-17T16:19:38+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 450019,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE LA LOIRE SÉNIORS",
+            "level": "D",
+            "cdg": {
+              "cg_no": 126,
+              "name": "DISTRICT DE LA LOIRE",
+              "external_updated_at": "2026-10-26T15:11:09+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:26:49+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 459242,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE LAURAFOOT",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-10-22T14:55:44+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:12+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 172806,
+        "external_updated_at": "2026-09-11T23:19:24+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC563727.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "P COISE GRAMMOND",
+      "short_name_ligue": "P COISE GRAMMOND",
+      "short_name_federation": "AFPC",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 457862,
+            "season": 2026,
+            "type": "CH",
+            "name": "SENIORS REGIONAL 3",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-09-17T16:19:38+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 450019,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE LA LOIRE SÉNIORS",
+            "level": "D",
+            "cdg": {
+              "cg_no": 126,
+              "name": "DISTRICT DE LA LOIRE",
+              "external_updated_at": "2026-10-26T15:11:09+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:26:49+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 459242,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE LAURAFOOT",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-10-22T14:55:44+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:11+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 420430101,
+      "name": "STADE DE CHAMPVERT",
+      "zip_code": "42330",
+      "city": "CHAMBOEUF",
+      "libelle_surface": "Synthétique",
+      "external_updated_at": "2026-09-17T10:19:18+00:00",
+      "address": "ROUTE DE CHAMPVERT"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-05T00:00:00+00:00",
+    "time": "18H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 160317693,
+        "po_cod": "AC",
+        "prenom": "HUSEYIN",
+        "nom": "YIGITER",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-09-01T00:13:35+00:00"
+      },
+      {
+        "mm_no": 161435871,
+        "po_cod": "A1",
+        "prenom": "MEYER",
+        "nom": "JRAD",
+        "label_position": "Arbitre assistant 1",
+        "position_ordre": 2,
+        "external_updated_at": "2026-09-01T00:13:34+00:00"
+      },
+      {
+        "mm_no": 161435872,
+        "po_cod": "A2",
+        "prenom": "YANIS",
+        "nom": "NAGUY",
+        "label_position": "Arbitre assistant 2",
+        "position_ordre": 3,
+        "external_updated_at": "2026-09-01T00:13:34+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26137242",
+    "external_updated_at": "2026-09-05T20:19:16+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56147251,
+    "competition": {
+      "cp_no": 457862,
+      "season": 2026,
+      "type": "CH",
+      "name": "SENIORS REGIONAL 3",
+      "level": "L",
+      "cdg": {
+        "cg_no": 122,
+        "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+        "external_updated_at": "2026-10-28T08:34:08+00:00"
+      },
+      "external_updated_at": "2026-09-17T16:19:38+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "UNIQUE",
+      "external_updated_at": "2026-08-26T14:31:32+00:00"
+    },
+    "poule": {
+      "stage_number": 4,
+      "name": "POULE D",
+      "external_updated_at": "2026-09-05T20:19:15+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:22:47+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 2247,
+        "external_updated_at": "2026-10-21T18:55:23+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC504377.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "E.S. DE VEAUCHE",
+      "short_name_ligue": "E.S. DE VEAUCHE",
+      "short_name_federation": "E.S. DE VEAUCHE",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 457862,
+            "season": 2026,
+            "type": "CH",
+            "name": "SENIORS REGIONAL 3",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-09-17T16:19:38+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 450019,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE LA LOIRE SÉNIORS",
+            "level": "D",
+            "cdg": {
+              "cg_no": 126,
+              "name": "DISTRICT DE LA LOIRE",
+              "external_updated_at": "2026-10-26T15:11:09+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:26:49+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 459242,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE LAURAFOOT",
+            "level": "L",
+            "cdg": {
+              "cg_no": 122,
+              "name": "LIGUE AUVERGNE-RHONE-ALPES DE FOOTBALL",
+              "external_updated_at": "2026-10-28T08:34:08+00:00"
+            },
+            "external_updated_at": "2026-10-22T14:55:44+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:21:22+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 2184,
+        "external_updated_at": "2026-08-28T20:43:34+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC504271.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "STE SIGOLENE",
+      "short_name_ligue": "STE SIGOLENE",
+      "short_name_federation": "STE SIGOLENE",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-08T15:04:45+00:00"
+          }
+        },
+        {
+    
