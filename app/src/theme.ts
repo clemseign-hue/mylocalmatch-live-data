@@ -20,7 +20,6 @@ export const LEVELS = [
   { id: 'r1', label: 'R1' },
   { id: 'r2', label: 'R2' },
   { id: 'r3', label: 'R3' },
-  { id: 'coupe', label: 'Coupe de France' },
 ] as const;
 
 export const DATE_FILTERS = [

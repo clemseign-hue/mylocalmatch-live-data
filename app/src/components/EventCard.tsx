@@ -3,12 +3,12 @@ import type { MatchEvent } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
 
-interface Props { t: Theme; event: MatchEvent & { distanceKm: number }; selected: boolean; onSelect: () => void; onTicket: () => void }
+interface Props { t: Theme; event: MatchEvent & { distanceKm: number }; side?: 'Domicile' | 'Extérieur'; selected: boolean; onSelect: () => void; onTicket: () => void }
 
 const directionsUrl = (e: MatchEvent) =>
   `https://maps.apple.com/?daddr=${e.lat},${e.lng}&q=${encodeURIComponent(e.venue || `${e.home} vs ${e.away}`)}`;
 
-export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, selected, onSelect, onTicket }, ref) {
+export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, selected, onSelect, onTicket }, ref) {
   return (
     <div ref={ref} onClick={onSelect} className="relative cursor-pointer overflow-hidden rounded-xl border transition"
       style={{ borderColor: selected ? t.gold : t.border, background: t.card }}>
@@ -24,7 +24,15 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
           <h3 className="font-display text-lg leading-tight">
             {e.home} <span style={{ color: t.gold }}>vs</span> {e.away}
           </h3>
-          <p className="mt-0.5 text-[11px]" style={{ color: t.textSoft }}>{e.competition}</p>
+          <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[11px]" style={{ color: t.textSoft }}>
+            {side && (
+              <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold"
+                style={side === 'Domicile' ? { background: t.gold + '26', color: t.gold } : { background: t.chipBorder + '66', color: t.textSoft }}>
+                {side}
+              </span>
+            )}
+            {e.competition}
+          </p>
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs" style={{ color: t.text }}>
             <span className="flex items-center gap-1"><Icon name="calendar" size={12} color={t.textMute} /> {e.dayLabel}</span>
             <span className="flex items-center gap-1"><Icon name="clock" size={12} color={t.textMute} /> {e.time}</span>

@@ -6,12 +6,9 @@ import type { MatchEvent, Place } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
 
-// Fonds de carte CARTO (données OpenStreetMap), en version claire et sombre.
-const TILES = {
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-};
-const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
+// Fond de carte OpenStreetMap (gratuit, sans clé) ; en mode sombre il est assombri par un filtre CSS.
+const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
 const pinIcon = (e: MatchEvent, selected: boolean) => L.divIcon({
   className: '',
@@ -33,10 +30,11 @@ interface Props {
   center: Place;
   selectedId: string | null;
   onSelect: (id: string) => void;
+  fitKey?: string | null; // quand il change, la carte se cadre sur tous les matchs affichés
   height?: number;
 }
 
-export function MatchMap({ t, dark, events, center, selectedId, onSelect, height = 340 }: Props) {
+export function MatchMap({ t, dark, events, center, selectedId, onSelect, fitKey, height = 340 }: Props) {
   const elRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const tilesRef = useRef<L.TileLayer | null>(null);
@@ -58,13 +56,12 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, height
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Fond clair / sombre
+  // Fond de carte
   useEffect(() => {
-    const map = mapRef.current!;
-    tilesRef.current?.remove();
-    tilesRef.current = L.tileLayer(dark ? TILES.dark : TILES.light, { attribution: ATTRIBUTION, maxZoom: 19, subdomains: 'abcd' }).addTo(map);
+    tilesRef.current = L.tileLayer(TILES, { attribution: ATTRIBUTION, maxZoom: 19 }).addTo(mapRef.current!);
     tilesRef.current.bringToBack();
-  }, [dark]);
+    return () => { tilesRef.current?.remove(); };
+  }, []);
 
   // Marqueurs des matchs
   useEffect(() => {
@@ -79,6 +76,14 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, height
     });
     cluster.addLayers(markers);
   }, [events]);
+
+  // Cadrage sur les matchs d'un club choisi
+  useEffect(() => {
+    if (!fitKey || !events.length) return;
+    const bounds = L.latLngBounds(events.map(e => [e.lat, e.lng] as [number, number]));
+    mapRef.current!.fitBounds(bounds, { padding: [30, 30], maxZoom: 12 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fitKey, events.length]);
 
   // Mise en avant du match sélectionné
   useEffect(() => {
@@ -107,7 +112,7 @@ export function MatchMap({ t, dark, events, center, selectedId, onSelect, height
   const btn = 'flex h-9 w-9 items-center justify-center rounded-lg border shadow-sm';
   const btnStyle = { background: t.sheet, borderColor: t.chipBorder, color: t.text };
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border" style={{ height, borderColor: t.border,
+    <div className={`relative w-full overflow-hidden rounded-xl border${dark ? ' mlm-dark-map' : ''}`} style={{ height, borderColor: t.border,
       ['--map-bg' as string]: t.inputBg, ['--pin-border' as string]: t.sheet, ['--pin-selected' as string]: t.text,
       ['--cluster-bg' as string]: t.flare, ['--cluster-text' as string]: '#FFFFFF', ['--cluster-ring' as string]: t.flare + '55' }}>
       <div ref={elRef} className="absolute inset-0" />

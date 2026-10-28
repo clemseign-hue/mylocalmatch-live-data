@@ -21,16 +21,20 @@ export function levelOf(competition: string): LevelId {
   return 'autre';
 }
 
-const cleanName = (s: string) => s.replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+const cleanName = (s: string) => s.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+// « VICHY RC 2 » (équipe réserve) appartient au club « VICHY RC ».
+export const clubOf = (team: string) => team.replace(/\s+\d+$/, '');
 
 function toEvent(e: RawEvent, i: number): MatchEvent | null {
   if (e.lat == null || e.lng == null || !e.home || !e.away) return null;
   const d = e.date ? new Date(e.date + 'T00:00:00') : null;
   const competition = e.competition || '';
+  if (levelOf(competition) === 'coupe') return null; // Coupe de France retirée de l'appli
+  const home = cleanName(e.home), away = cleanName(e.away);
   return {
     id: e.matchId ? `m${e.matchId}` : `a${i}`,
     sport: (e.sport as Sport) || 'football',
-    home: cleanName(e.home), away: cleanName(e.away),
+    home, away, homeClub: clubOf(home), awayClub: clubOf(away),
     competition, level: levelOf(competition),
     venue: e.venue || '',
     approximate: e.precision !== 'stade',

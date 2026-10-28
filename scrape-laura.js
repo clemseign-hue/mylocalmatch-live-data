@@ -16,7 +16,6 @@ const COMPETITIONS = [
   ...[1, 2].map(p => ({ name: `Régional 1 - Poule ${'AB'[p - 1]}`, id: 457860, phase: 1, poule: p, type: 'ch' })),
   ...[1, 2, 3, 4, 5].map(p => ({ name: `Régional 2 - Poule ${'ABCDE'[p - 1]}`, id: 457861, phase: 1, poule: p, type: 'ch' })),
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(p => ({ name: `Régional 3 - Poule ${'ABCDEFGHIJ'[p - 1]}`, id: 457862, phase: 1, poule: p, type: 'ch' })),
-  { name: 'Coupe de France - LAURA', id: 449168, phase: 1, poule: 13, type: 'cp' },
 ].map(c => ({
   ...c,
   url: c.type === 'cp'

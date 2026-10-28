@@ -5,6 +5,8 @@ export interface MatchEvent {
   sport: Sport;
   home: string;
   away: string;
+  homeClub: string;
+  awayClub: string;
   competition: string;
   level: LevelId;
   venue: string;
@@ -20,5 +22,7 @@ export interface MatchEvent {
 }
 
 export type LevelId = 'tous' | 'r1' | 'r2' | 'r3' | 'coupe' | 'autre';
+
+export interface Club { name: string; count: number }
 
 export interface Place { label: string; lat: number; lng: number }
