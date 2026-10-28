@@ -7,6 +7,9 @@ const DATA_DIR = __dirname; // layout plat
 const readJson = (f, def) => { try { return JSON.parse(fs.readFileSync(path.join(DATA_DIR, f), 'utf-8')); } catch { return def; } };
 const COMMUNES = readJson('communes-laura.json', {});
 const CLUBS_VILLES = readJson('clubs-villes.json', {});
+// Cache des stades localisés via OpenStreetMap (clé = numéro de terrain FFF).
+const STADES = readJson('stades-laura.json', {});
+let stadesDirty = false;
 const API_KEY = process.env.SCRAPER_API_KEY;
 let communesDirty = false;
 
@@ -78,6 +81,7 @@ function dofaVenue(m) {
   if (!t || typeof t !== 'object') return null;
   const lat = parseFloat(t.latitude ?? t.lat), lng = parseFloat(t.longitude ?? t.lng ?? t.lon);
   return {
+    id: t.te_no || null,
     name: clean(t.name || t.libelle || t.nom),
     address: clean(t.address || t.adresse),
     zip: clean(t.zip_code || t.code_postal || t.postal_code),
@@ -200,15 +204,75 @@ async function geocodeClub(clubName) {
   return null;
 }
 
+// ---------- Localisation précise des stades (OpenStreetMap / Nominatim) ----------
+// Règles d'usage Nominatim : 1 requête/seconde max, application identifiée, résultats mis en cache.
+const NOMINATIM = 'https://nominatim.openstreetmap.org/search';
+const SPORT_PLACE = /^(pitch|stadium|sports_centre|recreation_ground|track|sports_hall)$/;
+const RETRY_AFTER_DAYS = 30;
+let lastNominatim = 0;
+
+// « PARC DES SPORTS PIERRE COULON 01 » → « PARC DES SPORTS PIERRE COULON »
+const stadiumName = name => clean(name.replace(/\s+(n°\s*)?\d+$/i, '').replace(/\s+(terrain|synth[ée]tique|honneur|annexe)\b.*$/i, ''));
+
+async function nominatim(q) {
+  const wait = lastNominatim + 1100 - Date.now();
+  if (wait > 0) await sleep(wait);
+  lastNominatim = Date.now();
+  try {
+    const url = `${NOMINATIM}?format=jsonv2&countrycodes=fr&limit=8&q=${encodeURIComponent(q)}`;
+    const r = await fetch(url, { headers: { 'User-Agent': 'MyLocalMatch/1.0 (https://github.com/clemseign-hue/mylocalmatch-live-data)', 'Accept-Language': 'fr' }, signal: AbortSignal.timeout(15000) });
+    if (!r.ok) return [];
+    return await r.json();
+  } catch { return []; }
+}
+
+const distKm = (a, b) => {
+  const rad = Math.PI / 180, dLat = (b.lat - a.lat) * rad, dLng = (b.lng - a.lng) * rad;
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLng / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(x));
+};
+
+async function findStadium(v, cityPos) {
+  const name = stadiumName(v.name);
+  const queries = [`${name}, ${v.city}`, `${name}, ${v.zip}`];
+  if (!/^stade|^parc|^complexe|^terrain/i.test(name)) queries.push(`stade ${name}, ${v.city}`);
+  for (const q of queries) {
+    for (const r of await nominatim(q)) {
+      const pos = { lat: parseFloat(r.lat), lng: parseFloat(r.lon) };
+      const isSport = (r.category === 'leisure' && SPORT_PLACE.test(r.type))
+        || (['leisure', 'amenity', 'building', 'landuse'].includes(r.category) && /stade|stadium|sport|foot/i.test(r.name || ''));
+      // Le résultat doit être un lieu sportif, dans la région, et à moins de 10 km de la commune indiquée.
+      if (isSport && inLaura(pos) && (!cityPos || distKm(pos, cityPos) < 10)) return pos;
+    }
+  }
+  return null;
+}
+
+async function locateVenue(v) {
+  const key = String(v.id || slug(`${v.name} ${v.zip} ${v.city}`));
+  const cached = STADES[key];
+  if (cached && (cached.precision === 'stade' || Date.now() - Date.parse(cached.checkedAt) < RETRY_AFTER_DAYS * 864e5)) {
+    return cached.lat != null ? cached : null;
+  }
+  const cityPos = v.city ? await geocodeCity(v.city) : null;
+  let result = null;
+  const stadium = await findStadium(v, cityPos);
+  if (stadium) result = { ...stadium, precision: 'stade' };
+  else if (v.address) {
+    const g = await geocodeViaBAN([v.address, v.zip, v.city].filter(Boolean).join(' '));
+    if (g && (!cityPos || distKm(g, cityPos) < 10)) result = { ...g, precision: 'adresse' };
+  }
+  if (!result && cityPos) result = { ...cityPos, precision: 'ville' };
+  STADES[key] = { name: v.name, city: v.city, lat: result ? result.lat : null, lng: result ? result.lng : null, precision: result ? result.precision : null, checkedAt: new Date().toISOString() };
+  stadesDirty = true;
+  return result;
+}
+
 async function locate(e) {
   const v = e.venue;
   if (v) {
     if (inLaura(v.pos)) return { ...v.pos, precision: 'stade' };
-    if (v.address || v.city) {
-      const g = await geocodeViaBAN([v.address, v.zip, v.city].filter(Boolean).join(' '));
-      if (g) return { ...g, precision: v.address ? 'stade' : 'ville' };
-    }
-    if (v.city) { const c = await geocodeCity(v.city); if (c) return { ...c, precision: 'ville' }; }
+    if (v.name || v.address || v.city) { const r = await locateVenue(v); if (r) return r; }
   }
   const c = await geocodeClub(e.home);
   return c ? { ...c, precision: 'ville' } : null;
@@ -233,6 +297,7 @@ async function locate(e) {
       events.push({
         sport: 'football', competition: comp.name, ...rest,
         venue: venue && venue.name ? [venue.name, venue.city].filter(Boolean).join(', ') : null,
+        address: venue ? [venue.address, [venue.zip, venue.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') || null : null,
         lat: pos ? pos.lat : null, lng: pos ? pos.lng : null, geocoded: !!pos, precision: pos ? pos.precision : null,
         real: true, source: `LAuRAFoot — ${comp.name}`, detailsUrl: comp.url,
       });
@@ -249,6 +314,7 @@ async function locate(e) {
     return;
   }
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
+  if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   if (communesDirty) fs.writeFileSync(path.join(DATA_DIR, 'communes-laura.json'), JSON.stringify(COMMUNES, null, 2));
   const upcoming = events.filter(e => e.date >= new Date().toISOString().slice(0, 10)).length;
   console.log(`${events.length} matchs (${upcoming} à venir), ${report.filter(r => r.error).length} erreurs, ${unlocated.size} clubs non localisés`);

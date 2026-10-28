@@ -5,8 +5,14 @@ import { Icon } from './Icon';
 
 interface Props { t: Theme; event: MatchEvent & { distanceKm: number }; side?: 'Domicile' | 'Extérieur'; selected: boolean; onSelect: () => void; onTicket: () => void }
 
-const directionsUrl = (e: MatchEvent) =>
-  `https://maps.apple.com/?daddr=${e.lat},${e.lng}&q=${encodeURIComponent(e.venue || `${e.home} vs ${e.away}`)}`;
+// Itinéraire Plans : coordonnées exactes si le stade a été localisé précisément,
+// sinon on laisse Plans chercher le stade par son nom et son adresse (plus fiable qu'un point approximatif).
+function directionsUrl(e: MatchEvent) {
+  if (!e.approximate) return `https://maps.apple.com/?daddr=${e.lat},${e.lng}&dirflg=d`;
+  const stadium = e.venue.split(',')[0].replace(/\s+\d+$/, '');
+  const where = [stadium, e.address].filter(Boolean).join(', ');
+  return `https://maps.apple.com/?daddr=${encodeURIComponent(where || `${e.lat},${e.lng}`)}&dirflg=d`;
+}
 
 export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, selected, onSelect, onTicket }, ref) {
   return (
@@ -38,7 +44,8 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
             <span className="flex items-center gap-1"><Icon name="clock" size={12} color={t.textMute} /> {e.time}</span>
             {e.venue && <span className="flex min-w-0 items-center gap-1"><Icon name="pin" size={12} color={t.textMute} className="shrink-0" /> <span className="truncate">{e.venue}</span></span>}
           </div>
-          {e.approximate && <p className="mt-1 text-[10px]" style={{ color: t.textMute }}>Lieu approximatif (ville du club)</p>}
+          {selected && e.address && <p className="mt-1 text-[11px]" style={{ color: t.textSoft }}>{e.address}</p>}
+          {e.approximate && <p className="mt-1 text-[10px]" style={{ color: t.textMute }}>Position sur la carte approximative</p>}
         </div>
       </div>
       {selected && (

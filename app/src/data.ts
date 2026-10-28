@@ -10,7 +10,7 @@ export const REFRESH_INTERVAL_MS = 15 * 60 * 1000;
 
 interface RawEvent {
   sport?: string; competition?: string; home?: string; away?: string; date?: string; time?: string;
-  venue?: string | null; lat?: number | null; lng?: number | null; precision?: string | null;
+  venue?: string | null; address?: string | null; lat?: number | null; lng?: number | null; precision?: string | null;
   source?: string; detailsUrl?: string | null; matchId?: number | string | null;
 }
 
@@ -37,6 +37,7 @@ function toEvent(e: RawEvent, i: number): MatchEvent | null {
     home, away, homeClub: clubOf(home), awayClub: clubOf(away),
     competition, level: levelOf(competition),
     venue: e.venue || '',
+    address: e.address || '',
     approximate: e.precision !== 'stade',
     lat: e.lat, lng: e.lng,
     date: e.date || null,

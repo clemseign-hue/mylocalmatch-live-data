@@ -10,6 +10,7 @@ export interface MatchEvent {
   competition: string;
   level: LevelId;
   venue: string;
+  address: string;
   approximate: boolean;
   lat: number;
   lng: number;
