@@ -1,6 +1,7 @@
 // Robot d'extraction MyLocalMatch — football amateur LAURA.
-// Source 1 : API publique de la FFF (api-dofa.fff.fr) → toutes les journées, stade, sans crédit ScraperAPI.
-// Source 2 (secours) : page LAuRAFoot rendue via ScraperAPI (journées 1–5 seulement).
+// Source : API publique de la FFF (api-dofa.fff.fr) → toutes les journées et le stade.
+// Elle bloque les serveurs GitHub : les requêtes passent alors par ScraperAPI sans rendu (≈1 crédit/requête).
+// En cas d'échec, les matchs déjà connus de la poule sont conservés.
 const fs = require('fs');
 const path = require('path');
 const DATA_DIR = __dirname; // layout plat
@@ -10,6 +11,9 @@ const CLUBS_VILLES = readJson('clubs-villes.json', {});
 // Cache des stades localisés via OpenStreetMap (clé = numéro de terrain FFF).
 const STADES = readJson('stades-laura.json', {});
 let stadesDirty = false;
+// Page de l'API où commencent les matchs à venir, par poule : on ne repaie pas les pages déjà jouées.
+const PAGES_STATE = readJson('pages-state.json', {});
+const PREVIOUS = readJson('events-amateur.json', { events: [] });
 const API_KEY = process.env.SCRAPER_API_KEY;
 let communesDirty = false;
 
@@ -92,13 +96,19 @@ function dofaVenue(m) {
 
 async function fetchViaDofa(comp) {
   // On ne se fie pas au lien « page suivante » (parfois absent) : on avance tant que des matchs arrivent.
+  // Les matchs sont classés par date : on reprend à la première page qui contenait des matchs à venir.
+  const stateKey = `${comp.id}-${comp.phase}-${comp.poule}`;
+  const start = PAGES_STATE[stateKey] || 1;
   const members = []; const seen = new Set(); const pages = [];
-  for (let page = 1; page <= 10; page++) {
+  let firstUseful = null;
+  for (let page = start; page <= 12; page++) {
     const url = `${DOFA}/compets/${comp.id}/phases/${comp.phase}/poules/${comp.poule}/matchs?page=${page}`;
     let json;
-    try { json = await fetchJson(url); } catch (err) { if (page === 1) throw err; pages.push(`p${page}: ${err.message}`); break; }
-    if (page === 1) fs.writeFileSync(path.join(DATA_DIR, `debug-dofa-${slug(comp.name)}.json`), JSON.stringify(json, null, 2).slice(0, 20000));
+    try { json = await fetchJson(url); } catch (err) { if (page === start) throw err; pages.push(`p${page}: ${err.message}`); break; }
+    if (page === start) fs.writeFileSync(path.join(DATA_DIR, `debug-dofa-${slug(comp.name)}.json`), JSON.stringify(json, null, 2).slice(0, 20000));
     const list = Array.isArray(json) ? json : (json['hydra:member'] || json.member || json.items || []);
+    if (page === start && !list.length && start > 1) { delete PAGES_STATE[stateKey]; return fetchViaDofa(comp); } // calendrier remanié : on repart du début
+    if (firstUseful === null && list.some(m => { const dt = dofaDateTime(m); return dt && dt.date >= KEEP_FROM; })) firstUseful = page;
     const fresh = list.filter(m => { const k = m.ma_no || JSON.stringify([m.date, m.home, m.away]); if (seen.has(k)) return false; seen.add(k); return true; });
     pages.push(`p${page}: ${list.length}`);
     members.push(...fresh);
@@ -106,6 +116,7 @@ async function fetchViaDofa(comp) {
     await sleep(300);
   }
   comp.pages = pages.join(', ');
+  if (firstUseful) PAGES_STATE[stateKey] = firstUseful;
   const events = [];
   for (const m of members) {
     const dt = dofaDateTime(m);
@@ -119,55 +130,6 @@ async function fetchViaDofa(comp) {
   }
   if (!events.length) throw new Error(`API FFF : 0 match exploitable (${members.length} reçus)`);
   return events;
-}
-
-// ---------- Source 2 (secours) : ScraperAPI ----------
-const MONTHS = { janvier: 1, février: 2, mars: 3, avril: 4, mai: 5, juin: 6, juillet: 7, août: 8, septembre: 9, octobre: 10, novembre: 11, décembre: 12 };
-const DATE_RE = /(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s+(\d{1,2})\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\s*-\s*(\d{1,2})H(\d{2})/gi;
-const SEP_RE = /\s-\s/;
-
-async function fetchRendered(url, attempt = 1) {
-  const api = `http://api.scraperapi.com/?api_key=${API_KEY}&url=${encodeURIComponent(url)}&render=true`;
-  const res = await fetch(api, { signal: AbortSignal.timeout(60000) });
-  if (res.status >= 500 && attempt < 3) { await sleep(3000 * attempt); return fetchRendered(url, attempt + 1); }
-  if (!res.ok) throw new Error(`ScraperAPI HTTP ${res.status} (après ${attempt} tentative(s))`);
-  return res.text();
-}
-
-function htmlToText(html) {
-  const cheerio = require('cheerio');
-  const $ = cheerio.load(html);
-  $('script,style').remove();
-  return $('body').text();
-}
-
-function cleanTeamName(name) { return clean(name.replace(/^TAB\s*\d+\s*-\s*\d+\s*/i, '').replace(/\s*Pénalité\s*$/i, '')); }
-
-function parseSchedule(text) {
-  const matches = [...text.matchAll(DATE_RE)];
-  const events = [];
-  for (let i = 0; i < matches.length; i++) {
-    const m = matches[i];
-    const start = m.index + m[0].length;
-    const end = i + 1 < matches.length ? matches[i + 1].index : text.length;
-    let chunk = text.slice(start, end).split(/Journée\s*\d+|Sidebar|Recherche avancée/i)[0];
-    const nl = chunk.indexOf('\n'); if (nl !== -1) chunk = chunk.slice(0, nl);
-    const sep = chunk.search(SEP_RE); if (sep === -1) continue;
-    const sepMatch = chunk.slice(sep).match(SEP_RE);
-    const home = cleanTeamName(chunk.slice(0, sep + 1).trim());
-    const away = cleanTeamName(chunk.slice(sep + sepMatch[0].length).trim());
-    if (!home || !away) continue;
-    const month = MONTHS[m[3].toLowerCase()]; if (!month) continue;
-    events.push({ home, away, date: `${m[4]}-${pad(month)}-${pad(m[2])}`, time: `${pad(m[5])}:${m[6]}`, venue: null });
-  }
-  return events;
-}
-
-async function fetchViaScraperApi(comp) {
-  if (!API_KEY) throw new Error('SCRAPER_API_KEY manquante');
-  const text = htmlToText(await fetchRendered(comp.url));
-  fs.writeFileSync(path.join(DATA_DIR, `debug-${slug(comp.name)}.txt`), text);
-  return parseSchedule(text);
 }
 
 // ---------- Géocodage ----------
@@ -232,7 +194,8 @@ async function nominatim(q) {
     const url = `${NOMINATIM}?format=jsonv2&countrycodes=fr&limit=8&q=${encodeURIComponent(q)}`;
     const r = await fetch(url, { headers: { 'User-Agent': 'MyLocalMatch/1.0 (https://github.com/clemseign-hue/mylocalmatch-live-data)', 'Accept-Language': 'fr' }, signal: AbortSignal.timeout(15000) });
     if (!r.ok) return [];
-    return await r.json();
+    const j = await r.json();
+    return Array.isArray(j) ? j : [];
   } catch { return []; }
 }
 
@@ -370,9 +333,12 @@ if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
     let parsed = null, source = null, errors = [];
     try { parsed = await fetchViaDofa(comp); source = 'api-fff'; } catch (err) { errors.push(err.message); }
     if (!parsed) {
-      try { parsed = await fetchViaScraperApi(comp); source = 'scraperapi'; } catch (err) { errors.push(err.message); }
+      // Échec (crédits épuisés, API indisponible…) : on garde les matchs déjà connus de cette poule.
+      const previous = (PREVIOUS.events || []).filter(e => e.competition === comp.name && e.date >= KEEP_FROM);
+      events.push(...previous);
+      report.push({ competition: comp.name, error: errors.join(' | '), previousKept: previous.length });
+      continue;
     }
-    if (!parsed) { report.push({ competition: comp.name, error: errors.join(' | ') }); continue; }
     let kept = 0;
     for (const e of parsed) {
       if (e.date < KEEP_FROM) continue;
@@ -401,6 +367,7 @@ if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
   }
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
+  fs.writeFileSync(path.join(DATA_DIR, 'pages-state.json'), JSON.stringify(PAGES_STATE, null, 2));
   if (communesDirty) fs.writeFileSync(path.join(DATA_DIR, 'communes-laura.json'), JSON.stringify(COMMUNES, null, 2));
   const upcoming = events.filter(e => e.date >= new Date().toISOString().slice(0, 10)).length;
   console.log(`${events.length} matchs (${upcoming} à venir), ${report.filter(r => r.error).length} erreurs, ${unlocated.size} clubs non localisés`);

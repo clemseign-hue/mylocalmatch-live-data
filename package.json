@@ -4,8 +4,5 @@
   "private": true,
   "scripts": {
     "scrape": "node scrape-laura.js"
-  },
-  "dependencies": {
-    "cheerio": "^1.0.0"
   }
 }
