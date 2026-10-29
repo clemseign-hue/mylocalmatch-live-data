@@ -20,6 +20,14 @@ const links = (text, re) => [...new Set([...text.matchAll(/href="([^"]+)"/g)].ma
   // Données embarquées dans la page (attributs data-*, JSON)
   out.home.dataAttrs = [...new Set([...home.text.matchAll(/\s(data-[a-z\-]+)=/g)].map(m => m[1]))].slice(0, 40);
   out.home.jsonBlocks = [...home.text.matchAll(/<script[^>]*type="application\/(?:ld\+)?json"[^>]*>([\s\S]{0,400})/g)].map(m => m[1]).slice(0, 5);
+  // Contenu de l'attribut data-cfk (configuration des blocs de la page)
+  out.home.cfk = [...home.text.matchAll(/data-cfk="([^"]{0,600})/g)].map(m => m[1]).slice(0, 3);
+  // Index public de l'API WordPress : liste des espaces de noms et routes exposés par le site
+  const idx = await page(`${BASE}/wp-json/`);
+  try {
+    const j = JSON.parse(idx.text);
+    out.wpjson = { status: idx.status, namespaces: j.namespaces, routes: Object.keys(j.routes || {}).filter(r => !/^\/wp\/v2|oembed|yoast|contact-form|wp-site-health|batch/.test(r)).slice(0, 80) };
+  } catch { out.wpjson = { status: idx.status, sample: idx.text.slice(0, 300) }; }
   // Une page « régional » si on en trouve une
   const regional = out.home.compLinks.find(l => /regional|auvergne|aura/i.test(l));
   if (regional) {
