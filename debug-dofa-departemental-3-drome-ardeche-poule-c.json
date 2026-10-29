@@ -1,0 +1,701 @@
+[
+  {
+    "ma_no": 56224951,
+    "competition": {
+      "cp_no": 452465,
+      "season": 2026,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 3,
+      "name": "POULE C",
+      "external_updated_at": "2026-09-06T17:14:34+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:15:12+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 189625,
+        "external_updated_at": "2026-10-01T06:53:00+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC582295.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "US DROME-PROVENCE",
+      "short_name_ligue": "US DROME-PROVENCE",
+      "short_name_federation": "US DROME-PROVENCE",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458740,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE XAVIER BOUVIER",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:31+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 23930,
+        "external_updated_at": "2026-09-25T15:03:11+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC546292.jpg"
+      },
+      "category_code": "SEM",
+      "number": 4,
+      "code": 2,
+      "short_name": "F.C. EYRIEUX EMBROYE",
+      "short_name_ligue": "F.C. EYRIEUX EMBROYE",
+      "short_name_federation": "F.C. EYRIEUX EMBROYE",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:32:07+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 261460101,
+      "name": "STADE ROCHECOURBIÈRE",
+      "zip_code": "26230",
+      "city": "GRIGNAN",
+      "libelle_surface": "Pelouse Naturelle",
+      "external_updated_at": "2026-06-05T16:03:20+00:00",
+      "address": "LE BOURG"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "15H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 160781476,
+        "po_cod": "AC",
+        "prenom": "JONATHAN",
+        "nom": "BARBIER",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-27T16:16:20+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26139753",
+    "external_updated_at": "2026-09-06T17:22:51+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56224952,
+    "competition": {
+      "cp_no": 452465,
+      "season": 2026,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 3,
+      "name": "POULE C",
+      "external_updated_at": "2026-09-06T17:14:34+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:15:12+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 12521,
+        "external_updated_at": "2026-09-25T17:17:54+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC528941.jpg"
+      },
+      "category_code": "SEM",
+      "number": 3,
+      "code": 2,
+      "short_name": "FC MONTELIMAR",
+      "short_name_ligue": "FC MONTELIMAR",
+      "short_name_federation": "FC MONTELIMAR",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458740,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE XAVIER BOUVIER",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:25:45+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 176967,
+        "external_updated_at": "2026-09-04T14:49:49+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC580604.jpg"
+      },
+      "category_code": "SEM",
+      "number": 3,
+      "code": 2,
+      "short_name": "A.S.V.M",
+      "short_name_ligue": "A.S.V.M",
+      "short_name_federation": "A.S.V.M",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:17+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 261980301,
+      "name": "STADE BAGATELLE",
+      "zip_code": "26200",
+      "city": "MONTELIMAR",
+      "libelle_surface": "Synthétique",
+      "external_updated_at": "2026-09-24T13:50:46+00:00",
+      "address": "17 RUE JULES MICHELET"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "15H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 4,
+    "home_score": 4,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 4,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 160781477,
+        "po_cod": "AC",
+        "prenom": "Anonyme",
+        "nom": "",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-27T19:06:08+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26139754",
+    "external_updated_at": "2026-09-06T17:14:39+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56224953,
+    "competition": {
+      "cp_no": 452465,
+      "season": 2026,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 3,
+      "name": "POULE C",
+      "external_updated_at": "2026-09-06T17:14:34+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:15:12+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 194266,
+        "external_updated_at": "2026-09-24T13:46:59+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC560137.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "A.C.E FC",
+      "short_name_ligue": "A.C.E FC",
+      "short_name_federation": "A.C.E FC",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458740,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE XAVIER BOUVIER",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:40+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 2229,
+        "external_updated_at": "2026-10-05T09:39:57+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC504332.jpg"
+      },
+      "category_code": "SEM",
+      "number": 2,
+      "code": 2,
+      "short_name": "C.O. DONZEROIS",
+      "short_name_ligue": "C.O. DONZEROIS",
+      "short_name_federation": "C.O. DONZEROIS",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:21:22+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 261250101,
+      "name": "STADE MUNICIPAL",
+      "zip_code": "26400",
+      "city": "EURRE",
+      "libelle_surface": "Pelouse Naturelle",
+      "external_updated_at": "2026-06-05T16:03:03+00:00",
+      "address": "LE PLATEAU"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "15H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "PE",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 4,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "GA",
+    "away_nb_but": 4,
+    "away_score": 4,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 160781478,
+        "po_cod": "AC",
+        "prenom": "STEPHANE",
+        "nom": "VIELZEUF",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-09-04T14:02:12+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26139755",
+    "external_updated_at": "2026-09-06T17:54:12+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56224949,
+    "competition": {
+      "cp_no": 452465,
+      "season": 2026,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D3 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 3,
+      "name": "POULE C",
+      "external_updated_at": "2026-09-06T17:14:34+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-06T17:15:12+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 11218,
+        "external_updated_at": "2026-10-09T11:00:13+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC527007.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "U.S. ROCHEMAURE",
+      "short_name_ligue": "U.S. ROCHEMAURE",
+      "short_name_federation": "U.S. ROCHEMAURE",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458740,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE XAVIER BOUVIER",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:25:21+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 20846,
+        "external_updated_at": "2026-09-25T15:11:23+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC540857.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "VALDAINE F.C.",
+      "short_name_ligue": "VALDAINE F.C.",
+      "short_name_federation": "VALDAINE F.C.",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452465,
+            "season": 2026,
+            "type": "CH",
+            "name": "D3 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458740,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE XAVIER BOUVIER",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:31:18+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 71910101,
+      "name": "Stade  Roselyne Et Jean Pierre Laulagnet",
+      "zip_code": "07400",
+      "city": "ROCHEMAUR

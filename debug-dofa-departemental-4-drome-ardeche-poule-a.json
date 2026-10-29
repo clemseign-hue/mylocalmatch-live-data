@@ -1,0 +1,701 @@
+[
+  {
+    "ma_no": 56225400,
+    "competition": {
+      "cp_no": 452466,
+      "season": 2026,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 1,
+      "name": "POULE A",
+      "external_updated_at": "2026-09-06T13:34:54+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-07T14:13:40+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 2322,
+        "external_updated_at": "2026-10-09T13:24:55+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC504545.jpg"
+      },
+      "category_code": "SEM",
+      "number": 4,
+      "code": 2,
+      "short_name": "E.S. BOULIEU LES ANN",
+      "short_name_ligue": "E.S. BOULIEU LES ANN",
+      "short_name_federation": "E.S. BOULIEU LES ANN",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:21:26+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 3405,
+        "external_updated_at": "2026-10-05T10:08:06+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC509197.jpg"
+      },
+      "category_code": "SEM",
+      "number": 5,
+      "code": 3,
+      "short_name": "U.S. DAVEZIEUX VIDAL",
+      "short_name_ligue": "DAVEZIEUX VIDALON",
+      "short_name_federation": "U.S. DAVEZIEUX VIDAL",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:22:07+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 70410101,
+      "name": "STADE ÉMILE MARTIN 1",
+      "zip_code": "07100",
+      "city": "BOULIEU LES ANNONAY",
+      "libelle_surface": "Pelouse Naturelle",
+      "external_updated_at": "2026-06-07T08:47:41+00:00",
+      "address": "CHEMIN DE GRUSSE"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "13H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "PE",
+    "cr_nb_but": 2,
+    "home_score": 2,
+    "home_but_contre": 3,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "GA",
+    "away_nb_but": 3,
+    "away_score": 3,
+    "away_but_contre": 2,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 161150670,
+        "po_cod": "AC",
+        "prenom": "BENJAMIN",
+        "nom": "GUILLARD",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-30T10:45:37+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26141774",
+    "external_updated_at": "2026-09-07T12:39:32+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56225403,
+    "competition": {
+      "cp_no": 452466,
+      "season": 2026,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 1,
+      "name": "POULE A",
+      "external_updated_at": "2026-09-06T13:34:54+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-07T14:13:40+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 157881,
+        "external_updated_at": "2026-10-15T10:09:59+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC554458.jpg"
+      },
+      "category_code": "SEM",
+      "number": 2,
+      "code": 2,
+      "short_name": "FC RAMBERTOIS",
+      "short_name_ligue": "FC RAMBERTOIS",
+      "short_name_federation": "FC RAMBERTOIS",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:34:01+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 9523,
+        "external_updated_at": "2026-10-26T09:50:05+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC524469.jpg"
+      },
+      "category_code": "SEM",
+      "number": 3,
+      "code": 2,
+      "short_name": "BOURG ARGENTA",
+      "short_name_ligue": "BOURG ARGENTA",
+      "short_name_federation": "BOURG ARGENTA",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:24:54+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 263250201,
+      "name": "STADE MUNICIPAL-2",
+      "zip_code": "26140",
+      "city": "ST RAMBERT D ALBON",
+      "libelle_surface": "Synthétique",
+      "external_updated_at": "2026-10-12T18:31:46+00:00",
+      "address": "15 RUE DU RHONE"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "12H30",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 161150669,
+        "po_cod": "AC",
+        "prenom": "JONATHAN",
+        "nom": "JULINA",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-30T10:50:04+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26141773",
+    "external_updated_at": "2026-09-06T14:52:02+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56225404,
+    "competition": {
+      "cp_no": 452466,
+      "season": 2026,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 1,
+      "name": "POULE A",
+      "external_updated_at": "2026-09-06T13:34:54+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-07T14:13:40+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 12750,
+        "external_updated_at": "2026-08-24T14:39:53+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC529284.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "US 2 VALLONS",
+      "short_name_ligue": "US 2 VALLONS",
+      "short_name_federation": "US 2 VALLONS",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:25:49+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 10852,
+        "external_updated_at": "2026-08-24T14:37:59+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC526432.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "AS DU DOLON",
+      "short_name_ligue": "AS DU DOLON",
+      "short_name_federation": "AS DU DOLON",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE FOOTBALL",
+              "external_updated_at": "2026-10-27T19:10:19+00:00"
+            },
+            "external_updated_at": "2026-10-28T17:08:04+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:25:15+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "terrain": {
+      "te_no": 384480101,
+      "name": "STADE CHONAS1",
+      "zip_code": "38370",
+      "city": "ST PRIM",
+      "libelle_surface": "Pelouse Naturelle",
+      "external_updated_at": "2026-06-06T08:12:45+00:00",
+      "address": "CHEMIN DES FONTENETTES"
+    },
+    "season": 2026,
+    "status": "A",
+    "ma_ar": "A",
+    "ma_inver": "N",
+    "ma_arret": "N",
+    "is_overtime": "N",
+    "date": "2026-09-06T00:00:00+00:00",
+    "time": "15H00",
+    "initial_date": null,
+    "cr_eq_naff": null,
+    "home_resu": "GA",
+    "cr_nb_but": 3,
+    "home_score": 3,
+    "home_but_contre": 1,
+    "home_nb_point": null,
+    "home_nb_tir_but": null,
+    "home_nb_point_pena": 0,
+    "home_is_forfeit": "N",
+    "cv_eq_naff": null,
+    "away_resu": "PE",
+    "away_nb_but": 1,
+    "away_score": 1,
+    "away_but_contre": 3,
+    "away_nb_point": null,
+    "away_nb_tir_but": null,
+    "away_nb_point_pena": 0,
+    "away_is_forfeit": "N",
+    "seems_postponed": "",
+    "match_membres": [
+      {
+        "mm_no": 161150673,
+        "po_cod": "AC",
+        "prenom": "NICOLAS",
+        "nom": "FINCK",
+        "label_position": "Arbitre centre",
+        "position_ordre": 1,
+        "external_updated_at": "2026-08-30T10:50:04+00:00"
+      }
+    ],
+    "match_feuille": "/api/match_feuilles/26141777",
+    "external_updated_at": "2026-09-06T17:45:46+00:00",
+    "status_label": "/"
+  },
+  {
+    "ma_no": 56247621,
+    "competition": {
+      "cp_no": 452466,
+      "season": 2026,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "level": "D",
+      "cdg": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "external_updated_at": "2026-10-17T18:41:23+00:00"
+      },
+      "external_updated_at": "2026-08-26T14:21:56+00:00"
+    },
+    "phase": {
+      "number": 1,
+      "type": "CH",
+      "name": "D4 UNIQUE",
+      "external_updated_at": "2026-08-26T14:32:50+00:00"
+    },
+    "poule": {
+      "stage_number": 1,
+      "name": "POULE A",
+      "external_updated_at": "2026-09-06T13:34:54+00:00",
+      "poule_unique": false,
+      "at_least_one_match_resultat": true
+    },
+    "poule_journee": {
+      "number": 1,
+      "external_updated_at": "2026-09-07T14:13:40+00:00",
+      "name": "1"
+    },
+    "home": {
+      "club": {
+        "cl_no": 15200,
+        "external_updated_at": "2026-09-30T16:04:32+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC532844.jpg"
+      },
+      "category_code": "SEM",
+      "number": 3,
+      "code": 2,
+      "short_name": "F.C. MUZOLAIS",
+      "short_name_ligue": "F.C. MUZOLAIS",
+      "short_name_federation": "F.C. MUZOLAIS",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 452466,
+            "season": 2026,
+            "type": "CH",
+            "name": "D4 UNIQUE",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-08-26T14:21:56+00:00"
+          }
+        },
+        {
+          "competition": {
+            "cp_no": 458739,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE RENE GIRAUD",
+            "level": "D",
+            "cdg": {
+              "cg_no": 125,
+              "name": "DISTRICT DROME ARDECHE",
+              "external_updated_at": "2026-10-17T18:41:23+00:00"
+            },
+            "external_updated_at": "2026-10-22T21:25:39+00:00"
+          }
+        }
+      ],
+      "external_updated_at": "2026-08-27T14:26:28+00:00",
+      "category_label": "Senior Libre",
+      "category_gender": "M"
+    },
+    "away": {
+      "club": {
+        "cl_no": 15279,
+        "external_updated_at": "2026-09-10T15:29:21+00:00",
+        "logo": "https://cdn-transverse.azureedge.net/phlogos/BC532969.jpg"
+      },
+      "category_code": "SEM",
+      "number": 1,
+      "code": 1,
+      "short_name": "ST JULIEN MOL",
+      "short_name_ligue": "ST JULIEN MOL",
+      "short_name_federation": "ST JULIEN MOL",
+      "type": "C",
+      "engagements": [
+        {
+          "competition": {
+            "cp_no": 449168,
+            "season": 2026,
+            "type": "CP",
+            "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+            "level": "F",
+            "cdg": {
+              "cg_no": 0,
+              "name": "FEDERATION FRANCAISE DE F

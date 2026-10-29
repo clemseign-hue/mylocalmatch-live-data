@@ -863,5 +863,425 @@
   "st-pierre-de-belleville": {
     "lat": 45.46888,
     "lng": 6.281232
+  },
+  "donzere": {
+    "lat": 44.440459,
+    "lng": 4.717257
+  },
+  "chabeuil": {
+    "lat": 44.911687,
+    "lng": 5.000235
+  },
+  "pierrelatte": {
+    "lat": 44.357315,
+    "lng": 4.689504
+  },
+  "charmes-sur-rhone": {
+    "lat": 44.869125,
+    "lng": 4.832061
+  },
+  "bourg-de-peage": {
+    "lat": 45.022204,
+    "lng": 5.050547
+  },
+  "boulieu-les-annonay": {
+    "lat": 45.271966,
+    "lng": 4.655137
+  },
+  "etoile-sur-rhone": {
+    "lat": 44.833924,
+    "lng": 4.885112
+  },
+  "tournon-sur-rhone": {
+    "lat": 45.054155,
+    "lng": 4.815476
+  },
+  "bourg-argental": {
+    "lat": 45.300992,
+    "lng": 4.55841
+  },
+  "anneyron": {
+    "lat": 45.271584,
+    "lng": 4.894271
+  },
+  "st-jean-de-muzols": {
+    "lat": 45.077538,
+    "lng": 4.799235
+  },
+  "romans-sur-isere": {
+    "lat": 45.051594,
+    "lng": 5.046335
+  },
+  "chateauneuf-sur-isere": {
+    "lat": 45.007611,
+    "lng": 4.956298
+  },
+  "andancette": {
+    "lat": 45.246444,
+    "lng": 4.811698
+  },
+  "larnage": {
+    "lat": 45.093276,
+    "lng": 4.864525
+  },
+  "maclas": {
+    "lat": 45.365012,
+    "lng": 4.693223
+  },
+  "hauterives": {
+    "lat": 45.255148,
+    "lng": 5.035217
+  },
+  "champagne": {
+    "lat": 45.276327,
+    "lng": 4.800315
+  },
+  "serves-sur-rhone": {
+    "lat": 45.142378,
+    "lng": 4.822333
+  },
+  "chomerac": {
+    "lat": 44.709906,
+    "lng": 4.67071
+  },
+  "villeneuve-de-berg": {
+    "lat": 44.55412,
+    "lng": 4.511334
+  },
+  "st-etienne-de-fontbellon": {
+    "lat": 44.597658,
+    "lng": 4.376686
+  },
+  "beaumont-les-valence": {
+    "lat": 44.873424,
+    "lng": 4.944171
+  },
+  "malissard": {
+    "lat": 44.899436,
+    "lng": 4.955813
+  },
+  "rochegude": {
+    "lat": 44.248619,
+    "lng": 4.836761
+  },
+  "st-privat": {
+    "lat": 44.630912,
+    "lng": 4.418254
+  },
+  "veyras": {
+    "lat": 44.731466,
+    "lng": 4.555986
+  },
+  "bourg-les-valence": {
+    "lat": 44.962715,
+    "lng": 4.893636
+  },
+  "aubenas": {
+    "lat": 44.612671,
+    "lng": 4.391775
+  },
+  "cornas": {
+    "lat": 44.963032,
+    "lng": 4.844124
+  },
+  "albon": {
+    "lat": 45.244921,
+    "lng": 4.858219
+  },
+  "st-barthelemy-de-vals": {
+    "lat": 45.163726,
+    "lng": 4.875902
+  },
+  "st-rambert-d-albon": {
+    "lat": 45.289193,
+    "lng": 4.83181
+  },
+  "quintenas": {
+    "lat": 45.188704,
+    "lng": 4.698595
+  },
+  "roiffieux": {
+    "lat": 45.217573,
+    "lng": 4.659492
+  },
+  "pont-de-l-isere": {
+    "lat": 45.014914,
+    "lng": 4.884274
+  },
+  "st-romain-de-lerps": {
+    "lat": 44.977271,
+    "lng": 4.799945
+  },
+  "mauves": {
+    "lat": 45.031778,
+    "lng": 4.810236
+  },
+  "st-alban-d-ay": {
+    "lat": 45.186589,
+    "lng": 4.637027
+  },
+  "satillieu": {
+    "lat": 45.14406,
+    "lng": 4.594075
+  },
+  "chateauneuf-de-galaure": {
+    "lat": 45.231022,
+    "lng": 4.963327
+  },
+  "la-roche-de-glun": {
+    "lat": 45.02208,
+    "lng": 4.862381
+  },
+  "colombier-le-jeune": {
+    "lat": 45.012789,
+    "lng": 4.707461
+  },
+  "sarras": {
+    "lat": 45.186952,
+    "lng": 4.786139
+  },
+  "marches": {
+    "lat": 44.976718,
+    "lng": 5.114107
+  },
+  "etables": {
+    "lat": 45.098727,
+    "lng": 4.736418
+  },
+  "st-martin-de-valamas": {
+    "lat": 44.938526,
+    "lng": 4.375864
+  },
+  "villevocance": {
+    "lat": 45.222366,
+    "lng": 4.594362
+  },
+  "st-agreve": {
+    "lat": 44.998053,
+    "lng": 4.408332
+  },
+  "grignan": {
+    "lat": 44.433878,
+    "lng": 4.905067
+  },
+  "livron-sur-drome": {
+    "lat": 44.790946,
+    "lng": 4.826348
+  },
+  "allex": {
+    "lat": 44.773136,
+    "lng": 4.910313
+  },
+  "puy-st-martin": {
+    "lat": 44.618809,
+    "lng": 4.969029
+  },
+  "rochemaure": {
+    "lat": 44.587614,
+    "lng": 4.702719
+  },
+  "sauzet": {
+    "lat": 44.597311,
+    "lng": 4.826245
+  },
+  "aouste-sur-sye": {
+    "lat": 44.711276,
+    "lng": 5.056869
+  },
+  "ancone": {
+    "lat": 44.581114,
+    "lng": 4.726963
+  },
+  "chateauneuf-du-rhone": {
+    "lat": 44.502814,
+    "lng": 4.735352
+  },
+  "allan": {
+    "lat": 44.501006,
+    "lng": 4.789512
+  },
+  "ruoms": {
+    "lat": 44.450265,
+    "lng": 4.349232
+  },
+  "montboucher-sur-jabron": {
+    "lat": 44.553478,
+    "lng": 4.814803
+  },
+  "lablachere": {
+    "lat": 44.463669,
+    "lng": 4.2021
+  },
+  "lussas": {
+    "lat": 44.621685,
+    "lng": 4.476073
+  },
+  "savasse": {
+    "lat": 44.608759,
+    "lng": 4.772904
+  },
+  "bourg-st-andeol": {
+    "lat": 44.377761,
+    "lng": 4.633673
+  },
+  "le-teil": {
+    "lat": 44.54636,
+    "lng": 4.668294
+  },
+  "st-paul-trois-chateaux": {
+    "lat": 44.345699,
+    "lng": 4.764015
+  },
+  "st-prim": {
+    "lat": 45.446285,
+    "lng": 4.796478
+  },
+  "jarcieu": {
+    "lat": 45.337595,
+    "lng": 4.95219
+  },
+  "bren": {
+    "lat": 45.135115,
+    "lng": 4.935791
+  },
+  "st-julien-molin-molette": {
+    "lat": 45.318614,
+    "lng": 4.618242
+  },
+  "st-jeure-d-ay": {
+    "lat": 45.143901,
+    "lng": 4.711818
+  },
+  "clonas-sur-vareze": {
+    "lat": 45.414377,
+    "lng": 4.789823
+  },
+  "clerieux": {
+    "lat": 45.078534,
+    "lng": 4.958487
+  },
+  "le-cheylard": {
+    "lat": 44.906244,
+    "lng": 4.424503
+  },
+  "lamastre": {
+    "lat": 44.983159,
+    "lng": 4.584757
+  },
+  "chatuzange-le-goubet": {
+    "lat": 45.005351,
+    "lng": 5.093124
+  },
+  "st-cyr": {
+    "lat": 45.244073,
+    "lng": 4.741848
+  },
+  "desaignes": {
+    "lat": 44.986598,
+    "lng": 4.499045
+  },
+  "st-paul-les-romans": {
+    "lat": 45.052797,
+    "lng": 5.127688
+  },
+  "st-romain-de-surieu": {
+    "lat": 45.386661,
+    "lng": 4.886781
+  },
+  "felines": {
+    "lat": 45.316163,
+    "lng": 4.728516
+  },
+  "st-felicien": {
+    "lat": 45.078896,
+    "lng": 4.606354
+  },
+  "st-uze": {
+    "lat": 45.189968,
+    "lng": 4.861835
+  },
+  "parnans": {
+    "lat": 45.108666,
+    "lng": 5.154287
+  },
+  "beaumont-monteux": {
+    "lat": 45.033928,
+    "lng": 4.919947
+  },
+  "peyrins": {
+    "lat": 45.098525,
+    "lng": 5.04799
+  },
+  "montelier": {
+    "lat": 44.941742,
+    "lng": 5.023675
+  },
+  "montvendre": {
+    "lat": 44.86975,
+    "lng": 5.004699
+  },
+  "portes-les-valence": {
+    "lat": 44.876622,
+    "lng": 4.884414
+  },
+  "st-marcel-les-valence": {
+    "lat": 44.972973,
+    "lng": 4.952229
+  },
+  "la-baume-de-transit": {
+    "lat": 44.328566,
+    "lng": 4.864511
+  },
+  "st-gervais-sur-roubion": {
+    "lat": 44.581226,
+    "lng": 4.895796
+  },
+  "die": {
+    "lat": 44.749977,
+    "lng": 5.370309
+  },
+  "st-marcel-d-ardeche": {
+    "lat": 44.327636,
+    "lng": 4.615046
+  },
+  "roussas": {
+    "lat": 44.434655,
+    "lng": 4.802703
+  },
+  "upie": {
+    "lat": 44.799938,
+    "lng": 4.976952
+  },
+  "meysse": {
+    "lat": 44.611897,
+    "lng": 4.717888
+  },
+  "montsegur-sur-lauzon": {
+    "lat": 44.363041,
+    "lng": 4.867739
+  },
+  "bouchet": {
+    "lat": 44.295241,
+    "lng": 4.87871
+  },
+  "st-didier-sous-aubenas": {
+    "lat": 44.611641,
+    "lng": 4.414721
+  },
+  "vals-les-bains": {
+    "lat": 44.660859,
+    "lng": 4.34078
+  },
+  "flaviac": {
+    "lat": 44.748488,
+    "lng": 4.66552
+  },
+  "lalevade": {
+    "lat": 44.652167,
+    "lng": 4.319146
+  },
+  "st-remeze": {
+    "lat": 44.395839,
+    "lng": 4.505407
   }
 }
