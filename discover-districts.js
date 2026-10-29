@@ -4,7 +4,6 @@ const fs = require('fs');
 const API_KEY = process.env.SCRAPER_API_KEY;
 const DOFA = 'https://api-dofa.fff.fr/api';
 const MAX_REQUESTS = 40;
-const DISTRICT_RE = /DROME|ARDECHE/i;
 const ZIP_RE = /^(26|07)/;
 const SOURCES = [ // poules régionales contenant des clubs du district
   { id: 457860, poule: 2 }, { id: 457861, poule: 3 }, { id: 457861, poule: 4 }, { id: 457862, poule: 5 },
@@ -53,16 +52,20 @@ const members = j => (Array.isArray(j) ? j : (j && (j['hydra:member'] || j.membe
       for (const t of teams) {
         for (const e of t.engagements || []) {
           const c = e.competition || e;
-          if (c && c.cdg && DISTRICT_RE.test(c.cdg.name || '')) {
-            out.district = out.district || { cg_no: c.cdg.cg_no, name: c.cdg.name };
+          // Ici « cdg » n'est pas renseigné : niveau « D » = district (celui du club).
+          if (c && c.level === 'D') {
             comps.set(c.cp_no, { cp_no: c.cp_no, name: c.name, type: c.type, level: c.level, team: t.short_name, category: t.category_code });
           }
         }
       }
     }
 
-    // 3. Phases et poules des championnats seniors
+    // 3. Phases et poules des championnats seniors (on vérifie le district sur la fiche compétition)
     for (const c of comps.values()) {
+      if (c.type === 'CH' && (!c.category || c.category === 'SEM') && !out.district) {
+        const fiche = await get(`${DOFA}/compets/${c.cp_no}`);
+        if (fiche && fiche.cdg) out.district = { cg_no: fiche.cdg.cg_no, name: fiche.cdg.name };
+      }
       const entry = { ...c, phases: [] };
       out.competitions.push(entry);
       if (c.type !== 'CH' || c.category && c.category !== 'SEM') continue;
