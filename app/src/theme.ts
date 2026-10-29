@@ -4,16 +4,12 @@ export const THEMES = {
 };
 export type Theme = typeof THEMES.dark;
 
+// Couleur de pastille par sport (seul le football est couvert pour l'instant).
 export const SPORTS = [
-  { id: 'tous', label: 'Tous' },
   { id: 'football', label: 'Football', color: '#F4B740' },
-  { id: 'rugby', label: 'Rugby', color: '#C97B2E' },
-  { id: 'handball', label: 'Handball', color: '#3A7CA5' },
-  { id: 'basket', label: 'Basket', color: '#A78BFA' },
 ];
 export const sportColor = (s: string) => SPORTS.find(x => x.id === s)?.color || '#F2F2F7';
 export const sportInitial = (s: string) => ({ football: 'F', rugby: 'R', handball: 'H', basket: 'B' } as Record<string, string>)[s] || '?';
-export const PRICING: Record<string, number[]> = { football: [8, 5, 3], rugby: [15, 10, 6], handball: [6, 4, 2], basket: [12, 8, 5] };
 
 export const LEVELS = [
   { id: 'tous', label: 'Tous niveaux' },

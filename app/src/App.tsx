@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Club, MatchEvent, Place } from './types';
-import { DATE_FILTERS, LEVELS, SPORTS, THEMES } from './theme';
+import { DATE_FILTERS, LEVELS, THEMES } from './theme';
 import { DEFAULT_MAP_STYLE } from './mapStyles';
 import { REFRESH_INTERVAL_MS, addDaysISO, fetchEvents, haversineKm, isWeekendDate, loadPref, savePref, todayISO } from './data';
 import { Icon } from './components/Icon';
 import { MatchMap } from './components/MatchMap';
 import { EventCard } from './components/EventCard';
 import { LocationSheet } from './components/LocationSheet';
-import { TicketSheet } from './components/TicketSheet';
+import { InfoSheet } from './components/InfoSheet';
 import { ClubSheet } from './components/ClubSheet';
 
 const DEFAULT_PLACE: Place = { label: 'Lyon', lat: 45.7640, lng: 4.8357 };
@@ -26,7 +26,6 @@ function useSystemDark() {
 }
 
 export default function App() {
-  const [sport, setSport] = useState('tous');
   const [level, setLevel] = useState('tous');
   const [date, setDate] = useState('weekend'); // à l'ouverture : les matchs de ce week-end
   const [selected, setSelected] = useState<string | null>(null);
@@ -37,7 +36,12 @@ export default function App() {
   const [club, setClub] = useState<string | null>(() => loadPref('club', null));
   const [showClubs, setShowClubs] = useState(false);
   const [mapStyle, setMapStyle] = useState<string>(() => loadPref('mapStyle', DEFAULT_MAP_STYLE));
-  const [ticketEvent, setTicketEvent] = useState<MatchEvent | null>(null);
+  const [favs, setFavs] = useState<string[]>(() => loadPref('favs', []));
+  const [favOnly, setFavOnly] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
+  // Lien direct vers un match (?match=…), ouvert une seule fois au chargement
+  const pendingMatch = useRef<string | null>(new URLSearchParams(location.search).get('match'));
   const [manualMode, setManualMode] = useState<'dark' | 'light' | null>(() => loadPref('theme', null));
   const [events, setEvents] = useState<MatchEvent[]>([]);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
@@ -74,6 +78,17 @@ export default function App() {
     setSelected(null);
   };
 
+  const toggleFav = (name: string) => {
+    setFavs(prev => {
+      const next = prev.includes(name) ? prev.filter(n => n !== name) : [...prev, name];
+      savePref('favs', next);
+      if (!next.length) setFavOnly(false);
+      return next;
+    });
+  };
+
+  const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2500); };
+
   const refresh = useCallback(async () => {
     setFetchState(s => (s === 'ok' ? 'ok' : 'loading'));
     try {
@@ -101,7 +116,7 @@ export default function App() {
     const weekEnd = addDaysISO(today, 7);
     return events
       .filter(e => !club || e.homeClub === club || e.awayClub === club)
-      .filter(e => sport === 'tous' || e.sport === sport)
+      .filter(e => !favOnly || favs.includes(e.homeClub) || favs.includes(e.awayClub))
       .filter(e => level === 'tous' || e.level === level)
       .filter(e => {
         if (!e.date) return true;
@@ -113,10 +128,10 @@ export default function App() {
         return true;
       })
       .map(e => ({ ...e, distanceKm: Math.round(haversineKm(place.lat, place.lng, e.lat, e.lng) * 10) / 10 }))
-      .sort((a, b) => club
+      .sort((a, b) => club || favOnly // un club ou mes clubs : ordre chronologique
         ? (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time)
         : a.distanceKm - b.distanceKm || (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time));
-  }, [events, sport, level, date, place, club]);
+  }, [events, level, date, place, club, favOnly, favs]);
 
   // Liste des clubs (équipes réserves regroupées) avec leur nombre de matchs à venir
   const clubs = useMemo<Club[]>(() => {
@@ -129,7 +144,18 @@ export default function App() {
     return [...counts].map(([name, count]) => ({ name, count })).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   }, [events]);
 
-  useEffect(() => setVisible(PAGE_SIZE), [sport, level, date, place, club]);
+  useEffect(() => setVisible(PAGE_SIZE), [level, date, place, club, favOnly]);
+
+  // Ouverture via un lien partagé : on lève les filtres pour être sûr d'afficher le match, puis on le sélectionne.
+  useEffect(() => {
+    const id = pendingMatch.current;
+    if (!id || !events.length) return;
+    pendingMatch.current = null;
+    history.replaceState(null, '', location.pathname);
+    if (!events.some(e => e.id === id)) { showToast('Ce match n\'est plus disponible.'); return; }
+    setDate('tous'); setLevel('tous'); setClub(null); setFavOnly(false);
+    setTimeout(() => selectEventRef.current(id), 50);
+  }, [events]);
 
   const selectEvent = (id: string) => {
     setSelected(id);
@@ -137,6 +163,8 @@ export default function App() {
     if (index >= visible) setVisible(index + 10);
     requestAnimationFrame(() => listRefs.current[id]?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
   };
+  const selectEventRef = useRef(selectEvent);
+  selectEventRef.current = selectEvent;
 
   const handleLocate = () => {
     if (!navigator.geolocation) { setLocateError(true); return; }
@@ -178,23 +206,24 @@ export default function App() {
           </div>
         </div>
         <div className="no-scrollbar mt-4 flex gap-2 overflow-x-auto">
-          {SPORTS.map(s => (
-            <button key={s.id} onClick={() => setSport(s.id)} className="shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition" style={chip(sport === s.id)}>{s.label}</button>
-          ))}
-        </div>
-        <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto">
           {DATE_FILTERS.map(d => (
             <button key={d.id} onClick={() => setDate(d.id)} className="shrink-0 rounded-full border px-3 py-1 text-[11px] font-medium transition" style={smallChip(date === d.id)}>{d.label}</button>
           ))}
         </div>
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto">
+          <button onClick={() => (favs.length ? setFavOnly(v => !v) : setShowClubs(true))}
+            className="flex shrink-0 items-center gap-1 rounded-full border px-3 py-1 text-[11px] font-semibold transition" style={chip(favOnly)}>
+            <Icon name="star" size={11} color={favOnly ? t.chipActiveText : t.gold} filled={favs.length > 0} /> Mes clubs{favs.length ? ` (${favs.length})` : ''}
+          </button>
           {LEVELS.map(l => (
             <button key={l.id} onClick={() => setLevel(l.id)} className="shrink-0 rounded-full border px-3 py-1 text-[11px] font-medium transition" style={smallChip(level === l.id)}>{l.label}</button>
           ))}
         </div>
         {club ? (
           <div className="mt-3 flex items-center gap-2 rounded-full border px-3 py-2" style={{ borderColor: t.gold, background: t.gold + '1A' }}>
-            <Icon name="search" size={14} color={t.gold} />
+            <button onClick={() => toggleFav(club)} aria-label={favs.includes(club) ? 'Retirer de mes clubs' : 'Ajouter à mes clubs'}>
+              <Icon name="star" size={16} color={t.gold} filled={favs.includes(club)} />
+            </button>
             <button onClick={() => setShowClubs(true)} className="min-w-0 flex-1 truncate text-left text-sm font-semibold" style={{ color: t.text }}>{club}</button>
             <button onClick={() => chooseClub(null)} aria-label="Voir tous les clubs" className="flex shrink-0 items-center gap-1 text-[11px] font-semibold" style={{ color: t.textSoft }}>
               Tous les clubs <Icon name="x" size={14} />
@@ -211,7 +240,7 @@ export default function App() {
         <MatchMap t={t} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club}
           styleId={mapStyle} onStyleChange={id => { setMapStyle(id); savePref('mapStyle', id); }} />
         <p className="mt-3 text-center text-[11px]" style={{ color: t.textMute }}>
-          {count} match{count > 1 ? 's' : ''} à venir{club ? ` pour ${club}` : ''} · touche un point pour voir le match
+          {count} match{count > 1 ? 's' : ''} à venir{club ? ` pour ${club}` : favOnly ? ' pour mes clubs' : ''} · touche un point pour voir le match
         </p>
         <div className="mt-1 flex items-center justify-center gap-1.5 text-center text-[10px]" style={{ color: t.textMute }}>
           {fetchState === 'loading' && <span>Chargement des matchs…</span>}
@@ -234,7 +263,8 @@ export default function App() {
         {filtered.slice(0, visible).map(e => (
           <EventCard key={e.id} ref={el => { listRefs.current[e.id] = el; }} t={t} event={e} selected={selected === e.id}
             side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined}
-            onSelect={() => selectEvent(e.id)} onTicket={() => setTicketEvent(e)} />
+            favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
+            onSelect={() => selectEvent(e.id)} onCopied={() => showToast('Lien du match copié')} />
         ))}
         {visible < count && (
           <button onClick={() => setVisible(v => v + PAGE_SIZE)} className="w-full rounded-full border py-3 text-sm font-semibold" style={{ borderColor: t.chipBorder, color: t.text, background: t.card }}>
@@ -245,20 +275,26 @@ export default function App() {
           <Icon name="info" size={13} className="mt-0.5 shrink-0" />
           <span>
             Football amateur : Auvergne-Rhône-Alpes (R1, R2, R3) et district Drôme-Ardèche (D1 à D4), d'après les calendriers officiels FFF,
-            mis à jour automatiquement chaque semaine. Les matchs déjà joués disparaissent de la liste. Vérifie l'horaire sur « Détails » avant de te déplacer.
+            mis à jour automatiquement chaque semaine. Les matchs déjà joués disparaissent de la liste. Vérifie l'horaire sur « Détails » avant de te déplacer.{' '}
+            <button onClick={() => setShowInfo(true)} className="font-semibold underline" style={{ color: t.textSoft }}>Infos, sources et mentions légales</button>
           </span>
         </div>
       </section>
 
-      {selected && !ticketEvent && !showLocation && !showClubs && (
+      {selected && !showInfo && !showLocation && !showClubs && (
         <button onClick={() => setSelected(null)} className="fixed bottom-5 right-5 z-[700] flex h-10 w-10 items-center justify-center rounded-full border"
           style={{ background: t.card, borderColor: t.chipBorder, color: t.textSoft, marginBottom: 'env(safe-area-inset-bottom)' }} aria-label="Fermer la sélection">
           <Icon name="x" size={16} />
         </button>
       )}
-      {showClubs && <ClubSheet t={t} clubs={clubs} onSelect={chooseClub} onClose={() => setShowClubs(false)} />}
+      {showClubs && <ClubSheet t={t} clubs={clubs} favs={favs} onToggleFav={toggleFav} onSelect={chooseClub} onClose={() => setShowClubs(false)} />}
       {showLocation && <LocationSheet t={t} locating={locating} onLocate={handleLocate} onSelect={choosePlace} onClose={() => setShowLocation(false)} />}
-      {ticketEvent && <TicketSheet t={t} event={ticketEvent} onClose={() => setTicketEvent(null)} />}
+      {showInfo && <InfoSheet t={t} onClose={() => setShowInfo(false)} />}
+      {toast && (
+        <div className="fixed inset-x-0 z-[1100] flex justify-center px-4" style={{ bottom: 'calc(env(safe-area-inset-bottom) + 24px)' }}>
+          <div className="rounded-full px-4 py-2 text-sm font-semibold shadow-lg" style={{ background: t.chipActiveBg, color: t.chipActiveText }}>{toast}</div>
+        </div>
+      )}
     </div>
   );
 }

@@ -17,7 +17,6 @@ export interface MatchEvent {
   date: string | null; // AAAA-MM-JJ
   dayLabel: string;
   time: string;
-  partner: boolean;
   source: string;
   detailsUrl: string | null;
 }

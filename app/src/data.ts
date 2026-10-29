@@ -45,7 +45,6 @@ function toEvent(e: RawEvent, i: number): MatchEvent | null {
     date: e.date || null,
     dayLabel: d ? d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }) : 'Date à confirmer',
     time: e.time || '',
-    partner: false,
     source: e.source || 'LAuRAFoot',
     detailsUrl: e.detailsUrl || null,
   };
