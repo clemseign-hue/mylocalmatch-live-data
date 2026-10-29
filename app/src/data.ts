@@ -1,18 +1,12 @@
 import type { LevelId, MatchEvent, Sport } from './types';
 
-// Fichier produit chaque semaine par le robot GitHub Actions (même dépôt).
+// Fichier compact produit chaque semaine par le robot GitHub Actions (même dépôt).
 // raw.githubusercontent.com est rafraîchi en ~5 min ; jsDelivr sert de secours.
-const DATA_URLS = [
-  'https://raw.githubusercontent.com/clemseign-hue/mylocalmatch-live-data/main/events-amateur.json',
-  'https://cdn.jsdelivr.net/gh/clemseign-hue/mylocalmatch-live-data@main/events-amateur.json',
+const REPO_FILE = (file: string) => [
+  `https://raw.githubusercontent.com/clemseign-hue/mylocalmatch-live-data/main/${file}`,
+  `https://cdn.jsdelivr.net/gh/clemseign-hue/mylocalmatch-live-data@main/${file}`,
 ];
 export const REFRESH_INTERVAL_MS = 15 * 60 * 1000;
-
-interface RawEvent {
-  sport?: string; competition?: string; home?: string; away?: string; date?: string; time?: string;
-  venue?: string | null; address?: string | null; lat?: number | null; lng?: number | null; precision?: string | null;
-  source?: string; detailsUrl?: string | null; matchId?: number | string | null;
-}
 
 export function levelOf(competition: string): LevelId {
   if (/coupe/i.test(competition)) return 'coupe';
@@ -23,42 +17,45 @@ export function levelOf(competition: string): LevelId {
   return 'autre';
 }
 
-const cleanName = (s: string) => s.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
 // « VICHY RC 2 » (équipe réserve) appartient au club « VICHY RC ».
 export const clubOf = (team: string) => team.replace(/\s+\d+$/, '');
 
-function toEvent(e: RawEvent, i: number): MatchEvent | null {
-  if (e.lat == null || e.lng == null || !e.home || !e.away) return null;
-  const d = e.date ? new Date(e.date + 'T00:00:00') : null;
-  const competition = e.competition || '';
-  if (levelOf(competition) === 'coupe') return null; // Coupe de France retirée de l'appli
-  const home = cleanName(e.home), away = cleanName(e.away);
+// Format de matchs-app.json : tables partagées + lignes courtes (voir writeAppFile dans scrape-laura.js)
+type Row = [number, string, string, string, string, number, string, (number | null)?, (number | null)?, ('home' | 'away' | null)?];
+interface AppFile {
+  generatedAt: string;
+  comps: [string, string | null][];
+  venues: [string, string, number, number, 0 | 1][];
+  up: Row[];
+  res: Row[];
+}
+
+function toEvent(f: AppFile, r: Row): MatchEvent | null {
+  const [c, date, time, home, away, v, id, hs, as, forfeit] = r;
+  const [competition, detailsUrl] = f.comps[c] || ['', null];
+  const [venue, address, lat, lng, exact] = f.venues[v] || ['', '', null, null, 0];
+  if (lat == null || lng == null || levelOf(competition) === 'coupe') return null;
+  const d = new Date(date + 'T00:00:00');
   return {
-    id: e.matchId ? `m${e.matchId}` : `a${i}`,
-    sport: (e.sport as Sport) || 'football',
+    id: `m${id}`, sport: 'football' as Sport,
     home, away, homeClub: clubOf(home), awayClub: clubOf(away),
     competition, level: levelOf(competition),
-    venue: e.venue || '',
-    address: e.address || '',
-    approximate: e.precision !== 'stade',
-    lat: e.lat, lng: e.lng,
-    date: e.date || null,
-    dayLabel: d ? d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }) : 'Date à confirmer',
-    time: e.time || '',
-    source: e.source || 'LAuRAFoot',
-    detailsUrl: e.detailsUrl || null,
+    venue, address, approximate: !exact, lat, lng, date, time,
+    dayLabel: d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }),
+    source: competition, detailsUrl,
+    homeScore: hs ?? null, awayScore: as ?? null, forfeit: forfeit ?? null,
   };
 }
 
-export async function fetchEvents(): Promise<{ events: MatchEvent[]; generatedAt: string | null }> {
+export async function fetchEvents(): Promise<{ events: MatchEvent[]; results: MatchEvent[]; generatedAt: string | null }> {
   let lastError: unknown;
-  for (const url of DATA_URLS) {
+  for (const url of REPO_FILE('matchs-app.json')) {
     try {
       const res = await fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json = await res.json();
-      const events = ((json.events || []) as RawEvent[]).map(toEvent).filter((e): e is MatchEvent => !!e);
-      return { events, generatedAt: json.generatedAt || null };
+      const f = await res.json() as AppFile;
+      const parse = (rows: Row[]) => (rows || []).map(r => toEvent(f, r)).filter((e): e is MatchEvent => !!e);
+      return { events: parse(f.up), results: parse(f.res), generatedAt: f.generatedAt || null };
     } catch (err) { lastError = err; }
   }
   throw lastError;

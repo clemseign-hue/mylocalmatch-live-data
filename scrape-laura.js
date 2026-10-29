@@ -14,6 +14,8 @@ let stadesDirty = false;
 // Page de l'API où commencent les matchs à venir, par poule : on ne repaie pas les pages déjà jouées.
 const PAGES_STATE = readJson('pages-state.json', {});
 const PREVIOUS = readJson('events-amateur.json', { events: [] });
+// Archive des résultats : alimentée gratuitement par les scores présents dans les pages déjà lues.
+const RESULTS = readJson('resultats.json', {});
 const API_KEY = process.env.SCRAPER_API_KEY;
 let communesDirty = false;
 
@@ -132,7 +134,10 @@ async function fetchViaDofa(comp) {
     if (/exempt/i.test(home + ' ' + away)) continue;
     const venue = dofaVenue(m);
     const journee = m.poule_journee && (m.poule_journee.number ?? m.poule_journee.numero);
-    events.push({ home, away, ...dt, venue, journee: journee || null, matchId: m.ma_no || m.id || null });
+    const score = v => (typeof v === 'number' ? v : null);
+    const forfeit = m.home_is_forfeit === 'O' ? 'home' : m.away_is_forfeit === 'O' ? 'away' : null;
+    events.push({ home, away, ...dt, venue, journee: journee || null, matchId: m.ma_no || m.id || null,
+      homeScore: score(m.home_score), awayScore: score(m.away_score), forfeit });
   }
   if (!events.length) throw new Error(`API FFF : 0 match exploitable (${members.length} reçus)`);
   return events;
@@ -297,6 +302,31 @@ async function locate(e) {
   return c ? { ...c, precision: 'ville' } : null;
 }
 
+// ---------- Fichier compact lu par l'appli : matchs-app.json ----------
+// Tables partagées (compétitions, stades) + lignes courtes : bien plus léger à charger en 4G.
+function writeAppFile(data, results) {
+  const today = new Date().toISOString().slice(0, 10);
+  const comps = [], compIdx = new Map(), venues = [], venueIdx = new Map();
+  const r5 = x => (x == null ? null : Math.round(x * 1e5) / 1e5);
+  const comp = e => {
+    if (!compIdx.has(e.competition)) { compIdx.set(e.competition, comps.length); comps.push([e.competition, e.detailsUrl || null]); }
+    return compIdx.get(e.competition);
+  };
+  const venue = e => {
+    const key = [e.venue, e.address, r5(e.lat), r5(e.lng)].join('|');
+    if (!venueIdx.has(key)) { venueIdx.set(key, venues.length); venues.push([e.venue || '', e.address || '', r5(e.lat), r5(e.lng), e.precision === 'stade' ? 1 : 0]); }
+    return venueIdx.get(key);
+  };
+  const row = e => [comp(e), e.date, e.time, e.home.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim(), e.away.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim(), venue(e), String(e.matchId || '')];
+  const located = e => e.lat != null && e.lng != null && e.home && e.away;
+  const upcoming = (data.events || []).filter(e => located(e) && e.date >= today).map(row);
+  const played = Object.values(results).filter(located).sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time))
+    .map(e => [...row(e), e.homeScore, e.awayScore, e.forfeit || null]);
+  const app = { v: 1, generatedAt: data.generatedAt, comps, venues, up: upcoming, res: played };
+  fs.writeFileSync(path.join(DATA_DIR, 'matchs-app.json'), JSON.stringify(app));
+  return app;
+}
+
 // ---------- Relocalisation seule : node scrape-laura.js --stades ----------
 // Recalcule la position des stades des matchs déjà récupérés, sans interroger la FFF.
 async function relocateOnly() {
@@ -326,6 +356,7 @@ async function relocateOnly() {
     Object.assign(e, { lat: st.lat, lng: st.lng, geocoded: true, precision: st.precision });
   }
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  writeAppFile(data, RESULTS);
   fs.writeFileSync(path.join(DATA_DIR, 'debug-overpass.txt'), overpassLog.join('\n'));
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   const counts = Object.values(STADES).reduce((c, s) => (c[s.precision] = (c[s.precision] || 0) + 1, c), {});
@@ -333,7 +364,10 @@ async function relocateOnly() {
 }
 
 // ---------- Programme principal ----------
-if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
+if (process.argv.includes('--app')) {
+  const app = writeAppFile(PREVIOUS, RESULTS);
+  console.log(`matchs-app.json : ${app.up.length} à venir, ${app.res.length} résultats`);
+} else if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
   const events = []; const report = []; const unlocated = new Set();
   // --only=texte : ne met à jour que les compétitions dont le nom contient ce texte (les autres sont conservées).
   const onlyArg = (process.argv.find(a => a.startsWith('--only=')) || '').slice(7).trim();
@@ -354,9 +388,18 @@ if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
       continue;
     }
     let kept = 0;
+    const today = new Date().toISOString().slice(0, 10);
     for (const e of parsed) {
-      if (e.date < KEEP_FROM) continue;
+      const played = e.date < today && e.homeScore != null && e.awayScore != null;
+      if (e.date < KEEP_FROM && !played) continue;
       const pos = await locate(e);
+      if (played && e.matchId) {
+        const { venue: v, ...r } = e;
+        RESULTS[e.matchId] = { ...r, competition: comp.name, venue: v && v.name ? [v.name, v.city].filter(Boolean).join(', ') : null,
+          address: v ? [v.address, [v.zip, v.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') || null : null,
+          lat: pos ? pos.lat : null, lng: pos ? pos.lng : null, precision: pos ? pos.precision : null, detailsUrl: comp.url };
+      }
+      if (e.date < KEEP_FROM) continue;
       if (!pos) unlocated.add(e.home);
       const { venue, ...rest } = e;
       events.push({
@@ -380,6 +423,8 @@ if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
     return;
   }
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
+  fs.writeFileSync(path.join(DATA_DIR, 'resultats.json'), JSON.stringify(RESULTS, null, 1));
+  writeAppFile(output, RESULTS);
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   fs.writeFileSync(path.join(DATA_DIR, 'pages-state.json'), JSON.stringify(PAGES_STATE, null, 2));
   if (communesDirty) fs.writeFileSync(path.join(DATA_DIR, 'communes-laura.json'), JSON.stringify(COMMUNES, null, 2));

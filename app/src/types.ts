@@ -19,6 +19,10 @@ export interface MatchEvent {
   time: string;
   source: string;
   detailsUrl: string | null;
+  // Uniquement pour les matchs terminés
+  homeScore?: number | null;
+  awayScore?: number | null;
+  forfeit?: 'home' | 'away' | null;
 }
 
 export type LevelId = 'tous' | 'r1' | 'r2' | 'r3' | 'd1' | 'd2' | 'd3' | 'd4' | 'coupe' | 'autre';
