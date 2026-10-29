@@ -1,20 +1,15 @@
-[
-  {
-    "url": "https://www.ffhandball.fr/robots.txt",
+{
+  "home": {
     "status": 200,
-    "finalUrl": "https://www.ffhandball.fr/robots.txt",
-    "length": 175,
-    "robots": "# START YOAST BLOCK\n# ---------------------------\nUser-agent: *\nDisallow:\n\nSitemap: https://www.ffhandball.fr/sitemap_index.xml\n# ---------------------------\n# END YOAST BLOCK"
-  },
-  {
-    "url": "https://www.ffhandball.fr/competitions/",
-    "status": 200,
-    "finalUrl": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/",
-    "length": 598577,
-    "links": [
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/",
+    "compLinks": [
       "https://www.ffhandball.fr/competitions/saison-2026-2027-22/"
     ],
-    "hasStructuredData": true,
-    "head": "<!doctype html>\n<html lang=\"fr-FR\">\n\n<head>\n    <!-- Google Tag Manager -->\n    <script>\n        (function(w, d, s, l, i) {\n            w[l] = w[l] || [];\n            w[l].push({\n                'gtm.start': new Date().getTime(),\n                event: 'gtm.js'\n            });\n            var f = d.getElementsByTagName(s)[0],\n                j = d.createElement(s),\n                dl = l != 'dataLayer' ? '&l=' + l : '';\n            j.async = true;\n            j.src =\n                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;\n            f.parentNode.insertBefore(j, f);\n        })(window, document, 'script', 'dataLayer', 'GTM-PXK3JKW');\n    </script>\n    <!-- End Google Tag Manager -->\n\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-sc"
+    "dataAttrs": [
+      "data-cfk"
+    ],
+    "jsonBlocks": [
+      "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://www.ffhandball.fr/#website\",\"url\":\"https://www.ffhandball.fr/\",\"name\":\"FFHandball\",\"description\":\"\",\"publisher\":{\"@id\":\"https://www.ffhandball.fr/#organization\"},\"alternateName\":\"Fédération Française de Handball\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.ffhandbal"
+    ]
   }
-]
+}
