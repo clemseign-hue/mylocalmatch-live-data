@@ -10,6 +10,14 @@
     ],
     "jsonBlocks": [
       "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://www.ffhandball.fr/#website\",\"url\":\"https://www.ffhandball.fr/\",\"name\":\"FFHandball\",\"description\":\"\",\"publisher\":{\"@id\":\"https://www.ffhandball.fr/#organization\"},\"alternateName\":\"Fédération Française de Handball\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.ffhandbal"
+    ],
+    "cfk": [
+      "6sZWw29dctS7ftp2KcBsqdzdsdgzBgyx"
     ]
+  },
+  "wpjson": {
+    "status": 200,
+    "namespaces": [],
+    "routes": []
   }
 }
