@@ -1,5 +1,8 @@
 {
-  "district": null,
+  "district": {
+    "cg_no": 125,
+    "name": "DISTRICT DROME ARDECHE"
+  },
   "clubs": [
     {
       "cl_no": 113142,
@@ -26,7 +29,341 @@
       "name": "ANNONAY FC"
     }
   ],
-  "competitions": [],
+  "competitions": [
+    {
+      "cp_no": 455026,
+      "name": "U15 D2",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U15",
+      "phases": []
+    },
+    {
+      "cp_no": 455018,
+      "name": "Coupe U15 CREDIT AGRICOLE - JP QUINTIN",
+      "type": "CP",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U15",
+      "phases": []
+    },
+    {
+      "cp_no": 455829,
+      "name": "U17 D1",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U17",
+      "phases": []
+    },
+    {
+      "cp_no": 455780,
+      "name": "COUPE U17 ERM VALLON - VIVIER BOUDRIER",
+      "type": "CP",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U17",
+      "phases": []
+    },
+    {
+      "cp_no": 453249,
+      "name": "U20 D1",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "SEM",
+      "phases": [
+        {
+          "number": 1,
+          "name": "Phase unique ",
+          "poules": [
+            {
+              "stage_number": 1,
+              "name": "POULE A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cp_no": 455779,
+      "name": "Coupe U20 - Georges ETIENNE",
+      "type": "CP",
+      "level": "D",
+      "team": "CREST AOUSTE",
+      "category": "SEM",
+      "phases": []
+    },
+    {
+      "cp_no": 458357,
+      "name": "U13 D2",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 455907,
+      "name": "U17 Brassage",
+      "type": "CH",
+      "level": "D",
+      "team": "CREST AOUSTE",
+      "category": "U17",
+      "phases": []
+    },
+    {
+      "cp_no": 459804,
+      "name": "Coupe U17 DDAF",
+      "type": "CP",
+      "level": "D",
+      "team": "CREST AOUSTE",
+      "category": "U17",
+      "phases": []
+    },
+    {
+      "cp_no": 460825,
+      "name": "U13 D4",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 459353,
+      "name": "U13 D6",
+      "type": "CH",
+      "level": "D",
+      "team": "RHONE CRUSSOL FOOT",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 458355,
+      "name": "U13 D1",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 455024,
+      "name": "U15 Brassage",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U15",
+      "phases": []
+    },
+    {
+      "cp_no": 454301,
+      "name": "VETERANS",
+      "type": "CH",
+      "level": "D",
+      "team": "RCF 07",
+      "category": "SEM",
+      "phases": [
+        {
+          "number": 1,
+          "name": "PHASE UNIQUE",
+          "poules": [
+            {
+              "stage_number": 1,
+              "name": "POULE A"
+            },
+            {
+              "stage_number": 2,
+              "name": "POULE B"
+            },
+            {
+              "stage_number": 3,
+              "name": "POULE C"
+            },
+            {
+              "stage_number": 4,
+              "name": "POULE D"
+            },
+            {
+              "stage_number": 5,
+              "name": "POULE E"
+            },
+            {
+              "stage_number": 6,
+              "name": "POULE F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cp_no": 458741,
+      "name": "COUPE VETERANS",
+      "type": "CP",
+      "level": "D",
+      "team": "RCF 07",
+      "category": "SEM",
+      "phases": []
+    },
+    {
+      "cp_no": 455830,
+      "name": "U17 D2",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U17",
+      "phases": []
+    },
+    {
+      "cp_no": 452463,
+      "name": "D1 UNIQUE",
+      "type": "CH",
+      "level": "D",
+      "team": "FC RHONE VALLEES",
+      "category": "SEM",
+      "phases": [
+        {
+          "number": 1,
+          "name": "D1 UNIQUE",
+          "poules": [
+            {
+              "stage_number": 1,
+              "name": "UNIQUE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cp_no": 458740,
+      "name": "COUPE XAVIER BOUVIER",
+      "type": "CP",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "SEM",
+      "phases": []
+    },
+    {
+      "cp_no": 454761,
+      "name": "SENIORS F A 11 / D1",
+      "type": "CH",
+      "level": "D",
+      "team": "RCF 07",
+      "category": "SEF",
+      "phases": []
+    },
+    {
+      "cp_no": 452464,
+      "name": "D2 UNIQUE",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "SEM",
+      "phases": [
+        {
+          "number": 1,
+          "name": "D2 UNIQUE",
+          "poules": [
+            {
+              "stage_number": 1,
+              "name": "POULE A"
+            },
+            {
+              "stage_number": 2,
+              "name": "POULE B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cp_no": 460821,
+      "name": "U13 D3",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 455019,
+      "name": "Coupe U15 Gilbert PESTRE",
+      "type": "CP",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U15",
+      "phases": []
+    },
+    {
+      "cp_no": 460868,
+      "name": "U13 D5",
+      "type": "CH",
+      "level": "D",
+      "team": "ANNONAY FC",
+      "category": "U13",
+      "phases": []
+    },
+    {
+      "cp_no": 455025,
+      "name": "U15 D1",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "U15",
+      "phases": []
+    },
+    {
+      "cp_no": 452466,
+      "name": "D4 UNIQUE",
+      "type": "CH",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "SEM",
+      "phases": [
+        {
+          "number": 1,
+          "name": "D4 UNIQUE",
+          "poules": [
+            {
+              "stage_number": 1,
+              "name": "POULE A"
+            },
+            {
+              "stage_number": 2,
+              "name": "POULE B"
+            },
+            {
+              "stage_number": 3,
+              "name": "POULE C"
+            },
+            {
+              "stage_number": 4,
+              "name": "POULE D"
+            },
+            {
+              "stage_number": 5,
+              "name": "POULE E"
+            },
+            {
+              "stage_number": 6,
+              "name": "POULE F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cp_no": 458739,
+      "name": "COUPE RENE GIRAUD",
+      "type": "CP",
+      "level": "D",
+      "team": "AV.S. SUD ARDECHE F.",
+      "category": "SEM",
+      "phases": []
+    }
+  ],
   "log": [
     {
       "url": "https://api-dofa.fff.fr/api/compets/457860/phases/1/poules/2/matchs?page=1",
@@ -65,6 +402,61 @@
     },
     {
       "url": "https://api-dofa.fff.fr/api/clubs/2233/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/453249",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/453249/phases",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/453249/phases/1/poules",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/454301/phases",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/454301/phases/1/poules",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452463/phases",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452463/phases/1/poules",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452464/phases",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452464/phases/1/poules",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452466/phases",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/452466/phases/1/poules",
       "status": 200,
       "ok": true
     }
@@ -201,5 +593,5 @@
     "category_gender": "M",
     "diffusable": true
   },
-  "requests": 8
+  "requests": 19
 }
