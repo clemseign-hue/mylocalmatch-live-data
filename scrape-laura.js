@@ -304,7 +304,7 @@ async function locate(e) {
 
 // ---------- Fichier compact lu par l'appli : matchs-app.json ----------
 // Tables partagées (compétitions, stades) + lignes courtes : bien plus léger à charger en 4G.
-function writeAppFile(data, results) {
+function writeAppFile(data) {
   const today = new Date().toISOString().slice(0, 10);
   const comps = [], compIdx = new Map(), venues = [], venueIdx = new Map();
   const r5 = x => (x == null ? null : Math.round(x * 1e5) / 1e5);
@@ -320,9 +320,8 @@ function writeAppFile(data, results) {
   const row = e => [comp(e), e.date, e.time, e.home.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim(), e.away.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim(), venue(e), String(e.matchId || '')];
   const located = e => e.lat != null && e.lng != null && e.home && e.away;
   const upcoming = (data.events || []).filter(e => located(e) && e.date >= today).map(row);
-  const played = Object.values(results).filter(located).sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time))
-    .map(e => [...row(e), e.homeScore, e.awayScore, e.forfeit || null]);
-  const app = { v: 1, generatedAt: data.generatedAt, comps, venues, up: upcoming, res: played };
+  // Les résultats (resultats.json) restent archivés mais ne sont pas affichés dans l'appli pour l'instant.
+  const app = { v: 1, generatedAt: data.generatedAt, comps, venues, up: upcoming };
   fs.writeFileSync(path.join(DATA_DIR, 'matchs-app.json'), JSON.stringify(app));
   return app;
 }
@@ -356,7 +355,7 @@ async function relocateOnly() {
     Object.assign(e, { lat: st.lat, lng: st.lng, geocoded: true, precision: st.precision });
   }
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
-  writeAppFile(data, RESULTS);
+  writeAppFile(data);
   fs.writeFileSync(path.join(DATA_DIR, 'debug-overpass.txt'), overpassLog.join('\n'));
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   const counts = Object.values(STADES).reduce((c, s) => (c[s.precision] = (c[s.precision] || 0) + 1, c), {});
@@ -365,8 +364,8 @@ async function relocateOnly() {
 
 // ---------- Programme principal ----------
 if (process.argv.includes('--app')) {
-  const app = writeAppFile(PREVIOUS, RESULTS);
-  console.log(`matchs-app.json : ${app.up.length} à venir, ${app.res.length} résultats`);
+  const app = writeAppFile(PREVIOUS);
+  console.log(`matchs-app.json : ${app.up.length} matchs à venir`);
 } else if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
   const events = []; const report = []; const unlocated = new Set();
   // --only=texte : ne met à jour que les compétitions dont le nom contient ce texte (les autres sont conservées).
@@ -424,7 +423,7 @@ if (process.argv.includes('--app')) {
   }
   fs.writeFileSync(path.join(DATA_DIR, 'events-amateur.json'), JSON.stringify(output, null, 2));
   fs.writeFileSync(path.join(DATA_DIR, 'resultats.json'), JSON.stringify(RESULTS, null, 1));
-  writeAppFile(output, RESULTS);
+  writeAppFile(output);
   if (stadesDirty) fs.writeFileSync(path.join(DATA_DIR, 'stades-laura.json'), JSON.stringify(STADES, null, 2));
   fs.writeFileSync(path.join(DATA_DIR, 'pages-state.json'), JSON.stringify(PAGES_STATE, null, 2));
   if (communesDirty) fs.writeFileSync(path.join(DATA_DIR, 'communes-laura.json'), JSON.stringify(COMMUNES, null, 2));

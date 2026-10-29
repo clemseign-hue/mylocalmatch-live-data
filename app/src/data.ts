@@ -21,17 +21,16 @@ export function levelOf(competition: string): LevelId {
 export const clubOf = (team: string) => team.replace(/\s+\d+$/, '');
 
 // Format de matchs-app.json : tables partagées + lignes courtes (voir writeAppFile dans scrape-laura.js)
-type Row = [number, string, string, string, string, number, string, (number | null)?, (number | null)?, ('home' | 'away' | null)?];
+type Row = [number, string, string, string, string, number, string];
 interface AppFile {
   generatedAt: string;
   comps: [string, string | null][];
   venues: [string, string, number, number, 0 | 1][];
   up: Row[];
-  res: Row[];
 }
 
 function toEvent(f: AppFile, r: Row): MatchEvent | null {
-  const [c, date, time, home, away, v, id, hs, as, forfeit] = r;
+  const [c, date, time, home, away, v, id] = r;
   const [competition, detailsUrl] = f.comps[c] || ['', null];
   const [venue, address, lat, lng, exact] = f.venues[v] || ['', '', null, null, 0];
   if (lat == null || lng == null || levelOf(competition) === 'coupe') return null;
@@ -43,11 +42,10 @@ function toEvent(f: AppFile, r: Row): MatchEvent | null {
     venue, address, approximate: !exact, lat, lng, date, time,
     dayLabel: d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }),
     source: competition, detailsUrl,
-    homeScore: hs ?? null, awayScore: as ?? null, forfeit: forfeit ?? null,
   };
 }
 
-export async function fetchEvents(): Promise<{ events: MatchEvent[]; results: MatchEvent[]; generatedAt: string | null }> {
+export async function fetchEvents(): Promise<{ events: MatchEvent[]; generatedAt: string | null }> {
   let lastError: unknown;
   for (const url of REPO_FILE('matchs-app.json')) {
     try {
@@ -55,7 +53,7 @@ export async function fetchEvents(): Promise<{ events: MatchEvent[]; results: Ma
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const f = await res.json() as AppFile;
       const parse = (rows: Row[]) => (rows || []).map(r => toEvent(f, r)).filter((e): e is MatchEvent => !!e);
-      return { events: parse(f.up), results: parse(f.res), generatedAt: f.generatedAt || null };
+      return { events: parse(f.up), generatedAt: f.generatedAt || null };
     } catch (err) { lastError = err; }
   }
   throw lastError;

@@ -8,13 +8,10 @@ import { MatchMap } from './components/MatchMap';
 import { EventCard } from './components/EventCard';
 import { LocationSheet } from './components/LocationSheet';
 import { InfoSheet } from './components/InfoSheet';
-import { ResultCard } from './components/ResultCard';
 import { ClubSheet } from './components/ClubSheet';
 
 const DEFAULT_PLACE: Place = { label: 'Lyon', lat: 45.7640, lng: 4.8357 };
 const PAGE_SIZE = 40;
-const RADII = [null, 10, 20, 50] as const; // rayon autour du lieu choisi (null = toutes distances)
-type Mode = 'avenir' | 'resultats';
 type FetchState = 'idle' | 'loading' | 'ok' | 'error';
 
 function useSystemDark() {
@@ -47,9 +44,6 @@ export default function App() {
   const pendingMatch = useRef<string | null>(new URLSearchParams(location.search).get('match'));
   const [manualMode, setManualMode] = useState<'dark' | 'light' | null>(() => loadPref('theme', null));
   const [events, setEvents] = useState<MatchEvent[]>([]);
-  const [results, setResults] = useState<MatchEvent[]>([]);
-  const [mode, setMode] = useState<Mode>('avenir');
-  const [radius, setRadius] = useState<number | null>(() => loadPref('radius', null));
   const [online, setOnline] = useState(() => navigator.onLine);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [fetchState, setFetchState] = useState<FetchState>('idle');
@@ -99,9 +93,8 @@ export default function App() {
   const refresh = useCallback(async () => {
     setFetchState(s => (s === 'ok' ? 'ok' : 'loading'));
     try {
-      const { events, results, generatedAt } = await fetchEvents();
+      const { events, generatedAt } = await fetchEvents();
       setEvents(events);
-      setResults(results);
       setLastUpdated(generatedAt);
       setFetchState('ok');
     } catch {
@@ -142,21 +135,11 @@ export default function App() {
         return true;
       })
       .map(e => ({ ...e, distanceKm: Math.round(haversineKm(place.lat, place.lng, e.lat, e.lng) * 10) / 10 }))
-      .filter(e => !radius || club || favOnly || e.distanceKm <= radius) // le rayon ne s'applique pas à un club choisi
       .sort((a, b) => club || favOnly // un club ou mes clubs : ordre chronologique
         ? (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time)
         : a.distanceKm - b.distanceKm || (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time));
-  }, [events, level, date, place, club, favOnly, favs, radius]);
+  }, [events, level, date, place, club, favOnly, favs]);
 
-  // Résultats (matchs terminés) : mêmes filtres club / mes clubs / niveau / rayon, du plus récent au plus ancien
-  const pastResults = useMemo(() => results
-    .filter(e => !club || e.homeClub === club || e.awayClub === club)
-    .filter(e => !favOnly || favs.includes(e.homeClub) || favs.includes(e.awayClub))
-    .filter(e => level === 'tous' || e.level === level)
-    .map(e => ({ ...e, distanceKm: Math.round(haversineKm(place.lat, place.lng, e.lat, e.lng) * 10) / 10 }))
-    .filter(e => !radius || club || favOnly || e.distanceKm <= radius)
-    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.distanceKm - b.distanceKm),
-  [results, club, favOnly, favs, level, place, radius]);
 
   // Liste des clubs (équipes réserves regroupées) avec leur nombre de matchs à venir
   const clubs = useMemo<Club[]>(() => {
@@ -169,7 +152,7 @@ export default function App() {
     return [...counts].map(([name, count]) => ({ name, count })).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   }, [events]);
 
-  useEffect(() => setVisible(PAGE_SIZE), [level, date, place, club, favOnly, radius, mode]);
+  useEffect(() => setVisible(PAGE_SIZE), [level, date, place, club, favOnly]);
 
   // Ouverture via un lien partagé : on lève les filtres pour être sûr d'afficher le match, puis on le sélectionne.
   useEffect(() => {
@@ -178,7 +161,7 @@ export default function App() {
     pendingMatch.current = null;
     history.replaceState(null, '', location.pathname);
     if (!events.some(e => e.id === id)) { showToast('Ce match n\'est plus disponible.'); return; }
-    setMode('avenir'); setDate('tous'); setLevel('tous'); setClub(null); setFavOnly(false); setRadius(null);
+    setDate('tous'); setLevel('tous'); setClub(null); setFavOnly(false);
     setTimeout(() => selectEventRef.current(id), 50);
   }, [events]);
 
@@ -219,10 +202,6 @@ export default function App() {
             <button onClick={() => setShowLocation(true)} className="mt-1 flex max-w-full items-center gap-1 text-[11px] uppercase tracking-[0.1em]" style={{ color: t.textSoft }}>
               <Icon name="pin" size={11} /> <span className="truncate">{place.label}</span> <span className="shrink-0" style={{ color: t.textMute }}>· changer</span>
             </button>
-            <button onClick={() => { const next = RADII[(RADII.indexOf(radius as typeof RADII[number]) + 1) % RADII.length]; setRadius(next); savePref('radius', next); }}
-              className="mt-1.5 flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[11px] font-semibold" style={radius ? { borderColor: t.flare, color: t.flare } : { borderColor: t.chipBorder, color: t.textSoft }}>
-              <Icon name="locate" size={11} /> {radius ? `Moins de ${radius} km` : 'Toutes distances'}
-            </button>
           </div>
           <div className="flex shrink-0 items-center gap-2">
             <button onClick={toggleTheme} aria-label="Basculer le thème" className="flex h-9 w-9 items-center justify-center rounded-full border" style={{ borderColor: t.chipBorder }}>
@@ -234,22 +213,11 @@ export default function App() {
             </button>
           </div>
         </div>
-        <div className="mt-4 grid grid-cols-2 rounded-xl p-1" style={{ background: t.inputBg }} role="tablist">
-          {([['avenir', 'À venir', 'calendar'], ['resultats', 'Résultats', 'check']] as const).map(([id, label, icon]) => (
-            <button key={id} role="tab" aria-selected={mode === id} onClick={() => { setMode(id); setSelected(null); }}
-              className="flex items-center justify-center gap-1.5 rounded-lg py-2 text-sm font-semibold transition"
-              style={mode === id ? { background: id === 'avenir' ? t.flare : t.textSoft, color: '#FFFFFF' } : { color: t.textMute }}>
-              <Icon name={icon} size={14} /> {label}
-            </button>
+        <div className="no-scrollbar mt-4 flex gap-2 overflow-x-auto">
+          {DATE_FILTERS.map(d => (
+            <button key={d.id} onClick={() => setDate(d.id)} className="shrink-0 rounded-full border px-3 py-1 text-[11px] font-medium transition" style={smallChip(date === d.id)}>{d.label}</button>
           ))}
         </div>
-        {mode === 'avenir' && (
-          <div className="no-scrollbar mt-3 flex gap-2 overflow-x-auto">
-            {DATE_FILTERS.map(d => (
-              <button key={d.id} onClick={() => setDate(d.id)} className="shrink-0 rounded-full border px-3 py-1 text-[11px] font-medium transition" style={smallChip(date === d.id)}>{d.label}</button>
-            ))}
-          </div>
-        )}
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto">
           <button onClick={() => (favs.length ? setFavOnly(v => !v) : setShowClubs(true))}
             className="flex shrink-0 items-center gap-1 rounded-full border px-3 py-1 text-[11px] font-semibold transition" style={chip(favOnly)}>
@@ -276,10 +244,6 @@ export default function App() {
         )}
       </header>
 
-      {mode === 'resultats' ? (
-        <ResultsSection t={t} results={pastResults} club={club} visible={visible} onMore={() => setVisible(v => v + PAGE_SIZE)}
-          lastUpdated={lastUpdated} fetchState={fetchState} online={online} />
-      ) : (<>
       <section className="px-4 pb-2 pt-4">
         <MatchMap t={t} events={filtered} center={place} selectedId={selected} onSelect={selectEvent} fitKey={club}
           styleId={mapStyle} onStyleChange={id => { setMapStyle(id); savePref('mapStyle', id); }} />
@@ -325,7 +289,6 @@ export default function App() {
           </span>
         </div>
       </section>
-      </>)}
 
       {selected && !showInfo && !showLocation && !showClubs && (
         <button onClick={() => setSelected(null)} className="fixed bottom-5 right-5 z-[700] flex h-10 w-10 items-center justify-center rounded-full border"
@@ -345,40 +308,3 @@ export default function App() {
   );
 }
 
-// Liste des résultats, regroupés par date, sous un bandeau « matchs terminés » bien visible.
-function ResultsSection({ t, results, club, visible, onMore, lastUpdated, fetchState, online }: {
-  t: typeof THEMES.dark; results: (MatchEvent & { distanceKm: number })[]; club: string | null; visible: number; onMore: () => void;
-  lastUpdated: string | null; fetchState: FetchState; online: boolean;
-}) {
-  const shown = results.slice(0, visible);
-  const groups: [string, typeof shown][] = [];
-  for (const e of shown) {
-    const last = groups[groups.length - 1];
-    if (last && last[0] === e.dayLabel) last[1].push(e); else groups.push([e.dayLabel, [e]]);
-  }
-  return (
-    <section className="space-y-3 px-4 pt-4" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 40px)' }}>
-      <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-[12px] font-semibold" style={{ background: t.textMute, color: '#FFFFFF' }}>
-        <Icon name="check" size={14} /> Matchs terminés · {results.length} résultat{results.length > 1 ? 's' : ''}{club ? ` pour ${club}` : ''}
-      </div>
-      {!online && <p className="text-center text-[11px] font-semibold" style={{ color: t.flare }}>Hors connexion : derniers résultats enregistrés sur ton téléphone.</p>}
-      {fetchState === 'ok' && results.length === 0 && (
-        <p className="py-12 text-center text-sm" style={{ color: t.textMute }}>
-          Pas encore de résultat pour ces filtres. Les scores s'ajoutent automatiquement à chaque mise à jour hebdomadaire (le lundi).
-        </p>
-      )}
-      {groups.map(([day, list]) => (
-        <div key={day} className="space-y-2">
-          <h4 className="pt-2 text-[11px] font-bold uppercase tracking-wider" style={{ color: t.textMute }}>{day}</h4>
-          {list.map(e => <ResultCard key={e.id} t={t} event={e} side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined} />)}
-        </div>
-      ))}
-      {visible < results.length && (
-        <button onClick={onMore} className="w-full rounded-full border py-3 text-sm font-semibold" style={{ borderColor: t.chipBorder, color: t.text, background: t.card }}>
-          Voir plus de résultats ({results.length - visible} restants)
-        </button>
-      )}
-      {lastUpdated && <p className="text-center text-[10px]" style={{ color: t.textMute }}>Données mises à jour le {new Date(lastUpdated).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</p>}
-    </section>
-  );
-}
