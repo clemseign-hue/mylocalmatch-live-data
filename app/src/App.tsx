@@ -273,7 +273,7 @@ export default function App() {
           <EventCard key={e.id} ref={el => { listRefs.current[e.id] = el; }} t={t} event={e} selected={selected === e.id}
             side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined}
             favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
-            onSelect={() => selectEvent(e.id)} onCopied={() => showToast('Lien du match copié')} />
+            onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')} />
         ))}
         {visible < count && (
           <button onClick={() => setVisible(v => v + PAGE_SIZE)} className="w-full rounded-full border py-3 text-sm font-semibold" style={{ borderColor: t.chipBorder, color: t.text, background: t.card }}>
@@ -290,12 +290,6 @@ export default function App() {
         </div>
       </section>
 
-      {selected && !showInfo && !showLocation && !showClubs && (
-        <button onClick={() => setSelected(null)} className="fixed bottom-5 right-5 z-[700] flex h-10 w-10 items-center justify-center rounded-full border"
-          style={{ background: t.card, borderColor: t.chipBorder, color: t.textSoft, marginBottom: 'env(safe-area-inset-bottom)' }} aria-label="Fermer la sélection">
-          <Icon name="x" size={16} />
-        </button>
-      )}
       {showClubs && <ClubSheet t={t} clubs={clubs} favs={favs} onToggleFav={toggleFav} onSelect={chooseClub} onClose={() => setShowClubs(false)} />}
       {showLocation && <LocationSheet t={t} locating={locating} onLocate={handleLocate} onSelect={choosePlace} onClose={() => setShowLocation(false)} />}
       {showInfo && <InfoSheet t={t} onClose={() => setShowInfo(false)} />}
