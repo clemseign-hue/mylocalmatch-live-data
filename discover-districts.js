@@ -1,15 +1,11 @@
-// Exploration ponctuelle : championnats d'un district via les équipes de ses clubs.
+// Exploration ponctuelle : vérifie des numéros de compétition et liste leurs phases/poules.
 // Lancement manuel uniquement ; plafonné à MAX_REQUESTS crédits ScraperAPI. Résultat : debug-discovery.json
 const fs = require('fs');
 const API_KEY = process.env.SCRAPER_API_KEY;
 const DOFA = 'https://api-dofa.fff.fr/api';
-const MAX_REQUESTS = 40;
-const ZIP_RE = /^(26|07)/;
-const SOURCES = [ // poules régionales contenant des clubs du district
-  { id: 457860, poule: 2 }, { id: 457861, poule: 3 }, { id: 457861, poule: 4 }, { id: 457862, poule: 5 },
-];
+const MAX_REQUESTS = 15;
+const CANDIDATES = [452465, 452467, 452468];
 let requests = 0;
-const log = [];
 
 async function get(url) {
   if (requests >= MAX_REQUESTS) throw new Error('plafond de requêtes atteint');
@@ -19,63 +15,25 @@ async function get(url) {
     res = await fetch(`http://api.scraperapi.com/?api_key=${API_KEY}&url=${encodeURIComponent(url)}&keep_headers=true`, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(60000) }).catch(e => ({ ok: false, status: e.message }));
   }
   const text = res.ok ? await res.text() : '';
-  let json = null; try { json = JSON.parse(text); } catch { /* pas du JSON */ }
-  log.push({ url, status: res.status, ok: !!json });
   console.log(res.status, url);
-  return json;
+  try { return JSON.parse(text); } catch { return null; }
 }
 const members = j => (Array.isArray(j) ? j : (j && (j['hydra:member'] || j.member)) || []);
 
 (async () => {
-  const out = { district: null, clubs: [], competitions: [], log };
+  const out = { competitions: [] };
   try {
-    // 1. Clubs du district présents en régional
-    const clubs = new Map();
-    for (const s of SOURCES) {
-      for (const m of members(await get(`${DOFA}/compets/${s.id}/phases/1/poules/${s.poule}/matchs?page=1`))) {
-        for (const side of ['home', 'away']) {
-          const t = m[side]; const cl = t && t.club && t.club.cl_no;
-          if (cl && m.terrain && ZIP_RE.test(String(m.terrain.zip_code || '')) && side === 'home') clubs.set(cl, t.short_name);
-        }
-      }
-      if (clubs.size >= 6) break;
-    }
-    out.clubs = [...clubs].map(([cl_no, name]) => ({ cl_no, name }));
-
-    // 2. Équipes des clubs → engagements en championnat de district
-    const comps = new Map();
-    for (const { cl_no } of out.clubs.slice(0, 6)) {
-      let j = await get(`${DOFA}/clubs/${cl_no}/equipes`);
-      if (!j) j = await get(`${DOFA}/clubs/${cl_no}`);
-      const teams = members(j).length ? members(j) : (j && (j.equipes || j.teams)) || [];
-      if (!out.sampleTeam && teams[0]) out.sampleTeam = teams[0];
-      for (const t of teams) {
-        for (const e of t.engagements || []) {
-          const c = e.competition || e;
-          // Ici « cdg » n'est pas renseigné : niveau « D » = district (celui du club).
-          if (c && c.level === 'D') {
-            comps.set(c.cp_no, { cp_no: c.cp_no, name: c.name, type: c.type, level: c.level, team: t.short_name, category: t.category_code });
-          }
-        }
-      }
-    }
-
-    // 3. Phases et poules des championnats seniors (on vérifie le district sur la fiche compétition)
-    for (const c of comps.values()) {
-      if (c.type === 'CH' && (!c.category || c.category === 'SEM') && !out.district) {
-        const fiche = await get(`${DOFA}/compets/${c.cp_no}`);
-        if (fiche && fiche.cdg) out.district = { cg_no: fiche.cdg.cg_no, name: fiche.cdg.name };
-      }
-      const entry = { ...c, phases: [] };
+    for (const cp of CANDIDATES) {
+      const fiche = await get(`${DOFA}/compets/${cp}`);
+      const entry = { cp_no: cp, name: fiche && fiche.name, type: fiche && fiche.type, level: fiche && fiche.level, cdg: fiche && fiche.cdg && fiche.cdg.cg_no, phases: [] };
       out.competitions.push(entry);
-      if (c.type !== 'CH' || c.category && c.category !== 'SEM') continue;
-      for (const ph of members(await get(`${DOFA}/compets/${c.cp_no}/phases`))) {
-        const poules = members(await get(`${DOFA}/compets/${c.cp_no}/phases/${ph.number}/poules`)).map(p => ({ stage_number: p.stage_number, name: p.name }));
+      if (!fiche || fiche.type !== 'CH' || entry.cdg !== 125) continue;
+      for (const ph of members(await get(`${DOFA}/compets/${cp}/phases`))) {
+        const poules = members(await get(`${DOFA}/compets/${cp}/phases/${ph.number}/poules`)).map(p => ({ stage_number: p.stage_number, name: p.name }));
         entry.phases.push({ number: ph.number, name: ph.name, poules });
       }
     }
   } catch (err) { out.error = err.message; }
   out.requests = requests;
   fs.writeFileSync('debug-discovery.json', JSON.stringify(out, null, 2));
-  console.log(`${requests} requêtes via ScraperAPI`);
 })();
