@@ -20,6 +20,10 @@ export const LEVELS = [
   { id: 'r1', label: 'R1' },
   { id: 'r2', label: 'R2' },
   { id: 'r3', label: 'R3' },
+  { id: 'd1', label: 'D1' },
+  { id: 'd2', label: 'D2' },
+  { id: 'd3', label: 'D3' },
+  { id: 'd4', label: 'D4' },
 ] as const;
 
 export const DATE_FILTERS = [

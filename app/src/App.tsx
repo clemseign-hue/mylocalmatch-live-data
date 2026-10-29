@@ -244,7 +244,7 @@ export default function App() {
         <div className="flex gap-2 rounded-lg border px-3 py-2.5 text-[11px] leading-relaxed" style={{ borderColor: t.border, color: t.textMute }}>
           <Icon name="info" size={13} className="mt-0.5 shrink-0" />
           <span>
-            Football amateur Auvergne-Rhône-Alpes (R1, R2, R3) d'après les calendriers officiels LAuRAFoot / FFF,
+            Football amateur : Auvergne-Rhône-Alpes (R1, R2, R3) et district Drôme-Ardèche (D1 à D4), d'après les calendriers officiels FFF,
             mis à jour automatiquement chaque semaine. Les matchs déjà joués disparaissent de la liste. Vérifie l'horaire sur « Détails » avant de te déplacer.
           </span>
         </div>

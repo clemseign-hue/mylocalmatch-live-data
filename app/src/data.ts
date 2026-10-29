@@ -18,6 +18,8 @@ export function levelOf(competition: string): LevelId {
   if (/coupe/i.test(competition)) return 'coupe';
   const m = competition.match(/R[ée]gional\s*(\d)/i);
   if (m) return (`r${m[1]}` as LevelId);
+  const d = competition.match(/D[ée]partemental\s*(\d)/i);
+  if (d) return (`d${d[1]}` as LevelId);
   return 'autre';
 }
 

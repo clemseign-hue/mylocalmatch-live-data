@@ -17,18 +17,23 @@ const PREVIOUS = readJson('events-amateur.json', { events: [] });
 const API_KEY = process.env.SCRAPER_API_KEY;
 let communesDirty = false;
 
-const BASE = 'https://laurafoot.fff.fr/competitions';
 const DOFA = 'https://api-dofa.fff.fr/api';
+const LIGUE = { site: 'https://laurafoot.fff.fr', source: 'LAuRAFoot' };
+const DROME_ARDECHE = { site: 'https://drome-ardeche.fff.fr', source: 'District Drôme-Ardèche' };
+const POULES = 'ABCDEFGHIJ';
+// Championnats suivis (numéros FFF trouvés avec discover-districts.js).
+const championnat = (label, id, nbPoules, org) =>
+  Array.from({ length: nbPoules }, (_, i) => ({ name: nbPoules > 1 ? `${label} - Poule ${POULES[i]}` : label, id, phase: 1, poule: i + 1, org }));
 const COMPETITIONS = [
-  ...[1, 2].map(p => ({ name: `Régional 1 - Poule ${'AB'[p - 1]}`, id: 457860, phase: 1, poule: p, type: 'ch' })),
-  ...[1, 2, 3, 4, 5].map(p => ({ name: `Régional 2 - Poule ${'ABCDE'[p - 1]}`, id: 457861, phase: 1, poule: p, type: 'ch' })),
-  ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(p => ({ name: `Régional 3 - Poule ${'ABCDEFGHIJ'[p - 1]}`, id: 457862, phase: 1, poule: p, type: 'ch' })),
-].map(c => ({
-  ...c,
-  url: c.type === 'cp'
-    ? `${BASE}?id=${c.id}&poule=${c.poule}&phase=${c.phase}&type=cp&tab=resultat`
-    : `${BASE}?tab=calendar&id=${c.id}&phase=${c.phase}&poule=${c.poule}&type=ch`,
-}));
+  ...championnat('Régional 1', 457860, 2, LIGUE),
+  ...championnat('Régional 2', 457861, 5, LIGUE),
+  ...championnat('Régional 3', 457862, 10, LIGUE),
+  // District Drôme-Ardèche (n° 125), seniors masculins
+  ...championnat('Départemental 1 Drôme-Ardèche', 452463, 1, DROME_ARDECHE),
+  ...championnat('Départemental 2 Drôme-Ardèche', 452464, 2, DROME_ARDECHE),
+  ...championnat('Départemental 3 Drôme-Ardèche', 452465, 4, DROME_ARDECHE),
+  ...championnat('Départemental 4 Drôme-Ardèche', 452466, 6, DROME_ARDECHE),
+].map(c => ({ ...c, url: `${c.org.site}/competitions?tab=calendar&id=${c.id}&phase=${c.phase}&poule=${c.poule}&type=ch` }));
 
 // On garde les matchs depuis 7 jours (l'app masque déjà les matchs passés).
 const KEEP_FROM = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
@@ -329,7 +334,15 @@ async function relocateOnly() {
 // ---------- Programme principal ----------
 if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
   const events = []; const report = []; const unlocated = new Set();
+  // --only=texte : ne met à jour que les compétitions dont le nom contient ce texte (les autres sont conservées).
+  const onlyArg = (process.argv.find(a => a.startsWith('--only=')) || '').slice(7).trim();
   for (const comp of COMPETITIONS) {
+    if (onlyArg && !comp.name.toLowerCase().includes(onlyArg.toLowerCase())) {
+      const previous = (PREVIOUS.events || []).filter(e => e.competition === comp.name && e.date >= KEEP_FROM);
+      events.push(...previous);
+      report.push({ competition: comp.name, skipped: true, previousKept: previous.length });
+      continue;
+    }
     let parsed = null, source = null, errors = [];
     try { parsed = await fetchViaDofa(comp); source = 'api-fff'; } catch (err) { errors.push(err.message); }
     if (!parsed) {
@@ -351,7 +364,7 @@ if (process.argv.includes('--stades')) { relocateOnly(); } else (async () => {
         stadeId: venue && venue.id ? String(venue.id) : null,
         address: venue ? [venue.address, [venue.zip, venue.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') || null : null,
         lat: pos ? pos.lat : null, lng: pos ? pos.lng : null, geocoded: !!pos, precision: pos ? pos.precision : null,
-        real: true, source: `LAuRAFoot — ${comp.name}`, detailsUrl: comp.url,
+        real: true, source: `${comp.org.source} — ${comp.name}`, detailsUrl: comp.url,
       });
       kept++;
     }

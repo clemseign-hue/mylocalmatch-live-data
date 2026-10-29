@@ -22,7 +22,7 @@ export interface MatchEvent {
   detailsUrl: string | null;
 }
 
-export type LevelId = 'tous' | 'r1' | 'r2' | 'r3' | 'coupe' | 'autre';
+export type LevelId = 'tous' | 'r1' | 'r2' | 'r3' | 'd1' | 'd2' | 'd3' | 'd4' | 'coupe' | 'autre';
 
 export interface Club { name: string; count: number }
 
