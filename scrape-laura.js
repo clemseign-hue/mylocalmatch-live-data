@@ -117,7 +117,8 @@ async function fetchViaDofa(comp) {
     const fresh = list.filter(m => { const k = m.ma_no || JSON.stringify([m.date, m.home, m.away]); if (seen.has(k)) return false; seen.add(k); return true; });
     pages.push(`p${page}: ${list.length}`);
     members.push(...fresh);
-    if (!fresh.length || json['hydra:totalItems'] && members.length >= json['hydra:totalItems']) break;
+    // Page incomplète = dernière page : inutile de payer une requête de plus pour une page vide.
+    if (!fresh.length || list.length < 30 || json['hydra:totalItems'] && members.length >= json['hydra:totalItems']) break;
     await sleep(300);
   }
   comp.pages = pages.join(', ');
