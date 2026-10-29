@@ -1,1107 +1,205 @@
-[
-  {
-    "url": "https://api-dofa.fff.fr/api/compets?cdg.cg_no=127&season=2026",
-    "status": 500,
-    "summary": null,
-    "sample": ""
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/compets?cg_no=127",
-    "status": 500,
-    "summary": null,
-    "sample": ""
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/cdgs/127/compets",
-    "status": 404,
-    "summary": null,
-    "sample": ""
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/compets/453692",
-    "status": 200,
-    "summary": {
-      "items": [
-        {
-          "cp_no": 453692,
-          "name": "COUPE DE LYON DU RHONE SENIORS",
+{
+  "district": null,
+  "clubs": [
+    {
+      "cl_no": 113142,
+      "name": "ENT. CREST AOUSTE"
+    },
+    {
+      "cl_no": 180046,
+      "name": "O. VALENCE"
+    },
+    {
+      "cl_no": 113141,
+      "name": "FC RHONE VALLEES"
+    },
+    {
+      "cl_no": 116755,
+      "name": "RHONE CRUSSOL F. 07"
+    },
+    {
+      "cl_no": 100425,
+      "name": "AV.S. SUD ARDECHE F."
+    },
+    {
+      "cl_no": 2233,
+      "name": "ANNONAY FC"
+    }
+  ],
+  "competitions": [],
+  "log": [
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/457860/phases/1/poules/2/matchs?page=1",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/compets/457861/phases/1/poules/3/matchs?page=1",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/113142/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/180046/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/113141/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/116755/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/100425/equipes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://api-dofa.fff.fr/api/clubs/2233/equipes",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "sampleTeam": {
+    "club": {
+      "cl_no": 113142,
+      "district": {
+        "cg_no": 125,
+        "name": "DISTRICT DROME ARDECHE",
+        "sa_no": 2026
+      },
+      "affiliation_number": 551477,
+      "name": "ENTENTE CREST AOUSTE",
+      "short_name": "CREST AOUSTE",
+      "logo": "https://cdn-transverse.azureedge.net/phlogos/BC551477.jpg"
+    },
+    "season": 2026,
+    "category_code": "SEM",
+    "number": 1,
+    "code": 1,
+    "short_name": "ENT. CREST AOUSTE",
+    "short_name_ligue": "ENT. CREST AOUSTE",
+    "short_name_federation": "CREST AOUSTE",
+    "type": "C",
+    "engagements": [
+      {
+        "sa_no": 2026,
+        "terrain": "/api/terrains/261080101",
+        "en_statut": "E",
+        "en_forf_gene": "N",
+        "en_tour_no": 7,
+        "en_elimine": "N",
+        "en_excl_class": "",
+        "competition": {
+          "cp_no": 449168,
           "type": "CP",
-          "level": "D",
-          "season": 2026,
-          "cdg": 127,
-          "keys": [
-            "cp_no",
-            "season",
-            "license_code",
-            "type",
-            "name",
-            "shortname",
-            "cp_niv",
-            "level",
-            "cdg",
-            "phases"
-          ]
+          "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+          "level": "F"
+        },
+        "phase": {
+          "number": 1
+        },
+        "poule": {
+          "stage_number": 13
         }
-      ]
-    }
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/compets/453692/phases",
-    "status": 200,
-    "summary": {
-      "items": [
-        {
-          "name": "Phase Unique",
+      },
+      {
+        "sa_no": 2026,
+        "terrain": "/api/terrains/261080101",
+        "en_statut": "E",
+        "en_forf_gene": "N",
+        "en_tour_no": 0,
+        "en_elimine": "N",
+        "en_excl_class": "",
+        "competition": {
+          "cp_no": 457860,
+          "type": "CH",
+          "name": "SENIORS REGIONAL 1",
+          "level": "L"
+        },
+        "phase": {
+          "number": 1
+        },
+        "poule": {
+          "stage_number": 2
+        }
+      },
+      {
+        "sa_no": 2026,
+        "terrain": "/api/terrains/261080101",
+        "en_statut": "E",
+        "en_forf_gene": "N",
+        "en_tour_no": 0,
+        "en_elimine": "",
+        "en_excl_class": "",
+        "competition": {
+          "cp_no": 454688,
+          "type": "AC",
+          "name": "MATCHS AMICAUX NAT ET REG",
+          "level": "L"
+        },
+        "phase": {
+          "number": 1
+        },
+        "poule": {
+          "stage_number": 1
+        }
+      },
+      {
+        "sa_no": 2026,
+        "terrain": "/api/terrains/261080101",
+        "en_statut": "E",
+        "en_forf_gene": "N",
+        "en_tour_no": 1,
+        "en_elimine": "N",
+        "en_excl_class": "",
+        "competition": {
+          "cp_no": 459242,
           "type": "CP",
-          "number": 1,
-          "keys": [
-            "number",
-            "type",
-            "name",
-            "has_ranking",
-            "has_second_leg",
-            "has_penalty",
-            "has_extra_time",
-            "competition",
-            "groups"
-          ]
+          "name": "COUPE LAURAFOOT",
+          "level": "L"
+        },
+        "phase": {
+          "number": 1
+        },
+        "poule": {
+          "stage_number": 1
         }
-      ]
-    }
+      },
+      {
+        "sa_no": 2026,
+        "terrain": "/api/terrains/261080101",
+        "en_statut": "E",
+        "en_forf_gene": "N",
+        "en_tour_no": 2,
+        "en_elimine": "N",
+        "en_excl_class": "",
+        "competition": {
+          "cp_no": 449168,
+          "type": "CP",
+          "name": "COUPE DE FRANCE CRÉDIT AGRICOLE",
+          "level": "F"
+        },
+        "phase": {
+          "number": 2
+        },
+        "poule": {
+          "stage_number": 1
+        }
+      }
+    ],
+    "category_label": "Senior Libre",
+    "category_gender": "M",
+    "diffusable": true
   },
-  {
-    "url": "https://api-dofa.fff.fr/api/compets/453692/phases/1/poules",
-    "status": 200,
-    "summary": {
-      "items": [
-        {
-          "name": "UNIQUE",
-          "season": 2026,
-          "cdg": 127,
-          "stage_number": 1,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/compets/457862/phases/1/poules",
-    "status": 200,
-    "summary": {
-      "items": [
-        {
-          "name": "POULE A",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 1,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE B",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 2,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE C",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 3,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE D",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 4,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE E",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 5,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE F",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 6,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE G",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 7,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE H",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 8,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE I",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 9,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        },
-        {
-          "name": "POULE J",
-          "season": 2026,
-          "cdg": 122,
-          "stage_number": 10,
-          "keys": [
-            "stage_number",
-            "season",
-            "name",
-            "code",
-            "status",
-            "gp_diff_info",
-            "gp_diff_no_tour",
-            "phase",
-            "competition",
-            "cdg",
-            "rounds",
-            "poule_unique",
-            "at_least_one_match_resultat"
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "url": "https://api-dofa.fff.fr/api/cdgs",
-    "status": 200,
-    "summary": {
-      "items": [
-        {
-          "name": "COMITE PROVINCIAL DES ILES",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "COMITE PROVINCIAL NORD",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "COMITE PROVINCIAL SUD",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "COMITÉ TERRITORIAL DE ST BARTHÉLEMY",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "Comité territorial de St Barthélemy",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DELEGATION DU ROANNAIS",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT  DE LA COTE D'AZUR",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT AISNE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT ALLIER",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT ARTOIS",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT AUBE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT AUDE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT AVEYRON FOOTBALL",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT BELFORT-MONTBELIARD",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT CANTAL",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT CHARENTE MARITIME",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT CHER",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT COMMINGES HTE GARONNE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT COTE D'OPALE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT D'ALSACE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE COTE D'OR",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE FOOTBALL DOUBS-TERRITOIRE DE BELFORT",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE L AIN",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE L EURE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE L ISERE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE L'ARIEGE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE L'HERAULT",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA  CHARENTE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA CORREZE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA CREUSE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA GIRONDE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA LOIRE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA MAYENNE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA SAVOIE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA SOMME",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LA VIENNE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LOIRE ATLANTIQUE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE LYON ET DU RHONE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DE VENDEE DE FOOTBALL",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DES ALPES",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DES ARDENNES",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DES DEUX-SEVRES",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DES FLANDRES",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DES HAUTS-DE-SEINE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DROME ARDECHE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DU CALVADOS DE FOOTBALL",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DU JURA",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT DU VAR",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT ESCAUT",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT ESSONNE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT EURE-ET-LOIR",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT FINISTERE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT FINISTERE SUD",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT FLUVIAL HAUTE NDIE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT FOOT DORDOGNE-PERIGORD",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT FOOTBALL COTES D'ARMOR",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT GARD LOZERE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT GERS FOOTBALL",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT GIRONDE ATLANTIQUE",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        },
-        {
-          "name": "DISTRICT GIRONDE EST",
-          "keys": [
-            "cg_no",
-            "cg_cod",
-            "type_label",
-            "name",
-            "short_name",
-            "cg_no_supp",
-            "sa_no",
-            "cp_cod"
-          ]
-        }
-      ]
-    }
-  }
-]
+  "requests": 8
+}
