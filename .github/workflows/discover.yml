@@ -1,0 +1,24 @@
+name: Exploration des compétitions (ponctuel)
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: '22' }
+      - name: Explorer l'API FFF
+        env:
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+        run: node discover-districts.js
+      - name: Publier le résultat
+        run: |
+          git config user.name "MyLocalMatch Bot"
+          git config user.email "actions@github.com"
+          git add debug-discovery.json
+          git diff --quiet --cached || git commit -m "Exploration des compétitions ($(date -u +%Y-%m-%d))"
+          git push
