@@ -18,3 +18,7 @@ html, body { margin: 0; padding: 0; overscroll-behavior: none; background: var(-
   color: var(--cluster-text); font-weight: 700; font-size: 12px; border: 3px solid var(--cluster-ring); box-shadow: 0 1px 6px rgba(0,0,0,.35); }
 .mlm-me { width: 16px; height: 16px; border-radius: 9999px; background: #2F80ED; border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(47,128,237,.25); }
 .leaflet-control-attribution { font-size: 9px !important; }
+
+/* Écran de validation : fond animé (impossible à confondre avec une capture d'écran) */
+@keyframes mlm-wave { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes mlm-spin { to { transform: rotate(360deg); } }

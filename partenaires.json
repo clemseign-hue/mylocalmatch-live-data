@@ -1,0 +1,18 @@
+{
+  "_aide": "Un objet par commerce partenaire. Ajouter un partenaire = ajouter une entrée ici, sans toucher au code. Texte de l'offre : jamais de mention d'alcool (loi Évin). rayon_km et heure_fin sont optionnels (3 km et 23:59 par défaut). \"test\": true = partenaire visible uniquement en mode test (lien ?test=1).",
+  "partenaires": [
+    {
+      "id": "exemple-bar-valence",
+      "nom": "Exemple – Bar du Stade",
+      "type": "bar",
+      "adresse": "1 rue Exemple, 26000 Valence",
+      "lat": 44.9334,
+      "lng": 4.8924,
+      "offre": "-10 % sur ta consommation jusqu'à minuit",
+      "rayon_km": 3,
+      "heure_fin": "23:59",
+      "actif": true,
+      "test": true
+    }
+  ]
+}

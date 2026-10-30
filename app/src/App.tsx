@@ -8,6 +8,11 @@ import { MatchMap } from './components/MatchMap';
 import { EventCard } from './components/EventCard';
 import { LocationSheet } from './components/LocationSheet';
 import { InfoSheet } from './components/InfoSheet';
+import { ScanFlow } from './components/ScanFlow';
+import { ValidationScreen } from './components/ValidationScreen';
+import type { CardOffer } from './components/EventCard';
+import { couponKey, fetchPartners, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
 const DEFAULT_PLACE: Place = { label: 'Valence', lat: 44.9334, lng: 4.8924 }; // zone de lancement : Drôme-Ardèche
@@ -44,6 +49,14 @@ export default function App() {
   const [favOnly, setFavOnly] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  // Offres partenaires (scan QR au comptoir)
+  const [partners, setPartners] = useState<Partner[]>([]);
+  const [going, setGoing] = useState<Record<string, string>>(loadGoing);
+  const [coupons, setCoupons] = useState<Record<string, Coupon>>(loadCoupons);
+  const [scanning, setScanning] = useState(false);
+  const [validation, setValidation] = useState<{ partner: Partner; coupon: Coupon } | null>(null);
+  const [, setTick] = useState(0); // réévalue la fenêtre des offres chaque minute
+  useEffect(() => { const i = setInterval(() => setTick(n => n + 1), 60000); return () => clearInterval(i); }, []);
   // Lien direct vers un match (?match=…), ouvert une seule fois au chargement
   const pendingMatch = useRef<string | null>(new URLSearchParams(location.search).get('match'));
   const [manualMode, setManualMode] = useState<'dark' | 'light' | null>(() => loadPref('theme', null));
@@ -94,11 +107,36 @@ export default function App() {
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2500); };
 
+  const toggleGoing = (id: string) => {
+    setGoing(prev => {
+      const next = { ...prev };
+      if (next[id]) delete next[id]; else next[id] = new Date().toISOString();
+      saveGoing(next);
+      recordGoing(id, !!next[id]);
+      return next;
+    });
+  };
+
+  // Offres « Après le match » d'un match : partenaires dans le rayon, pendant la fenêtre de validité (F03)
+  const offersFor = (e: MatchEvent): CardOffer[] => (going[e.id]
+    ? partnersNear(e, partners).filter(({ partner }) => inWindow(e, partner))
+      .map(({ partner, km }) => ({ partner, km, coupon: coupons[couponKey(e.id, partner.id)] }))
+    : []);
+  const goingMatches = useMemo(() => events.filter(e => going[e.id]), [events, going]);
+
+  const onValidated = (c: Coupon) => {
+    setCoupons(prev => { const next = { ...prev, [couponKey(c.matchId, c.partnerId)]: c }; saveCoupons(next); return next; });
+    setScanning(false);
+    const partner = partners.find(p => p.id === c.partnerId);
+    if (partner) setValidation({ partner, coupon: c });
+  };
+
   const refresh = useCallback(async () => {
     setFetchState(s => (s === 'ok' ? 'ok' : 'loading'));
     try {
-      const { events, generatedAt } = await fetchEvents();
+      const [{ events, generatedAt }, partnerList] = await Promise.all([fetchEvents(), fetchPartners()]);
       setEvents(events);
+      setPartners(partnerList);
       setLastUpdated(generatedAt);
       setFetchState('ok');
     } catch {
@@ -277,7 +315,9 @@ export default function App() {
           <EventCard key={e.id} ref={el => { listRefs.current[e.id] = el; }} t={t} event={e} selected={selected === e.id}
             side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined}
             favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
-            onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')} />
+            onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')}
+            going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} offers={selected === e.id ? offersFor(e) : []}
+            onScan={() => setScanning(true)} onShowValidation={o => o.coupon && setValidation({ partner: o.partner, coupon: o.coupon })} />
         ))}
         {visible < count && (
           <button onClick={() => setVisible(v => v + PAGE_SIZE)} className="w-full rounded-full border py-3 text-sm font-semibold" style={{ borderColor: t.chipBorder, color: t.text, background: t.card }}>
@@ -297,6 +337,8 @@ export default function App() {
       {showClubs && <ClubSheet t={t} clubs={clubs} favs={favs} onToggleFav={toggleFav} onSelect={chooseClub} onClose={() => setShowClubs(false)} />}
       {showLocation && <LocationSheet t={t} locating={locating} onLocate={handleLocate} onSelect={choosePlace} onClose={() => setShowLocation(false)} />}
       {showInfo && <InfoSheet t={t} onClose={() => setShowInfo(false)} />}
+      {scanning && <ScanFlow t={t} partners={partners} goingMatches={goingMatches} coupons={coupons} onValidated={onValidated} onClose={() => setScanning(false)} />}
+      {validation && <ValidationScreen partner={validation.partner} coupon={validation.coupon} onClose={() => setValidation(null)} />}
       {toast && (
         <div className="fixed inset-x-0 z-[1100] flex justify-center px-4" style={{ bottom: 'calc(env(safe-area-inset-bottom) + 24px)' }}>
           <div className="rounded-full px-4 py-2 text-sm font-semibold shadow-lg" style={{ background: t.chipActiveBg, color: t.chipActiveText }}>{toast}</div>

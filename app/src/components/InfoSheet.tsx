@@ -42,7 +42,8 @@ export function InfoSheet({ t, onClose }: { t: Theme; onClose: () => void }) {
       <Section t={t} title="Confidentialité">
         <p><strong>Aucun compte, aucun cookie, aucune publicité, aucun outil de mesure d'audience.</strong> MyLocalMatch ne collecte ni ne conserve de données personnelles sur un serveur.</p>
         <p><strong>Ta position</strong> (bouton GPS) sert uniquement, sur ton téléphone, à calculer la distance des stades. Elle n'est envoyée nulle part.</p>
-        <p><strong>Tes préférences</strong> (ville choisie, clubs favoris, thème, style de carte) sont enregistrées uniquement dans ton navigateur. Tu peux les effacer en supprimant les données du site dans les réglages de Safari.</p>
+        <p><strong>Offres partenaires :</strong> la caméra sert uniquement à lire le QR-code du comptoir (aucune image n'est enregistrée). Au moment du scan, ta position sert à vérifier que tu es bien chez le commerçant : seule la distance (en mètres) est conservée, jamais tes coordonnées. Les validations d'offres et les « J'y vais » sont rattachés à un identifiant anonyme, sans nom ni e-mail.</p>
+        <p><strong>Tes préférences</strong> (ville choisie, clubs favoris, matchs « J'y vais », offres utilisées, thème, style de carte) sont enregistrées uniquement dans ton navigateur. Tu peux les effacer en supprimant les données du site dans les réglages de Safari.</p>
         <p><strong>Services utilisés</strong>, qui reçoivent ton adresse IP comme tout site web : GitHub (hébergement de l'appli et des données), OpenFreeMap et OpenStreetMap (fond de carte), API Adresse de l'État (uniquement le texte tapé dans la recherche de lieu). Le bouton « Itinéraire » ouvre Plans d'Apple.</p>
       </Section>
     </Sheet>

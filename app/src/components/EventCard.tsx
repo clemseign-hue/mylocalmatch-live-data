@@ -3,8 +3,15 @@ import type { MatchEvent } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
 import { calendarHref, shareMatch } from '../share';
+import { VALIDATION_SCREEN_MS, type Coupon, type Partner } from '../partners';
 
-interface Props { t: Theme; event: MatchEvent & { distanceKm: number }; side?: 'Domicile' | 'Extérieur'; favorite: boolean; selected: boolean; onSelect: () => void; onCopied: () => void }
+export interface CardOffer { partner: Partner; km: number; coupon?: Coupon }
+
+interface Props {
+  t: Theme; event: MatchEvent & { distanceKm: number }; side?: 'Domicile' | 'Extérieur'; favorite: boolean; selected: boolean;
+  onSelect: () => void; onCopied: () => void;
+  going: boolean; onToggleGoing: () => void; offers: CardOffer[]; onScan: () => void; onShowValidation: (o: CardOffer) => void;
+}
 
 // Itinéraire Plans : coordonnées exactes si le stade a été localisé précisément,
 // sinon on laisse Plans chercher le stade par son nom et son adresse (plus fiable qu'un point approximatif).
@@ -15,7 +22,7 @@ function directionsUrl(e: MatchEvent) {
   return `https://maps.apple.com/?daddr=${encodeURIComponent(where || `${e.lat},${e.lng}`)}&dirflg=d`;
 }
 
-export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, favorite, selected, onSelect, onCopied }, ref) {
+export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, favorite, selected, onSelect, onCopied, going, onToggleGoing, offers, onScan, onShowValidation }, ref) {
   return (
     <div ref={ref} onClick={onSelect} className="relative cursor-pointer overflow-hidden rounded-xl border transition"
       style={{ borderColor: selected ? t.gold : t.border, background: t.card }}>
@@ -48,8 +55,48 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
           </div>
           {selected && e.address && <p className="mt-1 text-[11px]" style={{ color: t.textSoft }}>{e.address}</p>}
           {e.approximate && <p className="mt-1 text-[10px]" style={{ color: t.textMute }}>Position sur la carte approximative</p>}
+          {going && !selected && <p className="mt-1 text-[11px] font-semibold" style={{ color: t.flare }}>Je vais au match ✓</p>}
         </div>
       </div>
+      {selected && (
+        <div className="border-t border-dashed px-4 py-3" style={{ borderColor: t.dashed }}>
+          <button onClick={ev => { ev.stopPropagation(); onToggleGoing(); }} className="w-full rounded-full py-2.5 text-sm font-semibold transition"
+            style={going ? { background: t.flare + '1F', color: t.flare, border: `1px solid ${t.flare}` } : { background: t.flare, color: '#FFFFFF' }}>
+            {going ? 'Je vais au match ✓' : "J'y vais"}
+          </button>
+          {going && <p className="mt-1 text-center text-[10px]" style={{ color: t.textMute }}>Touche à nouveau pour annuler</p>}
+          {offers.length > 0 && (
+            <div className="mt-3 rounded-xl p-3" style={{ background: t.inputBg }} onClick={ev => ev.stopPropagation()}>
+              <p className="font-display mb-2 text-lg">Après le match</p>
+              <div className="space-y-2">
+                {offers.map(o => {
+                  const recent = o.coupon && Date.now() - new Date(o.coupon.at).getTime() < VALIDATION_SCREEN_MS;
+                  return (
+                    <div key={o.partner.id} className="rounded-lg px-3 py-2" style={{ background: t.card }}>
+                      <div className="flex items-baseline justify-between gap-2">
+                        <span className="truncate text-sm font-semibold">{o.partner.nom}</span>
+                        <span className="shrink-0 text-[11px]" style={{ color: t.textMute }}>{o.km < 1 ? `${Math.round(o.km * 1000)} m` : `${o.km.toFixed(1)} km`} du stade</span>
+                      </div>
+                      <p className="text-[13px]" style={{ color: o.coupon ? t.textMute : t.gold }}>{o.partner.offre}</p>
+                      {o.coupon && (
+                        <p className="mt-0.5 flex items-center justify-between text-[11px]" style={{ color: t.textMute }}>
+                          Utilisée le {new Date(o.coupon.at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })} à {new Date(o.coupon.at).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}
+                          {recent && <button className="font-semibold underline" style={{ color: t.flare }} onClick={() => onShowValidation(o)}>Revoir l'écran</button>}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+              {(
+                <button onClick={onScan} className="mt-3 flex w-full items-center justify-center gap-2 rounded-full py-2.5 text-sm font-semibold" style={{ background: t.flare, color: '#FFFFFF' }}>
+                  <Icon name="qrcode" size={16} /> Scanner au comptoir
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
       {selected && (
         <div className="grid grid-cols-4 border-t border-dashed" style={{ borderColor: t.dashed }}>
           <a href={directionsUrl(e)} target="_blank" rel="noopener noreferrer" onClick={ev => ev.stopPropagation()}
