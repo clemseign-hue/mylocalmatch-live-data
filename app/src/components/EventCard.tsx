@@ -3,7 +3,7 @@ import type { MatchEvent } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
 import { calendarHref, shareMatch } from '../share';
-import { VALIDATION_SCREEN_MS, type Coupon, type Partner } from '../partners';
+import { FINAL_GOING_LOCK, VALIDATION_SCREEN_MS, type Coupon, type Partner } from '../partners';
 
 export interface CardOffer { partner: Partner; km: number; coupon?: Coupon }
 
@@ -83,7 +83,9 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
               {!going && e.hasOffer && (
                 <div className="mb-2 flex gap-2 rounded-xl border-2 px-3 py-2.5 text-[12px] leading-snug" style={{ borderColor: t.flare, background: t.flare + '14', color: t.text }}>
                   <Icon name="info" size={16} color={t.flare} className="mt-0.5 shrink-0" />
-                  <span><strong>Ce match donne accès à une offre partenaire.</strong> En confirmant « J'y vais », ta validation est <strong>définitive</strong> : tu ne pourras plus choisir un autre match ce jour-là.</span>
+                  {FINAL_GOING_LOCK
+                    ? <span><strong>Ce match donne accès à une offre partenaire.</strong> En confirmant « J'y vais », ta validation est <strong>définitive</strong> : tu ne pourras plus choisir un autre match ce jour-là.</span>
+                    : <span><strong>Ce match donne accès à une offre partenaire.</strong> Un seul « J'y vais » par jour : l'offre n'est valable que pour le match choisi.</span>}
                 </div>
               )}
               <button onClick={ev => { ev.stopPropagation(); pressGoing(); }} className="w-full rounded-full py-2.5 text-sm font-semibold transition"

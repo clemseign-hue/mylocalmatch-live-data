@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { couponKey, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { FINAL_GOING_LOCK, couponKey, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -126,7 +126,7 @@ export default function App() {
 
   // « J'y vais » : semaine en cours, un seul match par jour ; verrouillé dès qu'une offre a été utilisée (sauf en mode test)
   const hasCoupon = (matchId: string) => !testOn && Object.values(coupons).some(c => c.matchId === matchId);
-  const isFinal = (matchId: string) => !testOn && !!goingFinal[matchId];
+  const isFinal = (matchId: string) => FINAL_GOING_LOCK && !testOn && !!goingFinal[matchId];
   const locked = (matchId: string) => hasCoupon(matchId) || isFinal(matchId);
   const toggleGoing = (id: string) => {
     const match = events.find(e => e.id === id);
@@ -150,7 +150,7 @@ export default function App() {
     if (partnersNear(match, partners).length) {
       const fin = { ...goingFinal, [id]: true };
       setGoingFinal(fin); saveGoingFinal(fin);
-      showToast(testOn ? '« J\'y vais » confirmé (mode test : non verrouillé).' : '« J\'y vais » confirmé : choix définitif pour ce jour.');
+      showToast(!FINAL_GOING_LOCK || testOn ? '« J\'y vais » confirmé.' : '« J\'y vais » confirmé : choix définitif pour ce jour.');
     }
   };
 
