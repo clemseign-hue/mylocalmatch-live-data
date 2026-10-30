@@ -10,9 +10,18 @@ export interface Partner {
 }
 
 // Mode test : activé par le lien ?test=1 (désactivé par ?test=0), mémorisé sur l'appareil.
+// Le lien n'est lu qu'une fois, au chargement, puis retiré de l'adresse : ensuite seul le réglage mémorisé compte
+// (sinon un ?test=1 resté dans l'adresse réactivait le mode test à chaque actualisation).
+(function readTestLinkOnce() {
+  const params = new URLSearchParams(location.search);
+  const q = params.get('test');
+  if (q !== '1' && q !== '0') return;
+  savePref('testMode', q === '1');
+  params.delete('test');
+  const rest = params.toString();
+  history.replaceState(null, '', location.pathname + (rest ? `?${rest}` : '') + location.hash);
+})();
 export function testMode(): boolean {
-  const q = new URLSearchParams(location.search).get('test');
-  if (q === '1' || q === '0') savePref('testMode', q === '1');
   return loadPref<boolean>('testMode', false);
 }
 // L'appli installée sur l'écran d'accueil a sa propre mémoire (séparée de Safari) :
