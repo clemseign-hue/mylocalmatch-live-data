@@ -50,6 +50,7 @@ export function offerWindow(match: MatchEvent, partner: Partner) {
 }
 
 export const inWindow = (match: MatchEvent, partner: Partner, now = new Date()) => {
+  if (partner.test && testMode()) return true; // partenaire de test : disponible à toute heure pour essayer le scanner
   const { start, end } = offerWindow(match, partner);
   return now >= start && now <= end;
 };
