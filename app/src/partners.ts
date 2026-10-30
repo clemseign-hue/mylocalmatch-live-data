@@ -84,10 +84,14 @@ export function dayCode(d = new Date()) {
   return { color: DAY_COLORS[h % DAY_COLORS.length], word: DAY_WORDS[(h >>> 8) % DAY_WORDS.length] };
 }
 
-// « J'y vais » : seulement pour les matchs des 7 prochains jours, un seul match par jour.
-export const GOING_DAYS_AHEAD = 7;
-export function goingAllowed(match: MatchEvent, today: string, limit: string) {
-  return !!match.date && match.date >= today && match.date <= limit;
+// « J'y vais » : seulement pour les matchs de la semaine en cours (jusqu'au dimanche), un seul match par jour.
+export function endOfWeekISO(today: string) {
+  const d = new Date(today + 'T00:00:00');
+  d.setDate(d.getDate() + (7 - d.getDay()) % 7); // dimanche de cette semaine (aujourd'hui si on est dimanche)
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+export function goingAllowed(match: MatchEvent, today: string) {
+  return !!match.date && match.date >= today && match.date <= endOfWeekISO(today);
 }
 
 // ---------- État sur l'appareil ----------

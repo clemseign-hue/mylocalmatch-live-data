@@ -72,7 +72,7 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
             </>
           ) : (
             <p className="rounded-full py-2 text-center text-[12px] font-semibold" style={{ background: t.inputBg, color: t.textMute }}>
-              « J'y vais » disponible 7 jours avant le match
+              « J'y vais » disponible la semaine du match
             </p>
           )}
           {offers.length > 0 && (

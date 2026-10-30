@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { GOING_DAYS_AHEAD, couponKey, fetchPartners, goingAllowed, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { couponKey, fetchPartners, goingAllowed, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -119,7 +119,7 @@ export default function App() {
       return;
     }
     const today = todayISO();
-    if (!goingAllowed(match, today, addDaysISO(today, GOING_DAYS_AHEAD))) { showToast(`« J'y vais » s'ouvre ${GOING_DAYS_AHEAD} jours avant le match.`); return; }
+    if (!goingAllowed(match, today)) { showToast('« J\'y vais » s\'ouvre la semaine du match.'); return; }
     const sameDay = events.find(e => going[e.id] && e.date === match.date && e.id !== id);
     if (sameDay && hasCoupon(sameDay.id)) { showToast(`Tu as déjà utilisé une offre pour ${sameDay.home} - ${sameDay.away} ce jour-là.`); return; }
     const next = { ...going };
@@ -328,7 +328,7 @@ export default function App() {
             favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
             onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')}
             going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} goingLocked={!!going[e.id] && hasCoupon(e.id)}
-            goingOpen={goingAllowed(e, todayISO(), addDaysISO(todayISO(), GOING_DAYS_AHEAD))} offers={selected === e.id ? offersFor(e) : []}
+            goingOpen={goingAllowed(e, todayISO())} offers={selected === e.id ? offersFor(e) : []}
             onScan={() => setScanning(true)} onShowValidation={o => o.coupon && setValidation({ partner: o.partner, coupon: o.coupon })} />
         ))}
         {visible < count && (
