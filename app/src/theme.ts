@@ -29,13 +29,17 @@ export const DATE_FILTERS = [
 
 // Raccourcis rapides ; la recherche libre permet d'aller sur n'importe quelle commune.
 export const CITIES = [
+  { label: 'Valence', lat: 44.9334, lng: 4.8924 },
+  { label: 'Romans-sur-Isère', lat: 45.0434, lng: 5.0510 },
+  { label: 'Montélimar', lat: 44.5581, lng: 4.7509 },
+  { label: 'Privas', lat: 44.7353, lng: 4.5986 },
+  { label: 'Annonay', lat: 45.2398, lng: 4.6707 },
   { label: 'Lyon', lat: 45.7640, lng: 4.8357 },
   { label: 'Villeurbanne', lat: 45.7667, lng: 4.8794 },
   { label: 'Villefranche-sur-Saône', lat: 45.9886, lng: 4.7167 },
   { label: 'Grenoble', lat: 45.1885, lng: 5.7245 },
   { label: 'Saint-Étienne', lat: 45.4397, lng: 4.3872 },
   { label: 'Annecy', lat: 45.8992, lng: 6.1294 },
-  { label: 'Valence', lat: 44.9334, lng: 4.8924 },
   { label: 'Chambéry', lat: 45.5646, lng: 5.9178 },
   { label: 'Clermont-Ferrand', lat: 45.7772, lng: 3.0870 },
 ];

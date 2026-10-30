@@ -10,7 +10,7 @@ import { LocationSheet } from './components/LocationSheet';
 import { InfoSheet } from './components/InfoSheet';
 import { ClubSheet } from './components/ClubSheet';
 
-const DEFAULT_PLACE: Place = { label: 'Lyon', lat: 45.7640, lng: 4.8357 };
+const DEFAULT_PLACE: Place = { label: 'Valence', lat: 44.9334, lng: 4.8924 }; // zone de lancement : Drôme-Ardèche
 const PAGE_SIZE = 40;
 type FetchState = 'idle' | 'loading' | 'ok' | 'error';
 
@@ -29,7 +29,11 @@ export default function App() {
   const [level, setLevel] = useState('tous');
   const [date, setDate] = useState('weekend'); // à l'ouverture : les matchs de ce week-end
   const [selected, setSelected] = useState<string | null>(null);
-  const [place, setPlace] = useState<Place>(() => loadPref('place', DEFAULT_PLACE));
+  const [place, setPlace] = useState<Place>(() => {
+    const saved = loadPref<Place | null>('place', null);
+    // L'ancien lieu par défaut (Lyon, jamais choisi explicitement) bascule sur Valence
+    return !saved || (saved.label === 'Lyon' && saved.lat === 45.7640) ? DEFAULT_PLACE : saved;
+  });
   const [locating, setLocating] = useState(false);
   const [locateError, setLocateError] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
