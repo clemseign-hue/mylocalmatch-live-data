@@ -3,7 +3,7 @@ import type { MatchEvent } from '../types';
 import type { Theme } from '../theme';
 import {
   MAX_SCAN_DISTANCE_LOW_GPS_M, MAX_SCAN_DISTANCE_M, anonymousId, couponKey, distanceM, inWindow,
-  partnerIdFromQr, partnersNear, type Coupon, type Partner,
+  partnerIdFromQr, partnersNear, testMode, type Coupon, type Partner,
 } from '../partners';
 import { couponAlreadyUsed, queueScan, verifyPin } from '../backend';
 import { loadPref, savePref } from '../data';
@@ -55,6 +55,8 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
     if (!open.length) return { kind: 'error', message: TXT.hours(partner.heure_fin || '23:59') };
     const match = open.find(m => !coupons[couponKey(m.id, partner.id)]);
     if (!match || await couponAlreadyUsed(match.id, partner.id)) return { kind: 'error', message: TXT.used };
+    // Mode test (?test=1) : pas de contrôle de distance, pour essayer le parcours de n'importe où
+    if (testMode()) return { kind: 'firstVisit', partner, match, mode, dist: null };
     return { kind: 'location', partner, match, mode };
   }
 

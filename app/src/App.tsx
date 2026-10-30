@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { couponKey, fetchPartners, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { GOING_DAYS_AHEAD, couponKey, fetchPartners, goingAllowed, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -107,14 +107,25 @@ export default function App() {
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2500); };
 
+  // « J'y vais » : 7 prochains jours, un seul match par jour ; verrouillé dès qu'une offre a été utilisée
+  const hasCoupon = (matchId: string) => Object.values(coupons).some(c => c.matchId === matchId);
   const toggleGoing = (id: string) => {
-    setGoing(prev => {
-      const next = { ...prev };
-      if (next[id]) delete next[id]; else next[id] = new Date().toISOString();
-      saveGoing(next);
-      recordGoing(id, !!next[id]);
-      return next;
-    });
+    const match = events.find(e => e.id === id);
+    if (!match) return;
+    if (going[id]) {
+      if (hasCoupon(id)) { showToast('Offre déjà utilisée : « J\'y vais » ne peut plus être annulé.'); return; }
+      const next = { ...going }; delete next[id];
+      setGoing(next); saveGoing(next); recordGoing(id, false);
+      return;
+    }
+    const today = todayISO();
+    if (!goingAllowed(match, today, addDaysISO(today, GOING_DAYS_AHEAD))) { showToast(`« J'y vais » s'ouvre ${GOING_DAYS_AHEAD} jours avant le match.`); return; }
+    const sameDay = events.find(e => going[e.id] && e.date === match.date && e.id !== id);
+    if (sameDay && hasCoupon(sameDay.id)) { showToast(`Tu as déjà utilisé une offre pour ${sameDay.home} - ${sameDay.away} ce jour-là.`); return; }
+    const next = { ...going };
+    if (sameDay) { delete next[sameDay.id]; recordGoing(sameDay.id, false); showToast(`« J'y vais » déplacé : un seul match par jour.`); }
+    next[id] = new Date().toISOString();
+    setGoing(next); saveGoing(next); recordGoing(id, true);
   };
 
   // Offres « Après le match » d'un match : partenaires dans le rayon, pendant la fenêtre de validité (F03)
@@ -316,7 +327,8 @@ export default function App() {
             side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined}
             favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
             onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')}
-            going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} offers={selected === e.id ? offersFor(e) : []}
+            going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} goingLocked={!!going[e.id] && hasCoupon(e.id)}
+            goingOpen={goingAllowed(e, todayISO(), addDaysISO(todayISO(), GOING_DAYS_AHEAD))} offers={selected === e.id ? offersFor(e) : []}
             onScan={() => setScanning(true)} onShowValidation={o => o.coupon && setValidation({ partner: o.partner, coupon: o.coupon })} />
         ))}
         {visible < count && (

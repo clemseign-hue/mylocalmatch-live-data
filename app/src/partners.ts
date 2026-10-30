@@ -84,6 +84,12 @@ export function dayCode(d = new Date()) {
   return { color: DAY_COLORS[h % DAY_COLORS.length], word: DAY_WORDS[(h >>> 8) % DAY_WORDS.length] };
 }
 
+// « J'y vais » : seulement pour les matchs des 7 prochains jours, un seul match par jour.
+export const GOING_DAYS_AHEAD = 7;
+export function goingAllowed(match: MatchEvent, today: string, limit: string) {
+  return !!match.date && match.date >= today && match.date <= limit;
+}
+
 // ---------- État sur l'appareil ----------
 export interface Coupon { matchId: string; partnerId: string; at: string; firstVisit: boolean; distanceM: number | null; mode: 'qr' | 'pin' }
 
