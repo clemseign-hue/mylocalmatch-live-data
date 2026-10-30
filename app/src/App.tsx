@@ -373,6 +373,9 @@ export default function App() {
             <button onClick={() => setShowInfo(true)} className="font-semibold underline" style={{ color: t.textSoft }}>Infos, sources et mentions légales</button>
           </span>
         </div>
+        <p className="text-center text-[10px]" style={{ color: t.textMute }}>
+          Version du {__BUILD__} · {window.matchMedia('(display-mode: standalone)').matches || (navigator as Navigator & { standalone?: boolean }).standalone ? 'appli écran d\'accueil' : 'navigateur'}
+        </p>
       </section>
 
       {showClubs && <ClubSheet t={t} clubs={clubs} favs={favs} onToggleFav={toggleFav} onSelect={chooseClub} onClose={() => setShowClubs(false)} />}
