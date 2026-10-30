@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { couponKey, fetchPartners, goingAllowed, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { couponKey, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -52,6 +52,7 @@ export default function App() {
   // Offres partenaires (scan QR au comptoir)
   const [partners, setPartners] = useState<Partner[]>([]);
   const [going, setGoing] = useState<Record<string, string>>(loadGoing);
+  const [goingFinal, setGoingFinal] = useState<Record<string, boolean>>(loadGoingFinal);
   const [coupons, setCoupons] = useState<Record<string, Coupon>>(loadCoupons);
   const [scanning, setScanning] = useState(false);
   const [validation, setValidation] = useState<{ partner: Partner; coupon: Coupon } | null>(null);
@@ -125,11 +126,14 @@ export default function App() {
 
   // « J'y vais » : semaine en cours, un seul match par jour ; verrouillé dès qu'une offre a été utilisée (sauf en mode test)
   const hasCoupon = (matchId: string) => !testOn && Object.values(coupons).some(c => c.matchId === matchId);
+  const isFinal = (matchId: string) => !testOn && !!goingFinal[matchId];
+  const locked = (matchId: string) => hasCoupon(matchId) || isFinal(matchId);
   const toggleGoing = (id: string) => {
     const match = events.find(e => e.id === id);
     if (!match) return;
     if (going[id]) {
       if (hasCoupon(id)) { showToast('Offre déjà utilisée : « J\'y vais » ne peut plus être annulé.'); return; }
+      if (isFinal(id)) { showToast('« J\'y vais » validé définitivement pour ce match.'); return; }
       const next = { ...going }; delete next[id];
       setGoing(next); saveGoing(next); recordGoing(id, false);
       return;
@@ -137,11 +141,17 @@ export default function App() {
     const today = todayISO();
     if (!goingAllowed(match, today)) { showToast('« J\'y vais » s\'ouvre la semaine du match.'); return; }
     const sameDay = events.find(e => going[e.id] && e.date === match.date && e.id !== id);
-    if (sameDay && hasCoupon(sameDay.id)) { showToast(`Tu as déjà utilisé une offre pour ${sameDay.home} - ${sameDay.away} ce jour-là.`); return; }
+    if (sameDay && locked(sameDay.id)) { showToast(`Ton « J'y vais » pour ${sameDay.home} - ${sameDay.away} est définitif ce jour-là.`); return; }
     const next = { ...going };
     if (sameDay) { delete next[sameDay.id]; recordGoing(sameDay.id, false); showToast(`« J'y vais » déplacé : un seul match par jour.`); }
     next[id] = new Date().toISOString();
     setGoing(next); saveGoing(next); recordGoing(id, true);
+    // Match avec offre : la confirmation (double toucher) rend le choix définitif
+    if (partnersNear(match, partners).length) {
+      const fin = { ...goingFinal, [id]: true };
+      setGoingFinal(fin); saveGoingFinal(fin);
+      showToast(testOn ? '« J\'y vais » confirmé (mode test : non verrouillé).' : '« J\'y vais » confirmé : choix définitif pour ce jour.');
+    }
   };
 
   // Offres « Après le match » d'un match : partenaires dans le rayon, pendant la fenêtre de validité (F03)
@@ -203,11 +213,11 @@ export default function App() {
         if (date === 'semaine') return e.date <= weekEnd;
         return true;
       })
-      .map(e => ({ ...e, distanceKm: Math.round(haversineKm(place.lat, place.lng, e.lat, e.lng) * 10) / 10 }))
+      .map(e => ({ ...e, distanceKm: Math.round(haversineKm(place.lat, place.lng, e.lat, e.lng) * 10) / 10, hasOffer: partnersNear(e, partners).length > 0 }))
       .sort((a, b) => club || favOnly // un club ou mes clubs : ordre chronologique
         ? (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time)
         : a.distanceKm - b.distanceKm || (a.date || '').localeCompare(b.date || '') || a.time.localeCompare(b.time));
-  }, [events, level, date, place, club, favOnly, favs]);
+  }, [events, level, date, place, club, favOnly, favs, partners]);
 
 
   // Liste des clubs (équipes réserves regroupées) avec leur nombre de matchs à venir
@@ -345,8 +355,9 @@ export default function App() {
             side={club ? (e.homeClub === club ? 'Domicile' : 'Extérieur') : undefined}
             favorite={favs.includes(e.homeClub) || favs.includes(e.awayClub)}
             onSelect={() => (selected === e.id ? setSelected(null) : selectEvent(e.id))} onCopied={() => showToast('Lien du match copié')}
-            going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} goingLocked={!!going[e.id] && hasCoupon(e.id)}
-            goingOpen={goingAllowed(e, todayISO())} offers={selected === e.id ? offersFor(e) : []}
+            going={!!going[e.id]} onToggleGoing={() => toggleGoing(e.id)} goingLocked={!!going[e.id] && locked(e.id)}
+            goingOpen={goingAllowed(e, todayISO())}
+            blockedBy={(() => { const o = events.find(x => x.id !== e.id && going[x.id] && x.date === e.date && locked(x.id)); return o ? `${o.home} - ${o.away}` : null; })()} offers={selected === e.id ? offersFor(e) : []}
             onScan={() => setScanning(true)} onShowValidation={o => o.coupon && setValidation({ partner: o.partner, coupon: o.coupon })} />
         ))}
         {visible < count && (

@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import type { MatchEvent } from '../types';
 import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
@@ -10,7 +10,7 @@ export interface CardOffer { partner: Partner; km: number; coupon?: Coupon }
 interface Props {
   t: Theme; event: MatchEvent & { distanceKm: number }; side?: 'Domicile' | 'Extérieur'; favorite: boolean; selected: boolean;
   onSelect: () => void; onCopied: () => void;
-  going: boolean; goingOpen: boolean; goingLocked: boolean; onToggleGoing: () => void; offers: CardOffer[]; onScan: () => void; onShowValidation: (o: CardOffer) => void;
+  going: boolean; goingOpen: boolean; goingLocked: boolean; blockedBy: string | null; onToggleGoing: () => void; offers: CardOffer[]; onScan: () => void; onShowValidation: (o: CardOffer) => void;
 }
 
 // Itinéraire Plans : coordonnées exactes si le stade a été localisé précisément,
@@ -22,7 +22,16 @@ function directionsUrl(e: MatchEvent) {
   return `https://maps.apple.com/?daddr=${encodeURIComponent(where || `${e.lat},${e.lng}`)}&dirflg=d`;
 }
 
-export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, favorite, selected, onSelect, onCopied, going, goingOpen, goingLocked, onToggleGoing, offers, onScan, onShowValidation }, ref) {
+export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ t, event: e, side, favorite, selected, onSelect, onCopied, going, goingOpen, goingLocked, blockedBy, onToggleGoing, offers, onScan, onShowValidation }, ref) {
+  // Match avec offre : premier toucher = avertissement, second toucher (dans les 4 s) = confirmation définitive
+  const [armed, setArmed] = useState(false);
+  useEffect(() => { if (!armed) return; const tm = setTimeout(() => setArmed(false), 4000); return () => clearTimeout(tm); }, [armed]);
+  useEffect(() => { if (!selected) setArmed(false); }, [selected]);
+  const pressGoing = () => {
+    if (!going && e.hasOffer && !armed) { setArmed(true); return; }
+    setArmed(false);
+    onToggleGoing();
+  };
   return (
     <div ref={ref} onClick={onSelect} className="relative cursor-pointer overflow-hidden rounded-xl border transition"
       style={{ borderColor: selected ? t.gold : t.border, background: t.card }}>
@@ -39,6 +48,11 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
             {favorite && <Icon name="star" size={13} color={t.gold} filled className="mr-1 inline-block -translate-y-0.5" />}
             {e.home} <span style={{ color: t.gold }}>vs</span> {e.away}
           </h3>
+          {e.hasOffer && (
+            <span className="mt-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold" style={{ background: t.flare, color: '#FFFFFF' }}>
+              <Icon name="gift" size={12} /> Offre partenaire
+            </span>
+          )}
           <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[11px]" style={{ color: t.textSoft }}>
             {side && (
               <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold"
@@ -60,14 +74,25 @@ export const EventCard = forwardRef<HTMLDivElement, Props>(function EventCard({ 
       </div>
       {selected && (
         <div className="border-t border-dashed px-4 py-3" style={{ borderColor: t.dashed }}>
-          {going || goingOpen ? (
+          {!going && blockedBy ? (
+            <p className="rounded-xl px-3 py-2.5 text-center text-[12px] font-semibold" style={{ background: t.inputBg, color: t.textSoft }}>
+              « J'y vais » déjà validé pour {blockedBy} ce jour-là (choix définitif).
+            </p>
+          ) : going || goingOpen ? (
             <>
-              <button onClick={ev => { ev.stopPropagation(); onToggleGoing(); }} className="w-full rounded-full py-2.5 text-sm font-semibold transition"
-                style={going ? { background: t.flare + '1F', color: t.flare, border: `1px solid ${t.flare}` } : { background: t.flare, color: '#FFFFFF' }}>
-                {going ? 'Je vais au match ✓' : "J'y vais"}
+              {!going && e.hasOffer && (
+                <div className="mb-2 flex gap-2 rounded-xl border-2 px-3 py-2.5 text-[12px] leading-snug" style={{ borderColor: t.flare, background: t.flare + '14', color: t.text }}>
+                  <Icon name="info" size={16} color={t.flare} className="mt-0.5 shrink-0" />
+                  <span><strong>Ce match donne accès à une offre partenaire.</strong> En confirmant « J'y vais », ta validation est <strong>définitive</strong> : tu ne pourras plus choisir un autre match ce jour-là.</span>
+                </div>
+              )}
+              <button onClick={ev => { ev.stopPropagation(); pressGoing(); }} className="w-full rounded-full py-2.5 text-sm font-semibold transition"
+                style={going ? { background: t.flare + '1F', color: t.flare, border: `1px solid ${t.flare}` }
+                  : armed ? { background: t.text, color: t.bg, animation: 'mlm-pulse .8s ease-in-out infinite' } : { background: t.flare, color: '#FFFFFF' }}>
+                {going ? 'Je vais au match ✓' : armed ? 'Touche encore pour confirmer' : e.hasOffer ? "J'y vais (2 touchers pour confirmer)" : "J'y vais"}
               </button>
               <p className="mt-1 text-center text-[10px]" style={{ color: t.textMute }}>
-                {goingLocked ? 'Offre utilisée : choix verrouillé' : going ? 'Touche à nouveau pour annuler' : 'Un seul match par jour'}
+                {goingLocked ? 'Choix définitif pour ce jour' : going ? 'Touche à nouveau pour annuler' : 'Un seul match par jour'}
               </p>
             </>
           ) : (

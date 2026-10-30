@@ -7,9 +7,10 @@ import { sportColor, sportInitial, type Theme } from '../theme';
 import { Icon } from './Icon';
 import { MAP_STYLES, mapStyleById } from '../mapStyles';
 
+// Les matchs avec une offre partenaire ont un anneau orange et un petit cadeau.
 const pinIcon = (e: MatchEvent, selected: boolean) => L.divIcon({
   className: '',
-  html: `<span class="mlm-pin${selected ? ' is-selected' : ''}" style="width:24px;height:24px;background:${sportColor(e.sport)}">${sportInitial(e.sport)}</span>`,
+  html: `<span class="mlm-pin${selected ? ' is-selected' : ''}${e.hasOffer ? ' has-offer' : ''}" style="width:24px;height:24px;background:${sportColor(e.sport)}">${sportInitial(e.sport)}${e.hasOffer ? '<i class="mlm-gift">🎁</i>' : ''}</span>`,
   iconSize: [24, 24],
   iconAnchor: [12, 12],
 });

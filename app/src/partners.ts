@@ -101,6 +101,9 @@ export function goingAllowed(match: MatchEvent, today: string) {
 export interface Coupon { matchId: string; partnerId: string; at: string; firstVisit: boolean; distanceM: number | null; mode: 'qr' | 'pin' }
 
 export const loadGoing = () => loadPref<Record<string, string>>('going', {});   // matchId → date du clic
+// « J'y vais » définitifs (matchs avec offre, confirmés en deux touchers)
+export const loadGoingFinal = () => loadPref<Record<string, boolean>>('goingFinal', {});
+export const saveGoingFinal = (g: Record<string, boolean>) => savePref('goingFinal', g);
 export const saveGoing = (g: Record<string, string>) => savePref('going', g);
 export const couponKey = (matchId: string, partnerId: string) => `${matchId}|${partnerId}`;
 export const loadCoupons = () => loadPref<Record<string, Coupon>>('coupons', {});
