@@ -53,8 +53,9 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
     if (!near.length) return { kind: 'error', message: TXT.noGoing };
     const open = near.filter(m => inWindow(m, partner)).sort((a, b) => b.time.localeCompare(a.time));
     if (!open.length) return { kind: 'error', message: TXT.hours(partner.heure_fin || '23:59') };
-    const match = open.find(m => !coupons[couponKey(m.id, partner.id)]);
-    if (!match || await couponAlreadyUsed(match.id, partner.id)) return { kind: 'error', message: TXT.used };
+    // Mode test : le propriétaire peut rescanner autant qu'il veut (aucun contrôle « déjà utilisée »)
+    const match = testMode() ? open[0] : open.find(m => !coupons[couponKey(m.id, partner.id)]);
+    if (!match || (!testMode() && await couponAlreadyUsed(match.id, partner.id))) return { kind: 'error', message: TXT.used };
     // Mode test (?test=1) : pas de contrôle de distance, pour essayer le parcours de n'importe où
     if (testMode()) return { kind: 'firstVisit', partner, match, mode, dist: null };
     return { kind: 'location', partner, match, mode };

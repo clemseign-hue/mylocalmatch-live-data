@@ -22,3 +22,4 @@ html, body { margin: 0; padding: 0; overscroll-behavior: none; background: var(-
 /* Écran de validation : fond animé (impossible à confondre avec une capture d'écran) */
 @keyframes mlm-wave { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 @keyframes mlm-spin { to { transform: rotate(360deg); } }
+@keyframes mlm-drop { from { transform: translateY(-120%); opacity: 0; } to { transform: none; opacity: 1; } }

@@ -15,6 +15,9 @@ export function testMode(): boolean {
   if (q === '1' || q === '0') savePref('testMode', q === '1');
   return loadPref<boolean>('testMode', false);
 }
+// L'appli installée sur l'écran d'accueil a sa propre mémoire (séparée de Safari) :
+// le mode test s'active aussi depuis l'appli (5 touchers sur le titre).
+export function setTestMode(on: boolean) { savePref('testMode', on); }
 
 const PARTNERS_URLS = [
   'https://raw.githubusercontent.com/clemseign-hue/mylocalmatch-live-data/main/partenaires.json',

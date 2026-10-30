@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { couponKey, fetchPartners, goingAllowed, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { couponKey, fetchPartners, goingAllowed, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -105,10 +105,26 @@ export default function App() {
     });
   };
 
-  const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2500); };
+  const toastTimer = useRef<number>(0);
+  const showToast = (msg: string) => { setToast(msg); clearTimeout(toastTimer.current); toastTimer.current = window.setTimeout(() => setToast(null), 4500); };
 
-  // « J'y vais » : 7 prochains jours, un seul match par jour ; verrouillé dès qu'une offre a été utilisée
-  const hasCoupon = (matchId: string) => Object.values(coupons).some(c => c.matchId === matchId);
+  // Mode test (réservé au propriétaire) : 5 touchers rapides sur le titre l'activent ou le désactivent
+  const [testOn, setTestOn] = useState(testMode);
+  const titleTaps = useRef<number[]>([]);
+  const onTitleTap = () => {
+    const now = Date.now();
+    titleTaps.current = [...titleTaps.current.filter(ts => now - ts < 3000), now];
+    if (titleTaps.current.length >= 5) {
+      titleTaps.current = [];
+      const next = !testOn;
+      setTestMode(next); setTestOn(next);
+      showToast(next ? 'Mode test activé' : 'Mode test désactivé');
+      fetchPartners().then(setPartners);
+    }
+  };
+
+  // « J'y vais » : semaine en cours, un seul match par jour ; verrouillé dès qu'une offre a été utilisée (sauf en mode test)
+  const hasCoupon = (matchId: string) => !testOn && Object.values(coupons).some(c => c.matchId === matchId);
   const toggleGoing = (id: string) => {
     const match = events.find(e => e.id === id);
     if (!match) return;
@@ -251,7 +267,9 @@ export default function App() {
       <header className="border-b px-4 pb-4" style={{ borderColor: t.border, paddingTop: 'calc(env(safe-area-inset-top) + 20px)' }}>
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0">
-            <h1 className="font-display text-3xl leading-none">MyLocal<span style={{ color: t.flare }}>Match</span></h1>
+            <h1 onClick={onTitleTap} className="font-display select-none text-3xl leading-none">MyLocal<span style={{ color: t.flare }}>Match</span>
+              {testOn && <span className="ml-2 rounded px-1.5 py-0.5 align-middle font-body text-[10px] font-bold" style={{ background: t.gold, color: '#111113' }}>TEST</span>}
+            </h1>
             <button onClick={() => setShowLocation(true)} className="mt-1 flex max-w-full items-center gap-1 text-[11px] uppercase tracking-[0.1em]" style={{ color: t.textSoft }}>
               <Icon name="pin" size={11} /> <span className="truncate">{place.label}</span> <span className="shrink-0" style={{ color: t.textMute }}>· changer</span>
             </button>
@@ -352,8 +370,11 @@ export default function App() {
       {scanning && <ScanFlow t={t} partners={partners} goingMatches={goingMatches} coupons={coupons} onValidated={onValidated} onClose={() => setScanning(false)} />}
       {validation && <ValidationScreen partner={validation.partner} coupon={validation.coupon} onClose={() => setValidation(null)} />}
       {toast && (
-        <div className="fixed inset-x-0 z-[1100] flex justify-center px-4" style={{ bottom: 'calc(env(safe-area-inset-bottom) + 24px)' }}>
-          <div className="rounded-full px-4 py-2 text-sm font-semibold shadow-lg" style={{ background: t.chipActiveBg, color: t.chipActiveText }}>{toast}</div>
+        <div className="fixed inset-x-0 z-[1300] flex justify-center px-4" style={{ top: 'calc(env(safe-area-inset-top) + 12px)' }} onClick={() => setToast(null)}>
+          <div role="status" className="flex w-full max-w-md items-center gap-3 rounded-2xl px-4 py-3.5 text-[15px] font-semibold shadow-2xl"
+            style={{ background: t.flare, color: '#FFFFFF', animation: 'mlm-drop .25s ease-out' }}>
+            <Icon name="info" size={22} className="shrink-0" /> <span>{toast}</span>
+          </div>
         </div>
       )}
     </div>

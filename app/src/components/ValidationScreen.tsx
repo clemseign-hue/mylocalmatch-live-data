@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { dayCode, VALIDATION_SCREEN_MS, type Coupon, type Partner } from '../partners';
 import { Icon } from './Icon';
 
-// Écran à montrer au serveur (F07) : heure qui défile à la seconde, fond animé, couleur et mot du jour.
+// Écran à montrer au serveur (F07) : compte à rebours de 10 min à la seconde, fond animé, couleur et mot du jour.
 // Après 10 minutes (R07), il affiche « Offre utilisée » sans animation.
 export function ValidationScreen({ partner, coupon, onClose }: { partner: Partner; coupon: Coupon; onClose: () => void }) {
   const [now, setNow] = useState(() => new Date());
@@ -10,7 +10,8 @@ export function ValidationScreen({ partner, coupon, onClose }: { partner: Partne
   const at = new Date(coupon.at);
   const expired = now.getTime() - at.getTime() > VALIDATION_SCREEN_MS;
   const { color, word } = dayCode(now);
-  const clock = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const left = Math.max(0, VALIDATION_SCREEN_MS - (now.getTime() - at.getTime()));
+  const countdown = `${String(Math.floor(left / 60000)).padStart(2, '0')}:${String(Math.floor(left / 1000) % 60).padStart(2, '0')}`;
   const usedAt = `${at.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })} à ${at.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`;
 
   return (
@@ -32,7 +33,8 @@ export function ValidationScreen({ partner, coupon, onClose }: { partner: Partne
             <p className="font-display text-4xl leading-none">Offre validée ✓</p>
             <p className="mt-3 text-xl font-semibold">{partner.offre}</p>
             <p className="mt-1 text-base opacity-90">{partner.nom}</p>
-            <p className="font-display mt-8 text-6xl tabular-nums">{clock}</p>
+            <p className="mt-7 text-[11px] font-bold uppercase tracking-widest opacity-90">Temps restant</p>
+            <p className="font-display text-7xl leading-none tabular-nums">{countdown}</p>
             <div className="mt-6 inline-block rounded-2xl border-4 border-white/80 px-6 py-2" style={{ background: color }}>
               <p className="text-[11px] font-bold uppercase tracking-widest opacity-90">Mot du jour</p>
               <p className="font-display text-4xl">{word}</p>
