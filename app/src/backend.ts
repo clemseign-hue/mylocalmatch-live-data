@@ -7,7 +7,7 @@ import { firebaseConfig } from './firebase-config';
 
 export const backendReady = true;
 
-export interface ScanRecord extends Coupon { scanId: string; userId: string; queuedAt: string; pinHash?: string }
+export interface ScanRecord extends Omit<Coupon, 'mode'> { mode: Coupon['mode'] | 'hors_ligne'; scanId: string; userId: string; queuedAt: string; pinHash?: string }
 
 type Fb = {
   db: import('firebase/firestore').Firestore;
@@ -89,7 +89,7 @@ export async function saveScan(scan: ScanRecord, queueOnFail = true, test = fals
         return snap.exists() ? 'used' : 'denied';
       } catch { return 'denied'; }
     }
-    if (queueOnFail && !test) queueScan(scan);
+    if (queueOnFail && !test) queueScan({ ...scan, mode: 'hors_ligne' });
     return 'queued';
   }
 }

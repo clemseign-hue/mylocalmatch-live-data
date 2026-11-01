@@ -8,5 +8,7 @@ const BUILD = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', day
 export default defineConfig({
   base: './',
   define: { __BUILD__: JSON.stringify(BUILD) },
+  // Deux pages : l'appli (index.html) et l'administration non listée (admin.html)
+  build: { rollupOptions: { input: { main: 'index.html', admin: 'admin.html' } } },
   plugins: [react()],
 });

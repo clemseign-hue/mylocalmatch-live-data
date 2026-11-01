@@ -234,6 +234,16 @@ export default function App() {
 
   useEffect(() => setVisible(PAGE_SIZE), [level, date, place, club, favOnly]);
 
+  // QR d'une affiche scanné avec l'appareil photo (?p=…) : l'offre se valide depuis l'appli, on l'explique
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (!params.get('p')) return;
+    params.delete('p');
+    history.replaceState(null, '', location.pathname + (params.toString() ? `?${params}` : ''));
+    setTimeout(() => showToast('Offre partenaire : choisis ton match, touche « J\'y vais » puis « Scanner au comptoir » dans l\'appli.'), 800);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Ouverture via un lien partagé : on lève les filtres pour être sûr d'afficher le match, puis on le sélectionne.
   useEffect(() => {
     const id = pendingMatch.current;

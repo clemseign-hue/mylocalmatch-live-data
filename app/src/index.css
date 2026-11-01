@@ -26,3 +26,11 @@ html, body { margin: 0; padding: 0; overscroll-behavior: none; background: var(-
 .mlm-pin.has-offer { box-shadow: 0 0 0 3px #FF5A36, 0 1px 6px rgba(0,0,0,.4); position: relative; }
 .mlm-gift { position: absolute; top: -9px; right: -10px; font-style: normal; font-size: 12px; line-height: 1; }
 @keyframes mlm-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,90,54,.7); } 50% { box-shadow: 0 0 0 8px rgba(255,90,54,0); } }
+
+/* Page admin : impression des affiches A6, une par page */
+@media print {
+  @page { size: A6; margin: 0; }
+  .no-print { display: none !important; }
+  body { background: #fff !important; }
+  .poster { page-break-after: always; break-after: page; }
+}
