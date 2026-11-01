@@ -23,6 +23,7 @@ function fb(): Promise<Fb> {
       const app = initializeApp(firebaseConfig);
       const a = auth.getAuth(app);
       const cred = a.currentUser ? { user: a.currentUser } : await auth.signInAnonymously(a);
+      await cred.user.getIdToken(); // connexion entièrement prête avant la première écriture
       return { db: fs.getFirestore(app), uid: cred.user.uid, fs };
     })();
     fbPromise.catch(() => { fbPromise = null; }); // nouvel essai au prochain appel
@@ -79,6 +80,7 @@ export async function saveScan(scan: ScanRecord, queueOnFail = true, test = fals
     return 'ok';
   } catch (err) {
     const code = (err as { code?: string }).code || '';
+    console.warn('MyLocalMatch : enregistrement du scan impossible', code, (err as Error).message);
     if (code === 'permission-denied') {
       // Création refusée : soit le coupon existe déjà, soit le code PIN ne correspond pas
       try {
