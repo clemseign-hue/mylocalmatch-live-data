@@ -116,12 +116,19 @@ function Export() {
       const { fs, db } = await loadFb();
       const [y, m] = month.split('-').map(Number);
       const start = new Date(y, m - 1, 1).toISOString(), end = new Date(y, m, 1).toISOString();
-      const q = fs.query(fs.collection(db, test ? 'scans_test' : 'scans'), fs.where('date_heure', '>=', start), fs.where('date_heure', '<', end));
-      const snap = await fs.getDocs(q);
+      // Vrais scans : filtrés par le serveur sur la date du scan. Scans de test (peu nombreux) : tout est lu puis filtré
+      // ici, en prenant la date de réception quand la date du scan manque.
+      const col = fs.collection(db, test ? 'scans_test' : 'scans');
+      const snap = await fs.getDocs(test ? col : fs.query(col, fs.where('date_heure', '>=', start), fs.where('date_heure', '<', end)));
       const rows = snap.docs.map(d => {
         const x = d.data();
-        return { ...x, scan_id: d.id, date_heure: x.date_heure ? fmtDate(new Date(x.date_heure)) : '', recu_le: x.recu_le?.toDate ? fmtDate(x.recu_le.toDate()) : '' } as Record<string, unknown>;
-      }).filter(r => !partner || r.partenaire_id === partner).sort((a, b) => String(a.date_heure).localeCompare(String(b.date_heure)));
+        const received = (x.recu_le || x.date)?.toDate?.() as Date | undefined;
+        const when = x.date_heure ? new Date(x.date_heure) : received;
+        return { ...x, _iso: when ? when.toISOString() : '', scan_id: d.id, date_heure: when ? fmtDate(when) : '', recu_le: received ? fmtDate(received) : '' } as Record<string, unknown>;
+      })
+        .filter(r => !test || (String(r._iso) >= start && String(r._iso) < end))
+        .filter(r => !partner || r.partenaire_id === partner)
+        .sort((a, b) => String(a.date_heure).localeCompare(String(b.date_heure)));
       const blob = new Blob([toCsv(rows)], { type: 'text/csv;charset=utf-8' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
