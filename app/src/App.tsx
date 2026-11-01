@@ -11,7 +11,7 @@ import { InfoSheet } from './components/InfoSheet';
 import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
-import { FINAL_GOING_LOCK, couponKey, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
+import { FINAL_GOING_LOCK, couponKey, endOfWeekISO, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
 import { recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
@@ -199,7 +199,7 @@ export default function App() {
   const filtered = useMemo(() => {
     const today = todayISO();
     const tomorrow = addDaysISO(today, 1);
-    const weekEnd = addDaysISO(today, 7);
+    const weekEnd = endOfWeekISO(today); // dimanche de la semaine en cours
     return events
       .filter(e => !club || e.homeClub === club || e.awayClub === club)
       .filter(e => !favOnly || favs.includes(e.homeClub) || favs.includes(e.awayClub))
