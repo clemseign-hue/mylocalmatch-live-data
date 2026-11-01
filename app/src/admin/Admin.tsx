@@ -86,7 +86,7 @@ const loadFb = () => (fbPromise ||= (async () => {
   return { auth, a: auth.getAuth(app), fs, db: fs.getFirestore(app) };
 })());
 
-const COLUMNS = ['scan_id', 'date_heure', 'partenaire_id', 'match_id', 'utilisateur_anonyme', 'premiere_visite', 'distance_m', 'mode', 'recu_le'];
+const COLUMNS = ['scan_id', 'date_heure', 'partenaire_id', 'match_id', 'utilisateur_anonyme', 'premiere_visite', 'distance_m', 'mode', 'recu_le', 'FlagTest'];
 
 function toCsv(rows: Record<string, unknown>[]) {
   const esc = (v: unknown) => { const s = v == null ? '' : String(v); return /[;"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
@@ -100,7 +100,7 @@ function Export() {
   const [email, setEmail] = useState(''); const [password, setPassword] = useState('');
   const [month, setMonth] = useState(() => new Date().toISOString().slice(0, 7));
   const [partner, setPartner] = useState('');
-  const [test, setTest] = useState(false);
+  const [scope, setScope] = useState<'vrais' | 'test' | 'tous'>('vrais');
   const [msg, setMsg] = useState<string | null>(null);
   useEffect(() => { loadFb().then(({ auth, a }) => auth.onAuthStateChanged(a, u => setUser(u ? { email: u.email, uid: u.uid } : null))); }, []);
 
@@ -118,21 +118,24 @@ function Export() {
       const start = new Date(y, m - 1, 1).toISOString(), end = new Date(y, m, 1).toISOString();
       // Vrais scans : filtrés par le serveur sur la date du scan. Scans de test (peu nombreux) : tout est lu puis filtré
       // ici, en prenant la date de réception quand la date du scan manque.
-      const col = fs.collection(db, test ? 'scans_test' : 'scans');
-      const snap = await fs.getDocs(test ? col : fs.query(col, fs.where('date_heure', '>=', start), fs.where('date_heure', '<', end)));
-      const rows = snap.docs.map(d => {
-        const x = d.data();
-        const received = (x.recu_le || x.date)?.toDate?.() as Date | undefined;
-        const when = x.date_heure ? new Date(x.date_heure) : received;
-        return { ...x, _iso: when ? when.toISOString() : '', scan_id: d.id, date_heure: when ? fmtDate(when) : '', recu_le: received ? fmtDate(received) : '' } as Record<string, unknown>;
-      })
-        .filter(r => !test || (String(r._iso) >= start && String(r._iso) < end))
+      const read = async (test: boolean) => {
+        const col = fs.collection(db, test ? 'scans_test' : 'scans');
+        const snap = await fs.getDocs(test ? col : fs.query(col, fs.where('date_heure', '>=', start), fs.where('date_heure', '<', end)));
+        return snap.docs.map(d => {
+          const x = d.data();
+          const received = (x.recu_le || x.date)?.toDate?.() as Date | undefined;
+          const when = x.date_heure ? new Date(x.date_heure) : received;
+          // FlagTest : 1 = scan du mode test, 0 = vrai scan
+          return { ...x, _iso: when ? when.toISOString() : '', scan_id: d.id, date_heure: when ? fmtDate(when) : '', recu_le: received ? fmtDate(received) : '', FlagTest: test ? 1 : 0 } as Record<string, unknown>;
+        }).filter(r => !test || (String(r._iso) >= start && String(r._iso) < end));
+      };
+      const rows = [...(scope !== 'test' ? await read(false) : []), ...(scope !== 'vrais' ? await read(true) : [])]
         .filter(r => !partner || r.partenaire_id === partner)
         .sort((a, b) => String(a.date_heure).localeCompare(String(b.date_heure)));
       const blob = new Blob([toCsv(rows)], { type: 'text/csv;charset=utf-8' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `scans${test ? '-test' : ''}_${month}${partner ? `_${partner}` : ''}.csv`;
+      link.download = `scans${scope === 'test' ? '-test' : scope === 'tous' ? '-tous' : ''}_${month}${partner ? `_${partner}` : ''}.csv`;
       link.click();
       setMsg(`${rows.length} scan(s) exporté(s).`);
     } catch (e) {
@@ -156,7 +159,12 @@ function Export() {
       <p className="break-all text-xs text-neutral-500">Identifiant administrateur (à mettre dans les règles Firestore) : <code>{user.uid}</code></p>
       <label className="block text-sm font-semibold">Mois<input type="month" value={month} onChange={e => setMonth(e.target.value)} className="mt-1 block w-full rounded border px-3 py-2 text-base font-normal" /></label>
       <label className="block text-sm font-semibold">Partenaire (identifiant, vide = tous)<input value={partner} onChange={e => setPartner(e.target.value.trim())} placeholder="ex. bar-du-stade-valence" className="mt-1 block w-full rounded border px-3 py-2 text-base font-normal" /></label>
-      <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={test} onChange={e => setTest(e.target.checked)} /> Scans du mode test</label>
+      <fieldset className="space-y-1 text-sm">
+        <legend className="font-semibold">Scans à exporter</legend>
+        {([['vrais', 'Vrais scans (FlagTest = 0)'], ['test', 'Scans du mode test (FlagTest = 1)'], ['tous', 'Les deux']] as const).map(([id, label]) => (
+          <label key={id} className="flex items-center gap-2"><input type="radio" checked={scope === id} onChange={() => setScope(id)} /> {label}</label>
+        ))}
+      </fieldset>
       <button onClick={exportCsv} className="w-full rounded-full py-2.5 font-semibold text-white" style={{ background: '#FF5A36' }}>Télécharger le CSV</button>
       {msg && <p className="text-sm">{msg}</p>}
       <p className="text-xs text-neutral-500">Colonnes : {COLUMNS.join(', ')}. Séparateur « ; », s'ouvre directement dans Excel et dans Power BI.</p>
