@@ -5,14 +5,14 @@ import {
   MAX_SCAN_DISTANCE_LOW_GPS_M, MAX_SCAN_DISTANCE_M, anonymousId, couponKey, distanceM, inWindow,
   partnerIdFromQr, partnersNear, testMode, type Coupon, type Partner,
 } from '../partners';
-import { couponAlreadyUsed, queueScan, verifyPin } from '../backend';
+import { couponAlreadyUsed, pinHash, saveScan, serverUserId, verifyPin } from '../backend';
 import { loadPref, savePref } from '../data';
 import { Icon } from './Icon';
 
 type Step =
   | { kind: 'intro' } | { kind: 'camera' } | { kind: 'pinChoose' } | { kind: 'pin'; partner: Partner }
-  | { kind: 'location'; partner: Partner; match: MatchEvent; mode: 'qr' | 'pin' }
-  | { kind: 'firstVisit'; partner: Partner; match: MatchEvent; mode: 'qr' | 'pin'; dist: number | null }
+  | { kind: 'location'; partner: Partner; match: MatchEvent; mode: 'qr' | 'pin'; pin?: string }
+  | { kind: 'firstVisit'; partner: Partner; match: MatchEvent; mode: 'qr' | 'pin'; dist: number | null; pin?: string }
   | { kind: 'error'; message: string; offerPin?: boolean };
 
 interface Props {
@@ -45,7 +45,7 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
   const [busy, setBusy] = useState(false);
 
   // Contrôles F05 : partenaire actif, J'y vais, fenêtre horaire, coupon non utilisé (puis position)
-  async function checkPartner(partnerId: string | null, mode: 'qr' | 'pin'): Promise<Step> {
+  async function checkPartner(partnerId: string | null, mode: 'qr' | 'pin', pin?: string): Promise<Step> {
     const partner = partners.find(p => p.id === partnerId);
     if (!partner) return { kind: 'error', message: TXT.unknownQr };
     if (!goingMatches.length) return { kind: 'error', message: TXT.noGoing };
@@ -57,8 +57,8 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
     const match = testMode() ? open[0] : open.find(m => !coupons[couponKey(m.id, partner.id)]);
     if (!match || (!testMode() && await couponAlreadyUsed(match.id, partner.id))) return { kind: 'error', message: TXT.used };
     // Mode test (?test=1) : pas de contrôle de distance, pour essayer le parcours de n'importe où
-    if (testMode()) return { kind: 'firstVisit', partner, match, mode, dist: null };
-    return { kind: 'location', partner, match, mode };
+    if (testMode()) return { kind: 'firstVisit', partner, match, mode, dist: null, pin };
+    return { kind: 'location', partner, match, mode, pin };
   }
 
   async function onQr(text: string) {
@@ -73,14 +73,21 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
       setBusy(false);
       const dist = distanceM({ lat: pos.coords.latitude, lng: pos.coords.longitude }, s.partner);
       const max = pos.coords.accuracy > MAX_SCAN_DISTANCE_M ? MAX_SCAN_DISTANCE_LOW_GPS_M : MAX_SCAN_DISTANCE_M; // R04
-      setStep(dist <= max ? { kind: 'firstVisit', partner: s.partner, match: s.match, mode: s.mode, dist } : { kind: 'error', message: TXT.tooFar(s.partner.nom) });
+      setStep(dist <= max ? { kind: 'firstVisit', partner: s.partner, match: s.match, mode: s.mode, dist, pin: s.pin } : { kind: 'error', message: TXT.tooFar(s.partner.nom) });
     }, () => { setBusy(false); setStep({ kind: 'error', message: `${TXT.tooFar(s.partner.nom)} Autorise la localisation pour valider.` }); },
     { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
   }
 
-  function validate(s: Extract<Step, { kind: 'firstVisit' }>, firstVisit: boolean) {
+  // Enregistrement serveur avant d'afficher la validation (F08/F09) ; sans réseau, validation locale puis envoi plus tard
+  async function validate(s: Extract<Step, { kind: 'firstVisit' }>, firstVisit: boolean) {
+    setBusy(true);
     const coupon: Coupon = { matchId: s.match.id, partnerId: s.partner.id, at: new Date().toISOString(), firstVisit, distanceM: s.dist, mode: s.mode };
-    queueScan({ ...coupon, scanId: crypto.randomUUID(), userId: anonymousId(), queuedAt: coupon.at });
+    const record = { ...coupon, scanId: crypto.randomUUID(), userId: await serverUserId(anonymousId()), queuedAt: coupon.at,
+      ...(s.pin ? { pinHash: await pinHash(s.partner.id, s.pin) } : {}) };
+    const r = await saveScan(record, true, testMode());
+    setBusy(false);
+    if (r === 'used') { setStep({ kind: 'error', message: TXT.used }); return; }
+    if (r === 'denied') { setStep({ kind: 'error', message: 'Validation refusée. Demande le code au serveur.', offerPin: true }); return; }
     onValidated(coupon);
   }
 
@@ -129,8 +136,8 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
         <div className="flex flex-1 flex-col justify-center gap-4 text-center">
           <p className="font-display text-3xl">Première fois chez {step.partner.nom} ?</p>
           <div className="grid grid-cols-2 gap-3">
-            <button className={primary} style={{ background: t.flare, color: '#fff' }} onClick={() => validate(step, true)}>Oui</button>
-            <button className={primary} style={{ background: t.card, color: t.text, border: `1px solid ${t.chipBorder}` }} onClick={() => validate(step, false)}>Non</button>
+            <button className={primary} disabled={busy} style={{ background: t.flare, color: '#fff' }} onClick={() => validate(step, true)}>Oui</button>
+            <button className={primary} disabled={busy} style={{ background: t.card, color: t.text, border: `1px solid ${t.chipBorder}` }} onClick={() => validate(step, false)}>Non</button>
           </div>
         </div>
       ));
@@ -151,10 +158,10 @@ export function ScanFlow({ t, partners, goingMatches, coupons, onValidated, onCl
         <PinPad t={t} onSubmit={async pin => {
           if (Date.now() < pinLockedUntil()) return 'Trop d\'essais : réessaie dans quelques minutes.';
           const r = await verifyPin(step.partner.id, pin);
-          if (r === 'unavailable') return 'Le code de secours sera disponible très bientôt. Utilise le scan du QR-code.';
+          if (r === 'unavailable') return 'Pas de réseau : impossible de vérifier le code pour le moment.';
           if (r === 'wrong') { registerPinError(); return 'Code incorrect.'; }
           savePref('pinErrors', 0);
-          setStep(await checkPartner(step.partner.id, 'pin'));
+          setStep(await checkPartner(step.partner.id, 'pin', pin));
           return null;
         }} />
       ));

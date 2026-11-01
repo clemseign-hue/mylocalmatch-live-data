@@ -12,7 +12,7 @@ import { ScanFlow } from './components/ScanFlow';
 import { ValidationScreen } from './components/ValidationScreen';
 import type { CardOffer } from './components/EventCard';
 import { FINAL_GOING_LOCK, couponKey, endOfWeekISO, fetchPartners, goingAllowed, loadGoingFinal, saveGoingFinal, setTestMode, testMode, inWindow, loadCoupons, loadGoing, partnersNear, saveCoupons, saveGoing, type Coupon, type Partner } from './partners';
-import { recordGoing } from './backend';
+import { flushScanQueue, recordGoing } from './backend';
 import { ClubSheet } from './components/ClubSheet';
 
 const DEFAULT_PLACE: Place = { label: 'Valence', lat: 44.9334, lng: 4.8924 }; // zone de lancement : Drôme-Ardèche
@@ -182,7 +182,8 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const on = () => { setOnline(true); refresh(); }, off = () => setOnline(false);
+    const on = () => { setOnline(true); refresh(); flushScanQueue(); }, off = () => setOnline(false);
+    flushScanQueue(); // scans validés hors ligne : envoyés dès que possible
     window.addEventListener('online', on); window.addEventListener('offline', off);
     return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off); };
   }, [refresh]);

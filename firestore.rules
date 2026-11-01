@@ -1,0 +1,54 @@
+rules_version = '2';
+// Règles de sécurité MyLocalMatch — à coller dans la console Firebase : Firestore Database > Règles > Publier.
+// Chaque téléphone a un identifiant anonyme (aucun nom, aucun e-mail).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function pinOk(partnerId, hash) {
+      return exists(/databases/$(database)/documents/pins/$(partnerId))
+        && get(/databases/$(database)/documents/pins/$(partnerId)).data.hash == hash;
+    }
+
+    // « J'y vais » : un document par match et par utilisateur ; chacun ne gère que le sien. Lecture : console uniquement.
+    match /going/{id} {
+      allow create, update: if signedIn()
+        && id == request.resource.data.match_id + '_' + request.auth.uid
+        && request.resource.data.utilisateur_anonyme == request.auth.uid
+        && request.resource.data.keys().hasOnly(['match_id', 'utilisateur_anonyme', 'date']);
+      allow delete: if signedIn() && resource.data.utilisateur_anonyme == request.auth.uid;
+      allow read: if false;
+    }
+
+    // Scans validés : identifiant = match_partenaire_utilisateur, donc UN SEUL coupon par match et par partenaire.
+    // Création uniquement (jamais de modification ni de suppression depuis l'appli).
+    match /scans/{id} {
+      allow get: if signedIn() && (resource == null || resource.data.utilisateur_anonyme == request.auth.uid);
+      allow create: if signedIn()
+        && id == request.resource.data.match_id + '_' + request.resource.data.partenaire_id + '_' + request.auth.uid
+        && request.resource.data.utilisateur_anonyme == request.auth.uid
+        && request.resource.data.mode in ['qr', 'pin', 'hors_ligne']
+        && request.resource.data.premiere_visite is bool
+        && (request.resource.data.mode != 'pin' || pinOk(request.resource.data.partenaire_id, request.resource.data.pin_hash));
+      allow list, update, delete: if false;
+    }
+
+    // Scans du mode test (propriétaire de l'appli) : séparés des vrais scans.
+    match /scans_test/{id} {
+      allow create: if signedIn() && request.resource.data.utilisateur_anonyme == request.auth.uid;
+      allow read, update, delete: if false;
+    }
+
+    // Vérification du code PIN : accepté seulement si l'empreinte correspond à celle du partenaire.
+    match /pin_checks/{id} {
+      allow create: if signedIn()
+        && request.resource.data.utilisateur_anonyme == request.auth.uid
+        && pinOk(request.resource.data.partenaire_id, request.resource.data.pin_hash);
+      allow read, update, delete: if false;
+    }
+
+    // Empreintes des codes PIN (une par partenaire) : jamais lisibles depuis l'appli, saisies dans la console.
+    match /pins/{id} {
+      allow read, write: if false;
+    }
+  }
+}
