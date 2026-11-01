@@ -5,7 +5,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
     // Administrateur (export CSV depuis admin.html) : identifiant affiché sur la page admin après connexion.
-    function isAdmin() { return request.auth != null && request.auth.uid in ['UID_ADMIN_A_RENSEIGNER']; }
+    function isAdmin() { return request.auth != null && request.auth.uid in ['cJl9OVBDIIh0cPzbkuYbBE13njH2']; }
     function pinOk(partnerId, hash) {
       return exists(/databases/$(database)/documents/pins/$(partnerId))
         && get(/databases/$(database)/documents/pins/$(partnerId)).data.hash == hash;
