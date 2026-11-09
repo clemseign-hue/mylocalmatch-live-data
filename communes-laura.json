@@ -1283,5 +1283,13 @@
   "st-remeze": {
     "lat": 44.395839,
     "lng": 4.505407
+  },
+  "guilherand-granges": {
+    "lat": 44.929344,
+    "lng": 4.869182
+  },
+  "crets-en-belledonne": {
+    "lat": 45.365372,
+    "lng": 6.032202
   }
 }
